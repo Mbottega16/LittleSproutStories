@@ -73,7 +73,8 @@ Create the database and copy its connection URL (starts `postgres://` or
    *Not* a Shopify token. Copy the token and the numeric **shop id**.
 2. For each Shop product in `app/products.py`, fill its `"printify"` map:
    - `blueprint_id` + `print_provider_id` from the Printify catalog for
-     the exact product + print shop;
+     the exact product + print shop (see verified apparel IDs in `APPAREL_VENDOR_QUOTES.md`:
+     `tshirt` youth `420` / adult `12`, `onesie` `561`, `hat` `776` / `18-253`);
    - `image_url` — upload the artwork to Printify (or host the PNG) and
      put its URL/id here;
    - `variant_id` for a product with no sizes, **or** a `variants`
@@ -81,9 +82,12 @@ Create the database and copy its connection URL (starts `postgres://` or
 3. `printify_mapping_ready()` gates each product — a half-filled map just
    falls back to manual, it won't send a broken order.
 4. Confirm real base cost + shipping per product against the live Printify
-   quote and update `price_cents`. Several current prices
-   (`sticker_sheet` $6, `journal` $14, `puzzle` $22) are guesses and
-   probably sell below cost.
+   quote and update `price_cents`. See `APPAREL_VENDOR_QUOTES.md` for the
+   full quote breakdown:
+   - `tshirt` ($20) is confirmed viable (+$3.21 profit standard, +$5.99 premium).
+   - `onesie` ($20) breaks even (+$1.29 profit standard, +$4.30 premium); consider $22.
+   - `hat` ($18) **sells at a loss** (-$2.89 to -$3.63 per cap standard); must be raised to $22–$24.
+   - Non-apparel prices (`sticker_sheet` $6, `journal` $14, `puzzle` $22) remain unconfirmed guesses and likely sell below cost.
 
 ## 6. Point the site at the live API + smoke test  *(you + me)*
 

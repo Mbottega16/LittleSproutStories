@@ -3,11 +3,14 @@ UI for adding products, and a code change + deploy is the right weight
 for a solo operator with a handful of SKUs, not a content-management
 system.
 
-Prices are working assumptions, not final vendor-quoted numbers -- sized
-against realistic print-on-demand (Printify-style) small-batch costs plus
-shipping plus Stripe's processing fee. Profit is explicitly not the goal
-here; confirm against actual Printify quotes before the first real sale
-so at least the floor is known.
+Prices are working assumptions sized against realistic print-on-demand
+(Printify-style) small-batch costs plus shipping plus Stripe's processing
+fee. Real apparel vendor quotes have been verified in APPAREL_VENDOR_QUOTES.md:
+- tshirt ($20.00): confirmed viable (+16% to +38% net margin).
+- onesie ($20.00): borderline viable (+6.5% standard, +21.5% premium); $22 suggested.
+- hat ($18.00): sells at a loss on standard Printify (-$2.89 to -$3.63); flagged
+  for owner decision to raise to $22.00-$24.00.
+Non-apparel items (stickers, journal, puzzle) remain working assumptions.
 
 Fulfillment
 -----------
@@ -26,7 +29,8 @@ The ``"printify"`` mapping is a stub until a real Printify account
 exists. Fill it from Printify's catalog + your uploaded artwork:
 
 * ``blueprint_id`` / ``print_provider_id`` -- ints from the Printify
-  catalog, for the exact product and print shop.
+  catalog, for the exact product and print shop (see verified apparel IDs
+  in APPAREL_VENDOR_QUOTES.md).
 * ``image_url`` -- the print image: a public ``https`` URL (or the id of
   an image already uploaded to Printify).
 * ``variant_id`` -- the single Printify variant id, for a product with
@@ -72,6 +76,8 @@ PRODUCTS: dict[str, dict] = {
         "variants": ["YS", "YM", "YL", "AS", "AM", "AL"],
         "shop_visible": True,
         "fulfillment": "printify",
+        # Verified POD: Bella+Canvas 3001Y (blueprint 420, youth) / 3001 (blueprint 12, adult).
+        # See APPAREL_VENDOR_QUOTES.md for full economics ($3.21 - $5.99 margin).
         "printify": _unmapped_printify(),
     },
     "onesie": {
@@ -81,6 +87,8 @@ PRODUCTS: dict[str, dict] = {
         "variants": ["6M", "12M", "18M", "24M"],
         "shop_visible": True,
         "fulfillment": "printify",
+        # Verified POD: Rabbit Skins 4400 (blueprint 561).
+        # See APPAREL_VENDOR_QUOTES.md ($1.29 margin standard / $4.30 premium).
         "printify": _unmapped_printify(),
     },
     "hat": {
@@ -90,6 +98,10 @@ PRODUCTS: dict[str, dict] = {
         "variants": None,
         "shop_visible": True,
         "fulfillment": "printify",
+        # Verified POD: Yupoong 6245CM (blueprint 776) / OTTO 18-253.
+        # WARNING: Sells at a loss (-$2.89 to -$3.63) at $18.00 on standard Printify!
+        # Recommended: raise price_cents to 2200 ($22) or 2400 ($24) upon owner sign-off.
+        # See APPAREL_VENDOR_QUOTES.md.
         "printify": _unmapped_printify(),
     },
     "water_bottle": {
