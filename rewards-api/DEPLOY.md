@@ -107,3 +107,18 @@ The box is `fulfillment: "manual"` — no API. Print the components, kit a
 first run (~25–50 boxes), send them to a kitting 3PL, then work the admin
 dashboard's unsent list against the 3PL. See the project notes for the
 $10 unit economics.
+
+## 8. Reading Passport Kit (separate track)
+
+Also `fulfillment: "manual"` — it bundles a Lulu Print API booklet with a
+Printify sticker sheet, two vendors that can't ship as one automated parcel.
+See `READING_PASSPORT_KIT_VENDOR_QUOTES.md` for the full cost breakdown
+behind the $18.00 price.
+
+1. Finalize the booklet's interior layout (page count, trim size), then
+   pull a firm quote from Lulu's pricing calculator for that exact spec.
+2. Order a first batch of booklets (Lulu) and sticker sheets (Printify) to
+   whichever kitting 3PL already handles the reward box — get a quote for
+   packing + mailing the two together before committing to a batch size.
+3. Work the admin dashboard's unsent list against that 3PL, same as the
+   reward box.

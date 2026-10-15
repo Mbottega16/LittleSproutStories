@@ -21,9 +21,13 @@ Every entry declares how it ships:
   Printify order automatically (app/services/printify.py). Needs a
   filled-in ``"printify"`` mapping AND a configured token/shop id;
   until both exist the order simply falls back to manual handling.
-* ``"manual"`` -- the reward box only. Pre-assembled boxes held by a
-  kitting 3PL; the operator works the admin dashboard's unsent list and
-  hands addresses to the 3PL, then marks each row sent. No API call.
+* ``"manual"`` -- hand-kitted items held by a kitting 3PL (the reward box
+  and the Reading Passport Kit); the operator works the admin dashboard's
+  unsent list and hands addresses to the 3PL, then marks each row sent.
+  No API call. The Reading Passport Kit bundles a Lulu Print API booklet
+  with a Printify sticker sheet -- two separate vendors can't ship as one
+  parcel automatically, so it's kitted by hand like the reward box rather
+  than wired up as a second automated fulfillment path.
 
 The ``"printify"`` mapping is a stub until a real Printify account
 exists. Fill it from Printify's catalog + your uploaded artwork:
@@ -148,6 +152,20 @@ PRODUCTS: dict[str, dict] = {
         "shop_visible": True,
         "fulfillment": "printify",
         "printify": _unmapped_printify(),
+    },
+    "reading_passport_kit": {
+        "name": "Little Sprout Reading Passport Kit",
+        "description": "A printed, bound Reading Passport booklet -- a page for every "
+                        "community-helper location in the series -- plus a sticker "
+                        "sheet of all 14 badges to fill it in. The mailed keepsake "
+                        "version of the free printable passport.",
+        "price_cents": 1800,
+        "variants": None,
+        "shop_visible": True,
+        # Kitted by hand from two vendors (Lulu booklet + Printify sticker
+        # sheet) and shipped by a 3PL, like reward_box. See
+        # READING_PASSPORT_KIT_VENDOR_QUOTES.md for the cost breakdown.
+        "fulfillment": "manual",
     },
 }
 
