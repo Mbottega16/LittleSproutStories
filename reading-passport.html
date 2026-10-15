@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" href="assets/icons/icon-192.png">
+<link rel="canonical" href="https://edusystems-code.github.io/LittleSproutStories/reading-passport.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LittleSprout">
+<meta property="og:title" content="Reading Passport | LittleSprout">
+<meta property="og:description" content="A free printable passport booklet -- a stamp for every community-helper location visited across all 14 storybooks.">
+<meta property="og:url" content="https://edusystems-code.github.io/LittleSproutStories/reading-passport.html">
+<meta property="og:image" content="https://edusystems-code.github.io/LittleSproutStories/assets/og-share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Reading Passport | LittleSprout">
+<meta name="twitter:description" content="A free printable passport booklet -- a stamp for every community-helper location visited across all 14 storybooks.">
+<meta name="twitter:image" content="https://edusystems-code.github.io/LittleSproutStories/assets/og-share.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#5BA672">
+<title>Reading Passport | LittleSprout</title>
+<meta name="description" content="A free printable passport booklet -- a stamp for every community-helper location visited across all 14 storybooks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sprout: #5BA672; --sprout-dark: #3C7A52; --sprout-deep: #2C5C3D;
+    --cream: #FBF6EC; --cream-deep: #F3EAD6; --paper-line: #E7DCC4;
+    --sun: #FFD24A; --sun-deep: #E1A400;
+    --bark: #36402C; --bark-soft: #5E6650; --gold: #D9B64E;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Nunito', sans-serif; background: var(--cream); color: var(--bark); line-height: 1.5; padding: 28px; }
+  h1 { font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 24px; margin-bottom: 6px; }
+  .intro { max-width: 640px; margin: 0 auto 26px; text-align: center; }
+  .intro p { font-size: 14px; color: var(--bark-soft); font-weight: 600; margin-top: 8px; }
+  .print-btn { display: inline-block; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 15px; background: var(--sprout); color: #fff; border: 0; border-radius: 50px; padding: 11px 24px; margin-top: 14px; cursor: pointer; text-decoration: none; }
+  .print-btn:hover { background: var(--sprout-dark); }
+  .back-link { display: block; margin-top: 12px; font-size: 13.5px; font-weight: 700; color: var(--sprout-dark); text-decoration: none; }
+  .back-link:hover { text-decoration: underline; }
+
+  .page { max-width: 700px; margin: 0 auto 34px; background: #fff; border: 1px solid var(--paper-line); border-radius: 18px;
+    padding: 34px; box-shadow: 0 4px 14px rgba(54,64,44,.08); }
+
+  /* ---- cover ---- */
+  .cover { background: var(--sprout-deep); color: #F3EEDA; border-radius: 18px; text-align: center; padding: 50px 34px; }
+  .cover .emblem { font-size: 46px; }
+  .cover .frame { border: 2.5px solid var(--gold); border-radius: 14px; padding: 36px 24px; }
+  .cover h2 { font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin: 14px 0 4px; }
+  .cover h1.title { font-size: 30px; color: #fff; margin-bottom: 18px; }
+  .cover .field { margin: 22px auto 0; max-width: 360px; text-align: left; }
+  .cover .field .line { border-bottom: 1.5px solid rgba(243,238,218,.55); height: 26px; margin-bottom: 4px; }
+  .cover .field .label { font-size: 10.5px; font-weight: 800; letter-spacing: .5px; text-transform: uppercase; color: rgba(243,238,218,.7); }
+
+  /* ---- intro/instructions page ---- */
+  .howto h2 { font-size: 19px; color: var(--sprout-dark); margin-bottom: 10px; }
+  .howto ol { margin: 0 0 16px 20px; }
+  .howto li { font-size: 14px; font-weight: 600; color: var(--bark-soft); margin-bottom: 8px; }
+  .howto li b { color: var(--bark); }
+
+  /* ---- stamp grid ---- */
+  .stamp-page h2 { text-align: center; font-size: 19px; color: var(--sprout-dark); margin-bottom: 18px; }
+  .stamp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .stamp { border: 2px dashed var(--sprout); border-radius: 14px; padding: 14px 12px; text-align: center; }
+  .stamp .ic { font-size: 28px; }
+  .stamp h3 { font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 13.5px; color: var(--sprout-deep); margin: 4px 0 10px; min-height: 34px; }
+  .stamp .circle { width: 64px; height: 64px; border: 2px solid var(--paper-line); border-radius: 50%; margin: 0 auto 8px;
+    display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 800; letter-spacing: .4px;
+    text-transform: uppercase; color: var(--bark-soft); text-align: center; }
+  .stamp .date-line { border-bottom: 1.5px solid var(--paper-line); height: 18px; margin: 0 8px; }
+  .stamp .date-label { font-size: 9.5px; font-weight: 800; letter-spacing: .4px; text-transform: uppercase; color: var(--bark-soft); margin-top: 3px; }
+
+  /* ---- back cover ---- */
+  .back-cover { background: var(--cream-deep); text-align: center; padding: 50px 34px; }
+  .back-cover .big { font-size: 42px; }
+  .back-cover h2 { font-size: 21px; color: var(--sprout-dark); margin: 10px 0 10px; }
+  .back-cover p { font-size: 14px; font-weight: 600; color: var(--bark-soft); max-width: 420px; margin: 0 auto 8px; }
+  .back-cover .site { font-family: 'Fredoka', sans-serif; font-weight: 600; color: var(--sprout-deep); margin-top: 14px; }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .intro { display: none !important; }
+    .page { box-shadow: none; border: none; max-width: none; margin: 0; border-radius: 0; page-break-after: always; min-height: 90vh; }
+    .page:last-child { page-break-after: auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="intro">
+  <h1>Your LittleSprout Reading Passport</h1>
+  <p>Print the three pages below. Cut them out, stack cover &rarr; stamp page &rarr; back cover, fold in half, and staple along the fold to make a little booklet. After each book, let your reader draw a stamp, color a sticker, or write the date in that location's circle.</p>
+  <button type="button" class="print-btn" onclick="window.print()">Print this passport</button>
+  <a class="back-link" href="index.html#shelf">&larr; Back to the badge shelf</a>
+</div>
+
+<div class="page cover">
+  <div class="frame">
+    <div class="emblem">🌱</div>
+    <h2>Little Sprout &middot; Community Helpers</h2>
+    <h1 class="title">Reading Passport</h1>
+    <div class="field">
+      <div class="line"></div>
+      <div class="label">Reader's name</div>
+    </div>
+    <div class="field">
+      <div class="line"></div>
+      <div class="label">Issued on</div>
+    </div>
+  </div>
+</div>
+
+<div class="page howto">
+  <h2>How this passport works</h2>
+  <ol>
+    <li><b>Read a storybook.</b> Every LittleSprout book is set in a real place in town &mdash; a fire station, a bakery, a library, and more.</li>
+    <li><b>Find its stamp.</b> Each place on the stamp page matches a badge on the online <a href="index.html#shelf">badge shelf</a>.</li>
+    <li><b>Mark it visited.</b> Draw a little stamp, color it in, or add a sticker in the circle, then write the date.</li>
+    <li><b>Keep going.</b> Fill all 14 stamps to finish the passport &mdash; just like finishing the badge shelf online.</li>
+  </ol>
+  <p style="font-size:13px;color:var(--bark-soft);font-weight:600;">This passport is a free companion to the badge shelf. It isn't required to read any book or earn any online badge &mdash; it's just a fun, offline way to track the same progress on paper.</p>
+</div>
+
+<div class="page stamp-page">
+  <h2>Stamp a circle for every place you visit</h2>
+  <div class="stamp-grid" id="stampGrid"></div>
+</div>
+
+<div class="page back-cover">
+  <div class="big">🏅</div>
+  <h2>Passport complete!</h2>
+  <p>Fourteen places, fourteen stamps &mdash; this reader has visited every community helper in town.</p>
+  <p>Flip back to the badge shelf online to see this same progress, and what's waiting there for a reader who finished all 14 books.</p>
+  <div class="site">🌱 LittleSprout</div>
+</div>
+
+<script>
+  // Mirrors ALL_BOOKS on index.html -- same 14 badges/locations, in the
+  // same library order, so the paper passport and the online badge shelf
+  // never drift out of sync.
+  var STAMPS = [
+    { icon: '🚒', name: 'Fire Station Explorer' },
+    { icon: '🚓', name: 'Police Station Explorer' },
+    { icon: '📚', name: 'Library Explorer' },
+    { icon: '🩺', name: 'Healthy Helper' },
+    { icon: '🏫', name: 'School Explorer' },
+    { icon: '💇', name: 'Barbershop Explorer' },
+    { icon: '🥐', name: 'Bakery Explorer' },
+    { icon: '🌻', name: 'Garden Explorer' },
+    { icon: '📮', name: 'Post Office Explorer' },
+    { icon: '🔧', name: 'Repair Shop Explorer' },
+    { icon: '🏛️', name: 'Community Center Explorer' },
+    { icon: '🚒', name: 'Fire Station Explorer II' },
+    { icon: '🌱', name: 'Garden Helper' },
+    { icon: '🎉', name: 'Community Helper Series Complete!' },
+  ];
+
+  document.getElementById('stampGrid').innerHTML = STAMPS.map(function(s) {
+    return '<div class="stamp">' +
+      '<div class="ic" aria-hidden="true">' + s.icon + '</div>' +
+      '<h3>' + s.name + '</h3>' +
+      '<div class="circle">Stamp<br>here</div>' +
+      '<div class="date-line"></div>' +
+      '<div class="date-label">Date visited</div>' +
+      '</div>';
+  }).join('');
+</script>
+
+</body>
+</html>
