@@ -1,0 +1,249 @@
+{
+  "book_id": "Book17_Maya_Toy_Rabbit",
+  "title": "Maya and the Velveteen Rabbit",
+  "book_title": "Maya & Sophie and the Velveteen Rabbit",
+  "book_badge": "Gentle Care",
+  "cover": {
+    "h1_html": "Maya &amp; <br>the Velveteen Rabbit",
+    "stage": {
+      "backdrop": "backdrop-library",
+      "elements": [
+        {
+          "type": "img",
+          "sprite": "maya_happy_waving.png",
+          "alt": "Maya"
+        },
+        {
+          "type": "img",
+          "sprite": "sophie_happy_waving.png",
+          "alt": "Sophie"
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "index": 1,
+      "stage": {
+        "backdrop": "backdrop-library",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "maya_happy_pointing.png",
+            "alt": "Maya"
+          },
+          {
+            "type": "img",
+            "sprite": "sophie_happy_standing.png",
+            "alt": "Sophie"
+          },
+          {
+            "type": "hotspot",
+            "position": "left",
+            "effect": "pulse",
+            "aria_label": "Tap the rabbit",
+            "emoji": "&#128007;"
+          }
+        ]
+      },
+      "text_a": "Maya and Sophie were exploring the cozy corner of the library when they discovered an old wooden box tucked under a shelf.",
+      "text_b": "Maya sees an old box. A toy is inside.",
+      "quiz": null
+    },
+    {
+      "index": 2,
+      "stage": {
+        "backdrop": "backdrop-library",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "maya_happy_standing.png",
+            "alt": "Maya"
+          },
+          {
+            "type": "img",
+            "sprite": "sophie_happy_jumping.png",
+            "alt": "Sophie"
+          },
+          {
+            "type": "hotspot",
+            "position": "right",
+            "effect": "pop",
+            "aria_label": "Pet the rabbit",
+            "emoji": "&#129528;"
+          }
+        ]
+      },
+      "text_a": "Inside the box sat a soft stuffed rabbit with worn velvet ears and a quiet smile.",
+      "text_b": "Sophie claps. &ldquo;Look at him!&rdquo; said Sophie.",
+      "quiz": null
+    },
+    {
+      "index": 3,
+      "stage": {
+        "backdrop": "backdrop-library",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "maya_happy_giving.png",
+            "alt": "Maya"
+          },
+          {
+            "type": "img",
+            "sprite": "sophie_neutral_looking.png",
+            "alt": "Sophie"
+          }
+        ]
+      },
+      "text_a": "Maya picked up the rabbit gently. &ldquo;His fur is worn, but he feels so warm and gentle,&rdquo; whispered Maya.",
+      "text_b": "The rabbit has soft red ears.",
+      "quiz": null
+    },
+    {
+      "index": 4,
+      "stage": {
+        "backdrop": "backdrop-library",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "maya_neutral_looking.png",
+            "alt": "Maya"
+          },
+          {
+            "type": "img",
+            "sprite": "sophie_sad_standing.png",
+            "alt": "Sophie"
+          }
+        ]
+      },
+      "text_a": "Sophie looked closely at the rabbit&rsquo;s stitched seams. &ldquo;Is he too old to play with?&rdquo; she wondered.",
+      "text_b": "Sophie is sad. &ldquo;Is he too old?&rdquo;",
+      "quiz": {
+        "question": "What toy did Maya and Sophie find?",
+        "options": [
+          "A soft velvet rabbit",
+          "A toy truck",
+          "A robot"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "index": 5,
+      "stage": {
+        "backdrop": "backdrop-library",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "maya_happy_standing.png",
+            "alt": "Maya"
+          },
+          {
+            "type": "img",
+            "sprite": "sophie_happy_standing.png",
+            "alt": "Sophie"
+          },
+          {
+            "type": "helper",
+            "name": "Ms. Chen",
+            "emoji": "&#128218;"
+          }
+        ]
+      },
+      "text_a": "Ms. Chen knelt beside them with a gentle smile. &ldquo;Real value doesn&rsquo;t come from being brand new. When a toy is truly loved, it becomes real.&rdquo;",
+      "text_b": "Ms. Chen smiles. &ldquo;Love makes him real.&rdquo;",
+      "quiz": null
+    },
+    {
+      "index": 6,
+      "stage": {
+        "backdrop": "backdrop-library",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "maya_happy_standing.png",
+            "alt": "Maya"
+          },
+          {
+            "type": "img",
+            "sprite": "sophie_happy_looking.png",
+            "alt": "Sophie"
+          },
+          {
+            "type": "hotspot",
+            "position": "mid",
+            "effect": "ding",
+            "aria_label": "Make a wish",
+            "emoji": "&#10024;"
+          }
+        ]
+      },
+      "text_a": "Maya hugged the rabbit close. &ldquo;You are my favorite reading buddy now,&rdquo; she said happily.",
+      "text_b": "Maya hugs the rabbit with love.",
+      "quiz": null
+    },
+    {
+      "index": 7,
+      "stage": {
+        "backdrop": "backdrop-library",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "maya_happy_standing.png",
+            "alt": "Maya"
+          },
+          {
+            "type": "img",
+            "sprite": "sophie_happy_giving.png",
+            "alt": "Sophie"
+          }
+        ]
+      },
+      "text_a": "Sophie helped arrange three storybooks so the rabbit could listen to the words. &ldquo;He loves stories!&rdquo; laughed Sophie.",
+      "text_b": "Sophie is glad. We love our rabbit.",
+      "quiz": {
+        "question": "What makes an old toy special?",
+        "options": [
+          "Being loved and cared for",
+          "Having batteries",
+          "Being kept in a closet"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "index": 8,
+      "stage": {
+        "backdrop": "backdrop-library",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "maya_happy_waving.png",
+            "alt": "Maya"
+          },
+          {
+            "type": "img",
+            "sprite": "sophie_happy_waving.png",
+            "alt": "Sophie"
+          },
+          {
+            "type": "helper",
+            "name": "Ms. Chen",
+            "emoji": "&#128218;"
+          }
+        ]
+      },
+      "text_a": "Before leaving the library, the girls tucked the rabbit into a soft felt basket. &ldquo;Sleep well, little friend,&rdquo; said Maya.",
+      "text_b": "Maya and Sophie clap. &ldquo;Good night!&rdquo;",
+      "quiz": null
+    }
+  ],
+  "end_screen": {
+    "badge_emoji": "&#128007;",
+    "badge_label_html": "Gentle<br>Care",
+    "feeling": "Cherishing well-loved things and understanding empathy.",
+    "ask": "Do you have a toy or blanket that is well-loved? Why is it special to you?",
+    "try_this": "Pick a beloved toy together and give it a special spot or gentle bedtime story tonight.",
+    "standards": "RL.K.1, SL.K.3"
+  }
+}

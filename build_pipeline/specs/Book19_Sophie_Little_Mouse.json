@@ -1,0 +1,242 @@
+{
+  "book_id": "Book19_Sophie_Little_Mouse",
+  "title": "Sophie and the Little Mouse",
+  "book_title": "Sophie & Maya and the Little Mouse",
+  "book_badge": "Kind Helper",
+  "cover": {
+    "h1_html": "Sophie &amp; <br>the Little Mouse",
+    "stage": {
+      "backdrop": "backdrop-street",
+      "elements": [
+        {
+          "type": "img",
+          "sprite": "sophie_happy_waving.png",
+          "alt": "Sophie"
+        },
+        {
+          "type": "img",
+          "sprite": "maya_happy_waving.png",
+          "alt": "Maya"
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "index": 1,
+      "stage": {
+        "backdrop": "backdrop-street",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "sophie_happy_pointing.png",
+            "alt": "Sophie"
+          },
+          {
+            "type": "img",
+            "sprite": "maya_happy_standing.png",
+            "alt": "Maya"
+          },
+          {
+            "type": "hotspot",
+            "position": "left",
+            "effect": "pulse",
+            "aria_label": "Tap the mouse",
+            "emoji": "&#128045;"
+          }
+        ]
+      },
+      "text_a": "Sophie and Maya were walking past the community garden gate when Sophie noticed something rustling in the dry leaves.",
+      "text_b": "Sophie sees a little mouse.",
+      "quiz": null
+    },
+    {
+      "index": 2,
+      "stage": {
+        "backdrop": "backdrop-street",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "sophie_neutral_looking.png",
+            "alt": "Sophie"
+          },
+          {
+            "type": "img",
+            "sprite": "maya_neutral_looking.png",
+            "alt": "Maya"
+          }
+        ]
+      },
+      "text_a": "A tiny gray mouse had gotten tangled in some soft gardening twine. It squeaked softly, trying to get free.",
+      "text_b": "The mouse cannot run away.",
+      "quiz": null
+    },
+    {
+      "index": 3,
+      "stage": {
+        "backdrop": "backdrop-street",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "sophie_happy_standing.png",
+            "alt": "Sophie"
+          },
+          {
+            "type": "img",
+            "sprite": "maya_happy_standing.png",
+            "alt": "Maya"
+          }
+        ]
+      },
+      "text_a": "&ldquo;He is so little,&rdquo; whispered Maya. &ldquo;We should be very quiet and gentle so we don&rsquo;t scare him.&rdquo;",
+      "text_b": "Maya is calm. &ldquo;We can help,&rdquo; said Maya.",
+      "quiz": null
+    },
+    {
+      "index": 4,
+      "stage": {
+        "backdrop": "backdrop-street",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "sophie_sad_standing.png",
+            "alt": "Sophie"
+          },
+          {
+            "type": "img",
+            "sprite": "maya_neutral_looking.png",
+            "alt": "Maya"
+          }
+        ]
+      },
+      "text_a": "Sophie reached out, but the twine was wound tight. &ldquo;I can&rsquo;t untangle it alone!&rdquo; Sophie said, feeling discouraged.",
+      "text_b": "Sophie is sad. The rope is stuck.",
+      "quiz": {
+        "question": "What did Sophie and Maya find tangled in twine?",
+        "options": [
+          "A little mouse",
+          "A big bicycle",
+          "A toy truck"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "index": 5,
+      "stage": {
+        "backdrop": "backdrop-street",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "sophie_happy_standing.png",
+            "alt": "Sophie"
+          },
+          {
+            "type": "img",
+            "sprite": "maya_happy_standing.png",
+            "alt": "Maya"
+          },
+          {
+            "type": "helper",
+            "name": "Keisha",
+            "emoji": "&#128045;"
+          }
+        ]
+      },
+      "text_a": "Keisha, the park caretaker, walked over with a gentle smile and a pair of blunt safety snips.",
+      "text_b": "Keisha smiles. &ldquo;Let me help,&rdquo; said Keisha.",
+      "quiz": null
+    },
+    {
+      "index": 6,
+      "stage": {
+        "backdrop": "backdrop-street",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "sophie_happy_kneeling.png",
+            "alt": "Sophie"
+          },
+          {
+            "type": "img",
+            "sprite": "maya_happy_looking.png",
+            "alt": "Maya"
+          },
+          {
+            "type": "hotspot",
+            "position": "mid",
+            "effect": "ding",
+            "aria_label": "Cheer for the mouse",
+            "emoji": "&#10024;"
+          }
+        ]
+      },
+      "text_a": "Keisha snipped the loose string carefully. Sophie gently held back the leaves so the mouse had a clear path.",
+      "text_b": "Snip, snip! The mouse is free.",
+      "quiz": null
+    },
+    {
+      "index": 7,
+      "stage": {
+        "backdrop": "backdrop-street",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "sophie_happy_jumping.png",
+            "alt": "Sophie"
+          },
+          {
+            "type": "img",
+            "sprite": "maya_happy_giving.png",
+            "alt": "Maya"
+          }
+        ]
+      },
+      "text_a": "The mouse paused on a mossy stone, wiggled its tiny whiskers at the girls, and scampered safely into the warm hedge.",
+      "text_b": "Sophie is glad. The mouse ran home.",
+      "quiz": {
+        "question": "Why were Sophie and Maya happy at the end?",
+        "options": [
+          "The mouse was safe and free",
+          "They found gold coins",
+          "It started to rain"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "index": 8,
+      "stage": {
+        "backdrop": "backdrop-street",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "sophie_happy_waving.png",
+            "alt": "Sophie"
+          },
+          {
+            "type": "img",
+            "sprite": "maya_happy_waving.png",
+            "alt": "Maya"
+          },
+          {
+            "type": "helper",
+            "name": "Keisha",
+            "emoji": "&#128045;"
+          }
+        ]
+      },
+      "text_a": "Keisha smiled at them both. &ldquo;No act of kindness, no matter how small, is ever wasted,&rdquo; Keisha said.",
+      "text_b": "Sophie and Maya clap. We did good!",
+      "quiz": null
+    }
+  ],
+  "end_screen": {
+    "badge_emoji": "&#128045;",
+    "badge_label_html": "Kind<br>Helper",
+    "feeling": "Kindness, gentle care for small creatures, and asking for help.",
+    "ask": "Have you ever helped an animal or a friend who was stuck? How did it feel?",
+    "try_this": "Look for one small act of kindness you can do for someone in your family today.",
+    "standards": "RL.K.1, SL.K.3"
+  }
+}
