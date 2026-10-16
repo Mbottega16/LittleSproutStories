@@ -1,0 +1,249 @@
+{
+  "book_id": "Book18_James_Marcus_River_Picnic",
+  "title": "James and Marcus by the River",
+  "book_title": "James & Marcus by the River",
+  "book_badge": "River Friend",
+  "cover": {
+    "h1_html": "James &amp; <br>Marcus by the River",
+    "stage": {
+      "backdrop": "backdrop-garden",
+      "elements": [
+        {
+          "type": "img",
+          "sprite": "james_happy_waving.png",
+          "alt": "James"
+        },
+        {
+          "type": "img",
+          "sprite": "marcus_happy_waving.png",
+          "alt": "Marcus"
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "index": 1,
+      "stage": {
+        "backdrop": "backdrop-garden",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "james_happy_pointing.png",
+            "alt": "James"
+          },
+          {
+            "type": "img",
+            "sprite": "marcus_happy_standing.png",
+            "alt": "Marcus"
+          },
+          {
+            "type": "hotspot",
+            "position": "left",
+            "effect": "pulse",
+            "aria_label": "Tap the boat",
+            "emoji": "&#128674;"
+          }
+        ]
+      },
+      "text_a": "James and Marcus took a red picnic basket down to the sparkling river on a warm spring day.",
+      "text_b": "James and Marcus see the river.",
+      "quiz": null
+    },
+    {
+      "index": 2,
+      "stage": {
+        "backdrop": "backdrop-garden",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "james_happy_standing.png",
+            "alt": "James"
+          },
+          {
+            "type": "img",
+            "sprite": "marcus_happy_jumping.png",
+            "alt": "Marcus"
+          },
+          {
+            "type": "hotspot",
+            "position": "right",
+            "effect": "pop",
+            "aria_label": "Watch the duck",
+            "emoji": "&#129414;"
+          }
+        ]
+      },
+      "text_a": "A small wooden rowboat bobbed gently by the green shore. &ldquo;Look at that little boat!&rdquo; laughed Marcus.",
+      "text_b": "Marcus sees a red boat.",
+      "quiz": null
+    },
+    {
+      "index": 3,
+      "stage": {
+        "backdrop": "backdrop-garden",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "james_happy_kneeling.png",
+            "alt": "James"
+          },
+          {
+            "type": "img",
+            "sprite": "marcus_happy_standing.png",
+            "alt": "Marcus"
+          }
+        ]
+      },
+      "text_a": "James spread out a big checkered blanket under the shady willow tree.",
+      "text_b": "James puts down the basket.",
+      "quiz": null
+    },
+    {
+      "index": 4,
+      "stage": {
+        "backdrop": "backdrop-garden",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "james_neutral_looking.png",
+            "alt": "James"
+          },
+          {
+            "type": "img",
+            "sprite": "marcus_sad_standing.png",
+            "alt": "Marcus"
+          }
+        ]
+      },
+      "text_a": "Marcus opened the basket, but the jam jar slipped! &ldquo;Oh no! Did it spill?&rdquo; he cried.",
+      "text_b": "Marcus is sad. &ldquo;Did it drop?&rdquo;",
+      "quiz": {
+        "question": "Where did James and Marcus go for a picnic?",
+        "options": [
+          "By the quiet river",
+          "To the moon",
+          "Inside a dark cave"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "index": 5,
+      "stage": {
+        "backdrop": "backdrop-garden",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "james_happy_standing.png",
+            "alt": "James"
+          },
+          {
+            "type": "img",
+            "sprite": "marcus_happy_standing.png",
+            "alt": "Marcus"
+          },
+          {
+            "type": "helper",
+            "name": "Alex",
+            "emoji": "&#128674;"
+          }
+        ]
+      },
+      "text_a": "Alex the firefighter was fishing nearby and caught the jar with a friendly grin. &ldquo;Safe and sound!&rdquo; Alex said.",
+      "text_b": "Alex smiles. &ldquo;I got it!&rdquo; said Alex.",
+      "quiz": null
+    },
+    {
+      "index": 6,
+      "stage": {
+        "backdrop": "backdrop-garden",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "james_happy_sitting.png",
+            "alt": "James"
+          },
+          {
+            "type": "img",
+            "sprite": "marcus_happy_sitting.png",
+            "alt": "Marcus"
+          },
+          {
+            "type": "hotspot",
+            "position": "mid",
+            "effect": "ding",
+            "aria_label": "Share a snack",
+            "emoji": "&#129366;"
+          }
+        ]
+      },
+      "text_a": "They shared fresh bread, sweet fruit, and cool water together under the soft breeze.",
+      "text_b": "They eat bread and jam in the sun.",
+      "quiz": null
+    },
+    {
+      "index": 7,
+      "stage": {
+        "backdrop": "backdrop-garden",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "james_happy_standing.png",
+            "alt": "James"
+          },
+          {
+            "type": "img",
+            "sprite": "marcus_happy_jumping.png",
+            "alt": "Marcus"
+          }
+        ]
+      },
+      "text_a": "Two friendly ducks swam over and quacked happily as Marcus waved. &ldquo;Picnics with friends are the best!&rdquo; said Marcus.",
+      "text_b": "Marcus is glad. Marcus loves picnics.",
+      "quiz": {
+        "question": "Who helped Marcus catch the jar?",
+        "options": [
+          "Alex the helper",
+          "A flying bird",
+          "A giant bear"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "index": 8,
+      "stage": {
+        "backdrop": "backdrop-garden",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "james_happy_waving.png",
+            "alt": "James"
+          },
+          {
+            "type": "img",
+            "sprite": "marcus_happy_waving.png",
+            "alt": "Marcus"
+          },
+          {
+            "type": "helper",
+            "name": "Alex",
+            "emoji": "&#128674;"
+          }
+        ]
+      },
+      "text_a": "As the sun set, the boys packed their basket and waved goodbye to the peaceful river.",
+      "text_b": "James and Marcus clap. &ldquo;Good day!&rdquo;",
+      "quiz": null
+    }
+  ],
+  "end_screen": {
+    "badge_emoji": "&#128674;",
+    "badge_label_html": "River<br>Friend",
+    "feeling": "Outdoor curiosity, sharing, and helping a friend.",
+    "ask": "Have you ever shared a meal outside with someone? What was fun about it?",
+    "try_this": "Have a mini living-room or backyard blanket picnic together this weekend.",
+    "standards": "RL.K.1, SL.K.3"
+  }
+}

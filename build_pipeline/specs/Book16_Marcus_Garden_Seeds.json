@@ -1,0 +1,254 @@
+{
+  "book_id": "Book16_Marcus_Garden_Seeds",
+  "title": "Marcus and Sophie in the Secret Garden",
+  "book_title": "Marcus & Sophie in the Secret Garden",
+  "book_badge": "Garden Sprout",
+  "cover": {
+    "h1_html": "Marcus &amp; <br>Sophie in the Secret Garden",
+    "stage": {
+      "backdrop": "backdrop-garden",
+      "elements": [
+        {
+          "type": "img",
+          "sprite": "marcus_happy_waving.png",
+          "alt": "Marcus"
+        },
+        {
+          "type": "img",
+          "sprite": "sophie_happy_waving.png",
+          "alt": "Sophie"
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "index": 1,
+      "stage": {
+        "backdrop": "backdrop-garden",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "marcus_happy_pointing.png",
+            "alt": "Marcus"
+          },
+          {
+            "type": "img",
+            "sprite": "sophie_happy_standing.png",
+            "alt": "Sophie"
+          },
+          {
+            "type": "hotspot",
+            "position": "left",
+            "effect": "pulse",
+            "aria_label": "Tap the sprout",
+            "emoji": "&#127793;"
+          }
+        ]
+      },
+      "text_a": "Marcus and Sophie visited the community garden on a sunny morning. Little green sprouts were growing everywhere!",
+      "text_b": "Marcus and Sophie see the green plants.",
+      "quiz": null
+    },
+    {
+      "index": 2,
+      "stage": {
+        "backdrop": "backdrop-garden",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "marcus_happy_standing.png",
+            "alt": "Marcus"
+          },
+          {
+            "type": "img",
+            "sprite": "sophie_happy_standing.png",
+            "alt": "Sophie"
+          },
+          {
+            "type": "helper",
+            "name": "Mr. Green",
+            "emoji": "&#127793;"
+          }
+        ]
+      },
+      "text_a": "&ldquo;Welcome, young gardeners!&rdquo; said Mr. Green with a warm smile. &ldquo;Today we are planting tiny seeds.&rdquo;",
+      "text_b": "Mr. Green waves. &ldquo;Come help!&rdquo; said Mr. Green.",
+      "quiz": null
+    },
+    {
+      "index": 3,
+      "stage": {
+        "backdrop": "backdrop-garden",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "marcus_happy_kneeling.png",
+            "alt": "Marcus"
+          },
+          {
+            "type": "img",
+            "sprite": "sophie_neutral_looking.png",
+            "alt": "Sophie"
+          },
+          {
+            "type": "hotspot",
+            "position": "right",
+            "effect": "pop",
+            "aria_label": "Tap the pot",
+            "emoji": "&#129684;"
+          }
+        ]
+      },
+      "text_a": "Marcus held a small clay pot. He filled it with soft, dark soil using his garden shovel.",
+      "text_b": "Marcus has a pot. Marcus digs in the dirt.",
+      "quiz": null
+    },
+    {
+      "index": 4,
+      "stage": {
+        "backdrop": "backdrop-garden",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "marcus_neutral_looking.png",
+            "alt": "Marcus"
+          },
+          {
+            "type": "img",
+            "sprite": "sophie_sad_standing.png",
+            "alt": "Sophie"
+          }
+        ]
+      },
+      "text_a": "Sophie opened a packet of seeds. &ldquo;They are so tiny! What if they don&rsquo;t grow?&rdquo; she asked worriedly.",
+      "text_b": "Sophie looks at the seeds. Sophie feels a bit sad.",
+      "quiz": {
+        "question": "What are Marcus and Sophie planting?",
+        "options": [
+          "Tiny seeds",
+          "Big rocks",
+          "Toys"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "index": 5,
+      "stage": {
+        "backdrop": "backdrop-garden",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "marcus_happy_standing.png",
+            "alt": "Marcus"
+          },
+          {
+            "type": "img",
+            "sprite": "sophie_neutral_looking.png",
+            "alt": "Sophie"
+          },
+          {
+            "type": "helper",
+            "name": "Mr. Green",
+            "emoji": "&#127793;"
+          }
+        ]
+      },
+      "text_a": "Mr. Green smiled gently. &ldquo;All seeds need is soil, sunlight, water, and patience,&rdquo; he explained.",
+      "text_b": "Seeds need sun and water to get big.",
+      "quiz": null
+    },
+    {
+      "index": 6,
+      "stage": {
+        "backdrop": "backdrop-garden",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "marcus_happy_looking.png",
+            "alt": "Marcus"
+          },
+          {
+            "type": "img",
+            "sprite": "sophie_happy_kneeling.png",
+            "alt": "Sophie"
+          },
+          {
+            "type": "hotspot",
+            "position": "mid",
+            "effect": "ding",
+            "aria_label": "Water the seeds",
+            "emoji": "&#128167;"
+          }
+        ]
+      },
+      "text_a": "Sophie carefully pressed two seeds into the dirt and patted it smooth. &ldquo;Good night, little seeds!&rdquo; she whispered.",
+      "text_b": "Sophie taps the dirt. Good job, Sophie!",
+      "quiz": null
+    },
+    {
+      "index": 7,
+      "stage": {
+        "backdrop": "backdrop-garden",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "marcus_happy_jumping.png",
+            "alt": "Marcus"
+          },
+          {
+            "type": "img",
+            "sprite": "sophie_happy_giving.png",
+            "alt": "Sophie"
+          }
+        ]
+      },
+      "text_a": "Marcus sprinkled water from the watering can. The soil drank it up eagerly. &ldquo;We did it together!&rdquo; shouted Marcus.",
+      "text_b": "Marcus gets water. Marcus feels glad.",
+      "quiz": {
+        "question": "What helped Sophie feel confident about planting?",
+        "options": [
+          "Mr. Green&rsquo;s kind advice",
+          "Running away",
+          "Eating a snack"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "index": 8,
+      "stage": {
+        "backdrop": "backdrop-garden",
+        "elements": [
+          {
+            "type": "img",
+            "sprite": "marcus_happy_waving.png",
+            "alt": "Marcus"
+          },
+          {
+            "type": "img",
+            "sprite": "sophie_happy_waving.png",
+            "alt": "Sophie"
+          },
+          {
+            "type": "helper",
+            "name": "Mr. Green",
+            "emoji": "&#127793;"
+          }
+        ]
+      },
+      "text_a": "Marcus and Sophie placed their pot in the warm sunshine. They could not wait to come back and see their green sprouts grow.",
+      "text_b": "Marcus and Sophie clap. &ldquo;We did it!&rdquo;",
+      "quiz": null
+    }
+  ],
+  "end_screen": {
+    "badge_emoji": "&#127793;",
+    "badge_label_html": "Garden<br>Sprout",
+    "feeling": "Patience and teamwork when trying something new.",
+    "ask": "Have you ever waited for something to grow? How did you practice patience?",
+    "try_this": "Plant a bean seed in a damp paper towel in a cup by the window this week and watch it sprout together.",
+    "standards": "RL.K.1, SL.K.3"
+  }
+}
