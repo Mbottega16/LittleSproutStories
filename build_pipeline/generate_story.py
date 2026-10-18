@@ -53,10 +53,22 @@ DOLCH_WORDS = {
     "will", "with", "yes", "you"
 }
 
-ALLOWED_FEELINGS = {"glad", "sad", "mad", "bad", "ok", "good"}
-CHARACTER_NAMES = {"maya", "marcus", "sophie", "james"}
+# Approved feelings and Story Heart Words from 10_Decodable_Word_List.md and GUIDANCE_DECODABILITY_VS_STORY_FLOW.md
+ALLOWED_FEELINGS = {
+    "glad", "sad", "mad", "bad", "ok", "good",
+    "calm", "safe", "brave", "proud", "shy", "upset", "stuck", "warm", "kind", "quiet", "fine",
+    "feel", "feels"
+}
+CHARACTER_NAMES = {
+    "maya", "marcus", "sophie", "james",
+    "alex", "jasmine", "chen", "patel", "rodriguez", "smith", "keisha", "tom", "rose", "david", "aisha", "green",
+    "mr", "ms", "officer", "nurse", "dr"
+}
 
-def validate_stream_b_line(line: str, allowed_theme_nouns: set) -> list:
+# Category (f) compound/multisyllable decodable words built from simple CVC syllables
+SIMPLE_MULTISYLLABLE = {"visit", "letter", "muffin", "rabbit", "sunset", "upset"}
+
+def validate_stream_b_line(line: str, allowed_theme_nouns: set, heart_words: set = None) -> list:
     """Validate a Stream B line against the decodable word rules. Returns list of warning words."""
     cleaned = re.sub(r"&[a-zA-Z0-9#]+;", " ", line) # strip html entities
     cleaned = re.sub(r"[^a-zA-Z\s]", " ", cleaned).lower()
@@ -64,8 +76,9 @@ def validate_stream_b_line(line: str, allowed_theme_nouns: set) -> list:
     
     warnings = []
     theme_noun_used = 0
+    active_heart_words = heart_words or set()
     for w in words:
-        if w in DOLCH_WORDS or w in CHARACTER_NAMES or w in ALLOWED_FEELINGS:
+        if w in DOLCH_WORDS or w in CHARACTER_NAMES or w in ALLOWED_FEELINGS or w in SIMPLE_MULTISYLLABLE or w in active_heart_words:
             continue
         if w in allowed_theme_nouns:
             theme_noun_used += 1
@@ -476,6 +489,7 @@ def build_spec_from_template(preset_name: str) -> dict:
     }
 
     theme_nouns = data.get("theme_nouns", set())
+    heart_words = set(data.get("heart_words", []))
 
     for p in data["pages"]:
         elements = []
@@ -488,7 +502,7 @@ def build_spec_from_template(preset_name: str) -> dict:
             elements.append({"type": "hotspot", "position": hs["position"], "effect": hs["effect"], "aria_label": hs["aria_label"], "emoji": hs["emoji"]})
 
         # Validate decodability
-        warns = validate_stream_b_line(p["text_b"], theme_nouns)
+        warns = validate_stream_b_line(p["text_b"], theme_nouns, heart_words)
         if warns:
             print(f"  [Decodability Warning] Page {p['index']} text_b has unverified words: {warns}", file=sys.stderr)
 

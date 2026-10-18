@@ -30,8 +30,8 @@ screen. Each interior page has:
   **elements** on it: character images (`img`), a community helper
   (`helper`), and/or a tappable **hotspot** (`hotspot`, plays a `pulse` or
   `ding` effect). Order matters — it's DOM order, i.e. paint order.
-- `text_a` — the full sentence (the decodable-phonics engine's "engine A")
-- `text_b` — the short/simplified line (engine B)
+- `text_a` — the full sentence (the decodable-phonics engine's "engine A", read by adult/TTS)
+- `text_b` — the short/simplified line (engine B, read by child) — must follow the 80/20 decodability rules, tiered SEL vocabulary, and Heart Word guidelines in `10_Decodable_Word_List.md` and `GUIDANCE_DECODABILITY_VS_STORY_FLOW.md`
 - an optional `quiz` — a question, an options list, and the correct index
 
 The cover has just an `h1_html` (raw HTML — may contain `<br>` and
