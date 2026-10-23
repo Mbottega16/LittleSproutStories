@@ -1,0 +1,16 @@
+# Little Sprout Stories — ignore 7,500+ .venv files, 389 MB raw_art, generated audio/sprites, and SQLite DBs
+.git/
+.agents/
+raw_art/
+rewards-api/.venv/
+**/.venv/
+**/__pycache__/
+assets/audio/
+assets/sprites/
+assets/backgrounds/
+assets/resource-photos/
+data/*.db
+*.db
+*.zip
+*.mp3
+*.wav
