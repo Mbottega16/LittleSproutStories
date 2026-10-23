@@ -16,7 +16,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 LINK_RE = re.compile(r'(?:href|src)=["\']([^"\']+)["\']')
-SKIP_DIRS = {".git", "node_modules", "scripts"}
+SKIP_DIRS = {".git", "node_modules", "scripts", "archive"}
 
 
 def is_local(url: str) -> bool:

@@ -15,7 +15,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 MARKER_RE = re.compile(r"[A-Z][A-Z0-9_-]*-SWAP")
 SCAN_EXTS = {".html", ".js", ".css"}
-SKIP_DIRS = {".git", "node_modules", "scripts"}
+SKIP_DIRS = {".git", "node_modules", "scripts", "archive"}
 
 
 def main() -> int:
