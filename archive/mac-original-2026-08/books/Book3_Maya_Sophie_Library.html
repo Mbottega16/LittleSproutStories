@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maya & Sophie Visit the Library | Little Sprout Stories</title>
+<style>
+:root { --sprout:#5BA672; --cream:#FBF6EC; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:'Comic Sans MS','Segoe UI',sans-serif; background:var(--cream); color:#2b2b2b; }
+.page-wrap { max-width:640px; margin:0 auto; padding:20px; }
+.page { background:#fff; border-radius:20px; padding:24px; box-shadow:0 4px 16px rgba(0,0,0,0.1); }
+.cover { text-align:center; }
+.banner { background:var(--sprout); color:#fff; display:inline-block; padding:6px 18px; border-radius:20px; font-size:14px; margin-bottom:10px; }
+h1 { color:var(--sprout); font-size:28px; }
+.stage { position:relative; min-height:280px; border-radius:16px; margin:16px 0; display:flex; align-items:flex-end; justify-content:center; gap:10px; padding:16px; overflow:hidden; }
+/* BACKGROUND-SWAP: replace these gradients with real illustrated backgrounds when location art is supplied (see Asset Gap List) */
+.backdrop-barbershop { background:linear-gradient(180deg,#e8f4dc 0%,#e8f4dc 50%,#a9d687 50%,#a9d687 100%); }
+.backdrop-garden { background:linear-gradient(180deg,#bfe3fa 0%,#bfe3fa 48%,#9fd37f 48%,#9fd37f 100%); }
+.backdrop-repair { background:linear-gradient(180deg,#f3ead6 0%,#f3ead6 52%,#d8c79e 52%,#d8c79e 100%); }
+.backdrop-street { background:linear-gradient(180deg,#bfe3ff 0%,#bfe3ff 55%,#c9c9c9 55%,#c9c9c9 100%); }
+.backdrop-firestation { background:linear-gradient(180deg,#ffd9a0 0%,#ffd9a0 45%,#e8433f 45%,#e8433f 100%); }
+.backdrop-police { background:linear-gradient(180deg,#d9eefb 0%,#d9eefb 52%,#8fc6ea 52%,#8fc6ea 100%); }
+.backdrop-library { background:linear-gradient(180deg,#f3ead6 0%,#f3ead6 50%,#c9b98e 50%,#c9b98e 100%); }
+.backdrop-doctor { background:linear-gradient(180deg,#fce0ee 0%,#fce0ee 52%,#eba9c9 52%,#eba9c9 100%); }
+.backdrop-center { background:linear-gradient(180deg,#fce0ee 0%,#fce0ee 50%,#e8b9d3 50%,#e8b9d3 100%); }
+.backdrop-school { background:linear-gradient(180deg,#fff1cc 0%,#fff1cc 50%,#f5d77e 50%,#f5d77e 100%); }
+.backdrop-bakery { background:linear-gradient(180deg,#ffe3cc 0%,#ffe3cc 52%,#f0b67f 52%,#f0b67f 100%); }
+.backdrop-postoffice { background:linear-gradient(180deg,#d9eefb 0%,#d9eefb 50%,#bfe3fa 50%,#bfe3fa 100%); }
+img.char { height:220px; object-fit:contain; }
+.hotspot { position:absolute; top:20px; font-size:40px; cursor:pointer; animation:bob 2s ease-in-out infinite; transition:transform .2s; }
+.hotspot.left { left:20px; }
+.hotspot.right { right:20px; }
+.hotspot.mid { left:50%; transform:translateX(-50%); }
+.hotspot.right2 { right:70px; top:44px; }
+@keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+.helper-slot { font-size:60px; text-align:center; }
+.helper-label { font-size:14px; background:#fff; border-radius:8px; padding:2px 8px; }
+.text-a { font-size:18px; line-height:1.5; margin-top:14px; }
+.text-b { font-size:20px; font-weight:bold; background:#eaf7ee; border-left:5px solid var(--sprout); padding:10px 14px; border-radius:8px; margin-top:10px; }
+.quiz { margin-top:16px; background:#fff8e6; border-radius:12px; padding:14px; text-align:center; }
+.quiz button { display:block; width:100%; margin:6px 0; padding:10px; font-size:16px; border-radius:10px; border:2px solid var(--sprout); background:#fff; cursor:pointer; }
+.quiz button.correct { background:var(--sprout); color:#fff; }
+.quiz button.wrong { background:#f5a; color:#fff; }
+.start-btn { margin-top:20px; background:var(--sprout); color:#fff; border:none; padding:14px 28px; font-size:18px; border-radius:30px; cursor:pointer; }
+.nav-row { max-width:640px; margin:0 auto; display:flex; justify-content:space-between; padding:0 20px 30px; }
+.nav-row button { background:var(--sprout); color:#fff; border:none; padding:10px 20px; border-radius:20px; font-size:16px; cursor:pointer; }
+.nav-row button:disabled { background:#ccc; }
+.end-screen { text-align:center; }
+.badge { font-size:60px; }
+.badge div { font-size:18px; font-weight:bold; color:var(--sprout); }
+.guide { text-align:left; background:#eaf7ee; border-radius:12px; padding:16px; margin-top:16px; }
+.standards { font-size:12px; color:#777; }
+</style>
+</head>
+<body>
+<div class="page-wrap" id="p0" style="display:block">
+<section class="page cover">
+  <div class="banner">Little Sprout Stories</div>
+  <h1>Maya &amp; Sophie<br>Visit the Library</h1>
+  <div class="stage backdrop-library">
+    <img class="char" src="../assets/sprites/maya_happy_waving.png" alt="Maya" loading="lazy">
+    <img class="char" src="../assets/sprites/sophie_happy_waving.png" alt="Sophie" loading="lazy">
+  </div>
+  <button class="start-btn" onclick="nextPage()">Start Reading &#9654;</button>
+</section></div>
+<div class="page-wrap" id="p1" style="display:none">
+<section class="page">
+  <div class="stage backdrop-library">
+    <img class="char" src="../assets/sprites/maya_happy_walking.png" alt="Maya" loading="lazy">
+    <img class="char" src="../assets/sprites/sophie_happy_jumping.png" alt="Sophie" loading="lazy">
+    <div class="hotspot right" onclick="pulse(this)">&#128218;</div>
+  </div>
+  <div class="text-a">Maya loved the library&rsquo;s quiet corners. Sophie loved the library too &mdash; but sitting still was hard for her.</div>
+  <div class="text-b">Maya and Sophie go in.</div>
+</section></div>
+<div class="page-wrap" id="p2" style="display:none">
+<section class="page">
+  <div class="stage backdrop-library">
+    <img class="char" src="../assets/sprites/maya_happy_sitting.png" alt="Maya" loading="lazy">
+    <img class="char" src="../assets/sprites/sophie_neutral_sitting.png" alt="Sophie" loading="lazy">
+    <div class="helper-slot">&#128105;&#8205;&#128218;<div class="helper-label">Ms. Chen</div></div>
+  </div>
+  <div class="text-a">Ms. Chen welcomed them and invited everyone to story time on the rug.</div>
+  <div class="text-b">Ms. Chen reads.</div>
+</section></div>
+<div class="page-wrap" id="p3" style="display:none">
+<section class="page">
+  <div class="stage backdrop-library">
+    <img class="char" src="../assets/sprites/sophie_sad_standing.png" alt="Sophie" loading="lazy">
+    <img class="char" src="../assets/sprites/maya_neutral_looking.png" alt="Maya" loading="lazy">
+  </div>
+  <div class="text-a">Partway through, Sophie&rsquo;s legs just had to wiggle. A few kids looked over. Sophie felt her cheeks get hot.</div>
+  <div class="text-b">Sophie feels embarrassed.</div>
+  <div class="quiz" data-answer="1">
+    <p>How does Sophie feel?</p>
+    <button onclick="checkAnswer(this,0)">Proud</button>
+    <button onclick="checkAnswer(this,1)">Embarrassed</button>
+    <button onclick="checkAnswer(this,2)">Bored</button>
+  </div>
+</section></div>
+<div class="page-wrap" id="p4" style="display:none">
+<section class="page">
+  <div class="stage backdrop-library">
+    <img class="char" src="../assets/sprites/sophie_sad_sitting.png" alt="Sophie" loading="lazy">
+    <img class="char" src="../assets/sprites/maya_neutral_sitting.png" alt="Maya" loading="lazy">
+  </div>
+  <div class="text-a">&ldquo;I think I&rsquo;m bad at library,&rdquo; Sophie whispered to Maya.</div>
+  <div class="text-b">Sophie feels bad.</div>
+</section></div>
+<div class="page-wrap" id="p5" style="display:none">
+<section class="page">
+  <div class="stage backdrop-library">
+    <img class="char" src="../assets/sprites/maya_neutral_pointing.png" alt="Maya" loading="lazy">
+    <img class="char" src="../assets/sprites/sophie_neutral_looking.png" alt="Sophie" loading="lazy">
+    <div class="hotspot left" onclick="pulse(this)">&#128214;</div>
+  </div>
+  <div class="text-a">Maya took her hand and showed her a comic-book display in the corner. &ldquo;Look &mdash; you can read standing up here.&rdquo;</div>
+  <div class="text-b">Maya shows a book.</div>
+</section></div>
+<div class="page-wrap" id="p6" style="display:none">
+<section class="page">
+  <div class="stage backdrop-library">
+    <img class="char" src="../assets/sprites/sophie_neutral_standing.png" alt="Sophie" loading="lazy">
+    <img class="char" src="../assets/sprites/maya_neutral_standing.png" alt="Maya" loading="lazy">
+    <div class="helper-slot">&#128105;&#8205;&#128218;<div class="helper-label">Ms. Chen</div></div>
+  </div>
+  <div class="text-a">Ms. Chen came over. &ldquo;There&rsquo;s no one right way to enjoy a book,&rdquo; she said. &ldquo;Some readers wiggle, some sit still &mdash; both are real readers.&rdquo;</div>
+  <div class="text-b">Every reader is different.</div>
+</section></div>
+<div class="page-wrap" id="p7" style="display:none">
+<section class="page">
+  <div class="stage backdrop-library">
+    <img class="char" src="../assets/sprites/sophie_happy_reaching.png" alt="Sophie" loading="lazy">
+    <img class="char" src="../assets/sprites/maya_happy_giving.png" alt="Maya" loading="lazy">
+  </div>
+  <div class="text-a">Sophie picked a comic and read it standing on her tiptoes, completely happy.</div>
+  <div class="text-b">Sophie is a real reader.</div>
+  <div class="quiz" data-answer="1">
+    <p>What did Sophie learn?</p>
+    <button onclick="checkAnswer(this,0)">There is one right way to read</button>
+    <button onclick="checkAnswer(this,1)">Readers can enjoy books differently</button>
+    <button onclick="checkAnswer(this,2)">Reading is boring</button>
+  </div>
+</section></div>
+<div class="page-wrap" id="p8" style="display:none">
+<section class="page">
+  <div class="stage backdrop-library">
+    <img class="char" src="../assets/sprites/maya_happy_waving.png" alt="Maya" loading="lazy">
+    <img class="char" src="../assets/sprites/sophie_happy_waving.png" alt="Sophie" loading="lazy">
+    <div class="helper-slot">&#128105;&#8205;&#128218;<div class="helper-label">Ms. Chen</div></div>
+  </div>
+  <div class="text-a">Maya and Sophie checked out their books together and promised to come back next week.</div>
+  <div class="text-b">They check out books.</div>
+</section></div>
+<div class="page-wrap" id="p9" style="display:none">
+<section class="page end-screen">
+  <div class="badge">&#127941;<div>Library<br>Explorer</div></div>
+  <h2>Great reading!</h2>
+  <div class="guide">
+    <h3>For Grown-Ups</h3>
+    <p><b>Feeling/skill:</b> Embarrassment eases with self-acceptance and a friend&rsquo;s help.</p>
+    <p><b>Ask your child:</b> Is there a way you like to do something that is different from your friends?</p>
+    <p><b>Try this:</b> Let your child choose how they sit and read tonight.</p>
+    <p class="standards">Standards: RL.K.5, RL.K.6</p>
+  </div>
+  <button class="start-btn" onclick="location.reload()">Read Again &#9654;</button>
+</section></div>
+<div class="nav-row">
+  <button id="prevBtn" onclick="prevPage()" disabled>&#9664; Back</button>
+  <button id="nextBtn" onclick="nextPage()">Next &#9654;</button>
+</div>
+<script>
+let current = 0;
+const total = 10;
+function show(i) {
+  for (let j=0;j<total;j++) document.getElementById('p'+j).style.display = (j===i)?'block':'none';
+  document.getElementById('prevBtn').disabled = (i===0);
+  document.getElementById('nextBtn').style.display = (i===total-1)?'none':'inline-block';
+  window.scrollTo(0,0);
+}
+function nextPage() { if (current<total-1) { current++; show(current); } }
+function prevPage() { if (current>0) { current--; show(current); } }
+function pulse(el) { el.style.transform='scale(1.3)'; setTimeout(()=>el.style.transform='scale(1)',200); }
+function ding(el) {
+  pulse(el);
+  try {
+    const ctx = new (window.AudioContext||window.webkitAudioContext)();
+    const o = ctx.createOscillator(); const g = ctx.createGain();
+    o.connect(g); g.connect(ctx.destination);
+    o.frequency.value = 880; g.gain.value = 0.12;
+    o.start(); setTimeout(()=>o.stop(), 350);
+  } catch(e) {}
+}
+function checkAnswer(btn, chosen) {
+  const quiz = btn.parentElement;
+  const answer = parseInt(quiz.dataset.answer);
+  [...quiz.querySelectorAll('button')].forEach((b,i)=>{
+    b.disabled = true;
+    if (i===answer) b.classList.add('correct');
+    else if (i===chosen) b.classList.add('wrong');
+  });
+}
+</script>
+</body>
+</html>
