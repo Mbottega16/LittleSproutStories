@@ -91,8 +91,10 @@ def main() -> int:
     # Ignore files that don't affect what the service worker serves.
     # rewards-api/ is the FastAPI backend -- it deploys separately to Render
     # and is never part of the PWA cache, so a change there is not a reason
-    # to bump CACHE_VERSION.
-    IGNORE_PREFIXES = ("scripts/", "build_pipeline/", "rewards-api/", ".git", "README.md", "CLAUDE.md")
+    # to bump CACHE_VERSION. The agent docs (CLAUDE.md = AGENTS.md, HISTORY.md,
+    # .claudeignore) are never cached either.
+    IGNORE_PREFIXES = ("scripts/", "build_pipeline/", "rewards-api/", ".git", "README.md",
+                       "CLAUDE.md", "AGENTS.md", "HISTORY.md", ".claudeignore")
     site_files_changed = [
         f for f in files
         if not f.startswith(IGNORE_PREFIXES) and f != "sw.js"
