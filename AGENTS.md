@@ -94,15 +94,8 @@ To keep context clean and avoid scanning thousands of vendor/binary files, **nev
 
 *Overwrite this at the end of every session; move the previous handoff into `HISTORY.md` first.*
 
-- **Last Worked On (2026-10-17):** merged PR #8 (cork-board moderation + `admin.html`, SEO
-  cards, resource card photos); added Books 16–19 (fable adaptations); staged the community
-  center background pack in `raw_art/`. Docs restructured 2026-10-24 (no site change).
-- **Current State (2026-10-24):** `main` is live with 18 books, 6 games, the Maryland Family
-  Resources Hub and the consolidated `rewards-api/` (code-complete and tested, not deployed).
-  Open PRs: #9 (visitor flow and resource pathing), #10 (phonics scope and sequence), #11
-  (games for older kids: Word Dash, Helper Detective), #12 (character minigames), #13 (shop
-  coming soon).
+- **Last Worked On (2026-10-29):** imported community center background pack (`raw_art/LittleSprout_community-center_Backgrounds.zip`) into `assets/backgrounds/` (`center_1.jpg` .. `center_5.jpg` and `center.jpg`), completing full 5-variant coverage across all 13 locations (78 images total). Upgraded `scripts/import_background_art.py` with single-target zip/slug argument and `--skip-existing` support. Bumped `sw.js` `CACHE_VERSION` to `littlesprout-v36`.
+- **Current State (2026-10-29):** `main` is live with 18 books, 6 games, all 13 background locations with 5 variants each, zero placeholder assets, and 0 broken links across 712 verified local links. Open PRs: #9, #10, #11, #12, #13.
 - **Next Up:**
-  1. Review and merge the open feature PRs (#9–#13) one at a time, resolving the shared `index.html` / `sw.js` `CACHE_VERSION` conflicts on each merge.
-  2. Run `python scripts/import_background_art.py` on the community center background pack in `raw_art/` if new location scenes are scheduled.
-  3. Deploy `rewards-api/` to Render + connect live Stripe keys only when the owner gives the explicit spend/publish sign-off.
+  1. Review and merge the open feature PRs (#9–#13) one at a time, resolving shared `index.html` / `sw.js` `CACHE_VERSION` conflicts on each merge.
+  2. Deploy `rewards-api/` to Render + connect live Stripe keys only when the owner gives explicit spend/publish sign-off.

@@ -19,6 +19,14 @@ This repo is public, so private planning notes stay in the owner's vault, not he
 
 ---
 
+## 2026-10-29 — community center multi-variant background art import & cache bump
+
+*PC · Antigravity*
+- **Changed:** Imported `raw_art/LittleSprout_community-center_Backgrounds.zip` into `assets/backgrounds/` (`center_1.jpg` .. `center_5.jpg` and `center.jpg`). Updated `scripts/import_background_art.py` with specific zip/slug argument targeting and `--skip-existing` support. Bumped `sw.js` `CACHE_VERSION` from `littlesprout-v35` to `littlesprout-v36`. All 13 backdrop locations now have complete 5-variant coverage (78 total images).
+- **Why:** The community center was the sole remaining location running on single-variant art.
+- **Verified:** `python scripts/link_check.py` passed (712 local links verified, 0 broken). `python scripts/placeholder_audit.py` passed (0 placeholders). `cache_bump_guard.py` verified against `sw.js` v36 bump.
+- **Left open:** Review and merge the open feature PRs (#9–#13).
+
 ## 2026-10-24 — docs restructured to the uniform standard
 
 *Mac · Claude · docs only, no site change*

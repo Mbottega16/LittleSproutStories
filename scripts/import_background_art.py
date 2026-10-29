@@ -9,8 +9,10 @@ manual multi-step job.
 
 Usage (from repo root):
     python scripts/import_background_art.py            # scan raw_art/backgrounds/*.zip
+    python scripts/import_background_art.py path/to/one.zip  # or specific zip(s)/slug(s)
     python scripts/import_background_art.py --check     # report the slug->class
                                                           # mapping without writing anything
+    python scripts/import_background_art.py --skip-existing  # skip already imported variants
 
 For each location zip, writes all 5 variants as assets/backgrounds/<class>_1.jpg
 .. <class>_5.jpg, AND <class>.jpg = variant 1 (unsuffixed, for the existing
@@ -100,10 +102,34 @@ def process_image(src_path: Path) -> Image.Image:
 
 
 def main() -> int:
-    check_only = "--check" in sys.argv[1:]
+    args = sys.argv[1:]
+    check_only = "--check" in args
+    skip_existing = "--skip-existing" in args
+    args = [a for a in args if a not in ("--check", "--skip-existing")]
+
     BACKGROUNDS_DIR.mkdir(parents=True, exist_ok=True)
 
-    zips = sorted(RAW_ART_DIR.glob("*.zip"))
+    if args:
+        targets = []
+        for a in args:
+            p = Path(a)
+            if p.is_file():
+                targets.append(p)
+            elif (RAW_ART_DIR / a).is_file():
+                targets.append(RAW_ART_DIR / a)
+            elif (REPO_ROOT / "raw_art" / a).is_file():
+                targets.append(REPO_ROOT / "raw_art" / a)
+            else:
+                found = list(RAW_ART_DIR.glob(f"*{a}*.zip")) + list((REPO_ROOT / "raw_art").glob(f"*{a}*.zip"))
+                if found:
+                    targets.extend(found)
+                else:
+                    print(f"Target not found: {a}")
+        by_name = {t.name: t for t in targets}
+        zips = sorted(by_name.values())
+    else:
+        zips = sorted(RAW_ART_DIR.glob("*.zip"))
+
     if not zips:
         print(f"No zips found in {RAW_ART_DIR.relative_to(REPO_ROOT)}/")
         return 0
@@ -136,10 +162,13 @@ def main() -> int:
                 zip_before = zip_after = 0
                 for num in sorted(variants):
                     member = variants[num]
+                    out_path = BACKGROUNDS_DIR / f"{css_class}_{num}.jpg"
+                    if skip_existing and out_path.exists() and (num != "1" or (BACKGROUNDS_DIR / f"{css_class}.jpg").exists()):
+                        continue
+
                     zf.extract(member, tmp_path)
                     src = tmp_path / member
                     before = src.stat().st_size
-                    out_path = BACKGROUNDS_DIR / f"{css_class}_{num}.jpg"
 
                     if check_only:
                         continue
