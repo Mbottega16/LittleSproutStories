@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
 <link rel="icon" type="image/png" href="../assets/icons/icon-192.png">
-<link rel="canonical" href="https://edusystems-code.github.io/LittleSproutStories/books/Book1_Maya_Marcus_FireStation.html">
+<link rel="canonical" href="https://mbottega16.github.io/LittleSproutStories/books/Book1_Maya_Marcus_FireStation.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LittleSprout">
 <meta property="og:title" content="Maya &amp; Marcus Visit the Fire Station | Little Sprout Stories">
 <meta property="og:description" content="Interactive phonics storybooks and feelings games for early readers ages 4–7, starring Maya, Marcus, Sophie, and James.">
-<meta property="og:url" content="https://edusystems-code.github.io/LittleSproutStories/books/Book1_Maya_Marcus_FireStation.html">
-<meta property="og:image" content="https://edusystems-code.github.io/LittleSproutStories/assets/og-share.png">
+<meta property="og:url" content="https://mbottega16.github.io/LittleSproutStories/books/Book1_Maya_Marcus_FireStation.html">
+<meta property="og:image" content="https://mbottega16.github.io/LittleSproutStories/assets/og-share.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Maya &amp; Marcus Visit the Fire Station | Little Sprout Stories">
 <meta name="twitter:description" content="Interactive phonics storybooks and feelings games for early readers ages 4–7, starring Maya, Marcus, Sophie, and James.">
-<meta name="twitter:image" content="https://edusystems-code.github.io/LittleSproutStories/assets/og-share.png">
+<meta name="twitter:image" content="https://mbottega16.github.io/LittleSproutStories/assets/og-share.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#5BA672">
-<title>Maya & Marcus Visit the Fire Station | Little Sprout Stories</title>
+<title>Maya &amp; Marcus Visit the Fire Station | Little Sprout Stories</title>
 <link rel="manifest" href="../manifest.json">
 <style>
 :root { --sprout:#5BA672; --sprout-dark:#3C7A52; --cream:#FBF6EC; --ink:#2b2b2b; }
@@ -38,39 +38,9 @@ body.easyread .text-a, body.easyread .text-b { line-height:1.95; }
 .cover { text-align:center; }
 .banner { background:var(--sprout); color:#fff; display:inline-block; padding:6px 18px; border-radius:20px; font-size:14px; margin-bottom:10px; }
 h1 { color:var(--sprout); font-size:28px; }
-.stage { position:relative; min-height:320px; border-radius:16px; margin:16px 0; display:flex; align-items:flex-end; justify-content:center; gap:10px; padding:16px; overflow:hidden; background-size:cover; background-position:center bottom; }
-/* All twelve locations now have real illustrated backgrounds (assets/backgrounds/).
-   Each keeps its old flat-gradient rule as the paint-before-image-loads/fallback color.
-   backdrop-classroom is Mr. Rodriguez's specific room -- used only on the one page across
-   every book that actually features him as the on-page helper (Book5 p2). Everywhere else
-   School-related (including Book5's own other pages and Book15's classroom-flavored recap)
-   stays on backdrop-school's general room, per explicit instruction. */
-.backdrop-barbershop { background-color:#e8f4dc; background-image:url('../assets/backgrounds/barbershop.jpg'); }
-.backdrop-garden { background-color:#bfe3fa; background-image:url('../assets/backgrounds/garden.jpg'); }
-.backdrop-repair { background-color:#f3ead6; background-image:url('../assets/backgrounds/repair.jpg'); }
-.backdrop-street { background-color:#bfe3ff; background-image:url('../assets/backgrounds/street.jpg'); }
-.backdrop-firestation { background-color:#ffd9a0; background-image:url('../assets/backgrounds/firestation.jpg'); }
-.backdrop-police { background-color:#d9eefb; background-image:url('../assets/backgrounds/police.jpg'); }
-.backdrop-classroom { background-color:#fff1cc; background-image:url('../assets/backgrounds/classroom.jpg'); }
-.backdrop-library { background-color:#f3ead6; background-image:url('../assets/backgrounds/library.jpg'); }
-.backdrop-doctor { background-color:#fce0ee; background-image:url('../assets/backgrounds/doctor.jpg'); }
-.backdrop-center { background-color:#fce0ee; background-image:url('../assets/backgrounds/center.jpg'); }
-.backdrop-school { background-color:#fff1cc; background-image:url('../assets/backgrounds/school.jpg'); }
-.backdrop-bakery { background-color:#ffe3cc; background-image:url('../assets/backgrounds/bakery.jpg'); }
-.backdrop-postoffice { background-color:#d9eefb; background-image:url('../assets/backgrounds/postoffice.jpg'); }
-img.char { height:220px; object-fit:contain; }
-
-.hotspot { position:absolute; top:20px; font-size:40px; cursor:pointer; animation:bob 2s ease-in-out infinite;
-  transition:transform .2s; background:none; border:none; padding:4px; line-height:1; }
-.hotspot.left { left:20px; }
-.hotspot.right { right:20px; }
-.hotspot.mid { left:50%; transform:translateX(-50%); }
-.hotspot.right2 { right:70px; top:44px; }
-@keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
-@media (prefers-reduced-motion: reduce) { .hotspot { animation:none; } }
-
-.helper-slot { font-size:60px; text-align:center; }
-.helper-label { font-size:14px; background:#fff; border-radius:8px; padding:2px 8px; }
+.subtitle { font-size:17px; font-weight:bold; color:var(--sprout-dark); margin:2px 0 0; }
+.art { margin:16px 0; border-radius:16px; overflow:hidden; }
+.art img { width:100%; height:auto; display:block; }
 
 .readaloud { display:inline-flex; align-items:center; gap:8px; background:#fff; border:2px solid var(--sprout);
   color:var(--sprout-dark); border-radius:22px; padding:8px 16px; font-size:15px; font-weight:bold;
@@ -114,9 +84,6 @@ img.char { height:220px; object-fit:contain; }
 .page-wrap.turn-in .page { animation: pageTurnIn .32s cubic-bezier(.2,.8,.3,1) both; }
 @keyframes pageTurnIn { from { opacity:0; transform:translateY(10px) scale(.97); } to { opacity:1; transform:translateY(0) scale(1); } }
 
-.hotspot.tapped { animation: hotspotPop .4s ease; }
-@keyframes hotspotPop { 0% { transform:scale(1) rotate(0); } 40% { transform:scale(1.45) rotate(-10deg); } 100% { transform:scale(1) rotate(0); } }
-
 .start-btn, .nav-row button, .readaloud, .topbar button { transition:transform .12s ease; }
 .start-btn:active, .nav-row button:not(:disabled):active, .readaloud:active, .topbar button:active { transform:scale(.93); }
 
@@ -133,7 +100,7 @@ img.char { height:220px; object-fit:contain; }
 @keyframes confettiFall { to { transform:translateY(110vh) rotate(560deg); opacity:.6; } }
 
 @media (prefers-reduced-motion: reduce) {
-  .page-wrap.turn-in .page, .hotspot.tapped, .quiz button.correct, .quiz button.wrong, .badge.celebrate { animation:none; }
+  .page-wrap.turn-in .page, .quiz button.correct, .quiz button.wrong, .badge.celebrate { animation:none; }
   .start-btn:active, .nav-row button:not(:disabled):active, .readaloud:active, .topbar button:active { transform:none; }
   .confetti-piece { display:none; }
 }
@@ -155,63 +122,81 @@ img.char { height:220px; object-fit:contain; }
 <section class="page cover">
   <div class="banner">Little Sprout Stories</div>
   <h1>Maya &amp; Marcus<br>Visit the Fire Station</h1>
-  <div class="stage backdrop-firestation">
-    <img class="char" src="../assets/sprites/maya_happy_waving.png" alt="Maya" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_happy_waving.png" alt="Marcus" loading="lazy">
-  </div>
+  <p class="subtitle">A story about feeling nervous — and being brave</p>
+  <div class="art"><img src="../assets/book1-cover.webp" alt="Maya &amp; Marcus Visit the Fire Station — cover art" fetchpriority="high"></div>
   <button class="start-btn" type="button" onclick="nextPage()">Start Reading &#9654;</button>
 </section></div>
 <div class="page-wrap" id="p1" style="display:none">
 <section class="page">
-  <div class="stage backdrop-street">
-    <img class="char" src="../assets/sprites/maya_happy_pointing.png" alt="Maya" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_surprised_looking.png" alt="Marcus" loading="lazy">
-    <button class="hotspot left" onclick="pulse(this)" aria-label="Tap to play" type="button">&#128658;</button>
-  </div>
+  <div class="art"><img src="../assets/book1-page1.webp" alt="Illustration for page 1 of Maya &amp; Marcus Visit the Fire Station" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">Maya and Marcus were walking to school when they saw something exciting &mdash; a big red fire truck parked outside the fire station!</div>
-  <div class="text-b">Maya and Marcus see a big red truck.</div>
+  <div class="text-a">Maya and Marcus were on their way to school when something enormous and gleaming stopped them mid-step — a fire truck, red as a ripe apple, parked outside the fire station with its ladders shining in the morning sun. “Whoa,” breathed Marcus. “It’s even bigger up close.”</div>
+  <div class="text-b">Maya and Marcus see a big red fire truck.</div>
 </section></div>
 <div class="page-wrap" id="p2" style="display:none">
 <section class="page">
-  <div class="stage backdrop-firestation">
-    <img class="char" src="../assets/sprites/maya_happy_standing.png" alt="Maya" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_happy_standing.png" alt="Marcus" loading="lazy">
-    <div class="helper-slot" role="img" aria-label="Alex">&#128658;&#8205;<div class="helper-label">Alex</div></div>
-  </div>
+  <div class="art"><img src="../assets/book1-page2.webp" alt="Illustration for page 2 of Maya &amp; Marcus Visit the Fire Station" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">&ldquo;Can we go look?&rdquo; asked Marcus. A firefighter named Alex waved them over with a big smile.</div>
-  <div class="text-b">Alex claps. &ldquo;Come in!&rdquo; said Alex.</div>
+  <div class="text-a">“Can we look?” Marcus called. The station door rolled up, and out stepped a firefighter with a grin as wide as the doorway. “You sure can,” he said. “I’m Alex. Welcome to our station — would you like to see what a firefighter’s day is really like?”</div>
+  <div class="text-b">Alex says, “Come in!”</div>
 </section></div>
 <div class="page-wrap" id="p3" style="display:none">
 <section class="page">
-  <div class="stage backdrop-firestation">
-    <img class="char" src="../assets/sprites/maya_happy_reaching.png" alt="Maya" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_happy_pointing.png" alt="Marcus" loading="lazy">
-    <button class="hotspot right" onclick="pulse(this)" aria-label="Tap to play" type="button">&#9937;</button>
-    <button class="hotspot right2" onclick="pulse(this)" aria-label="Tap to play" type="button">&#129519;</button>
-  </div>
+  <div class="art"><img src="../assets/book1-page3.webp" alt="Illustration for page 3 of Maya &amp; Marcus Visit the Fire Station" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">Alex showed them the fire truck, the big hose, and the shiny helmets. &ldquo;I help keep our town safe,&rdquo; said Alex.</div>
-  <div class="text-b">Alex has a hat. Alex has a bag.</div>
+  <div class="text-a">“Before anything else,” said Alex, “we check our tools — every single morning.” He tested his radio, clicked his flashlight on and off, and lifted the heavy air tank that helps firefighters breathe through smoke. “A firefighter’s first job isn’t fighting fires. It’s making sure everything works before we ever need it.”</div>
+  <div class="text-b">Alex checks his tools every day.</div>
 </section></div>
 <div class="page-wrap" id="p4" style="display:none">
 <section class="page">
-  <div class="stage backdrop-firestation">
-    <img class="char" src="../assets/sprites/maya_neutral_looking.png" alt="Maya" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_surprised_hands.png" alt="Marcus" loading="lazy">
-  </div>
+  <div class="art"><img src="../assets/book1-page4.webp" alt="Illustration for page 4 of Maya &amp; Marcus Visit the Fire Station" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">&ldquo;Want to hear what the fire alarm sounds like?&rdquo; asked Alex. Marcus&rsquo;s tummy felt jumpy. &ldquo;It&rsquo;s loud,&rdquo; he whispered. &ldquo;I don&rsquo;t know if I like loud.&rdquo;</div>
-  <div class="text-b">The bell rings. Marcus feels bad.</div>
+  <div class="text-a">Alex showed them the great coiled hoses, thick as tree trunks, and the nozzle that shapes the water into a powerful stream. He let them hold a helmet — surprisingly heavy! — and pointed up at the ladder that could stretch taller than three giraffes. “Every tool has a job,” Alex said, “and we practice until using them feels easy.”</div>
+  <div class="text-b">Alex has a hose, a ladder, and a helmet.</div>
+</section></div>
+<div class="page-wrap" id="p5" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book1-page5.webp" alt="Illustration for page 5 of Maya &amp; Marcus Visit the Fire Station" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">Out in the yard, a firefighter was spraying arcs of water at a row of orange cones — splash, splash, splash — knocking them down one by one. “We train even when there’s no fire,” Alex explained, “the way you practice reading even when it’s not a test. When a real emergency comes, our hands already know what to do.”</div>
+  <div class="text-b">Firefighters practice to be ready.</div>
+</section></div>
+<div class="page-wrap" id="p6" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book1-page6.webp" alt="Illustration for page 6 of Maya &amp; Marcus Visit the Fire Station" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">Inside, the station smelled of toast and coffee. There was a kitchen with a long table, beds in a quiet room, and a list of chores on the wall — cooking, sweeping, washing the truck. “We live here on our work days,” said Alex, “so the crew becomes like a second family. But even at dinner, even at midnight, we must always, always be ready to go.”</div>
+  <div class="text-b">The fire station is like a home.</div>
+</section></div>
+<div class="page-wrap" id="p7" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book1-page7.webp" alt="Illustration for page 7 of Maya &amp; Marcus Visit the Fire Station" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">“The best fire,” Alex told them, kneeling down, “is the one that never starts.” He pressed the button on a smoke alarm — chirp! — and taught them the rules: if the alarm sounds, get out and stay out, and run to your family’s meeting spot. “Part of my job is teaching kids like you, so nobody gets hurt at all.”</div>
+  <div class="text-b">If the alarm beeps, go out and stay out.</div>
+</section></div>
+<div class="page-wrap" id="p8" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book1-page8.webp" alt="Illustration for page 8 of Maya &amp; Marcus Visit the Fire Station" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">“Would you like to hear what our fire alarm sounds like?” Alex asked gently. Marcus’s tummy went jumpy, like it was full of bouncing grasshoppers. “It’s loud,” he whispered. “I don’t know if I like loud.”</div>
+  <div class="text-b">The bell rings. Marcus feels scared.</div>
   <div class="quiz" data-answer="1" role="group" aria-label="Question">
     <p class="quiz-q">How does Marcus feel?</p>
     <div class="quiz-opts">
@@ -222,79 +207,68 @@ img.char { height:220px; object-fit:contain; }
     <p class="quiz-feedback" role="status" aria-live="polite"></p>
   </div>
 </section></div>
-<div class="page-wrap" id="p5" style="display:none">
+<div class="page-wrap" id="p9" style="display:none">
 <section class="page">
-  <div class="stage backdrop-firestation">
-    <img class="char" src="../assets/sprites/maya_neutral_pointing.png" alt="Maya" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_surprised_standing.png" alt="Marcus" loading="lazy">
-  </div>
+  <div class="art"><img src="../assets/book1-page9.webp" alt="Illustration for page 9 of Maya &amp; Marcus Visit the Fire Station" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">Maya took Marcus&rsquo;s hand. &ldquo;It&rsquo;s okay to feel nervous,&rdquo; she said. Alex nodded. &ldquo;You can cover your ears first, and we&rsquo;ll count to three together.&rdquo;</div>
-  <div class="text-b">Maya holds Marcus&rsquo;s hand. Maya helps Marcus.</div>
+  <div class="text-a">Maya took Marcus’s hand and gave it a warm squeeze. “It’s okay to feel nervous,” she said. Alex nodded kindly. “Here’s our plan: cover your ears first, stand right here beside me, and we’ll count to three together. Brave doesn’t mean not scared. Brave means having a plan — and a friend.”</div>
+  <div class="text-b">Maya holds Marcus’s hand. Maya helps Marcus.</div>
 </section></div>
-<div class="page-wrap" id="p6" style="display:none">
+<div class="page-wrap" id="p10" style="display:none">
 <section class="page">
-  <div class="stage backdrop-firestation">
-    <img class="char" src="../assets/sprites/maya_neutral_standing.png" alt="Maya" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_surprised_hands.png" alt="Marcus" loading="lazy">
-    <button class="hotspot mid" onclick="ding(this)" aria-label="Tap to play" type="button">&#128276;</button>
-  </div>
+  <div class="art"><img src="../assets/book1-page10.webp" alt="Illustration for page 10 of Maya &amp; Marcus Visit the Fire Station" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">Alex counted, &ldquo;One, two, three!&rdquo; The alarm rang &mdash; loud, but only for a second. Marcus covered his ears and grinned. &ldquo;That wasn&rsquo;t so bad!&rdquo;</div>
+  <div class="text-a">Marcus pressed his hands over his ears. “One…” said Alex. “Two…” said Maya. “THREE!” — BRRRING! The alarm sang out, bold and brassy, for one whole second… and then it stopped. Marcus peeked through his fingers. His heart was thumping, but his feet felt steady. “That wasn’t so bad!”</div>
   <div class="text-b">One, two, three! Marcus did it.</div>
-</section></div>
-<div class="page-wrap" id="p7" style="display:none">
-<section class="page">
-  <div class="stage backdrop-firestation">
-    <img class="char" src="../assets/sprites/maya_happy_giving.png" alt="Maya" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_happy_jumping.png" alt="Marcus" loading="lazy">
-  </div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
-  </button>
-  <div class="text-a">&ldquo;I did it!&rdquo; said Marcus. &ldquo;Being a little nervous first is okay,&rdquo; said Alex, &ldquo;as long as you have a friend and a helper nearby.&rdquo;</div>
-  <div class="text-b">Marcus did it! Marcus feels glad.</div>
-  <div class="quiz" data-answer="0" role="group" aria-label="Question">
-    <p class="quiz-q">What helped Marcus feel brave?</p>
+  <div class="quiz" data-answer="2" role="group" aria-label="Question">
+    <p class="quiz-q">How many times did Marcus count?</p>
     <div class="quiz-opts">
-      <button type="button" onclick="checkAnswer(this,0)">A friend and a plan</button>
-      <button type="button" onclick="checkAnswer(this,1)">A snack</button>
-      <button type="button" onclick="checkAnswer(this,2)">Running away</button>
+      <button type="button" onclick="checkAnswer(this,0)">One time</button>
+      <button type="button" onclick="checkAnswer(this,1)">Two times</button>
+      <button type="button" onclick="checkAnswer(this,2)">Three times</button>
     </div>
     <p class="quiz-feedback" role="status" aria-live="polite"></p>
   </div>
 </section></div>
-<div class="page-wrap" id="p8" style="display:none">
+<div class="page-wrap" id="p11" style="display:none">
 <section class="page">
-  <div class="stage backdrop-firestation">
-    <img class="char" src="../assets/sprites/maya_happy_waving.png" alt="Maya" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_happy_sitting.png" alt="Marcus" loading="lazy">
-    <div class="helper-slot" role="img" aria-label="Alex">&#128658;&#8205;<div class="helper-label">Alex</div></div>
-  </div>
+  <div class="art"><img src="../assets/book1-page11.webp" alt="Illustration for page 11 of Maya &amp; Marcus Visit the Fire Station" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">Before they left, Alex let them sit in the driver&rsquo;s seat of the fire truck. Maya and Marcus waved goodbye, promising to visit again soon.</div>
-  <div class="text-b">Maya and Marcus clap. &ldquo;Bye, Alex!&rdquo;</div>
+  <div class="text-a">“I did it!” Marcus cheered. Alex laughed. “You know what my favorite part of this job is? It isn’t the truck, and it isn’t the siren. It’s this — helping our town feel safe, and watching somebody discover they’re braver than they thought.” He looked at Marcus. “Somebody like you.”</div>
+  <div class="text-b">Marcus did it! Marcus feels glad.</div>
 </section></div>
-<div class="page-wrap" id="p9" style="display:none">
+<div class="page-wrap" id="p12" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book1-page12.webp" alt="Illustration for page 12 of Maya &amp; Marcus Visit the Fire Station" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">Before they left, Alex lifted them up, up, up into the driver’s seat of the great red truck, where the steering wheel felt as wide as a bicycle tire. Down below, the whole crew waved. Maya and Marcus waved back until their arms ached — two small firefighters-for-a-day, already dreaming of their next visit.</div>
+  <div class="text-b">Maya and Marcus clap. “Bye, Alex!”</div>
+</section></div>
+<div class="page-wrap" id="p13" style="display:none">
 <section class="page end-screen">
-  <div class="badge"><span aria-hidden="true">&#127941;</span><div>Fire Station<br>Explorer</div></div>
+  <div class="badge"><span aria-hidden="true">&#127941;</span><div>Fire Station Explorer</div></div>
   <h2>Great reading!</h2>
   <p class="saved-note" id="savedNote"></p>
   <details class="guide">
     <summary>For Grown-Ups</summary>
     <p><b>Feeling/skill:</b> Naming nervousness and using a friend + a plan to move through it.</p>
-    <p><b>Ask your child:</b> Has a loud sound ever surprised you? What helped you feel okay again?</p>
-    <p><b>Try this:</b> Practice a &ldquo;count to three&rdquo; calming breath together before a loud or new experience this week.</p>
+    <p><b>Ask your child:</b> What do you do when a sound is too loud?</p>
+    <p><b>Try this:</b> Count to three while covering your ears, then uncover slowly.</p>
+    <p><b>Words to grow on:</b> gleaming, enormous, coiled, stream, practice, emergency, crew, steady, brave. Point at the tools as you name them — hose, nozzle, ladder, air tank, radio, helmet.</p>
+    <p><b>The bigger picture:</b> Firefighters do much more than fight fires — they check equipment daily, train constantly, live at the station in shifts, teach fire safety, and keep their community calm and prepared.</p>
     <p class="standards">Standards: RL.K.1, SL.K.3</p>
   </details>
   <div class="end-btns">
     <button class="start-btn" type="button" onclick="restart()">Read Again &#9654;</button>
+    <a class="start-btn ghost" href="Book1_Maya_Marcus_FireStation.pdf" download>&#128196; Download the printable PDF</a>
     <a class="start-btn ghost" href="../index.html">&#8592; More books</a>
   </div>
 </section></div>
@@ -311,7 +285,7 @@ const BOOK_ID = "Book1_Maya_Marcus_FireStation";
 const BOOK_TITLE = "Maya & Marcus Visit the Fire Station";
 const BOOK_BADGE = "Fire Station Explorer";
 let current = 0;
-const total = 10;
+const total = 14;
 
 /* ---------- progress: saved on this device only ---------- */
 function loadProgress() {
@@ -380,7 +354,6 @@ function tone(freq, dur, type, vol) {
     o.start(); o.stop(ctx.currentTime + dur);
   } catch(e) {}
 }
-function sfxPop() { tone(520, .12, 'sine', .12); }
 function sfxWhoosh() { tone(220, .16, 'sine', .05); setTimeout(function(){ tone(340, .12, 'sine', .04); }, 55); }
 function sfxSuccess() { tone(523, .12, 'sine', .1); setTimeout(function(){ tone(659, .12, 'sine', .1); }, 90); setTimeout(function(){ tone(784, .2, 'sine', .12); }, 180); }
 function sfxOops() { tone(220, .18, 'sine', .08); }
@@ -425,16 +398,6 @@ document.addEventListener('keydown', function(e) {
   else if (e.key === 'Escape') stopSpeech();
 });
 
-/* ---------- hotspots ---------- */
-function pulse(el) {
-  sfxPop();
-  el.classList.remove('tapped'); void el.offsetWidth; el.classList.add('tapped');
-}
-function ding(el) {
-  el.classList.remove('tapped'); void el.offsetWidth; el.classList.add('tapped');
-  tone(880, .35, 'sine', .12);
-}
-
 /* ---------- quiz ---------- */
 function checkAnswer(btn, chosen) {
   const quiz = btn.closest('.quiz');
@@ -469,13 +432,13 @@ function toggleEasy() {
 function toggleMute() {
   const d = loadProgress(); d.muted = !d.muted; saveProgress(d);
   const b = document.getElementById('muteBtn');
-  b.textContent = d.muted ? '🔇' : '🔊';
+  b.textContent = d.muted ? '\uD83D\uDD07' : '\uD83D\uDD0A';
   b.setAttribute('aria-pressed', d.muted ? 'true' : 'false');
 }
 (function initMute() {
   if (loadProgress().muted) {
     const b = document.getElementById('muteBtn');
-    b.textContent = '🔇';
+    b.textContent = '\uD83D\uDD07';
     b.setAttribute('aria-pressed', 'true');
   }
 })();
