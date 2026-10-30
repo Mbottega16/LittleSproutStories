@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
 <link rel="icon" type="image/png" href="../assets/icons/icon-192.png">
-<link rel="canonical" href="https://edusystems-code.github.io/LittleSproutStories/books/Book11_AllFour_CommunityCenter.html">
+<link rel="canonical" href="https://mbottega16.github.io/LittleSproutStories/books/Book11_AllFour_CommunityCenter.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LittleSprout">
-<meta property="og:title" content="All Four Visit the Community Center | Little Sprout Stories">
+<meta property="og:title" content="All Four Friends Visit the Community Center | Little Sprout Stories">
 <meta property="og:description" content="Interactive phonics storybooks and feelings games for early readers ages 4–7, starring Maya, Marcus, Sophie, and James.">
-<meta property="og:url" content="https://edusystems-code.github.io/LittleSproutStories/books/Book11_AllFour_CommunityCenter.html">
-<meta property="og:image" content="https://edusystems-code.github.io/LittleSproutStories/assets/og-share.png">
+<meta property="og:url" content="https://mbottega16.github.io/LittleSproutStories/books/Book11_AllFour_CommunityCenter.html">
+<meta property="og:image" content="https://mbottega16.github.io/LittleSproutStories/assets/og-share.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="All Four Visit the Community Center | Little Sprout Stories">
+<meta name="twitter:title" content="All Four Friends Visit the Community Center | Little Sprout Stories">
 <meta name="twitter:description" content="Interactive phonics storybooks and feelings games for early readers ages 4–7, starring Maya, Marcus, Sophie, and James.">
-<meta name="twitter:image" content="https://edusystems-code.github.io/LittleSproutStories/assets/og-share.png">
+<meta name="twitter:image" content="https://mbottega16.github.io/LittleSproutStories/assets/og-share.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#5BA672">
-<title>All Four Visit the Community Center | Little Sprout Stories</title>
+<title>All Four Friends Visit the Community Center | Little Sprout Stories</title>
 <link rel="manifest" href="../manifest.json">
 <style>
 :root { --sprout:#5BA672; --sprout-dark:#3C7A52; --cream:#FBF6EC; --ink:#2b2b2b; }
@@ -38,39 +38,9 @@ body.easyread .text-a, body.easyread .text-b { line-height:1.95; }
 .cover { text-align:center; }
 .banner { background:var(--sprout); color:#fff; display:inline-block; padding:6px 18px; border-radius:20px; font-size:14px; margin-bottom:10px; }
 h1 { color:var(--sprout); font-size:28px; }
-.stage { position:relative; min-height:320px; border-radius:16px; margin:16px 0; display:flex; align-items:flex-end; justify-content:center; gap:10px; padding:16px; overflow:hidden; background-size:cover; background-position:center bottom; }
-/* All twelve locations now have real illustrated backgrounds (assets/backgrounds/).
-   Each keeps its old flat-gradient rule as the paint-before-image-loads/fallback color.
-   backdrop-classroom is Mr. Rodriguez's specific room -- used only on the one page across
-   every book that actually features him as the on-page helper (Book5 p2). Everywhere else
-   School-related (including Book5's own other pages and Book15's classroom-flavored recap)
-   stays on backdrop-school's general room, per explicit instruction. */
-.backdrop-barbershop { background-color:#e8f4dc; background-image:url('../assets/backgrounds/barbershop.jpg'); }
-.backdrop-garden { background-color:#bfe3fa; background-image:url('../assets/backgrounds/garden.jpg'); }
-.backdrop-repair { background-color:#f3ead6; background-image:url('../assets/backgrounds/repair.jpg'); }
-.backdrop-street { background-color:#bfe3ff; background-image:url('../assets/backgrounds/street.jpg'); }
-.backdrop-firestation { background-color:#ffd9a0; background-image:url('../assets/backgrounds/firestation.jpg'); }
-.backdrop-police { background-color:#d9eefb; background-image:url('../assets/backgrounds/police.jpg'); }
-.backdrop-classroom { background-color:#fff1cc; background-image:url('../assets/backgrounds/classroom.jpg'); }
-.backdrop-library { background-color:#f3ead6; background-image:url('../assets/backgrounds/library.jpg'); }
-.backdrop-doctor { background-color:#fce0ee; background-image:url('../assets/backgrounds/doctor.jpg'); }
-.backdrop-center { background-color:#fce0ee; background-image:url('../assets/backgrounds/center.jpg'); }
-.backdrop-school { background-color:#fff1cc; background-image:url('../assets/backgrounds/school.jpg'); }
-.backdrop-bakery { background-color:#ffe3cc; background-image:url('../assets/backgrounds/bakery.jpg'); }
-.backdrop-postoffice { background-color:#d9eefb; background-image:url('../assets/backgrounds/postoffice.jpg'); }
-img.char { height:220px; object-fit:contain; }
-
-.hotspot { position:absolute; top:20px; font-size:40px; cursor:pointer; animation:bob 2s ease-in-out infinite;
-  transition:transform .2s; background:none; border:none; padding:4px; line-height:1; }
-.hotspot.left { left:20px; }
-.hotspot.right { right:20px; }
-.hotspot.mid { left:50%; transform:translateX(-50%); }
-.hotspot.right2 { right:70px; top:44px; }
-@keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
-@media (prefers-reduced-motion: reduce) { .hotspot { animation:none; } }
-
-.helper-slot { font-size:60px; text-align:center; }
-.helper-label { font-size:14px; background:#fff; border-radius:8px; padding:2px 8px; }
+.subtitle { font-size:17px; font-weight:bold; color:var(--sprout-dark); margin:2px 0 0; }
+.art { margin:16px 0; border-radius:16px; overflow:hidden; }
+.art img { width:100%; height:auto; display:block; }
 
 .readaloud { display:inline-flex; align-items:center; gap:8px; background:#fff; border:2px solid var(--sprout);
   color:var(--sprout-dark); border-radius:22px; padding:8px 16px; font-size:15px; font-weight:bold;
@@ -114,9 +84,6 @@ img.char { height:220px; object-fit:contain; }
 .page-wrap.turn-in .page { animation: pageTurnIn .32s cubic-bezier(.2,.8,.3,1) both; }
 @keyframes pageTurnIn { from { opacity:0; transform:translateY(10px) scale(.97); } to { opacity:1; transform:translateY(0) scale(1); } }
 
-.hotspot.tapped { animation: hotspotPop .4s ease; }
-@keyframes hotspotPop { 0% { transform:scale(1) rotate(0); } 40% { transform:scale(1.45) rotate(-10deg); } 100% { transform:scale(1) rotate(0); } }
-
 .start-btn, .nav-row button, .readaloud, .topbar button { transition:transform .12s ease; }
 .start-btn:active, .nav-row button:not(:disabled):active, .readaloud:active, .topbar button:active { transform:scale(.93); }
 
@@ -133,7 +100,7 @@ img.char { height:220px; object-fit:contain; }
 @keyframes confettiFall { to { transform:translateY(110vh) rotate(560deg); opacity:.6; } }
 
 @media (prefers-reduced-motion: reduce) {
-  .page-wrap.turn-in .page, .hotspot.tapped, .quiz button.correct, .quiz button.wrong, .badge.celebrate { animation:none; }
+  .page-wrap.turn-in .page, .quiz button.correct, .quiz button.wrong, .badge.celebrate { animation:none; }
   .start-btn:active, .nav-row button:not(:disabled):active, .readaloud:active, .topbar button:active { transform:none; }
   .confetti-piece { display:none; }
 }
@@ -155,53 +122,63 @@ img.char { height:220px; object-fit:contain; }
 <section class="page cover">
   <div class="banner">Little Sprout Stories</div>
   <h1>All Four Friends<br>Visit the Community Center</h1>
-  <div class="stage backdrop-center">
-    <img class="char" src="../assets/sprites/maya_happy_waving.png" alt="Maya" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_happy_waving.png" alt="Marcus" loading="lazy">
-    <img class="char" src="../assets/sprites/sophie_happy_waving.png" alt="Sophie" loading="lazy">
-    <img class="char" src="../assets/sprites/james_happy_waving.png" alt="James" loading="lazy">
-  </div>
+  <p class="subtitle">A story about feeling impatient — and making the wait visible</p>
+  <div class="art"><img src="../assets/book11-cover.webp" alt="All Four Friends Visit the Community Center — cover art" fetchpriority="high"></div>
   <button class="start-btn" type="button" onclick="nextPage()">Start Reading &#9654;</button>
 </section></div>
 <div class="page-wrap" id="p1" style="display:none">
 <section class="page">
-  <div class="stage backdrop-center">
-    <img class="char" src="../assets/sprites/maya_happy_walking.png" alt="Maya" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_happy_walking.png" alt="Marcus" loading="lazy">
-    <img class="char" src="../assets/sprites/sophie_happy_running.png" alt="Sophie" loading="lazy">
-    <img class="char" src="../assets/sprites/james_happy_walking.png" alt="James" loading="lazy">
-  </div>
+  <div class="art"><img src="../assets/book11-page1.webp" alt="Illustration for page 1 of All Four Friends Visit the Community Center" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">All four friends came to the community center for a favorite group game.</div>
-  <div class="text-b">Four friends play a game.</div>
+  <div class="text-a">All four friends tumbled through the community center doors in one noisy, giggly bunch — Maya, Marcus, Sophie, and James — because today was the day of their favorite group game, the one they talked about all week. “We’re here! We’re here!” announced Sophie, in case the whole building hadn’t noticed.</div>
+  <div class="text-b">Four friends come to play a game.</div>
 </section></div>
 <div class="page-wrap" id="p2" style="display:none">
 <section class="page">
-  <div class="stage backdrop-center">
-    <img class="char" src="../assets/sprites/sophie_happy_standing.png" alt="Sophie" loading="lazy">
-    <div class="helper-slot" role="img" aria-label="Nurse Aisha">&#128105;&#8205;&#9877;&#65039;<div class="helper-label">Nurse Aisha</div></div>
-    <img class="char" src="../assets/sprites/james_happy_standing.png" alt="James" loading="lazy">
-  </div>
+  <div class="art"><img src="../assets/book11-page2.webp" alt="Illustration for page 2 of All Four Friends Visit the Community Center" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">Nurse Aisha explained the rules &mdash; everyone would get a turn, one at a time.</div>
+  <div class="text-a">Nurse Aisha met them with the game box hugged to her chest and a smile for every single one of them. “Welcome, players! Here is our rule, and it is a fair one: everyone gets a turn, one at a time, and everybody cheers for everybody.” Four heads nodded — some of them more patiently than others.</div>
   <div class="text-b">Each kid gets a turn.</div>
 </section></div>
 <div class="page-wrap" id="p3" style="display:none">
 <section class="page">
-  <div class="stage backdrop-center">
-    <img class="char" src="../assets/sprites/james_happy_jumping.png" alt="James" loading="lazy">
-    <img class="char" src="../assets/sprites/sophie_frustrated_hands.png" alt="Sophie" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_neutral_standing.png" alt="Marcus" loading="lazy">
-  </div>
+  <div class="art"><img src="../assets/book11-page3.webp" alt="Illustration for page 3 of All Four Friends Visit the Community Center" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">James went first, and it was hard for Sophie to wait for her turn to come.</div>
-  <div class="text-b">Sophie feels mad.</div>
+  <div class="text-a">“This room didn’t wake up like this by magic,” Aisha laughed. “The center team comes early.” She showed them: the great ring of keys that unlocks the doors, the sign-in sheet where every visitor writes their name, the chairs set in a friendly circle, and the game box — opened and counted, piece by piece, so nobody’s turn would be spoiled by a missing one. On the shelf sat the first-aid kit, checked and ready, just in case. “Our first job,” said Aisha, “is making the room ready before the people arrive.”</div>
+  <div class="text-b">Aisha gets the room ready.</div>
+</section></div>
+<div class="page-wrap" id="p4" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book11-page4.webp" alt="Illustration for page 4 of All Four Friends Visit the Community Center" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">Aisha read the first name. “James!” James stepped up and took the very first turn, careful and proud. Sophie clapped for him — clap, clap — and then she looked at the three friends still waiting, and the whole long game still to go, and her toes began to bounce.</div>
+  <div class="text-b">James takes the first turn.</div>
+</section></div>
+<div class="page-wrap" id="p5" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book11-page5.webp" alt="Illustration for page 5 of All Four Friends Visit the Community Center" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">While the turns went on, Aisha pointed through the doorways, and the center was humming in every direction. In one room, grandparents stretched and swayed in exercise class. In another, big kids bent over homework at the long tables. Somewhere down the hall, babies and their grown-ups were singing a wiggly song. “Babies, grandparents, and everybody in between,” said Aisha. “A community center belongs to the whole community — that’s the whole point of it.”</div>
+  <div class="text-b">The center is for everyone.</div>
+</section></div>
+<div class="page-wrap" id="p6" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book11-page6.webp" alt="Illustration for page 6 of All Four Friends Visit the Community Center" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">Marcus took his turn. Maya took her turn. The game went on and on, and Sophie’s turn stayed far away, like a cookie on a very high shelf. “It feels like forever,” Sophie announced to the ceiling, bouncing on her toes — bounce, bounce, bounce — as if bouncing could make time hurry up. It could not.</div>
+  <div class="text-b">Waiting feels long.</div>
   <div class="quiz" data-answer="1" role="group" aria-label="Question">
     <p class="quiz-q">How does Sophie feel waiting?</p>
     <div class="quiz-opts">
@@ -212,56 +189,41 @@ img.char { height:220px; object-fit:contain; }
     <p class="quiz-feedback" role="status" aria-live="polite"></p>
   </div>
 </section></div>
-<div class="page-wrap" id="p4" style="display:none">
-<section class="page">
-  <div class="stage backdrop-center">
-    <img class="char" src="../assets/sprites/sophie_frustrated_jumping.png" alt="Sophie" loading="lazy">
-    <img class="char" src="../assets/sprites/maya_neutral_looking.png" alt="Maya" loading="lazy">
-  </div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
-  </button>
-  <div class="text-a">&ldquo;It feels like forever,&rdquo; Sophie said, bouncing on her toes.</div>
-  <div class="text-b">Waiting feels long.</div>
-</section></div>
-<div class="page-wrap" id="p5" style="display:none">
-<section class="page">
-  <div class="stage backdrop-center">
-    <img class="char" src="../assets/sprites/sophie_neutral_looking.png" alt="Sophie" loading="lazy">
-    <div class="helper-slot" role="img" aria-label="Nurse Aisha">&#128105;&#8205;&#9877;&#65039;<div class="helper-label">Nurse Aisha</div></div>
-    <button class="hotspot right" onclick="pulse(this)" aria-label="Tap to play" type="button">&#8987;</button>
-  </div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
-  </button>
-  <div class="text-a">Nurse Aisha brought out a big sand timer everyone could watch trickle down together.</div>
-  <div class="text-b">The timer ticks.</div>
-</section></div>
-<div class="page-wrap" id="p6" style="display:none">
-<section class="page">
-  <div class="stage backdrop-center">
-    <img class="char" src="../assets/sprites/sophie_neutral_sitting.png" alt="Sophie" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_neutral_sitting.png" alt="Marcus" loading="lazy">
-    <button class="hotspot mid" onclick="pulse(this)" aria-label="Tap to play" type="button">&#8987;</button>
-  </div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
-  </button>
-  <div class="text-a">Now Sophie could see exactly how long her wait would be, and watching the sand helped the time pass.</div>
-  <div class="text-b">Sophie watches the timer.</div>
-</section></div>
 <div class="page-wrap" id="p7" style="display:none">
 <section class="page">
-  <div class="stage backdrop-center">
-    <img class="char" src="../assets/sprites/sophie_happy_jumping.png" alt="Sophie" loading="lazy">
-    <img class="char" src="../assets/sprites/maya_happy_giving.png" alt="Maya" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_happy_giving.png" alt="Marcus" loading="lazy">
-  </div>
+  <div class="art"><img src="../assets/book11-page7.webp" alt="Illustration for page 7 of All Four Friends Visit the Community Center" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">When her turn finally came, Sophie played her best round yet.</div>
+  <div class="text-a">Then Aisha the teacher appeared, carrying something wonderful: a great big sand timer, tall as a milk bottle. She set it where everyone could see. “Waiting is hard when you can’t see it,” she said. “So let’s make the wait visible. Watch the sand trickle, grain by grain. When the top is empty — that’s your turn, Sophie. A timer is fair, because everybody can see exactly the same wait.”</div>
+  <div class="text-b">The timer shows the wait.</div>
+</section></div>
+<div class="page-wrap" id="p8" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book11-page8.webp" alt="Illustration for page 8 of All Four Friends Visit the Community Center" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">Sophie watched the sand pour down in a thin, sparkling ribbon. Trickle, trickle. She counted the grains she could not count. She wiggled only half as much. The mountain of sand above grew smaller… and smaller… and the bottom mountain grew — and somehow, knowing how much was left made the left part easier.</div>
+  <div class="text-b">Sophie watches the timer.</div>
+</section></div>
+<div class="page-wrap" id="p9" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book11-page9.webp" alt="Illustration for page 9 of All Four Friends Visit the Community Center" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">The very last grain dropped — plip! “Sophie!” called Aisha, and Sophie sprang up like a jack-in-the-box. She played with her whole heart, with all that waiting poured into it, and it was her best round yet — maybe the best round of the whole day.</div>
   <div class="text-b">Sophie takes her turn.</div>
+</section></div>
+<div class="page-wrap" id="p10" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book11-page10.webp" alt="Illustration for page 10 of All Four Friends Visit the Community Center" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">And when the last turn ended, all four friends cheered for each other’s turns — for James’s careful first try, for Marcus, for Maya, and for Sophie’s spectacular finale — win or not, loud or louder. The waiting hadn’t vanished. It had just gotten smaller, the way sand does.</div>
+  <div class="text-b">Friends clap for each other.</div>
   <div class="quiz" data-answer="0" role="group" aria-label="Question">
     <p class="quiz-q">What helped Sophie wait?</p>
     <div class="quiz-opts">
@@ -272,23 +234,27 @@ img.char { height:220px; object-fit:contain; }
     <p class="quiz-feedback" role="status" aria-live="polite"></p>
   </div>
 </section></div>
-<div class="page-wrap" id="p8" style="display:none">
+<div class="page-wrap" id="p11" style="display:none">
 <section class="page">
-  <div class="stage backdrop-center">
-    <img class="char" src="../assets/sprites/maya_happy_waving.png" alt="Maya" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_happy_hands.png" alt="Marcus" loading="lazy">
-    <img class="char" src="../assets/sprites/sophie_happy_waving.png" alt="Sophie" loading="lazy">
-    <img class="char" src="../assets/sprites/james_happy_giving.png" alt="James" loading="lazy">
-  </div>
+  <div class="art"><img src="../assets/book11-page11.webp" alt="Illustration for page 11 of All Four Friends Visit the Community Center" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">All four friends cheered for each other&rsquo;s turns, win or not.</div>
-  <div class="text-b">Friends clap for Sophie.</div>
+  <div class="text-a">“You know my favorite part of this job?” Aisha said as they stacked the game pieces back in their box — click, click, click. “It isn’t the games. It’s watching a room full of neighbors turn into a room full of friends. And look what you practiced today, Sophie — waiting your turn is really just saving up your cheering for later.” Sophie grinned. “I had a LOT saved up.”</div>
+  <div class="text-b">Waiting is saving up cheers.</div>
 </section></div>
-<div class="page-wrap" id="p9" style="display:none">
+<div class="page-wrap" id="p12" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book11-page12.webp" alt="Illustration for page 12 of All Four Friends Visit the Community Center" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">The four friends helped push the chairs back to their places, because that is what community means too — leaving the room ready for whoever comes next. Then they spilled out the doors into the sunshine, already arguing happily about next week’s game. “Same time!” called Aisha. “I’ll have the timer ready!”</div>
+  <div class="text-b">They say, “Bye, Aisha!”</div>
+</section></div>
+<div class="page-wrap" id="p13" style="display:none">
 <section class="page end-screen">
-  <div class="badge"><span aria-hidden="true">&#127941;</span><div>Community Center<br>Explorer</div></div>
+  <div class="badge"><span aria-hidden="true">&#127941;</span><div>Community Center Explorer</div></div>
   <h2>Great reading!</h2>
   <p class="saved-note" id="savedNote"></p>
   <details class="guide">
@@ -296,10 +262,13 @@ img.char { height:220px; object-fit:contain; }
     <p><b>Feeling/skill:</b> Impatience eases when waiting is made visible and fair.</p>
     <p><b>Ask your child:</b> What helps you wait for your turn?</p>
     <p><b>Try this:</b> Use a visible timer for turn-taking at home this week.</p>
+    <p><b>Words to grow on:</b> community, arrived, counted, visible, trickle, impatient, fair, spectacular, cheer. Point at the tools as you name them — keys, sign-in sheet, game pieces, sand timer, first-aid kit.</p>
+    <p><b>The bigger picture:</b> Community center staff do much more than run the game of the day — they open the building early and prepare every room, count and check games and safety supplies, welcome babies, students, and grandparents to programs running side by side, teach fair play, and leave every space ready for the next neighbors who need it.</p>
     <p class="standards">Standards: SL.K.1.a</p>
   </details>
   <div class="end-btns">
     <button class="start-btn" type="button" onclick="restart()">Read Again &#9654;</button>
+    <a class="start-btn ghost" href="Book11_AllFour_CommunityCenter.pdf" download>&#128196; Download the printable PDF</a>
     <a class="start-btn ghost" href="../index.html">&#8592; More books</a>
   </div>
 </section></div>
@@ -313,10 +282,10 @@ img.char { height:220px; object-fit:contain; }
 
 <script>
 const BOOK_ID = "Book11_AllFour_CommunityCenter";
-const BOOK_TITLE = "All Four Visit the Community Center";
+const BOOK_TITLE = "All Four Friends Visit the Community Center";
 const BOOK_BADGE = "Community Center Explorer";
 let current = 0;
-const total = 10;
+const total = 14;
 
 /* ---------- progress: saved on this device only ---------- */
 function loadProgress() {
@@ -385,7 +354,6 @@ function tone(freq, dur, type, vol) {
     o.start(); o.stop(ctx.currentTime + dur);
   } catch(e) {}
 }
-function sfxPop() { tone(520, .12, 'sine', .12); }
 function sfxWhoosh() { tone(220, .16, 'sine', .05); setTimeout(function(){ tone(340, .12, 'sine', .04); }, 55); }
 function sfxSuccess() { tone(523, .12, 'sine', .1); setTimeout(function(){ tone(659, .12, 'sine', .1); }, 90); setTimeout(function(){ tone(784, .2, 'sine', .12); }, 180); }
 function sfxOops() { tone(220, .18, 'sine', .08); }
@@ -430,16 +398,6 @@ document.addEventListener('keydown', function(e) {
   else if (e.key === 'Escape') stopSpeech();
 });
 
-/* ---------- hotspots ---------- */
-function pulse(el) {
-  sfxPop();
-  el.classList.remove('tapped'); void el.offsetWidth; el.classList.add('tapped');
-}
-function ding(el) {
-  el.classList.remove('tapped'); void el.offsetWidth; el.classList.add('tapped');
-  tone(880, .35, 'sine', .12);
-}
-
 /* ---------- quiz ---------- */
 function checkAnswer(btn, chosen) {
   const quiz = btn.closest('.quiz');
@@ -474,13 +432,13 @@ function toggleEasy() {
 function toggleMute() {
   const d = loadProgress(); d.muted = !d.muted; saveProgress(d);
   const b = document.getElementById('muteBtn');
-  b.textContent = d.muted ? '🔇' : '🔊';
+  b.textContent = d.muted ? '\uD83D\uDD07' : '\uD83D\uDD0A';
   b.setAttribute('aria-pressed', d.muted ? 'true' : 'false');
 }
 (function initMute() {
   if (loadProgress().muted) {
     const b = document.getElementById('muteBtn');
-    b.textContent = '🔇';
+    b.textContent = '\uD83D\uDD07';
     b.setAttribute('aria-pressed', 'true');
   }
 })();

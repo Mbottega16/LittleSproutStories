@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
 <link rel="icon" type="image/png" href="../assets/icons/icon-192.png">
-<link rel="canonical" href="https://edusystems-code.github.io/LittleSproutStories/books/Book9_Maya_Marcus_PostOffice.html">
+<link rel="canonical" href="https://mbottega16.github.io/LittleSproutStories/books/Book9_Maya_Marcus_PostOffice.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LittleSprout">
 <meta property="og:title" content="Maya &amp; Marcus Visit the Post Office | Little Sprout Stories">
 <meta property="og:description" content="Interactive phonics storybooks and feelings games for early readers ages 4–7, starring Maya, Marcus, Sophie, and James.">
-<meta property="og:url" content="https://edusystems-code.github.io/LittleSproutStories/books/Book9_Maya_Marcus_PostOffice.html">
-<meta property="og:image" content="https://edusystems-code.github.io/LittleSproutStories/assets/og-share.png">
+<meta property="og:url" content="https://mbottega16.github.io/LittleSproutStories/books/Book9_Maya_Marcus_PostOffice.html">
+<meta property="og:image" content="https://mbottega16.github.io/LittleSproutStories/assets/og-share.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Maya &amp; Marcus Visit the Post Office | Little Sprout Stories">
 <meta name="twitter:description" content="Interactive phonics storybooks and feelings games for early readers ages 4–7, starring Maya, Marcus, Sophie, and James.">
-<meta name="twitter:image" content="https://edusystems-code.github.io/LittleSproutStories/assets/og-share.png">
+<meta name="twitter:image" content="https://mbottega16.github.io/LittleSproutStories/assets/og-share.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#5BA672">
-<title>Maya & Marcus Visit the Post Office | Little Sprout Stories</title>
+<title>Maya &amp; Marcus Visit the Post Office | Little Sprout Stories</title>
 <link rel="manifest" href="../manifest.json">
 <style>
 :root { --sprout:#5BA672; --sprout-dark:#3C7A52; --cream:#FBF6EC; --ink:#2b2b2b; }
@@ -38,39 +38,9 @@ body.easyread .text-a, body.easyread .text-b { line-height:1.95; }
 .cover { text-align:center; }
 .banner { background:var(--sprout); color:#fff; display:inline-block; padding:6px 18px; border-radius:20px; font-size:14px; margin-bottom:10px; }
 h1 { color:var(--sprout); font-size:28px; }
-.stage { position:relative; min-height:320px; border-radius:16px; margin:16px 0; display:flex; align-items:flex-end; justify-content:center; gap:10px; padding:16px; overflow:hidden; background-size:cover; background-position:center bottom; }
-/* All twelve locations now have real illustrated backgrounds (assets/backgrounds/).
-   Each keeps its old flat-gradient rule as the paint-before-image-loads/fallback color.
-   backdrop-classroom is Mr. Rodriguez's specific room -- used only on the one page across
-   every book that actually features him as the on-page helper (Book5 p2). Everywhere else
-   School-related (including Book5's own other pages and Book15's classroom-flavored recap)
-   stays on backdrop-school's general room, per explicit instruction. */
-.backdrop-barbershop { background-color:#e8f4dc; background-image:url('../assets/backgrounds/barbershop.jpg'); }
-.backdrop-garden { background-color:#bfe3fa; background-image:url('../assets/backgrounds/garden.jpg'); }
-.backdrop-repair { background-color:#f3ead6; background-image:url('../assets/backgrounds/repair.jpg'); }
-.backdrop-street { background-color:#bfe3ff; background-image:url('../assets/backgrounds/street.jpg'); }
-.backdrop-firestation { background-color:#ffd9a0; background-image:url('../assets/backgrounds/firestation.jpg'); }
-.backdrop-police { background-color:#d9eefb; background-image:url('../assets/backgrounds/police.jpg'); }
-.backdrop-classroom { background-color:#fff1cc; background-image:url('../assets/backgrounds/classroom.jpg'); }
-.backdrop-library { background-color:#f3ead6; background-image:url('../assets/backgrounds/library.jpg'); }
-.backdrop-doctor { background-color:#fce0ee; background-image:url('../assets/backgrounds/doctor.jpg'); }
-.backdrop-center { background-color:#fce0ee; background-image:url('../assets/backgrounds/center.jpg'); }
-.backdrop-school { background-color:#fff1cc; background-image:url('../assets/backgrounds/school.jpg'); }
-.backdrop-bakery { background-color:#ffe3cc; background-image:url('../assets/backgrounds/bakery.jpg'); }
-.backdrop-postoffice { background-color:#d9eefb; background-image:url('../assets/backgrounds/postoffice.jpg'); }
-img.char { height:220px; object-fit:contain; }
-
-.hotspot { position:absolute; top:20px; font-size:40px; cursor:pointer; animation:bob 2s ease-in-out infinite;
-  transition:transform .2s; background:none; border:none; padding:4px; line-height:1; }
-.hotspot.left { left:20px; }
-.hotspot.right { right:20px; }
-.hotspot.mid { left:50%; transform:translateX(-50%); }
-.hotspot.right2 { right:70px; top:44px; }
-@keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
-@media (prefers-reduced-motion: reduce) { .hotspot { animation:none; } }
-
-.helper-slot { font-size:60px; text-align:center; }
-.helper-label { font-size:14px; background:#fff; border-radius:8px; padding:2px 8px; }
+.subtitle { font-size:17px; font-weight:bold; color:var(--sprout-dark); margin:2px 0 0; }
+.art { margin:16px 0; border-radius:16px; overflow:hidden; }
+.art img { width:100%; height:auto; display:block; }
 
 .readaloud { display:inline-flex; align-items:center; gap:8px; background:#fff; border:2px solid var(--sprout);
   color:var(--sprout-dark); border-radius:22px; padding:8px 16px; font-size:15px; font-weight:bold;
@@ -114,9 +84,6 @@ img.char { height:220px; object-fit:contain; }
 .page-wrap.turn-in .page { animation: pageTurnIn .32s cubic-bezier(.2,.8,.3,1) both; }
 @keyframes pageTurnIn { from { opacity:0; transform:translateY(10px) scale(.97); } to { opacity:1; transform:translateY(0) scale(1); } }
 
-.hotspot.tapped { animation: hotspotPop .4s ease; }
-@keyframes hotspotPop { 0% { transform:scale(1) rotate(0); } 40% { transform:scale(1.45) rotate(-10deg); } 100% { transform:scale(1) rotate(0); } }
-
 .start-btn, .nav-row button, .readaloud, .topbar button { transition:transform .12s ease; }
 .start-btn:active, .nav-row button:not(:disabled):active, .readaloud:active, .topbar button:active { transform:scale(.93); }
 
@@ -133,7 +100,7 @@ img.char { height:220px; object-fit:contain; }
 @keyframes confettiFall { to { transform:translateY(110vh) rotate(560deg); opacity:.6; } }
 
 @media (prefers-reduced-motion: reduce) {
-  .page-wrap.turn-in .page, .hotspot.tapped, .quiz button.correct, .quiz button.wrong, .badge.celebrate { animation:none; }
+  .page-wrap.turn-in .page, .quiz button.correct, .quiz button.wrong, .badge.celebrate { animation:none; }
   .start-btn:active, .nav-row button:not(:disabled):active, .readaloud:active, .topbar button:active { transform:none; }
   .confetti-piece { display:none; }
 }
@@ -155,50 +122,81 @@ img.char { height:220px; object-fit:contain; }
 <section class="page cover">
   <div class="banner">Little Sprout Stories</div>
   <h1>Maya &amp; Marcus<br>Visit the Post Office</h1>
-  <div class="stage backdrop-postoffice">
-    <img class="char" src="../assets/sprites/maya_happy_waving.png" alt="Maya" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_happy_waving.png" alt="Marcus" loading="lazy">
-  </div>
+  <p class="subtitle">A story about feeling doubtful — and trusting that good enough is good enough</p>
+  <div class="art"><img src="../assets/book9-cover.webp" alt="Maya &amp; Marcus Visit the Post Office — cover art" fetchpriority="high"></div>
   <button class="start-btn" type="button" onclick="nextPage()">Start Reading &#9654;</button>
 </section></div>
 <div class="page-wrap" id="p1" style="display:none">
 <section class="page">
-  <div class="stage backdrop-street">
-    <img class="char" src="../assets/sprites/maya_neutral_walking.png" alt="Maya" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_happy_walking.png" alt="Marcus" loading="lazy">
-    <button class="hotspot right" onclick="pulse(this)" aria-label="Tap to play" type="button">&#9993;&#65039;</button>
-  </div>
+  <div class="art"><img src="../assets/book9-page1.webp" alt="Illustration for page 1 of Maya &amp; Marcus Visit the Post Office" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">Maya had written a letter to her grandmother, and today she and Marcus were mailing it.</div>
-  <div class="text-b">Maya has a letter.</div>
+  <div class="text-a">Maya had written a letter — a real letter, in her best handwriting, with a drawing of a sunflower in the corner. Today she and Marcus were going to mail it all the way to Grandma’s house. Maya held the envelope with both hands, the way you hold something important.</div>
+  <div class="text-b">Maya has a letter for Grandma.</div>
 </section></div>
 <div class="page-wrap" id="p2" style="display:none">
 <section class="page">
-  <div class="stage backdrop-postoffice">
-    <img class="char" src="../assets/sprites/maya_neutral_standing.png" alt="Maya" loading="lazy">
-    <div class="helper-slot" role="img" aria-label="Rose">&#128105;&#8205;&#128188;<div class="helper-label">Rose</div></div>
-    <img class="char" src="../assets/sprites/marcus_happy_standing.png" alt="Marcus" loading="lazy">
-    <button class="hotspot left" onclick="pulse(this)" aria-label="Tap to play" type="button">&#128174;</button>
-  </div>
+  <div class="art"><img src="../assets/book9-page2.webp" alt="Illustration for page 2 of Maya &amp; Marcus Visit the Post Office" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">Rose greeted them at the counter with a warm smile and a stack of colorful stamps.</div>
-  <div class="text-b">Rose has stamps.</div>
+  <div class="text-a">The post office smelled of paper and ink, and behind the counter stood Rose, with a warm smile and a whole stack of colorful stamps — flags, flowers, and one with a rocket ship. “Well, hello!” said Rose. “Sending something special today? Let me show you what a postal worker’s day is really like.”</div>
+  <div class="text-b">Rose says hello. Rose has stamps.</div>
 </section></div>
 <div class="page-wrap" id="p3" style="display:none">
 <section class="page">
-  <div class="stage backdrop-postoffice">
-    <img class="char" src="../assets/sprites/maya_sad_looking.png" alt="Maya" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_neutral_standing.png" alt="Marcus" loading="lazy">
-  </div>
+  <div class="art"><img src="../assets/book9-page3.webp" alt="Illustration for page 3 of Maya &amp; Marcus Visit the Post Office" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">Maya looked at her letter again &mdash; a smudge here, a crossed-out word there. &ldquo;It&rsquo;s not good enough,&rdquo; she said quietly.</div>
-  <div class="text-b">Maya feels a bit sad.</div>
+  <div class="text-a">“Postal workers start early,” Rose told them, “before the town even wakes up.” Behind the counter stood a wall of sorting slots, each labeled with a street, and Rose’s hands flew — letter, slot, letter, slot — putting every envelope in exactly the right place. She checked her satchel and peered into the mail truck waiting at the back door. “A postal worker’s first job isn’t delivering. It’s sorting, so every single letter can find its way home.”</div>
+  <div class="text-b">Rose sorts every letter first.</div>
+</section></div>
+<div class="page-wrap" id="p4" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book9-page4.webp" alt="Illustration for page 4 of Maya &amp; Marcus Visit the Post Office" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">Rose showed them everything a letter meets on its journey. The scale that weighs packages, beep by beep. The postmark stamp that comes down — THUMP! — to say “this letter was here, on this very day.” And a long wall of tiny metal doors: hundreds of post office boxes, each keeping somebody’s mail safe until they come with their key. “Every letter takes a trip,” said Rose. “Our tools make sure it takes the right one.”</div>
+  <div class="text-b">Letters take a trip to Grandma’s house.</div>
+</section></div>
+<div class="page-wrap" id="p5" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book9-page5.webp" alt="Illustration for page 5 of Maya &amp; Marcus Visit the Post Office" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">“Think sorting looks easy?” Rose grinned. “Try the training game!” She spread a pile of pretend letters across the counter, and Maya and Marcus raced to slide each one into the right slot — Maple Street, Oak Street, River Road! They mixed up two, and Rose laughed kindly. “Even postal workers practice. New carriers walk their routes with a trainer, street by street, until they know every doorstep. We practice so that no letter ever gets lost on our watch.”</div>
+  <div class="text-b">Postal workers practice their routes.</div>
+</section></div>
+<div class="page-wrap" id="p6" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book9-page6.webp" alt="Illustration for page 6 of Maya &amp; Marcus Visit the Post Office" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">“Who gets mail?” Marcus asked. “Everyone,” said Rose, “and everything.” Birthday cards with money from uncles. Medicine that arrives right on time. A postcard from somebody standing next to the ocean. Carriers walk the same streets every day, in sunshine and in rain, and they get to know every family — and every dog! “If a neighbor’s mailbox stays stuffed full for days,” Rose added, “we notice, and we tell somebody, because looking out for your street is part of the job too.”</div>
+  <div class="text-b">Postal workers help every street.</div>
+</section></div>
+<div class="page-wrap" id="p7" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book9-page7.webp" alt="Illustration for page 7 of Maya &amp; Marcus Visit the Post Office" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">Then Rose became a teacher. She took a big pretend envelope and showed them the secret code every letter needs. “The name goes here, so we know WHO. The street and town go here, so we know WHERE. And the stamp goes in the corner — that’s the letter’s ticket for its trip.” Maya practiced writing the address very carefully. “Part of my job,” Rose said, “is helping anyone — even a brand-new letter writer — send their words anywhere in the whole world.”</div>
+  <div class="text-b">An address tells the letter where to go.</div>
+</section></div>
+<div class="page-wrap" id="p8" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book9-page8.webp" alt="Illustration for page 8 of Maya &amp; Marcus Visit the Post Office" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">At last, it was time to mail the real letter. But Maya looked at her envelope one more time — and now all she could see was a smudge near the corner, and one word crossed out and written again, wobbly. Her shoulders sank. “It’s not good enough,” she said quietly. “Grandma keeps her letters forever. Mine has mistakes in it.”</div>
+  <div class="text-b">Maya feels doubtful about her letter.</div>
   <div class="quiz" data-answer="1" role="group" aria-label="Question">
     <p class="quiz-q">How does Maya feel about her letter?</p>
     <div class="quiz-opts">
@@ -209,56 +207,23 @@ img.char { height:220px; object-fit:contain; }
     <p class="quiz-feedback" role="status" aria-live="polite"></p>
   </div>
 </section></div>
-<div class="page-wrap" id="p4" style="display:none">
+<div class="page-wrap" id="p9" style="display:none">
 <section class="page">
-  <div class="stage backdrop-postoffice">
-    <img class="char" src="../assets/sprites/marcus_neutral_reaching.png" alt="Marcus" loading="lazy">
-    <img class="char" src="../assets/sprites/maya_sad_standing.png" alt="Maya" loading="lazy">
-  </div>
+  <div class="art"><img src="../assets/book9-page9.webp" alt="Illustration for page 9 of Maya &amp; Marcus Visit the Post Office" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">Marcus looked at the letter. &ldquo;Grandma will just be happy it&rsquo;s from you,&rdquo; he said gently.</div>
-  <div class="text-b">Grandma will be glad.</div>
+  <div class="text-a">Marcus looked at the letter — at the smudge, and the wobbly word, and the sunflower blooming in the corner. “Grandma won’t care about the smudge,” he said gently. “She’ll just be happy it’s from you. The letter is good because YOU wrote it, Maya. Nobody else could have written exactly that one.”</div>
+  <div class="text-b">Grandma will be glad it is from Maya.</div>
 </section></div>
-<div class="page-wrap" id="p5" style="display:none">
+<div class="page-wrap" id="p10" style="display:none">
 <section class="page">
-  <div class="stage backdrop-postoffice">
-    <img class="char" src="../assets/sprites/maya_neutral_looking.png" alt="Maya" loading="lazy">
-    <div class="helper-slot" role="img" aria-label="Rose">&#128105;&#8205;&#128188;<div class="helper-label">Rose</div></div>
-    <button class="hotspot mid" onclick="pulse(this)" aria-label="Tap to play" type="button">&#128233;</button>
-  </div>
+  <div class="art"><img src="../assets/book9-page10.webp" alt="Illustration for page 10 of Maya &amp; Marcus Visit the Post Office" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">Rose showed them how the letter would be sorted, stamped, and sent on its journey.</div>
-  <div class="text-b">Rose sorts the mail.</div>
-</section></div>
-<div class="page-wrap" id="p6" style="display:none">
-<section class="page">
-  <div class="stage backdrop-postoffice">
-    <img class="char" src="../assets/sprites/maya_neutral_standing.png" alt="Maya" loading="lazy">
-    <div class="helper-slot" role="img" aria-label="Rose">&#128105;&#8205;&#128188;<div class="helper-label">Rose</div></div>
-    <img class="char" src="../assets/sprites/marcus_neutral_looking.png" alt="Marcus" loading="lazy">
-  </div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
-  </button>
-  <div class="text-a">&ldquo;Every letter that comes through here is real and true, smudges and all,&rdquo; Rose said.</div>
-  <div class="text-b">Each letter is real.</div>
-</section></div>
-<div class="page-wrap" id="p7" style="display:none">
-<section class="page">
-  <div class="stage backdrop-postoffice">
-    <img class="char" src="../assets/sprites/maya_happy_reaching.png" alt="Maya" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_happy_giving.png" alt="Marcus" loading="lazy">
-    <button class="hotspot right" onclick="pulse(this)" aria-label="Tap to play" type="button">&#128235;</button>
-  </div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
-  </button>
-  <div class="text-a">Maya watched her letter drop into the mail bin, and a little weight lifted off her shoulders.</div>
-  <div class="text-b">Maya sends her letter.</div>
+  <div class="text-a">Rose leaned over the counter. “May I tell you a secret of the post office?” she said. “Every letter that comes through here is real and true, smudges and all. The crossed-out words just show somebody cared enough to fix them.” Maya took a deep breath. She picked up her letter — her real, true, good-enough letter — reached up on tiptoe… and dropped it into the mail bin. A little weight she hadn’t even known she was carrying lifted right off her shoulders.</div>
+  <div class="text-b">Maya trusts her letter is good enough.</div>
   <div class="quiz" data-answer="1" role="group" aria-label="Question">
     <p class="quiz-q">What helped Maya feel better?</p>
     <div class="quiz-opts">
@@ -269,33 +234,41 @@ img.char { height:220px; object-fit:contain; }
     <p class="quiz-feedback" role="status" aria-live="polite"></p>
   </div>
 </section></div>
-<div class="page-wrap" id="p8" style="display:none">
+<div class="page-wrap" id="p11" style="display:none">
 <section class="page">
-  <div class="stage backdrop-postoffice">
-    <img class="char" src="../assets/sprites/maya_happy_jumping.png" alt="Maya" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_happy_hands.png" alt="Marcus" loading="lazy">
-    <button class="hotspot mid" onclick="pulse(this)" aria-label="Tap to play" type="button">&#128222;</button>
-  </div>
+  <div class="art"><img src="../assets/book9-page11.webp" alt="Illustration for page 11 of Maya &amp; Marcus Visit the Post Office" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">A week later, Grandma called &mdash; she loved the letter, smudge and all.</div>
-  <div class="text-b">Grandma is glad for the letter.</div>
+  <div class="text-a">“You know my favorite part of this job?” Rose asked as they watched the bin fill with the morning’s mail. “It isn’t the stamps, and it isn’t even the truck. It’s that I get to carry people’s love around in my satchel. A birthday hug. A ‘thinking of you.’ A letter from a granddaughter with a sunflower in the corner. Every delivery is somebody’s good news.”</div>
+  <div class="text-b">Rose carries good news to everyone.</div>
 </section></div>
-<div class="page-wrap" id="p9" style="display:none">
+<div class="page-wrap" id="p12" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book9-page12.webp" alt="Illustration for page 12 of Maya &amp; Marcus Visit the Post Office" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">“Bye, Rose!” they called, and they waved until the post office door swung shut behind them. And one week later — just one! — Grandma called on the phone, and her voice was smiling. She loved the letter. She loved the sunflower. She even loved the wobbly word. Smudges and all, it was perfect, because it was from Maya. That very afternoon, Maya sat down… and started a brand-new letter.</div>
+  <div class="text-b">Grandma loved the letter. Maya writes again!</div>
+</section></div>
+<div class="page-wrap" id="p13" style="display:none">
 <section class="page end-screen">
-  <div class="badge"><span aria-hidden="true">&#127941;</span><div>Post Office<br>Explorer</div></div>
+  <div class="badge"><span aria-hidden="true">&#127941;</span><div>Post Office Explorer</div></div>
   <h2>Great reading!</h2>
   <p class="saved-note" id="savedNote"></p>
   <details class="guide">
     <summary>For Grown-Ups</summary>
-    <p><b>Feeling/skill:</b> Self-doubt eases with trust that &ldquo;good enough&rdquo; really is good enough.</p>
+    <p><b>Feeling/skill:</b> Self-doubt eases with trust that “good enough” really is good enough.</p>
     <p><b>Ask your child:</b> Is there something you made that you worried was not good enough?</p>
     <p><b>Try this:</b> Mail a real letter together this week, imperfections included.</p>
+    <p><b>Words to grow on:</b> envelope, address, stamp, sort, journey, deliver, satchel, smudge, doubtful, trust. Point at the tools as you name them — sorting slots, scale, postmark stamp, satchel, mail truck, post office boxes.</p>
+    <p><b>The bigger picture:</b> Postal workers do much more than sell stamps — they sort thousands of letters into exactly the right places before the town wakes up, weigh and check every package, practice their routes until they know every street and doorstep, deliver in all kinds of weather, look out for the people on their routes, and teach everyone — even brand-new letter writers — how to send words and packages anywhere in the world.</p>
     <p class="standards">Standards: W.K.1, L.K.2.a</p>
   </details>
   <div class="end-btns">
     <button class="start-btn" type="button" onclick="restart()">Read Again &#9654;</button>
+    <a class="start-btn ghost" href="Book9_Maya_Marcus_PostOffice.pdf" download>&#128196; Download the printable PDF</a>
     <a class="start-btn ghost" href="../index.html">&#8592; More books</a>
   </div>
 </section></div>
@@ -312,7 +285,7 @@ const BOOK_ID = "Book9_Maya_Marcus_PostOffice";
 const BOOK_TITLE = "Maya & Marcus Visit the Post Office";
 const BOOK_BADGE = "Post Office Explorer";
 let current = 0;
-const total = 10;
+const total = 14;
 
 /* ---------- progress: saved on this device only ---------- */
 function loadProgress() {
@@ -381,7 +354,6 @@ function tone(freq, dur, type, vol) {
     o.start(); o.stop(ctx.currentTime + dur);
   } catch(e) {}
 }
-function sfxPop() { tone(520, .12, 'sine', .12); }
 function sfxWhoosh() { tone(220, .16, 'sine', .05); setTimeout(function(){ tone(340, .12, 'sine', .04); }, 55); }
 function sfxSuccess() { tone(523, .12, 'sine', .1); setTimeout(function(){ tone(659, .12, 'sine', .1); }, 90); setTimeout(function(){ tone(784, .2, 'sine', .12); }, 180); }
 function sfxOops() { tone(220, .18, 'sine', .08); }
@@ -426,16 +398,6 @@ document.addEventListener('keydown', function(e) {
   else if (e.key === 'Escape') stopSpeech();
 });
 
-/* ---------- hotspots ---------- */
-function pulse(el) {
-  sfxPop();
-  el.classList.remove('tapped'); void el.offsetWidth; el.classList.add('tapped');
-}
-function ding(el) {
-  el.classList.remove('tapped'); void el.offsetWidth; el.classList.add('tapped');
-  tone(880, .35, 'sine', .12);
-}
-
 /* ---------- quiz ---------- */
 function checkAnswer(btn, chosen) {
   const quiz = btn.closest('.quiz');
@@ -470,13 +432,13 @@ function toggleEasy() {
 function toggleMute() {
   const d = loadProgress(); d.muted = !d.muted; saveProgress(d);
   const b = document.getElementById('muteBtn');
-  b.textContent = d.muted ? '🔇' : '🔊';
+  b.textContent = d.muted ? '\uD83D\uDD07' : '\uD83D\uDD0A';
   b.setAttribute('aria-pressed', d.muted ? 'true' : 'false');
 }
 (function initMute() {
   if (loadProgress().muted) {
     const b = document.getElementById('muteBtn');
-    b.textContent = '🔇';
+    b.textContent = '\uD83D\uDD07';
     b.setAttribute('aria-pressed', 'true');
   }
 })();
