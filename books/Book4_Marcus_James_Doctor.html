@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
 <link rel="icon" type="image/png" href="../assets/icons/icon-192.png">
-<link rel="canonical" href="https://edusystems-code.github.io/LittleSproutStories/books/Book4_Marcus_James_Doctor.html">
+<link rel="canonical" href="https://mbottega16.github.io/LittleSproutStories/books/Book4_Marcus_James_Doctor.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LittleSprout">
 <meta property="og:title" content="Marcus &amp; James Visit the Doctor | Little Sprout Stories">
 <meta property="og:description" content="Interactive phonics storybooks and feelings games for early readers ages 4–7, starring Maya, Marcus, Sophie, and James.">
-<meta property="og:url" content="https://edusystems-code.github.io/LittleSproutStories/books/Book4_Marcus_James_Doctor.html">
-<meta property="og:image" content="https://edusystems-code.github.io/LittleSproutStories/assets/og-share.png">
+<meta property="og:url" content="https://mbottega16.github.io/LittleSproutStories/books/Book4_Marcus_James_Doctor.html">
+<meta property="og:image" content="https://mbottega16.github.io/LittleSproutStories/assets/og-share.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Marcus &amp; James Visit the Doctor | Little Sprout Stories">
 <meta name="twitter:description" content="Interactive phonics storybooks and feelings games for early readers ages 4–7, starring Maya, Marcus, Sophie, and James.">
-<meta name="twitter:image" content="https://edusystems-code.github.io/LittleSproutStories/assets/og-share.png">
+<meta name="twitter:image" content="https://mbottega16.github.io/LittleSproutStories/assets/og-share.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#5BA672">
-<title>Marcus & James Visit the Doctor | Little Sprout Stories</title>
+<title>Marcus &amp; James Visit the Doctor | Little Sprout Stories</title>
 <link rel="manifest" href="../manifest.json">
 <style>
 :root { --sprout:#5BA672; --sprout-dark:#3C7A52; --cream:#FBF6EC; --ink:#2b2b2b; }
@@ -38,39 +38,9 @@ body.easyread .text-a, body.easyread .text-b { line-height:1.95; }
 .cover { text-align:center; }
 .banner { background:var(--sprout); color:#fff; display:inline-block; padding:6px 18px; border-radius:20px; font-size:14px; margin-bottom:10px; }
 h1 { color:var(--sprout); font-size:28px; }
-.stage { position:relative; min-height:320px; border-radius:16px; margin:16px 0; display:flex; align-items:flex-end; justify-content:center; gap:10px; padding:16px; overflow:hidden; background-size:cover; background-position:center bottom; }
-/* All twelve locations now have real illustrated backgrounds (assets/backgrounds/).
-   Each keeps its old flat-gradient rule as the paint-before-image-loads/fallback color.
-   backdrop-classroom is Mr. Rodriguez's specific room -- used only on the one page across
-   every book that actually features him as the on-page helper (Book5 p2). Everywhere else
-   School-related (including Book5's own other pages and Book15's classroom-flavored recap)
-   stays on backdrop-school's general room, per explicit instruction. */
-.backdrop-barbershop { background-color:#e8f4dc; background-image:url('../assets/backgrounds/barbershop.jpg'); }
-.backdrop-garden { background-color:#bfe3fa; background-image:url('../assets/backgrounds/garden.jpg'); }
-.backdrop-repair { background-color:#f3ead6; background-image:url('../assets/backgrounds/repair.jpg'); }
-.backdrop-street { background-color:#bfe3ff; background-image:url('../assets/backgrounds/street.jpg'); }
-.backdrop-firestation { background-color:#ffd9a0; background-image:url('../assets/backgrounds/firestation.jpg'); }
-.backdrop-police { background-color:#d9eefb; background-image:url('../assets/backgrounds/police.jpg'); }
-.backdrop-classroom { background-color:#fff1cc; background-image:url('../assets/backgrounds/classroom.jpg'); }
-.backdrop-library { background-color:#f3ead6; background-image:url('../assets/backgrounds/library.jpg'); }
-.backdrop-doctor { background-color:#fce0ee; background-image:url('../assets/backgrounds/doctor.jpg'); }
-.backdrop-center { background-color:#fce0ee; background-image:url('../assets/backgrounds/center.jpg'); }
-.backdrop-school { background-color:#fff1cc; background-image:url('../assets/backgrounds/school.jpg'); }
-.backdrop-bakery { background-color:#ffe3cc; background-image:url('../assets/backgrounds/bakery.jpg'); }
-.backdrop-postoffice { background-color:#d9eefb; background-image:url('../assets/backgrounds/postoffice.jpg'); }
-img.char { height:220px; object-fit:contain; }
-
-.hotspot { position:absolute; top:20px; font-size:40px; cursor:pointer; animation:bob 2s ease-in-out infinite;
-  transition:transform .2s; background:none; border:none; padding:4px; line-height:1; }
-.hotspot.left { left:20px; }
-.hotspot.right { right:20px; }
-.hotspot.mid { left:50%; transform:translateX(-50%); }
-.hotspot.right2 { right:70px; top:44px; }
-@keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
-@media (prefers-reduced-motion: reduce) { .hotspot { animation:none; } }
-
-.helper-slot { font-size:60px; text-align:center; }
-.helper-label { font-size:14px; background:#fff; border-radius:8px; padding:2px 8px; }
+.subtitle { font-size:17px; font-weight:bold; color:var(--sprout-dark); margin:2px 0 0; }
+.art { margin:16px 0; border-radius:16px; overflow:hidden; }
+.art img { width:100%; height:auto; display:block; }
 
 .readaloud { display:inline-flex; align-items:center; gap:8px; background:#fff; border:2px solid var(--sprout);
   color:var(--sprout-dark); border-radius:22px; padding:8px 16px; font-size:15px; font-weight:bold;
@@ -114,9 +84,6 @@ img.char { height:220px; object-fit:contain; }
 .page-wrap.turn-in .page { animation: pageTurnIn .32s cubic-bezier(.2,.8,.3,1) both; }
 @keyframes pageTurnIn { from { opacity:0; transform:translateY(10px) scale(.97); } to { opacity:1; transform:translateY(0) scale(1); } }
 
-.hotspot.tapped { animation: hotspotPop .4s ease; }
-@keyframes hotspotPop { 0% { transform:scale(1) rotate(0); } 40% { transform:scale(1.45) rotate(-10deg); } 100% { transform:scale(1) rotate(0); } }
-
 .start-btn, .nav-row button, .readaloud, .topbar button { transition:transform .12s ease; }
 .start-btn:active, .nav-row button:not(:disabled):active, .readaloud:active, .topbar button:active { transform:scale(.93); }
 
@@ -133,7 +100,7 @@ img.char { height:220px; object-fit:contain; }
 @keyframes confettiFall { to { transform:translateY(110vh) rotate(560deg); opacity:.6; } }
 
 @media (prefers-reduced-motion: reduce) {
-  .page-wrap.turn-in .page, .hotspot.tapped, .quiz button.correct, .quiz button.wrong, .badge.celebrate { animation:none; }
+  .page-wrap.turn-in .page, .quiz button.correct, .quiz button.wrong, .badge.celebrate { animation:none; }
   .start-btn:active, .nav-row button:not(:disabled):active, .readaloud:active, .topbar button:active { transform:none; }
   .confetti-piece { display:none; }
 }
@@ -155,47 +122,80 @@ img.char { height:220px; object-fit:contain; }
 <section class="page cover">
   <div class="banner">Little Sprout Stories</div>
   <h1>Marcus &amp; James<br>Visit the Doctor</h1>
-  <div class="stage backdrop-doctor">
-    <img class="char" src="../assets/sprites/marcus_happy_waving.png" alt="Marcus" loading="lazy">
-    <img class="char" src="../assets/sprites/james_happy_waving.png" alt="James" loading="lazy">
-  </div>
+  <p class="subtitle">A story about feeling anxious — and the power of a small choice</p>
+  <div class="art"><img src="../assets/book4-cover.webp" alt="Marcus &amp; James Visit the Doctor — cover art" fetchpriority="high"></div>
   <button class="start-btn" type="button" onclick="nextPage()">Start Reading &#9654;</button>
 </section></div>
 <div class="page-wrap" id="p1" style="display:none">
 <section class="page">
-  <div class="stage backdrop-street">
-    <img class="char" src="../assets/sprites/marcus_surprised_walking.png" alt="Marcus" loading="lazy">
-    <img class="char" src="../assets/sprites/james_happy_walking.png" alt="James" loading="lazy">
-  </div>
+  <div class="art"><img src="../assets/book4-page1.webp" alt="Illustration for page 1 of Marcus &amp; James Visit the Doctor" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">Marcus had a checkup today, and his tummy felt fluttery just thinking about it.</div>
+  <div class="text-a">Marcus had a checkup today, and just thinking about it made his tummy feel fluttery, like a jar full of butterflies had come loose inside him. Beside him sat James, his very best friend, who had come along to help — and James loved facts the way some people love ice cream.</div>
   <div class="text-b">Marcus goes to the doctor.</div>
 </section></div>
 <div class="page-wrap" id="p2" style="display:none">
 <section class="page">
-  <div class="stage backdrop-doctor">
-    <img class="char" src="../assets/sprites/james_neutral_pointing.png" alt="James" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_surprised_standing.png" alt="Marcus" loading="lazy">
-    <div class="helper-slot" role="img" aria-label="Dr. Patel">&#128105;&#8205;&#9877;&#65039;<div class="helper-label">Dr. Patel</div></div>
-  </div>
+  <div class="art"><img src="../assets/book4-page2.webp" alt="Illustration for page 2 of Marcus &amp; James Visit the Doctor" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">James, who loved facts, started explaining every single step out loud.</div>
-  <div class="text-b">James knows facts.</div>
+  <div class="text-a">The door opened, and in came Dr. Patel, with a smile that made the whole room feel warmer. “Hello, Marcus. Hello, James,” she said. “I’m Dr. Patel. Would you like to see what a doctor’s day is really like — and everything we do to keep people healthy?”</div>
+  <div class="text-b">Dr. Patel says hello.</div>
 </section></div>
 <div class="page-wrap" id="p3" style="display:none">
 <section class="page">
-  <div class="stage backdrop-doctor">
-    <img class="char" src="../assets/sprites/james_neutral_hands.png" alt="James" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_surprised_hands.png" alt="Marcus" loading="lazy">
-  </div>
+  <div class="art"><img src="../assets/book4-page3.webp" alt="Illustration for page 3 of Marcus &amp; James Visit the Doctor" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">&ldquo;First they&rsquo;ll check your ears, then your heart, then&mdash;&rdquo; James went on and on. Marcus&rsquo;s flutter grew bigger.</div>
+  <div class="text-a">“Before my first patient,” said Dr. Patel, “I get everything ready.” She washed her hands until they were squeaky clean, laid out fresh paper on the examining table, and checked her tools one by one. “A doctor’s first job isn’t fixing sickness. It’s being clean, calm, and ready — before anyone even walks in.”</div>
+  <div class="text-b">Dr. Patel gets her tools ready.</div>
+</section></div>
+<div class="page-wrap" id="p4" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book4-page4.webp" alt="Illustration for page 4 of Marcus &amp; James Visit the Doctor" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">James’s eyes went round. “Facts!” he announced, and Dr. Patel showed them every one: the stethoscope that listens to hearts, the little ear-light that peeks inside ears, the soft cuff that gives your arm a gentle hug to measure how strongly your heart pushes, and the tall scale that tells how much you’ve grown. “Every tool answers a question,” Dr. Patel said. “My job is knowing which question to ask.”</div>
+  <div class="text-b">Dr. Patel has tools that listen and look.</div>
+</section></div>
+<div class="page-wrap" id="p5" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book4-page5.webp" alt="Illustration for page 5 of Marcus &amp; James Visit the Doctor" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">In the corner sat a very patient patient — a teddy bear with a bandage on his paw. “Doctors practice too,” said Dr. Patel, listening carefully to the teddy’s pretend heartbeat. “We study for many, many years, and we keep practicing on teddies and pretend patients, so that when a real child needs us, our hands already know what to do.”</div>
+  <div class="text-b">Doctors practice to be ready.</div>
+</section></div>
+<div class="page-wrap" id="p6" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book4-page6.webp" alt="Illustration for page 6 of Marcus &amp; James Visit the Doctor" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">Out in the waiting room, the whole neighborhood seemed to be there: a baby getting her first checkup, a grandfather with a bandaged thumb, a nurse calling names in a kind voice, and a receptionist who knew everybody’s birthday. “A clinic isn’t just for sick days,” said Dr. Patel. “We help people stay healthy — with checkups, and vaccines, and good advice — all year long.”</div>
+  <div class="text-b">The clinic helps the whole town stay healthy.</div>
+</section></div>
+<div class="page-wrap" id="p7" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book4-page7.webp" alt="Illustration for page 7 of Marcus &amp; James Visit the Doctor" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">“The best visit,” Dr. Patel told them, “is the one where nothing is wrong at all.” She showed them the germ-fighting rules: wash your hands with soap and sing the whole birthday song, cover your coughs like a vampire with his cape, and give your body sleep and colorful foods. “Part of my job,” she said, “is teaching families how to not get sick in the first place.”</div>
+  <div class="text-b">Wash your hands to stop germs.</div>
+</section></div>
+<div class="page-wrap" id="p8" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book4-page8.webp" alt="Illustration for page 8 of Marcus &amp; James Visit the Doctor" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">James, who loved facts, started explaining every single step out loud. “First they’ll check your ears, then your heart, then your eyes, then your—” On and on he went, faster and faster, and with every single fact, Marcus’s flutter grew bigger and bigger, until it felt less like butterflies and more like a whole flock of flapping birds.</div>
   <div class="text-b">Marcus feels bad.</div>
   <div class="quiz" data-answer="1" role="group" aria-label="Question">
     <p class="quiz-q">How does Marcus feel?</p>
@@ -207,55 +207,23 @@ img.char { height:220px; object-fit:contain; }
     <p class="quiz-feedback" role="status" aria-live="polite"></p>
   </div>
 </section></div>
-<div class="page-wrap" id="p4" style="display:none">
+<div class="page-wrap" id="p9" style="display:none">
 <section class="page">
-  <div class="stage backdrop-doctor">
-    <img class="char" src="../assets/sprites/marcus_neutral_looking.png" alt="Marcus" loading="lazy">
-    <div class="helper-slot" role="img" aria-label="Dr. Patel">&#128105;&#8205;&#9877;&#65039;<div class="helper-label">Dr. Patel</div></div>
-    <img class="char" src="../assets/sprites/james_neutral_standing.png" alt="James" loading="lazy">
-  </div>
+  <div class="art"><img src="../assets/book4-page9.webp" alt="Illustration for page 9 of Marcus &amp; James Visit the Doctor" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">Dr. Patel noticed. &ldquo;Would it help if you picked the order we do things in?&rdquo; she asked Marcus.</div>
+  <div class="text-a">Dr. Patel noticed. She sat down so her eyes were right even with Marcus’s, and she spoke slowly and softly. “Marcus,” she said, “would it help if you picked the order we do things in? Your ears, your heart, your growing-check — you can choose what comes first.”</div>
   <div class="text-b">Marcus can pick.</div>
 </section></div>
-<div class="page-wrap" id="p5" style="display:none">
+<div class="page-wrap" id="p10" style="display:none">
 <section class="page">
-  <div class="stage backdrop-doctor">
-    <img class="char" src="../assets/sprites/marcus_neutral_pointing.png" alt="Marcus" loading="lazy">
-    <img class="char" src="../assets/sprites/james_neutral_looking.png" alt="James" loading="lazy">
-  </div>
+  <div class="art"><img src="../assets/book4-page10.webp" alt="Illustration for page 10 of Marcus &amp; James Visit the Doctor" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">Marcus thought. &ldquo;Ears first. Heart last.&rdquo; Just deciding made the flutter feel smaller.</div>
+  <div class="text-a">Marcus thought very carefully. “Ears first,” he said. “Heart last.” And just deciding — just having the plan be partly his — made the flutter shrink smaller and smaller. Dr. Patel peeked in his ears, friendly as could be, and last of all came the stethoscope, cool and gentle on his chest. Then Dr. Patel did something wonderful: she let Marcus listen to his own heartbeat too. Thump-thump. Thump-thump. Steady as a drum.</div>
   <div class="text-b">Marcus picks ears first.</div>
-</section></div>
-<div class="page-wrap" id="p6" style="display:none">
-<section class="page">
-  <div class="stage backdrop-doctor">
-    <img class="char" src="../assets/sprites/marcus_happy_sitting.png" alt="Marcus" loading="lazy">
-    <div class="helper-slot" role="img" aria-label="Dr. Patel">&#128105;&#8205;&#9877;&#65039;<div class="helper-label">Dr. Patel</div></div>
-    <button class="hotspot right" onclick="pulse(this)" aria-label="Tap to play" type="button">&#129658;</button>
-  </div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
-  </button>
-  <div class="text-a">Dr. Patel used the stethoscope gently, and Marcus listened to his own heartbeat too.</div>
-  <div class="text-b">Marcus taps his chest.</div>
-</section></div>
-<div class="page-wrap" id="p7" style="display:none">
-<section class="page">
-  <div class="stage backdrop-doctor">
-    <img class="char" src="../assets/sprites/marcus_happy_giving.png" alt="Marcus" loading="lazy">
-    <img class="char" src="../assets/sprites/james_happy_standing.png" alt="James" loading="lazy">
-  </div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
-  </button>
-  <div class="text-a">&ldquo;That wasn&rsquo;t so bad when I got to choose,&rdquo; Marcus said.</div>
-  <div class="text-b">Marcus is not mad now.</div>
   <div class="quiz" data-answer="1" role="group" aria-label="Question">
     <p class="quiz-q">What helped Marcus feel calm?</p>
     <div class="quiz-opts">
@@ -266,32 +234,41 @@ img.char { height:220px; object-fit:contain; }
     <p class="quiz-feedback" role="status" aria-live="polite"></p>
   </div>
 </section></div>
-<div class="page-wrap" id="p8" style="display:none">
+<div class="page-wrap" id="p11" style="display:none">
 <section class="page">
-  <div class="stage backdrop-doctor">
-    <img class="char" src="../assets/sprites/james_happy_giving.png" alt="James" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_happy_waving.png" alt="Marcus" loading="lazy">
-  </div>
+  <div class="art"><img src="../assets/book4-page11.webp" alt="Illustration for page 11 of Marcus &amp; James Visit the Doctor" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">James promised to ask before explaining next time, and Marcus said that would help a lot.</div>
+  <div class="text-a">“That wasn’t so bad, when I got to choose,” Marcus said. Dr. Patel beamed. “You know my favorite part of this job? It isn’t the tools, and it isn’t the facts. It’s watching a worried face turn into a brave one — and knowing this town trusts me with the people it loves most.” Thump-thump, went Marcus’s heart, calm as could be.</div>
+  <div class="text-b">Dr. Patel loves helping people feel better.</div>
+</section></div>
+<div class="page-wrap" id="p12" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book4-page12.webp" alt="Illustration for page 12 of Marcus &amp; James Visit the Doctor" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">On the way out, James turned to Marcus with a very serious face. “Next time,” he promised, “I will ask before I explain. Asking first is a fact I should have known.” Marcus grinned. “That would help a lot.” And the two friends walked home together — one a little braver, one a little wiser, and both Healthy Helpers.</div>
   <div class="text-b">James will ask first.</div>
 </section></div>
-<div class="page-wrap" id="p9" style="display:none">
+<div class="page-wrap" id="p13" style="display:none">
 <section class="page end-screen">
-  <div class="badge"><span aria-hidden="true">&#127941;</span><div>Healthy<br>Helper</div></div>
+  <div class="badge"><span aria-hidden="true">&#127941;</span><div>Healthy Helper</div></div>
   <h2>Great reading!</h2>
   <p class="saved-note" id="savedNote"></p>
   <details class="guide">
     <summary>For Grown-Ups</summary>
     <p><b>Feeling/skill:</b> Anxiety eases when a child is offered a small, real choice.</p>
     <p><b>Ask your child:</b> What is one choice that would help you feel ready for something new?</p>
-    <p><b>Try this:</b> Offer two small choices before your child&rsquo;s next appointment.</p>
+    <p><b>Try this:</b> Offer two small choices before your child’s next appointment.</p>
+    <p><b>Words to grow on:</b> fluttery, checkup, stethoscope, gentle, steady, choice, anxious, trust. Point at the tools as you name them — stethoscope, ear-light (otoscope), blood-pressure cuff, scale.</p>
+    <p><b>The bigger picture:</b> Doctors do much more than treat sickness — they prepare and clean their rooms and tools before every patient, study and practice for years (often on pretend patients first), work as a team with nurses and receptionists, give checkups and vaccines to keep people healthy, and teach families the everyday habits that stop illness before it starts.</p>
     <p class="standards">Standards: L.K.1.d, SL.K.2</p>
   </details>
   <div class="end-btns">
     <button class="start-btn" type="button" onclick="restart()">Read Again &#9654;</button>
+    <a class="start-btn ghost" href="Book4_Marcus_James_Doctor.pdf" download>&#128196; Download the printable PDF</a>
     <a class="start-btn ghost" href="../index.html">&#8592; More books</a>
   </div>
 </section></div>
@@ -308,7 +285,7 @@ const BOOK_ID = "Book4_Marcus_James_Doctor";
 const BOOK_TITLE = "Marcus & James Visit the Doctor";
 const BOOK_BADGE = "Healthy Helper";
 let current = 0;
-const total = 10;
+const total = 14;
 
 /* ---------- progress: saved on this device only ---------- */
 function loadProgress() {
@@ -377,7 +354,6 @@ function tone(freq, dur, type, vol) {
     o.start(); o.stop(ctx.currentTime + dur);
   } catch(e) {}
 }
-function sfxPop() { tone(520, .12, 'sine', .12); }
 function sfxWhoosh() { tone(220, .16, 'sine', .05); setTimeout(function(){ tone(340, .12, 'sine', .04); }, 55); }
 function sfxSuccess() { tone(523, .12, 'sine', .1); setTimeout(function(){ tone(659, .12, 'sine', .1); }, 90); setTimeout(function(){ tone(784, .2, 'sine', .12); }, 180); }
 function sfxOops() { tone(220, .18, 'sine', .08); }
@@ -422,16 +398,6 @@ document.addEventListener('keydown', function(e) {
   else if (e.key === 'Escape') stopSpeech();
 });
 
-/* ---------- hotspots ---------- */
-function pulse(el) {
-  sfxPop();
-  el.classList.remove('tapped'); void el.offsetWidth; el.classList.add('tapped');
-}
-function ding(el) {
-  el.classList.remove('tapped'); void el.offsetWidth; el.classList.add('tapped');
-  tone(880, .35, 'sine', .12);
-}
-
 /* ---------- quiz ---------- */
 function checkAnswer(btn, chosen) {
   const quiz = btn.closest('.quiz');
@@ -466,13 +432,13 @@ function toggleEasy() {
 function toggleMute() {
   const d = loadProgress(); d.muted = !d.muted; saveProgress(d);
   const b = document.getElementById('muteBtn');
-  b.textContent = d.muted ? '🔇' : '🔊';
+  b.textContent = d.muted ? '\uD83D\uDD07' : '\uD83D\uDD0A';
   b.setAttribute('aria-pressed', d.muted ? 'true' : 'false');
 }
 (function initMute() {
   if (loadProgress().muted) {
     const b = document.getElementById('muteBtn');
-    b.textContent = '🔇';
+    b.textContent = '\uD83D\uDD07';
     b.setAttribute('aria-pressed', 'true');
   }
 })();
