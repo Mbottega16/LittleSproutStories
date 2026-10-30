@@ -67,7 +67,7 @@
   .nav-toggle svg { width: 26px; height: 26px; }
 
   /* HERO */
-  .hero { position: relative; padding: 60px 0 40px; overflow: hidden; }
+  .hero { position: relative; padding: 60px 0 40px; overflow: hidden; background: linear-gradient(rgba(251,246,236,0.84), rgba(251,246,236,0.60) 55%, rgba(251,246,236,0.80)), url('assets/hero-stage.webp') center 30% / cover no-repeat; }
   .hero-cloud { position: absolute; opacity: 0.7; pointer-events: none; }
   .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: var(--sky); color: var(--sky-deep); font-weight: 800; font-size: 13px; letter-spacing: 0.5px; text-transform: uppercase; padding: 7px 16px; border-radius: 50px; margin-bottom: 22px; }
   .hero h1 { font-size: clamp(38px, 6.5vw, 68px); line-height: 1.02; color: var(--bark); letter-spacing: -0.5px; margin-bottom: 20px; }
@@ -212,7 +212,8 @@
   @media (prefers-reduced-motion: reduce) { * { animation:none !important; transition:none !important; } }
   .approach-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; }
   .feat { text-align: center; padding: 0 8px; }
-  .feat-icon { width: 66px; height: 66px; border-radius: 20px; margin: 0 auto 18px; display: flex; align-items: center; justify-content: center; font-size: 32px; }
+  .feat-icon { width: 96px; height: 96px; border-radius: 24px; margin: 0 auto 18px; display: flex; align-items: center; justify-content: center; font-size: 32px; overflow: hidden; border: 1px solid var(--paper-line); box-shadow: 0 6px 18px rgba(54,64,44,0.10); }
+  .feat-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .feat h3 { font-size: 19px; color: var(--bark); margin-bottom: 8px; }
   .feat p { font-size: 14.5px; color: var(--bark-soft); font-weight: 600; }
 
@@ -247,7 +248,7 @@
   .res-cta span { color: var(--bark-soft); font-weight: 700; font-size: 14px; }
 
   .cta-strip { text-align: center; }
-  .cta-card { background: linear-gradient(160deg, var(--sun) 0%, #FFC01F 100%); border-radius: 28px; padding: 52px 32px; box-shadow: 0 12px 30px rgba(225,164,0,0.22); }
+  .cta-card { background: linear-gradient(160deg, rgba(255,224,130,0.82) 0%, rgba(255,192,31,0.78) 100%), url('assets/cta-stage.webp') center / cover no-repeat; border-radius: 28px; padding: 52px 32px; box-shadow: 0 12px 30px rgba(225,164,0,0.22); }
   .cta-card h2 { font-size: clamp(26px, 4vw, 38px); color: #5A4200; margin-bottom: 12px; }
   .cta-card p { font-size: 17px; color: #6B5212; font-weight: 700; margin-bottom: 26px; }
 
@@ -275,6 +276,13 @@
 
   .card-art img.card-cover { width:100%; height:100%; object-fit:cover; display:block; }
   .card-pdf { display:block; text-align:center; margin-top:10px; font-weight:800; font-size:14px; color:#3C7A52; }
+
+  /* DESIGN POLISH (proof): watercolor wash dividers, games stage banner, audience spot icons */
+  .wash-divider { height: 46px; background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0) 100%), linear-gradient(90deg, rgba(168,216,190,0) 0%, rgba(168,216,190,0.32) 22%, rgba(191,227,250,0.42) 50%, rgba(255,255,255,0.45) 74%, rgba(168,216,190,0) 100%); }
+  .wash-divider.flip { background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0) 100%), linear-gradient(90deg, rgba(191,227,250,0) 0%, rgba(255,255,255,0.45) 26%, rgba(207,240,219,0.42) 55%, rgba(191,227,250,0.32) 80%, rgba(191,227,250,0) 100%); }
+  .games-banner { width: 100%; height: 230px; object-fit: cover; display: block; border-radius: 26px; border: 4px solid #fff; box-shadow: 0 14px 34px rgba(54,64,44,0.14); margin: 0 auto 44px; }
+  @media (max-width: 640px) { .games-banner { height: 150px; } }
+  .aud-card h3 img.aud-icon { width: 46px; height: 46px; border-radius: 13px; object-fit: cover; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.35); }
 </style>
 </head>
 <body>
@@ -318,7 +326,7 @@
   <div class="wrap hero-text">
     <span class="hero-eyebrow">🌱 Read &middot; Play &middot; Grow</span>
     <h1>Little readers,<br><span class="pop">big adventures.</span></h1>
-    <p class="hero-sub">Interactive storybooks and feelings games that help children ages 4&ndash;7 learn to read, name their emotions, and explore their community &mdash; with friends Maya, Marcus, Sophie &amp; James.</p>
+    <p class="hero-sub">Every story runs on the Double Engine &mdash; Phonics plus Schema Building &mdash; inside a warm School Family where children ages 4&ndash;7 learn to read, explore their community, and practice big feelings with friends Maya, Marcus, Sophie &amp; James.</p>
     <div class="hero-btns">
       <a href="#library" class="btn-primary">Explore the library</a>
       <a href="#games" class="btn-ghost">Play a game</a>
@@ -340,22 +348,26 @@
   </div>
 </header>
 
+<div class="wash-divider" aria-hidden="true"></div>
+
 <!-- APPROACH -->
 <section class="section approach" id="approach">
   <div class="wrap">
     <div class="section-head">
       <span class="section-eyebrow">How it works</span>
       <h2>Two engines in every story</h2>
-      <p>LittleSprout pairs learning to read with learning to feel &mdash; so each adventure grows the whole child.</p>
+      <p>Phonics and world knowledge power every page &mdash; and there is always room to practice big feelings, so each adventure grows the whole child.</p>
     </div>
     <div class="approach-grid">
-      <div class="feat"><div class="feat-icon" style="background:#E8F4DC;">📖</div><h3>Decodable reading</h3><p>Short, sound-it-out sentences and repeated sight words build confidence on every page.</p></div>
-      <div class="feat"><div class="feat-icon" style="background:#FFF1CC;">⭐</div><h3>Tap-to-learn words</h3><p>Bolded vocabulary words open kid-friendly definitions, turning new words into known words.</p></div>
-      <div class="feat"><div class="feat-icon" style="background:#FCE0EE;">💕</div><h3>Big-feelings practice</h3><p>Characters model naming emotions and making kind choices &mdash; social-emotional learning woven into the story.</p></div>
-      <div class="feat"><div class="feat-icon" style="background:#D9EEFB;">🎯</div><h3>Playful checks</h3><p>Hotspots, sorting, and questions keep readers active and reward them with badges, not pressure.</p></div>
+      <div class="feat"><div class="feat-icon" style="background:#E8F4DC;"><img src="assets/icon-decodable.webp" alt="" loading="lazy"></div><h3>Decodable reading</h3><p>Carefully sequenced phonics: short, sound-it-out sentences and repeated sight words give new readers something they can truly read &mdash; and confidence that grows on every page.</p></div>
+      <div class="feat"><div class="feat-icon" style="background:#FFF1CC;"><img src="assets/icon-tapwords.webp" alt="" loading="lazy"></div><h3>Tap-to-learn words</h3><p>Tap any bolded word for a friendly definition. Real-world words like <strong>stethoscope</strong> and <strong>hydrant</strong> become schema &mdash; knowledge your child carries into every book that follows.</p></div>
+      <div class="feat"><div class="feat-icon" style="background:#FCE0EE;"><img src="assets/icon-feelings.webp" alt="" loading="lazy"></div><h3>Big-feelings practice</h3><p>In the School Family, friends and their composure coaches name big feelings, breathe, and choose kindness &mdash; social-emotional learning woven into every story, where it is safe to make mistakes.</p></div>
+      <div class="feat"><div class="feat-icon" style="background:#D9EEFB;"><img src="assets/icon-checks.webp" alt="" loading="lazy"></div><h3>Playful checks</h3><p>Gentle questions, sorting games, and story checks keep readers thinking as they go &mdash; and celebrate effort with badges, never pressure.</p></div>
     </div>
   </div>
 </section>
+
+<div class="wash-divider flip" aria-hidden="true"></div>
 
 <!-- LIBRARY -->
 <section class="section library" id="library">
@@ -566,6 +578,8 @@
   </div>
 </section>
 
+<div class="wash-divider" aria-hidden="true"></div>
+
 <!-- GAMES -->
 <section class="section games" id="games">
   <div class="wrap">
@@ -574,6 +588,7 @@
       <h2>Games with the same four friends</h2>
       <p>Short, replayable activities spanning ages 3&ndash;9 &mdash; sounding out words, naming feelings, rhyming, building sentences, and paying close attention.</p>
     </div>
+    <img class="games-banner" src="assets/games-stage.webp" alt="" loading="lazy">
     <div class="card-grid">
 
       <article class="card">
@@ -670,6 +685,8 @@
   </div>
 </section>
 
+<div class="wash-divider flip" aria-hidden="true"></div>
+
 <!-- BADGE SHELF -->
 <section class="section shelf" id="shelf">
   <div class="wrap">
@@ -703,6 +720,8 @@
   </div>
 </section>
 
+<div class="wash-divider" aria-hidden="true"></div>
+
 <!-- AUDIENCE -->
 <section class="section aud" id="grownups">
   <div class="wrap">
@@ -711,9 +730,9 @@
       <h2>Made for the people who read along</h2>
     </div>
     <div class="aud-grid">
-      <div class="aud-card"><h3>👪 Parents</h3><p>Safe, ad-free, and screen-time you can feel good about. Snuggle up and tap through a story together, or let an independent reader explore.</p></div>
-      <div class="aud-card"><h3>🎓 Teachers</h3><p>Aligned to early-literacy standards for phonics and sight words, with SEL themes that fit morning meeting and centers.</p></div>
-      <div class="aud-card"><h3>🧒 Kids</h3><p>Bright friends, real choices, and badges to earn. Big buttons and read-along text make it easy to play solo.</p></div>
+      <div class="aud-card"><h3><img class="aud-icon" src="assets/icon-parents.webp" alt="" loading="lazy"> Parents</h3><p>Safe, ad-free screen time you can feel good about. Snuggle up and read a story together, or let a growing reader explore on their own.</p></div>
+      <div class="aud-card"><h3><img class="aud-icon" src="assets/icon-teachers.webp" alt="" loading="lazy"> Teachers</h3><p>Built on early-literacy best practice &mdash; sequenced phonics, sight words, and rich vocabulary &mdash; with SEL themes that fit morning meeting, centers, and School Family routines.</p></div>
+      <div class="aud-card"><h3><img class="aud-icon" src="assets/icon-kids.webp" alt="" loading="lazy"> Kids</h3><p>Kids tap words and earn badges.</p></div>
     </div>
   </div>
 </section>
@@ -753,6 +772,8 @@
     <p class="res-disclaimer">External links open in a new tab and are provided for convenience. LittleSprout isn&rsquo;t affiliated with these organizations.</p>
   </div>
 </section>
+
+<div class="wash-divider flip" aria-hidden="true"></div>
 
 <!-- CTA -->
 <section class="section cta-strip">
