@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
 <link rel="icon" type="image/png" href="../assets/icons/icon-192.png">
-<link rel="canonical" href="https://edusystems-code.github.io/LittleSproutStories/books/Book6_Marcus_Sophie_Barbershop.html">
+<link rel="canonical" href="https://mbottega16.github.io/LittleSproutStories/books/Book6_Marcus_Sophie_Barbershop.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LittleSprout">
 <meta property="og:title" content="Marcus &amp; Sophie Visit the Barbershop | Little Sprout Stories">
 <meta property="og:description" content="Interactive phonics storybooks and feelings games for early readers ages 4–7, starring Maya, Marcus, Sophie, and James.">
-<meta property="og:url" content="https://edusystems-code.github.io/LittleSproutStories/books/Book6_Marcus_Sophie_Barbershop.html">
-<meta property="og:image" content="https://edusystems-code.github.io/LittleSproutStories/assets/og-share.png">
+<meta property="og:url" content="https://mbottega16.github.io/LittleSproutStories/books/Book6_Marcus_Sophie_Barbershop.html">
+<meta property="og:image" content="https://mbottega16.github.io/LittleSproutStories/assets/og-share.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Marcus &amp; Sophie Visit the Barbershop | Little Sprout Stories">
 <meta name="twitter:description" content="Interactive phonics storybooks and feelings games for early readers ages 4–7, starring Maya, Marcus, Sophie, and James.">
-<meta name="twitter:image" content="https://edusystems-code.github.io/LittleSproutStories/assets/og-share.png">
+<meta name="twitter:image" content="https://mbottega16.github.io/LittleSproutStories/assets/og-share.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#5BA672">
-<title>Marcus & Sophie Visit the Barbershop | Little Sprout Stories</title>
+<title>Marcus &amp; Sophie Visit the Barbershop | Little Sprout Stories</title>
 <link rel="manifest" href="../manifest.json">
 <style>
 :root { --sprout:#5BA672; --sprout-dark:#3C7A52; --cream:#FBF6EC; --ink:#2b2b2b; }
@@ -38,39 +38,9 @@ body.easyread .text-a, body.easyread .text-b { line-height:1.95; }
 .cover { text-align:center; }
 .banner { background:var(--sprout); color:#fff; display:inline-block; padding:6px 18px; border-radius:20px; font-size:14px; margin-bottom:10px; }
 h1 { color:var(--sprout); font-size:28px; }
-.stage { position:relative; min-height:320px; border-radius:16px; margin:16px 0; display:flex; align-items:flex-end; justify-content:center; gap:10px; padding:16px; overflow:hidden; background-size:cover; background-position:center bottom; }
-/* All twelve locations now have real illustrated backgrounds (assets/backgrounds/).
-   Each keeps its old flat-gradient rule as the paint-before-image-loads/fallback color.
-   backdrop-classroom is Mr. Rodriguez's specific room -- used only on the one page across
-   every book that actually features him as the on-page helper (Book5 p2). Everywhere else
-   School-related (including Book5's own other pages and Book15's classroom-flavored recap)
-   stays on backdrop-school's general room, per explicit instruction. */
-.backdrop-barbershop { background-color:#e8f4dc; background-image:url('../assets/backgrounds/barbershop.jpg'); }
-.backdrop-garden { background-color:#bfe3fa; background-image:url('../assets/backgrounds/garden.jpg'); }
-.backdrop-repair { background-color:#f3ead6; background-image:url('../assets/backgrounds/repair.jpg'); }
-.backdrop-street { background-color:#bfe3ff; background-image:url('../assets/backgrounds/street.jpg'); }
-.backdrop-firestation { background-color:#ffd9a0; background-image:url('../assets/backgrounds/firestation.jpg'); }
-.backdrop-police { background-color:#d9eefb; background-image:url('../assets/backgrounds/police.jpg'); }
-.backdrop-classroom { background-color:#fff1cc; background-image:url('../assets/backgrounds/classroom.jpg'); }
-.backdrop-library { background-color:#f3ead6; background-image:url('../assets/backgrounds/library.jpg'); }
-.backdrop-doctor { background-color:#fce0ee; background-image:url('../assets/backgrounds/doctor.jpg'); }
-.backdrop-center { background-color:#fce0ee; background-image:url('../assets/backgrounds/center.jpg'); }
-.backdrop-school { background-color:#fff1cc; background-image:url('../assets/backgrounds/school.jpg'); }
-.backdrop-bakery { background-color:#ffe3cc; background-image:url('../assets/backgrounds/bakery.jpg'); }
-.backdrop-postoffice { background-color:#d9eefb; background-image:url('../assets/backgrounds/postoffice.jpg'); }
-img.char { height:220px; object-fit:contain; }
-
-.hotspot { position:absolute; top:20px; font-size:40px; cursor:pointer; animation:bob 2s ease-in-out infinite;
-  transition:transform .2s; background:none; border:none; padding:4px; line-height:1; }
-.hotspot.left { left:20px; }
-.hotspot.right { right:20px; }
-.hotspot.mid { left:50%; transform:translateX(-50%); }
-.hotspot.right2 { right:70px; top:44px; }
-@keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
-@media (prefers-reduced-motion: reduce) { .hotspot { animation:none; } }
-
-.helper-slot { font-size:60px; text-align:center; }
-.helper-label { font-size:14px; background:#fff; border-radius:8px; padding:2px 8px; }
+.subtitle { font-size:17px; font-weight:bold; color:var(--sprout-dark); margin:2px 0 0; }
+.art { margin:16px 0; border-radius:16px; overflow:hidden; }
+.art img { width:100%; height:auto; display:block; }
 
 .readaloud { display:inline-flex; align-items:center; gap:8px; background:#fff; border:2px solid var(--sprout);
   color:var(--sprout-dark); border-radius:22px; padding:8px 16px; font-size:15px; font-weight:bold;
@@ -114,9 +84,6 @@ img.char { height:220px; object-fit:contain; }
 .page-wrap.turn-in .page { animation: pageTurnIn .32s cubic-bezier(.2,.8,.3,1) both; }
 @keyframes pageTurnIn { from { opacity:0; transform:translateY(10px) scale(.97); } to { opacity:1; transform:translateY(0) scale(1); } }
 
-.hotspot.tapped { animation: hotspotPop .4s ease; }
-@keyframes hotspotPop { 0% { transform:scale(1) rotate(0); } 40% { transform:scale(1.45) rotate(-10deg); } 100% { transform:scale(1) rotate(0); } }
-
 .start-btn, .nav-row button, .readaloud, .topbar button { transition:transform .12s ease; }
 .start-btn:active, .nav-row button:not(:disabled):active, .readaloud:active, .topbar button:active { transform:scale(.93); }
 
@@ -133,7 +100,7 @@ img.char { height:220px; object-fit:contain; }
 @keyframes confettiFall { to { transform:translateY(110vh) rotate(560deg); opacity:.6; } }
 
 @media (prefers-reduced-motion: reduce) {
-  .page-wrap.turn-in .page, .hotspot.tapped, .quiz button.correct, .quiz button.wrong, .badge.celebrate { animation:none; }
+  .page-wrap.turn-in .page, .quiz button.correct, .quiz button.wrong, .badge.celebrate { animation:none; }
   .start-btn:active, .nav-row button:not(:disabled):active, .readaloud:active, .topbar button:active { transform:none; }
   .confetti-piece { display:none; }
 }
@@ -155,48 +122,80 @@ img.char { height:220px; object-fit:contain; }
 <section class="page cover">
   <div class="banner">Little Sprout Stories</div>
   <h1>Marcus &amp; Sophie<br>Visit the Barbershop</h1>
-  <div class="stage backdrop-barbershop">
-    <img class="char" src="../assets/sprites/marcus_happy_waving.png" alt="Marcus" loading="lazy">
-    <img class="char" src="../assets/sprites/sophie_happy_waving.png" alt="Sophie" loading="lazy">
-  </div>
+  <p class="subtitle">A story about feeling scared — and watching a friend go first</p>
+  <div class="art"><img src="../assets/book6-cover.webp" alt="Marcus &amp; Sophie Visit the Barbershop — cover art" fetchpriority="high"></div>
   <button class="start-btn" type="button" onclick="nextPage()">Start Reading &#9654;</button>
 </section></div>
 <div class="page-wrap" id="p1" style="display:none">
 <section class="page">
-  <div class="stage backdrop-street">
-    <img class="char" src="../assets/sprites/sophie_neutral_walking.png" alt="Sophie" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_happy_walking.png" alt="Marcus" loading="lazy">
-  </div>
+  <div class="art"><img src="../assets/book6-page1.webp" alt="Illustration for page 1 of Marcus &amp; Sophie Visit the Barbershop" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">Sophie was getting her very first haircut, and Marcus came along because he already knew what to expect.</div>
+  <div class="text-a">Today was a day of very firsts: Sophie’s very first haircut, ever in her whole life. Marcus came along, because Marcus had had lots of haircuts, and he already knew what to expect — the spinning chair, the big mirror, and the kind man who ran the shop on the corner.</div>
   <div class="text-b">Sophie gets a haircut.</div>
 </section></div>
 <div class="page-wrap" id="p2" style="display:none">
 <section class="page">
-  <div class="stage backdrop-barbershop">
-    <img class="char" src="../assets/sprites/sophie_surprised_standing.png" alt="Sophie" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_neutral_standing.png" alt="Marcus" loading="lazy">
-    <div class="helper-slot" role="img" aria-label="Mr. Smith">&#128135;<div class="helper-label">Mr. Smith</div></div>
-    <button class="hotspot right" onclick="ding(this)" aria-label="Tap to play" type="button">&#9986;</button>
-  </div>
+  <div class="art"><img src="../assets/book6-page2.webp" alt="Illustration for page 2 of Marcus &amp; Sophie Visit the Barbershop" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">Mr. Smith greeted them with clippers buzzing softly in the background. Sophie froze at the sound.</div>
-  <div class="text-b">Buzz! The tool is on.</div>
+  <div class="text-a">The bell over the door jingled, and Mr. Smith looked up with a grin that crinkled his whole face. “Well, hello!” he said. “Marcus, my old friend — and you must be Sophie. I’ve been saving you the best seat in the shop.” From somewhere across the room came a soft, faraway sound: bzzzzz.</div>
+  <div class="text-b">Mr. Smith says hello.</div>
 </section></div>
 <div class="page-wrap" id="p3" style="display:none">
 <section class="page">
-  <div class="stage backdrop-barbershop">
-    <img class="char" src="../assets/sprites/sophie_surprised_hands.png" alt="Sophie" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_neutral_looking.png" alt="Marcus" loading="lazy">
-  </div>
+  <div class="art"><img src="../assets/book6-page3.webp" alt="Illustration for page 3 of Marcus &amp; Sophie Visit the Barbershop" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">&ldquo;That buzzing sound is scary,&rdquo; Sophie whispered.</div>
+  <div class="text-a">“Before my first customer,” said Mr. Smith, “I get everything clean and ready.” He swept the floor until it shone, washed his combs and brushes, oiled his clippers with two careful drops, and folded a stack of fresh, fluffy towels. “A barber’s first job isn’t cutting hair. It’s keeping every tool clean and safe — because clean tools protect everybody who sits in my chair.”</div>
+  <div class="text-b">Mr. Smith cleans his tools every day.</div>
+</section></div>
+<div class="page-wrap" id="p4" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book6-page4.webp" alt="Illustration for page 4 of Marcus &amp; Sophie Visit the Barbershop" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">Marcus pointed at everything, proud as a tour guide. “Those are the clippers — they trim short, short hair. Those are the scissors — snip, snip — for longer hair. That’s the cape, so the itchy bits don’t fall on your clothes. And that—” he pointed at the great chair, “—is the chair that spins.” Sophie looked at the shining row of tools. “There are so many,” she said.</div>
+  <div class="text-b">Mr. Smith has clippers and scissors.</div>
+</section></div>
+<div class="page-wrap" id="p5" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book6-page5.webp" alt="Illustration for page 5 of Marcus &amp; Sophie Visit the Barbershop" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">On a shelf sat a row of practice heads, each with a different tangle of hair. “Even barbers practice,” Mr. Smith explained. “We rehearse new styles on pretend heads first, and we practice keeping our hands steady as stones. Nobody’s real hair is for practicing on — that wouldn’t be fair at all.”</div>
+  <div class="text-b">Barbers practice to get better.</div>
+</section></div>
+<div class="page-wrap" id="p6" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book6-page6.webp" alt="Illustration for page 6 of Marcus &amp; Sophie Visit the Barbershop" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">All morning, the shop was full of neighbors: a grandfather getting his Sunday trim, a teenager asking for something new and brave, a father and a baby getting matching haircuts. Everybody chatted, everybody laughed, and everybody walked out standing a little taller. “A barber doesn’t just know hair,” said Mr. Smith. “A barber knows the whole neighborhood — and the neighborhood knows him.”</div>
+  <div class="text-b">The barbershop is for everyone.</div>
+</section></div>
+<div class="page-wrap" id="p7" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book6-page7.webp" alt="Illustration for page 7 of Marcus &amp; Sophie Visit the Barbershop" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">“Here’s my most important rule,” Mr. Smith told Sophie, holding up one finger. “I always explain before I do, and I always ask before I start. May I put the cape on? May I spray a little water? Nothing in my shop is a surprise.” He nodded at the spray bottle. “And at home, you can help too: washing hair keeps it healthy, and gentle brushing — never yanking — keeps the tangles away.”</div>
+  <div class="text-b">Mr. Smith always asks first.</div>
+</section></div>
+<div class="page-wrap" id="p8" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book6-page8.webp" alt="Illustration for page 8 of Marcus &amp; Sophie Visit the Barbershop" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">Then Mr. Smith picked up the clippers to trim a fuzzy edge nearby — and close up, the sound wasn’t soft and faraway anymore. BZZZZZ, buzzed the clippers, loud as a whole hive of bees. Sophie froze in her seat. “That buzzing sound,” she whispered, clutching the arms of her chair, “is scary.”</div>
   <div class="text-b">Sophie feels bad.</div>
   <div class="quiz" data-answer="1" role="group" aria-label="Question">
     <p class="quiz-q">How does Sophie feel?</p>
@@ -208,54 +207,23 @@ img.char { height:220px; object-fit:contain; }
     <p class="quiz-feedback" role="status" aria-live="polite"></p>
   </div>
 </section></div>
-<div class="page-wrap" id="p4" style="display:none">
+<div class="page-wrap" id="p9" style="display:none">
 <section class="page">
-  <div class="stage backdrop-barbershop">
-    <img class="char" src="../assets/sprites/sophie_neutral_looking.png" alt="Sophie" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_neutral_pointing.png" alt="Marcus" loading="lazy">
-  </div>
+  <div class="art"><img src="../assets/book6-page9.webp" alt="Illustration for page 9 of Marcus &amp; Sophie Visit the Barbershop" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">Marcus remembered feeling that way once too. &ldquo;Want me to go first so you can watch?&rdquo; he offered.</div>
+  <div class="text-a">Marcus looked at Sophie’s wide eyes, and he remembered — really remembered — feeling exactly that way once too, in this very chair. He hopped up. “Sophie,” he said, “want me to go first, so you can watch? Then you’ll know every single thing that’s going to happen. No surprises.”</div>
   <div class="text-b">Marcus goes first.</div>
 </section></div>
-<div class="page-wrap" id="p5" style="display:none">
+<div class="page-wrap" id="p10" style="display:none">
 <section class="page">
-  <div class="stage backdrop-barbershop">
-    <img class="char" src="../assets/sprites/marcus_neutral_sitting.png" alt="Marcus" loading="lazy">
-    <img class="char" src="../assets/sprites/sophie_neutral_standing.png" alt="Sophie" loading="lazy">
-  </div>
+  <div class="art"><img src="../assets/book6-page10.webp" alt="Illustration for page 10 of Marcus &amp; Sophie Visit the Barbershop" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">Sophie watched closely as Marcus sat calmly through his trim, giggling at the ticklish parts.</div>
-  <div class="text-b">Marcus sits still.</div>
-</section></div>
-<div class="page-wrap" id="p6" style="display:none">
-<section class="page">
-  <div class="stage backdrop-barbershop">
-    <img class="char" src="../assets/sprites/sophie_neutral_reaching.png" alt="Sophie" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_happy_giving.png" alt="Marcus" loading="lazy">
-    <button class="hotspot left" onclick="pulse(this)" aria-label="Tap to play" type="button">&#9986;</button>
-  </div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
-  </button>
-  <div class="text-a">Mr. Smith let Sophie hold the clippers, turned off, so she could feel they weren&rsquo;t scary at all.</div>
+  <div class="text-a">So Sophie watched, closely, as Marcus climbed up and sat calmly through his trim — cape, spray, snip-snip, and even a ticklish part near his ears that made him giggle into his shoulders. Then Mr. Smith did something kind: he put the clippers, turned safely OFF, right into Sophie’s hands. They were quiet. They were still. They weren’t scary at all. “Oh,” said Sophie. “Oh! They’re just… clippers.”</div>
   <div class="text-b">Sophie holds the tool.</div>
-</section></div>
-<div class="page-wrap" id="p7" style="display:none">
-<section class="page">
-  <div class="stage backdrop-barbershop">
-    <img class="char" src="../assets/sprites/sophie_happy_standing.png" alt="Sophie" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_happy_giving.png" alt="Marcus" loading="lazy">
-  </div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
-  </button>
-  <div class="text-a">Sophie climbed into the chair, brave and ready.</div>
-  <div class="text-b">Sophie is not sad now.</div>
   <div class="quiz" data-answer="1" role="group" aria-label="Question">
     <p class="quiz-q">What helped Sophie feel brave?</p>
     <div class="quiz-opts">
@@ -266,33 +234,41 @@ img.char { height:220px; object-fit:contain; }
     <p class="quiz-feedback" role="status" aria-live="polite"></p>
   </div>
 </section></div>
-<div class="page-wrap" id="p8" style="display:none">
+<div class="page-wrap" id="p11" style="display:none">
 <section class="page">
-  <div class="stage backdrop-barbershop">
-    <img class="char" src="../assets/sprites/sophie_happy_jumping.png" alt="Sophie" loading="lazy">
-    <img class="char" src="../assets/sprites/marcus_happy_waving.png" alt="Marcus" loading="lazy">
-    <button class="hotspot mid" onclick="pulse(this)" aria-label="Tap to play" type="button">&#129517;</button>
-  </div>
+  <div class="art"><img src="../assets/book6-page11.webp" alt="Illustration for page 11 of Marcus &amp; Sophie Visit the Barbershop" loading="lazy"></div>
   <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
     <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
   </button>
-  <div class="text-a">Her haircut was finished before she knew it, and she loved seeing herself in the big mirror.</div>
+  <div class="text-a">“You know my favorite part of this job?” Mr. Smith asked, dusting Marcus off with the soft brush. “It isn’t the scissors, and it isn’t the spinning chair. It’s watching somebody walk out of my shop feeling fresh and new and proud — a little taller than when they walked in. And a first haircut?” He smiled at Sophie. “A first haircut is a big day. I get to be part of it.”</div>
+  <div class="text-b">Mr. Smith helps people feel fresh and new.</div>
+</section></div>
+<div class="page-wrap" id="p12" style="display:none">
+<section class="page">
+  <div class="art"><img src="../assets/book6-page12.webp" alt="Illustration for page 12 of Marcus &amp; Sophie Visit the Barbershop" loading="lazy"></div>
+  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  </button>
+  <div class="text-a">Sophie climbed into the chair — brave, ready, and all by herself. Cape on (he asked first). A little spray (he asked first). Snip-snip, buzz-buzz, and before she knew it, it was finished. Mr. Smith spun the chair toward the big mirror, and Sophie gasped at the girl smiling back: same Sophie, brand-new hair. “I did it,” she said. “I really, really did it.”</div>
   <div class="text-b">Sophie sees her new haircut.</div>
 </section></div>
-<div class="page-wrap" id="p9" style="display:none">
+<div class="page-wrap" id="p13" style="display:none">
 <section class="page end-screen">
-  <div class="badge"><span aria-hidden="true">&#127941;</span><div>Barbershop<br>Explorer</div></div>
+  <div class="badge"><span aria-hidden="true">&#127941;</span><div>Barbershop Explorer</div></div>
   <h2>Great reading!</h2>
   <p class="saved-note" id="savedNote"></p>
   <details class="guide">
     <summary>For Grown-Ups</summary>
     <p><b>Feeling/skill:</b> Fear of the unknown eases when a trusted peer goes first.</p>
     <p><b>Ask your child:</b> Has a friend ever helped you feel brave about something new?</p>
-    <p><b>Try this:</b> Let an older sibling or friend &ldquo;go first&rdquo; for a new experience this week.</p>
+    <p><b>Try this:</b> Let an older sibling or friend “go first” for a new experience this week.</p>
+    <p><b>Words to grow on:</b> jingled, steady, rehearse, neighborhood, gentle, brave, expect, finished. Point at the tools as you name them — clippers, scissors, comb, cape, spray bottle.</p>
+    <p><b>The bigger picture:</b> Barbers do much more than cut hair — they clean and oil their tools before every customer so germs never spread, practice new styles on mannequin heads instead of real people, explain each step and ask permission before they start, teach families how to care for hair at home, and run a shop where the whole neighborhood gathers and everyone leaves feeling fresh and confident.</p>
     <p class="standards">Standards: L.K.1.b, L.K.5.b</p>
   </details>
   <div class="end-btns">
     <button class="start-btn" type="button" onclick="restart()">Read Again &#9654;</button>
+    <a class="start-btn ghost" href="Book6_Marcus_Sophie_Barbershop.pdf" download>&#128196; Download the printable PDF</a>
     <a class="start-btn ghost" href="../index.html">&#8592; More books</a>
   </div>
 </section></div>
@@ -309,7 +285,7 @@ const BOOK_ID = "Book6_Marcus_Sophie_Barbershop";
 const BOOK_TITLE = "Marcus & Sophie Visit the Barbershop";
 const BOOK_BADGE = "Barbershop Explorer";
 let current = 0;
-const total = 10;
+const total = 14;
 
 /* ---------- progress: saved on this device only ---------- */
 function loadProgress() {
@@ -378,7 +354,6 @@ function tone(freq, dur, type, vol) {
     o.start(); o.stop(ctx.currentTime + dur);
   } catch(e) {}
 }
-function sfxPop() { tone(520, .12, 'sine', .12); }
 function sfxWhoosh() { tone(220, .16, 'sine', .05); setTimeout(function(){ tone(340, .12, 'sine', .04); }, 55); }
 function sfxSuccess() { tone(523, .12, 'sine', .1); setTimeout(function(){ tone(659, .12, 'sine', .1); }, 90); setTimeout(function(){ tone(784, .2, 'sine', .12); }, 180); }
 function sfxOops() { tone(220, .18, 'sine', .08); }
@@ -423,16 +398,6 @@ document.addEventListener('keydown', function(e) {
   else if (e.key === 'Escape') stopSpeech();
 });
 
-/* ---------- hotspots ---------- */
-function pulse(el) {
-  sfxPop();
-  el.classList.remove('tapped'); void el.offsetWidth; el.classList.add('tapped');
-}
-function ding(el) {
-  el.classList.remove('tapped'); void el.offsetWidth; el.classList.add('tapped');
-  tone(880, .35, 'sine', .12);
-}
-
 /* ---------- quiz ---------- */
 function checkAnswer(btn, chosen) {
   const quiz = btn.closest('.quiz');
@@ -467,13 +432,13 @@ function toggleEasy() {
 function toggleMute() {
   const d = loadProgress(); d.muted = !d.muted; saveProgress(d);
   const b = document.getElementById('muteBtn');
-  b.textContent = d.muted ? '🔇' : '🔊';
+  b.textContent = d.muted ? '\uD83D\uDD07' : '\uD83D\uDD0A';
   b.setAttribute('aria-pressed', d.muted ? 'true' : 'false');
 }
 (function initMute() {
   if (loadProgress().muted) {
     const b = document.getElementById('muteBtn');
-    b.textContent = '🔇';
+    b.textContent = '\uD83D\uDD07';
     b.setAttribute('aria-pressed', 'true');
   }
 })();
