@@ -1,11 +1,12 @@
 /* LittleSprout service worker.
    Strategy:
      - shell (all top-level pages, manifest, icons) precached on install
-     - everything else (books, games, sprites) cached the first time it is opened,
+     - game pages, their backgrounds and their character sprites precached on install
+     - everything else (books, sprites) cached the first time it is opened,
        so a book a child has read once will still open with no connection.
    Bump CACHE_VERSION whenever site files change, so old copies are cleared. */
 
-const CACHE_VERSION = 'littlesprout-v40';
+const CACHE_VERSION = 'littlesprout-v41';
 
 const SHELL = [
   './',
@@ -24,12 +25,53 @@ const SHELL = [
   './assets/icons/icon-512.png'
 ];
 
+// Games pick characters and poses at random, so a game can ask for any sprite
+// in these sets on its first draw. Cache them all at install so the games open
+// offline before the child has ever seen a given pose.
+const GAME_PAGES = [
+  './games/feelings_faces.html',
+  './games/pose_parade.html',
+  './games/rhyme_time.html',
+  './games/sentence_builder.html',
+  './games/sound_it_out.html',
+  './games/whos_missing.html'
+];
+
+const GAME_BACKGROUNDS = [
+  './assets/backgrounds/classroom_2.jpg',
+  './assets/backgrounds/firestation_2.jpg',
+  './assets/backgrounds/library_2.jpg',
+  './assets/backgrounds/police_2.jpg',
+  './assets/backgrounds/garden_2.jpg',
+  './assets/backgrounds/bakery_2.jpg'
+];
+
+const SPRITE_CHARACTERS = ['maya', 'marcus', 'sophie', 'james'];
+const SPRITE_MOODS = ['happy', 'sad', 'surprised', 'frustrated', 'neutral'];
+const HAPPY_POSES = ['standing', 'waving', 'hands', 'looking', 'jumping', 'pointing', 'kneeling', 'running', 'sitting'];
+const OTHER_POSES = ['standing', 'waving', 'hands', 'looking'];
+
+function gameSpriteUrls() {
+  var urls = [];
+  SPRITE_CHARACTERS.forEach(function (id) {
+    SPRITE_MOODS.forEach(function (mood) {
+      var poses = mood === 'happy' ? HAPPY_POSES : OTHER_POSES;
+      poses.forEach(function (pose) {
+        urls.push('./assets/sprites/' + id + '_' + mood + '_' + pose + '.png');
+      });
+    });
+  });
+  return urls;
+}
+
+const PRECACHE = SHELL.concat(GAME_PAGES, GAME_BACKGROUNDS, gameSpriteUrls());
+
 self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(CACHE_VERSION)
       .then(function (cache) {
         // addAll is all-or-nothing; add individually so one miss can't break install
-        return Promise.all(SHELL.map(function (url) {
+        return Promise.all(PRECACHE.map(function (url) {
           return cache.add(url).catch(function () { return null; });
         }));
       })
