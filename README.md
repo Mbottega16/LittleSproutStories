@@ -55,6 +55,25 @@ python3 -m http.server 8000
 
 ---
 
+## Smoke test (Playwright)
+
+`scripts/smoke_playwright.mjs` opens every page in `books/` and `games/` in headless
+Chromium and fails on any HTTP error, console error, uncaught exception, or blank render.
+Playwright is not a repo dependency. It must be resolvable by `import 'playwright'` from this
+folder (for example, installed in a parent directory). Then install the browser once:
+
+```bash
+npx playwright install chromium                                # one-time browser download
+node scripts/smoke_playwright.mjs                              # test files on disk
+python3 -m http.server 8000 &                                  # or test a served copy:
+node scripts/smoke_playwright.mjs http://localhost:8000/
+```
+
+Exit code is 0 only when every page passes. Each run prints one `PASS`/`FAIL` line per page
+plus the errors for any failure.
+
+---
+
 ## Editing
 
 **Site copy, layout, resources** — edit `index.html` or `characters.html` directly.

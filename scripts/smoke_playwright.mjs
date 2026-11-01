@@ -26,13 +26,19 @@ for (const path of pages) {
   page.on('console', msg => { if (msg.type() === 'error') errors.push(msg.text()); });
   page.on('pageerror', err => errors.push(`pageerror: ${err.message}`));
   let status = 'ERR';
+  let rendered = false;
   try {
     const response = await page.goto(new URL(path, base).href, { waitUntil: 'load', timeout: 30000 });
     status = response ? response.status() : 'no-response';
     await page.waitForTimeout(1000);
+    // A blank page has no visible text and no drawn media; treat that as a missing render.
+    rendered = await page.evaluate(() =>
+      document.body.innerText.trim().length > 0 || document.querySelectorAll('img, canvas, svg').length > 0
+    );
   } catch (err) {
     errors.push(`navigation: ${err.message.split('\n')[0]}`);
   }
+  if (!rendered) errors.push('render: page has no text or media');
   const ok = status === 200 && errors.length === 0;
   if (!ok) failed++;
   console.log(`${ok ? 'PASS' : 'FAIL'} ${path} status=${status} errors=${errors.length}`);
