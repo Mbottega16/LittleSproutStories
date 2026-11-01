@@ -111,6 +111,13 @@
   /* LIBRARY / CARDS */
   .library { background: var(--cream-deep); border-top: 1px solid var(--paper-line); border-bottom: 1px solid var(--paper-line); }
   .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 26px; }
+  .tier-filter { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 0 auto 10px; }
+  .tier-btn { font: inherit; font-weight: 800; font-size: 15px; padding: 10px 18px; border-radius: 999px; border: 2px solid var(--paper-line); background: #fff; color: var(--bark); cursor: pointer; }
+  .tier-btn:hover { border-color: var(--sprout); }
+  .tier-btn[aria-pressed="true"] { background: var(--bark); border-color: var(--bark); color: #fff; }
+  .tier-btn:focus-visible { outline: 3px solid var(--sprout); outline-offset: 2px; }
+  .tier-count { text-align: center; font-weight: 700; color: var(--bark-soft); margin: 0 0 24px; }
+  .card[hidden] { display: none; }
   .card { background: #fff; border-radius: 22px; overflow: hidden; border: 1px solid var(--paper-line); box-shadow: 0 6px 22px rgba(54,64,44,0.06); display: flex; flex-direction: column; transition: transform 0.18s, box-shadow 0.18s; }
   .card:hover { transform: translateY(-5px); box-shadow: 0 14px 32px rgba(54,64,44,0.12); }
   .card-art { height: 168px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
@@ -377,6 +384,13 @@
       <h2>Open a book. Play a game.</h2>
       <p>All 14 adventures are ready to read &mdash; each with a &ldquo;Read to me&rdquo; button, so children can enjoy them before they can read alone.</p>
     </div>
+    <div class="tier-filter" role="group" aria-label="Filter books by reading tier">
+      <button type="button" class="tier-btn" data-tier="all" aria-pressed="true">All books</button>
+      <button type="button" class="tier-btn" data-tier="1" aria-pressed="false">Tier 1 &middot; Ages 4&ndash;5</button>
+      <button type="button" class="tier-btn" data-tier="2" aria-pressed="false">Tier 2 &middot; Ages 5&ndash;6</button>
+      <button type="button" class="tier-btn" data-tier="3" aria-pressed="false">Tier 3 &middot; Ages 6&ndash;7</button>
+    </div>
+    <p class="tier-count" aria-live="polite"></p>
     <div class="card-grid">
       <article class="card">
         <div class="card-art" style="background:linear-gradient(160deg,#FFD9A0,#E8433F);">
@@ -1107,6 +1121,37 @@
 
   renderProgress();
   window.addEventListener('pageshow', renderProgress);
+
+  /* ---------- reading-tier filter (scope & sequence) ---------- */
+  (function() {
+    var grid = document.querySelector('.card-grid');
+    var buttons = document.querySelectorAll('.tier-btn');
+    var count = document.querySelector('.tier-count');
+    if (!grid || !buttons.length || !count) return;
+    var cards = grid.querySelectorAll('.card');
+    /* Bands follow 10_Decodable_Word_List.md: Tier 1 = Books 1-5, Tier 2 = Books 6-12, Tier 3 = Books 14-19 */
+    Array.prototype.forEach.call(cards, function(card) {
+      var m = /Book\s+(\d+)/.exec(card.querySelector('.card-kicker').textContent);
+      var n = m ? parseInt(m[1], 10) : 0;
+      card.setAttribute('data-tier', n <= 5 ? '1' : n <= 12 ? '2' : '3');
+    });
+    function showTier(tier) {
+      var shown = 0;
+      Array.prototype.forEach.call(cards, function(card) {
+        var match = tier === 'all' || card.getAttribute('data-tier') === tier;
+        card.hidden = !match;
+        if (match) shown++;
+      });
+      Array.prototype.forEach.call(buttons, function(b) {
+        b.setAttribute('aria-pressed', b.getAttribute('data-tier') === tier ? 'true' : 'false');
+      });
+      count.textContent = 'Showing ' + shown + ' of ' + cards.length + ' books';
+    }
+    Array.prototype.forEach.call(buttons, function(b) {
+      b.addEventListener('click', function() { showTier(b.getAttribute('data-tier')); });
+    });
+    showTier('all');
+  })();
 
   /* ---------- offline support ---------- */
   if ('serviceWorker' in navigator) {
