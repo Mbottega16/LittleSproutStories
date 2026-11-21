@@ -94,6 +94,15 @@ Create the database and copy its connection URL (starts `postgres://` or
 1. In `shop.html`, `rewards.html`, `board.html`: set
    `const API_BASE = 'https://littlesprout-rewards.onrender.com/api';`
    (currently a placeholder), bump `sw.js` `CACHE_VERSION`, ship.
+   **Also turn the pages back on:** `shop.html` and `rewards.html` each
+   have `const COMING_SOON = true;` (added 2026-11). Set both to `false`,
+   or the pages keep showing the "coming soon" card. In `index.html`, the
+   finished-all-books box says "Reward box &mdash; coming soon": change that
+   wording when the box is live.
+   **Check the CORS origin first:** Render's `ALLOWED_ORIGINS` must be exactly
+   `https://mbottega16.github.io` (no path, no trailing slash). An older
+   copy of this repo named a wrong domain; `render.yaml` and `app/config.py`
+   were corrected on 2026-11-21.
 2. With Stripe still in **test mode**, buy something with test card
    `4242 4242 4242 4242`. Confirm: webhook flips the order to paid →
    address form → `POST /api/requests` returns 201 → a Printify **draft**
@@ -122,3 +131,21 @@ behind the $18.00 price.
    packing + mailing the two together before committing to a batch size.
 3. Work the admin dashboard's unsent list against that 3PL, same as the
    reward box.
+
+---
+
+## Go-live checklist (one page)
+
+- [ ] Stripe account verified; test keys work (step 1)
+- [ ] Postgres created; `DATABASE_URL` set (step 2)
+- [ ] Render service `littlesprout-rewards` deployed; `/api/health` says ok (step 3)
+- [ ] `ALLOWED_ORIGINS` = `https://mbottega16.github.io` exactly
+- [ ] Stripe webhook added; signing secret in Render (step 4)
+- [ ] Printify token and shop id set; each product's mapping filled (step 5)
+- [ ] Prices fixed: hat below cost at $18 (raise to $22-$24); onesie breaks even; non-apparel prices are guesses
+- [ ] `API_BASE` set in `shop.html`, `rewards.html`, `board.html` (step 6)
+- [ ] `COMING_SOON = false` in `shop.html` and `rewards.html`; `index.html` wording changed
+- [ ] `sw.js` `CACHE_VERSION` bumped
+- [ ] Test purchase with card 4242 4242 4242 4242: paid, address form, request 201, Printify draft order
+- [ ] First reward-box batch kitted with a 3PL (step 7)
+- [ ] **Owner sign-off to switch Stripe to live keys.** Nothing goes live without it.
