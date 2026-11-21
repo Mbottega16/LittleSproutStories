@@ -139,6 +139,10 @@
   // rather than guessed, since a wrong URL here would fail silently in a
   // confusing way (every fetch below handles a failed/unreachable API by
   // showing "not available yet" rather than a broken blank page).
+  // Paused on purpose until the site is polished: shows a "coming soon" card and makes
+  // no API calls. Flip to false once rewards-api/DEPLOY.md is done.
+  const COMING_SOON = true;
+
   const API_BASE = 'https://littlesprout-rewards.onrender.com/api';
 
   const TOKEN_KEY = 'littlesprout_reward_token';
@@ -339,7 +343,21 @@
     }
   }
 
+  function showComingSoon() {
+    const eyebrow = document.querySelector('.head .eyebrow');
+    if (eyebrow) eyebrow.textContent = '🌱 Coming soon';
+    app.innerHTML = '';
+    app.appendChild(el(`
+      <div class="card confirm">
+        <div class="confirm-icon">🌱</div>
+        <h2>The reward box is coming soon</h2>
+        <p>Well done for finishing all 14 books! The reward box isn&rsquo;t available yet. It will be here once LittleSprout is ready for it. Your badges stay saved on this device.</p>
+        <p><a href="index.html#library">Read the books</a> &middot; <a href="index.html#games">Play the games</a></p>
+      </div>`));
+  }
+
   (function init() {
+    if (COMING_SOON) { showComingSoon(); return; }
     const params = new URLSearchParams(window.location.search);
     const urlToken = params.get('token');
     const storedToken = sessionStorage.getItem(TOKEN_KEY);
