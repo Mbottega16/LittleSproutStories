@@ -8,8 +8,8 @@ Interactive phonics storybooks (ages 4–7) and educational mini-games (ages 3�
 - **Live Site:** https://mbottega16.github.io/LittleSproutStories/ (GitHub Pages deploys straight from `main`)
 
 ## What this is
-- **What:** fourteen-plus phonics storybooks starring four recurring kids (Maya, Marcus,
-  Sophie, James) and six games, built on a **"Double Engine"** model: every page pairs
+- **What:** eighteen phonics storybooks (Books 1–12 and 14–19) starring four recurring kids
+  (Maya, Marcus, Sophie, James) and twelve games, built on a **"Double Engine"** model: every page pairs
   decodable phonics text with a social-emotional-learning beat. Read-aloud with word
   highlighting, badges and progress, offline support, installable as a PWA.
 - **For:** early readers ages 4–7 (games up to 12), handed a home or classroom tablet by a
@@ -41,7 +41,7 @@ The frontend is **zero-dependency vanilla HTML5/CSS3/ES6 JS** (no bundler, no `p
 |---|---|
 | `build_pipeline/` | **Authoritative book generator.** Edit `build_pipeline/specs/<Book>.json` or `build_pipeline/render.py`, then run `python build_pipeline/build.py` to regenerate `books/*.html`. `extract_spec.py` recovers JSON from HTML; `generate_story.py` generates stories + Piper TTS audio. |
 | `books/` | 18 generated storybooks (`Book1`–`Book12`, `Book14`–`Book19`; Book 13 was scrapped intentionally — never renumber). |
-| `games/` | Standalone HTML5/JS mini-games (`feelings_faces.html`, `pose_parade.html`, `rhyme_time.html`, `sentence_builder.html`, `sound_it_out.html`, `whos_missing.html`) sharing sprites and `localStorage` star progress. |
+| `games/` | 12 standalone HTML5/JS mini-games (`feelings_faces`, `pose_parade`, `rhyme_time`, `sentence_builder`, `sound_it_out`, `whos_missing`, `word_dash`, `helper_detective`, `garden_harvest`, `block_balance`, `bug_safari`, `river_hop`) sharing sprites and `localStorage` star progress. |
 | `rewards-api/` | Standalone FastAPI + SQLAlchemy + Stripe + Printify backend for the $10 physical reward box, merch shop, and community cork-board moderation. Deployed separately on Render (`render.yaml`, `rootDir: rewards-api`). |
 | `scripts/` | Verification, art import, and build guards (`link_check.py`, `cache_bump_guard.py`, `placeholder_audit.py`, `generate_sitemap.py`, `import_character_art.py`, `import_background_art.py`). |
 
@@ -94,8 +94,9 @@ To keep context clean and avoid scanning thousands of vendor/binary files, **nev
 
 *Overwrite this at the end of every session; move the previous handoff into `HISTORY.md` first.*
 
-- **Last Worked On (2026-10-29):** imported community center background pack (`raw_art/LittleSprout_community-center_Backgrounds.zip`) into `assets/backgrounds/` (`center_1.jpg` .. `center_5.jpg` and `center.jpg`), completing full 5-variant coverage across all 13 locations (78 images total). Upgraded `scripts/import_background_art.py` with single-target zip/slug argument and `--skip-existing` support. Bumped `sw.js` `CACHE_VERSION` to `littlesprout-v36`.
-- **Current State (2026-10-29):** `main` is live with 18 books, 6 games, all 13 background locations with 5 variants each, zero placeholder assets, and 0 broken links across 712 verified local links. Open PRs: #9, #10, #11, #12, #13.
+- **Last Worked On (2026-11-21, cloud Claude, the owner's ask: finish all open work):** merged the open feature branches into one branch (`claude/finish-open-work`): visitor-flow fixes, the shop/reward-box coming-soon card, two games for older kids, four character games, and the decodability analyzer with the `stats.html` crosswalk. Added Books 16–19 cards to `index.html` (kept out of the 14-book reward logic on purpose). Replaced the stale `edusystems-code.github.io` domain with `mbottega16.github.io` everywhere (sitemap, canonical/OG tags, README, `rewards-api` config). Added the six newer games and their art to the `sw.js` precache; `CACHE_VERSION` is `littlesprout-v43`.
+- **Current State (2026-11-21):** `link_check.py` (695 links), `placeholder_audit.py` and `cache_bump_guard.py` all pass. The live URL was NOT opened (the cloud session could not fetch it). `analyze_decodability.py` flags unapproved words in Books 16–19 (`seeds`, `boat`, `rope`, `night`, `love`, `Mr`); the story lines were left alone on purpose.
 - **Next Up:**
-  1. Review and merge the open feature PRs (#9–#13) one at a time, resolving shared `index.html` / `sw.js` `CACHE_VERSION` conflicts on each merge.
-  2. Deploy `rewards-api/` to Render + connect live Stripe keys only when the owner gives explicit spend/publish sign-off.
+  1. Open `https://mbottega16.github.io/LittleSproutStories/` and confirm it loads. `Little Sprout Stories Web.url` points to `littlesproutstories.com`; confirm whether that domain is real.
+  2. Decide on Books 16–19: add the flagged words to `10_Decodable_Word_List.md`, or rewrite the lines in the specs and rebuild.
+  3. Deploy `rewards-api/` to Render + connect live Stripe keys only when the owner gives explicit spend/publish sign-off.

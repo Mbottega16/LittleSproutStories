@@ -71,15 +71,15 @@ class Settings(BaseSettings):
     # Which origin(s) may call this API -- the live LittleSprout Stories
     # site. Kept a plain list here (not hardcoded in main.py) so a local
     # dev origin can be added via .env without touching code.
-    allowed_origins: str = "https://edusystems-code.github.io"
+    allowed_origins: str = "https://mbottega16.github.io"
 
     # Where Stripe sends the buyer back after they finish (or cancel)
     # Checkout -- the token is appended as a query param so the page knows
     # which order to poll (see /checkout/status). The reward box returns to
     # rewards_page_url; every other product (app/products.py) returns to
     # shop_page_url instead.
-    rewards_page_url: str = "https://edusystems-code.github.io/LittleSproutStories/rewards.html"
-    shop_page_url: str = "https://edusystems-code.github.io/LittleSproutStories/shop.html"
+    rewards_page_url: str = "https://mbottega16.github.io/LittleSproutStories/rewards.html"
+    shop_page_url: str = "https://mbottega16.github.io/LittleSproutStories/shop.html"
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 

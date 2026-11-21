@@ -6,7 +6,7 @@
        so a book a child has read once will still open with no connection.
    Bump CACHE_VERSION whenever site files change, so old copies are cleared. */
 
-const CACHE_VERSION = 'littlesprout-v42';
+const CACHE_VERSION = 'littlesprout-v43';
 
 const SHELL = [
   './',
@@ -20,6 +20,8 @@ const SHELL = [
   './shop.html',
   './book-nook.html',
   './book-nook-bookplate.html',
+  './reading-passport.html',
+  './board.html',
   './manifest.json',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png'
@@ -34,7 +36,13 @@ const GAME_PAGES = [
   './games/rhyme_time.html',
   './games/sentence_builder.html',
   './games/sound_it_out.html',
-  './games/whos_missing.html'
+  './games/whos_missing.html',
+  './games/word_dash.html',
+  './games/helper_detective.html',
+  './games/garden_harvest.html',
+  './games/block_balance.html',
+  './games/bug_safari.html',
+  './games/river_hop.html'
 ];
 
 const GAME_BACKGROUNDS = [
@@ -43,7 +51,17 @@ const GAME_BACKGROUNDS = [
   './assets/backgrounds/library_2.jpg',
   './assets/backgrounds/police_2.jpg',
   './assets/backgrounds/garden_2.jpg',
-  './assets/backgrounds/bakery_2.jpg'
+  './assets/backgrounds/bakery_2.jpg',
+  './assets/backgrounds/repair.jpg',
+  './assets/backgrounds/center.jpg',
+  './assets/backgrounds/garden_3.jpg',
+  './assets/backgrounds/garden_4.jpg',
+  './assets/backgrounds/classroom_3.jpg',
+  './assets/backgrounds/school_3.jpg',
+  './assets/games/garden_harvest_bad.jpg',
+  './assets/games/garden_harvest_bg.jpg',
+  './assets/games/garden_harvest_item1.jpg',
+  './assets/games/garden_harvest_item2.jpg'
 ];
 
 const SPRITE_CHARACTERS = ['maya', 'marcus', 'sophie', 'james'];

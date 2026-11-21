@@ -19,6 +19,14 @@ This repo is public, so private planning notes stay in the owner's vault, not he
 
 ---
 
+## 2026-11-21 — finish open work: merge branches, Books 16–19 on the homepage, domain fix
+
+*Cloud · Claude · branch `claude/finish-open-work`*
+- **Changed:** Merged the open feature branches (visitor flow, shop coming-soon, games for older kids, character games). Took only the analyzer and `stats.html` from the phonics branch. Added Books 16–19 cards, an 18-book stats crosswalk, six games in the `sw.js` precache (`littlesprout-v43`), and `mbottega16.github.io` as the one site domain.
+- **Why:** The owner asked to finish all unfinished work and fix stale docs. Books 16–19 are not in `ALL_BOOKS`, because the reward box promises "finish all 14 books".
+- **Verified:** `link_check.py`, `placeholder_audit.py`, `cache_bump_guard.py` pass. NOT checked: the live site, and a browser run of the new cards.
+- **Left open:** unapproved words in Books 16–19; PR #10 story/render changes were skipped (they conflict with the watercolor rebuild); `rewards-api` deploy needs the owner's sign-off.
+
 ## 2026-10-29 — community center multi-variant background art import & cache bump
 
 *PC · Antigravity*
