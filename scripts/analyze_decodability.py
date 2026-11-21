@@ -70,6 +70,10 @@ NUMBER_WORDS = {"one", "two", "three"}
 HEART_WORDS = {
     "feel", "wait", "take", "real", "read", "mean", "count", "done",
     "same", "bake", "your", "paint",
+    # Tier 3 (Books 14-19+, ages 6-7): "love" is a named Story Heart Word in
+    # 10_Decodable_Word_List.md (g); "night" is a common vowel-team/silent-gh
+    # word taught by sight, used in Book 17.
+    "love", "night",
     # not actually suffixed forms ("thing" isn't "th" + "-ing") -- listed
     # whole so the suffix-stripper never mis-splits them
     "thing",
@@ -84,6 +88,9 @@ THEME_NOUNS = {
     "pin", "stamps", "haircut", "tool", "job", "game", "classroom",
     "chest", "snow", "sun", "spot", "home", "day", "friend", "friends",
     "kid", "helper",
+    # Books 16-19 (picture-supported: the backdrop/sprite shows the thing).
+    # "seed" is the doc's own example line in 10_Decodable_Word_List.md.
+    "seed", "boat", "rope",
 }
 # Names (category c): the four leads, the eleven community helpers, and
 # family terms used the same way a name is (learned as a whole word/
@@ -91,7 +98,7 @@ THEME_NOUNS = {
 NAMES = {
     "maya", "marcus", "sophie", "james", "alex", "jasmine", "chen",
     "ms", "patel", "rodriguez", "smith", "keisha", "tom", "rose",
-    "david", "aisha", "grandma",
+    "david", "aisha", "grandma", "mr",
 }
 
 SUFFIXES = ("'s", "es", "ed", "ing", "s")
