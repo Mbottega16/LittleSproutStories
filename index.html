@@ -65,6 +65,15 @@
   .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 0 var(--sprout-dark); }
   .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
   .nav-toggle svg { width: 26px; height: 26px; }
+  .nav-dd { position: relative; }
+  .nav-dd-btn { background: none; border: none; cursor: pointer; font: inherit; font-weight: 700; font-size: 15px; color: var(--bark-soft); padding: 0; display: inline-flex; align-items: center; gap: 5px; }
+  .nav-dd-btn:hover { color: var(--sprout-dark); }
+  .nav-dd-btn svg { transition: transform .15s; }
+  .nav-dd.open .nav-dd-btn svg { transform: rotate(180deg); }
+  .nav-dd-menu { position: absolute; top: calc(100% + 16px); left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--paper-line); border-radius: 14px; box-shadow: 0 10px 30px rgba(54,64,44,.14); padding: 8px; min-width: 200px; display: none; flex-direction: column; z-index: 60; }
+  .nav-dd-menu a { display: block; padding: 9px 12px; border-radius: 8px; font-size: 14.5px; font-weight: 700; color: var(--bark-soft); white-space: nowrap; }
+  .nav-dd-menu a:hover, .nav-dd-menu a.current { background: var(--cream-deep); color: var(--sprout-dark); }
+  .nav-dd.open .nav-dd-menu { display: flex; }
 
   /* HERO */
   .hero { position: relative; padding: 60px 0 40px; overflow: hidden; background: linear-gradient(rgba(251,246,236,0.84), rgba(251,246,236,0.60) 55%, rgba(251,246,236,0.80)), url('assets/hero-stage.webp') center 30% / cover no-repeat; }
@@ -75,6 +84,8 @@
   .hero-sub { font-size: clamp(17px, 2.3vw, 20px); color: var(--bark-soft); max-width: 540px; margin: 0 auto 30px; font-weight: 600; }
   .hero-text { text-align: center; position: relative; z-index: 2; }
   .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 12px; }
+  .hero-resources-link { font-weight: 700; font-size: 14.5px; margin-bottom: 4px; }
+  .hero-resources-link a { color: var(--sprout-dark); text-decoration: underline; }
   .btn-primary { background: var(--sun); color: #5A4200; padding: 15px 32px; border-radius: 50px; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 18px; box-shadow: 0 5px 0 var(--sun-deep); transition: transform 0.12s, box-shadow 0.12s; border: none; cursor: pointer; }
   .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 7px 0 var(--sun-deep); }
   .btn-ghost { background: #fff; color: var(--sprout-dark); padding: 15px 30px; border-radius: 50px; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 18px; border: 2px solid var(--sprout); transition: transform 0.12s, background 0.15s; cursor: pointer; }
@@ -138,6 +149,7 @@
   .card:hover .card-desc, .card:focus-within .card-desc, .card:active .card-desc { max-height: 220px; opacity: 1; margin-bottom: 18px; }
   .card-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; margin-top: auto; }
   .pill { font-size: 11.5px; font-weight: 800; padding: 4px 11px; border-radius: 50px; background: var(--cream-deep); color: var(--bark-soft); }
+  .pill-level { background: var(--sky); color: var(--sky-deep); }
   .card-launch { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--sprout); color: #fff; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 16px; padding: 12px; border-radius: 14px; box-shadow: 0 3px 0 var(--sprout-dark); transition: transform 0.12s, box-shadow 0.12s; }
   .card-launch:hover { transform: translateY(-1px); box-shadow: 0 4px 0 var(--sprout-dark); }
   .card.soon { opacity: 0.85; }
@@ -271,7 +283,15 @@
   .footer-cols { display: flex; gap: 56px; flex-wrap: wrap; }
   .footer-bottom { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 22px; font-size: 13px; color: #888E7C; font-weight: 600; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
 
-  @media (max-width: 760px) { .nav-links { display: none; } .nav-toggle { display: block; } .section { padding: 56px 0; } }
+  @media (max-width: 760px) {
+    .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--cream); border-bottom: 1px solid var(--paper-line); flex-direction: column; align-items: stretch; gap: 2px; padding: 10px 20px 20px; box-shadow: 0 12px 24px rgba(54,64,44,.1); }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 10px 2px; }
+    .nav-dd-menu { position: static; transform: none; box-shadow: none; border: none; padding: 0 0 4px 14px; min-width: 0; display: flex; }
+    .nav-dd-btn { padding: 10px 2px; width: 100%; justify-content: space-between; }
+    .nav-toggle { display: block; }
+    .section { padding: 56px 0; }
+  }
   :focus-visible { outline: 3px solid var(--sky-deep); outline-offset: 2px; border-radius: 6px; }
 
   /* juice: press feedback, badge celebration, confetti */
@@ -307,17 +327,24 @@
       </svg>
       LittleSprout
     </a>
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
       <a href="#library">Books</a>
       <a href="#games">Games</a>
       <a href="characters.html">Meet the Friends</a>
       <a href="#approach">How it works</a>
-      <a href="resources.html">Family Resources</a>
+      <div class="nav-dd">
+        <button type="button" class="nav-dd-btn" aria-expanded="false">For Families <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="nav-dd-menu">
+          <a href="resources.html">Family Resources</a>
+          <a href="grants.html">Grants &amp; Funding</a>
+          <a href="board.html">Community Board</a>
+        </div>
+      </div>
       <a href="book-nook.html">Book Nook</a>
       <a href="shop.html">Shop</a>
       <a href="#library" class="nav-cta">Start playing</a>
     </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
       <svg viewBox="0 0 24 24" fill="none" stroke="#36402C" stroke-width="2.5" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
   </div>
@@ -338,6 +365,7 @@
       <a href="#library" class="btn-primary">Explore the library</a>
       <a href="#games" class="btn-ghost">Play a game</a>
     </div>
+    <p class="hero-resources-link"><a href="resources.html">Looking for local family resources instead? &#8594;</a></p>
   </div>
   <div class="wrap">
     <div class="hero-backdrop">
@@ -401,7 +429,7 @@
           <h3>Maya & Marcus Visit the Fire Station</h3>
           <span class="card-hint">Hover to read more &#9662;</span>
           <p class="card-desc">Maya, Marcus visit Alex the Firefighter at the Fire Station, and practise a big feeling together along the way.</p>
-          <div class="card-meta"><span class="pill">Nervousness</span><span class="pill">Ages 4&ndash;7</span></div>
+          <div class="card-meta"><span class="pill">Nervousness</span><span class="pill">Ages 4&ndash;7</span><span class="pill pill-level" title="Reading level within this 18-book set">Level 2</span></div>
           <a class="card-launch" href="books/Book1_Maya_Marcus_FireStation.html">Read it &#8594;</a>
           <a class="card-pdf" href="books/Book1_Maya_Marcus_FireStation.pdf" download>Download the printable PDF</a>
         </div>
@@ -415,7 +443,7 @@
           <h3>Sophie & James Visit the Police Station</h3>
           <span class="card-hint">Hover to read more &#9662;</span>
           <p class="card-desc">Sophie, James visit Jasmine the Officer at the Police Station, and practise a big feeling together along the way.</p>
-          <div class="card-meta"><span class="pill">Frustration</span><span class="pill">Ages 4&ndash;7</span></div>
+          <div class="card-meta"><span class="pill">Frustration</span><span class="pill">Ages 4&ndash;7</span><span class="pill pill-level" title="Reading level within this 18-book set">Level 1</span></div>
           <a class="card-launch" href="books/Book2_Sophie_James_PoliceStation.html">Read it &#8594;</a>
           <a class="card-pdf" href="books/Book2_Sophie_James_PoliceStation.pdf" download>Download the printable PDF</a>
         </div>
@@ -429,7 +457,7 @@
           <h3>Maya & Sophie Visit the Library</h3>
           <span class="card-hint">Hover to read more &#9662;</span>
           <p class="card-desc">Maya, Sophie visit Ms. Chen the Librarian at the Library, and practise a big feeling together along the way.</p>
-          <div class="card-meta"><span class="pill">Embarrassment</span><span class="pill">Ages 4&ndash;7</span></div>
+          <div class="card-meta"><span class="pill">Embarrassment</span><span class="pill">Ages 4&ndash;7</span><span class="pill pill-level" title="Reading level within this 18-book set">Level 3</span></div>
           <a class="card-launch" href="books/Book3_Maya_Sophie_Library.html">Read it &#8594;</a>
           <a class="card-pdf" href="books/Book3_Maya_Sophie_Library.pdf" download>Download the printable PDF</a>
         </div>
@@ -443,7 +471,7 @@
           <h3>Marcus & James Visit the Doctor</h3>
           <span class="card-hint">Hover to read more &#9662;</span>
           <p class="card-desc">Marcus, James visit Dr. Patel at the Doctor's Office, and practise a big feeling together along the way.</p>
-          <div class="card-meta"><span class="pill">Anxiety</span><span class="pill">Ages 4&ndash;7</span></div>
+          <div class="card-meta"><span class="pill">Anxiety</span><span class="pill">Ages 4&ndash;7</span><span class="pill pill-level" title="Reading level within this 18-book set">Level 4</span></div>
           <a class="card-launch" href="books/Book4_Marcus_James_Doctor.html">Read it &#8594;</a>
           <a class="card-pdf" href="books/Book4_Marcus_James_Doctor.pdf" download>Download the printable PDF</a>
         </div>
@@ -457,7 +485,7 @@
           <h3>All Four Visit the Elementary School</h3>
           <span class="card-hint">Hover to read more &#9662;</span>
           <p class="card-desc">Maya, Marcus, Sophie, James visit Mr. Rodriguez at the Elementary School, and practise a big feeling together along the way.</p>
-          <div class="card-meta"><span class="pill">Missing a friend</span><span class="pill">Ages 4&ndash;7</span></div>
+          <div class="card-meta"><span class="pill">Missing a friend</span><span class="pill">Ages 4&ndash;7</span><span class="pill pill-level" title="Reading level within this 18-book set">Level 3</span></div>
           <a class="card-launch" href="books/Book5_AllFour_School.html">Read it &#8594;</a>
           <a class="card-pdf" href="books/Book5_AllFour_School.pdf" download>Download the printable PDF</a>
         </div>
@@ -471,7 +499,7 @@
           <h3>Marcus & Sophie Visit the Barbershop</h3>
           <span class="card-hint">Hover to read more &#9662;</span>
           <p class="card-desc">Marcus, Sophie visit Mr. Smith at the Barbershop, and practise a big feeling together along the way.</p>
-          <div class="card-meta"><span class="pill">Fear of the new</span><span class="pill">Ages 4&ndash;7</span></div>
+          <div class="card-meta"><span class="pill">Fear of the new</span><span class="pill">Ages 4&ndash;7</span><span class="pill pill-level" title="Reading level within this 18-book set">Level 1</span></div>
           <a class="card-launch" href="books/Book6_Marcus_Sophie_Barbershop.html">Read it &#8594;</a>
           <a class="card-pdf" href="books/Book6_Marcus_Sophie_Barbershop.pdf" download>Download the printable PDF</a>
         </div>
@@ -485,7 +513,7 @@
           <h3>Maya & James Visit the Bakery</h3>
           <span class="card-hint">Hover to read more &#9662;</span>
           <p class="card-desc">Maya, James visit Keisha the Baker at the Bakery, and practise a big feeling together along the way.</p>
-          <div class="card-meta"><span class="pill">Making mistakes</span><span class="pill">Ages 4&ndash;7</span></div>
+          <div class="card-meta"><span class="pill">Making mistakes</span><span class="pill">Ages 4&ndash;7</span><span class="pill pill-level" title="Reading level within this 18-book set">Level 1</span></div>
           <a class="card-launch" href="books/Book7_Maya_James_Bakery.html">Read it &#8594;</a>
           <a class="card-pdf" href="books/Book7_Maya_James_Bakery.pdf" download>Download the printable PDF</a>
         </div>
@@ -499,7 +527,7 @@
           <h3>Sophie & Marcus Visit the Garden</h3>
           <span class="card-hint">Hover to read more &#9662;</span>
           <p class="card-desc">Sophie, Marcus visit Tom the Gardener at the Community Garden, and practise a big feeling together along the way.</p>
-          <div class="card-meta"><span class="pill">Impatience</span><span class="pill">Ages 4&ndash;7</span></div>
+          <div class="card-meta"><span class="pill">Impatience</span><span class="pill">Ages 4&ndash;7</span><span class="pill pill-level" title="Reading level within this 18-book set">Level 1</span></div>
           <a class="card-launch" href="books/Book8_Sophie_Marcus_Garden.html">Read it &#8594;</a>
           <a class="card-pdf" href="books/Book8_Sophie_Marcus_Garden.pdf" download>Download the printable PDF</a>
         </div>
@@ -513,7 +541,7 @@
           <h3>Maya & Marcus Visit the Post Office</h3>
           <span class="card-hint">Hover to read more &#9662;</span>
           <p class="card-desc">Maya, Marcus visit Rose at the Post Office, and practise a big feeling together along the way.</p>
-          <div class="card-meta"><span class="pill">Self-doubt</span><span class="pill">Ages 4&ndash;7</span></div>
+          <div class="card-meta"><span class="pill">Self-doubt</span><span class="pill">Ages 4&ndash;7</span><span class="pill pill-level" title="Reading level within this 18-book set">Level 1</span></div>
           <a class="card-launch" href="books/Book9_Maya_Marcus_PostOffice.html">Read it &#8594;</a>
           <a class="card-pdf" href="books/Book9_Maya_Marcus_PostOffice.pdf" download>Download the printable PDF</a>
         </div>
@@ -527,7 +555,7 @@
           <h3>Sophie & James Visit the Repair Shop</h3>
           <span class="card-hint">Hover to read more &#9662;</span>
           <p class="card-desc">Sophie, James visit David at the Repair Shop, and practise a big feeling together along the way.</p>
-          <div class="card-meta"><span class="pill">Letting go</span><span class="pill">Ages 4&ndash;7</span></div>
+          <div class="card-meta"><span class="pill">Letting go</span><span class="pill">Ages 4&ndash;7</span><span class="pill pill-level" title="Reading level within this 18-book set">Level 3</span></div>
           <a class="card-launch" href="books/Book10_Sophie_James_RepairShop.html">Read it &#8594;</a>
           <a class="card-pdf" href="books/Book10_Sophie_James_RepairShop.pdf" download>Download the printable PDF</a>
         </div>
@@ -541,7 +569,7 @@
           <h3>All Four Visit the Community Center</h3>
           <span class="card-hint">Hover to read more &#9662;</span>
           <p class="card-desc">Maya, Marcus, Sophie, James visit Nurse Aisha at the Community Center, and practise a big feeling together along the way.</p>
-          <div class="card-meta"><span class="pill">Waiting your turn</span><span class="pill">Ages 4&ndash;7</span></div>
+          <div class="card-meta"><span class="pill">Waiting your turn</span><span class="pill">Ages 4&ndash;7</span><span class="pill pill-level" title="Reading level within this 18-book set">Level 3</span></div>
           <a class="card-launch" href="books/Book11_AllFour_CommunityCenter.html">Read it &#8594;</a>
           <a class="card-pdf" href="books/Book11_AllFour_CommunityCenter.pdf" download>Download the printable PDF</a>
         </div>
@@ -555,7 +583,7 @@
           <h3>Marcus & James Revisit the Fire Station</h3>
           <span class="card-hint">Hover to read more &#9662;</span>
           <p class="card-desc">Marcus, James visit Alex the Firefighter at the Fire Station, and practise a big feeling together along the way.</p>
-          <div class="card-meta"><span class="pill">Helping a friend</span><span class="pill">Ages 4&ndash;7</span></div>
+          <div class="card-meta"><span class="pill">Helping a friend</span><span class="pill">Ages 4&ndash;7</span><span class="pill pill-level" title="Reading level within this 18-book set">Level 2</span></div>
           <a class="card-launch" href="books/Book12_Marcus_James_FireStation2.html">Read it &#8594;</a>
           <a class="card-pdf" href="books/Book12_Marcus_James_FireStation2.pdf" download>Download the printable PDF</a>
         </div>
@@ -569,7 +597,7 @@
           <h3>All Four Help in the Garden</h3>
           <span class="card-hint">Hover to read more &#9662;</span>
           <p class="card-desc">Maya, Marcus, Sophie, James visit Tom the Gardener at the Community Garden, and practise a big feeling together along the way.</p>
-          <div class="card-meta"><span class="pill">Sharing jobs</span><span class="pill">Ages 4&ndash;7</span></div>
+          <div class="card-meta"><span class="pill">Sharing jobs</span><span class="pill">Ages 4&ndash;7</span><span class="pill pill-level" title="Reading level within this 18-book set">Level 2</span></div>
           <a class="card-launch" href="books/Book14_AllFour_Garden.html">Read it &#8594;</a>
           <a class="card-pdf" href="books/Book14_AllFour_Garden.pdf" download>Download the printable PDF</a>
         </div>
@@ -583,9 +611,65 @@
           <h3>We Are Community Helpers Too</h3>
           <span class="card-hint">Hover to read more &#9662;</span>
           <p class="card-desc">Maya, Marcus, Sophie, James visit All our friends at the Series Finale, and practise a big feeling together along the way.</p>
-          <div class="card-meta"><span class="pill">Pride</span><span class="pill">Ages 4&ndash;7</span></div>
+          <div class="card-meta"><span class="pill">Pride</span><span class="pill">Ages 4&ndash;7</span><span class="pill pill-level" title="Reading level within this 18-book set">Level 2</span></div>
           <a class="card-launch" href="books/Book15_AllFour_Finale.html">Read it &#8594;</a>
           <a class="card-pdf" href="books/Book15_AllFour_Finale.pdf" download>Download the printable PDF</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-art" style="background:linear-gradient(160deg,#FFF1CC,#FFD24A);">
+          <img class="card-cover" src="assets/book16-cover.webp" alt="Cover art" loading="lazy">          <span class="card-tag">Ready to read</span>
+        </div>
+        <div class="card-body">
+          <span class="card-kicker">Book 16 &middot; Classic Story</span>
+          <h3>Marcus and Sophie in the Secret Garden</h3>
+          <span class="card-hint">Hover to read more &#9662;</span>
+          <p class="card-desc">Marcus and Sophie try something new in a secret garden, and practise patience and teamwork along the way.</p>
+          <div class="card-meta"><span class="pill">Patience</span><span class="pill">Ages 4&ndash;7</span><span class="pill pill-level" title="Reading level within this 18-book set">Level 4</span></div>
+          <a class="card-launch" href="books/Book16_Marcus_Garden_Seeds.html">Read it &#8594;</a>
+          <a class="card-pdf" href="books/Book16_Marcus_Garden_Seeds.pdf" download>Download the printable PDF</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-art" style="background:linear-gradient(160deg,#FFF1CC,#FFD24A);">
+          <img class="card-cover" src="assets/book17-cover.webp" alt="Cover art" loading="lazy">          <span class="card-tag">Ready to read</span>
+        </div>
+        <div class="card-body">
+          <span class="card-kicker">Book 17 &middot; Classic Story</span>
+          <h3>Maya and the Velveteen Rabbit</h3>
+          <span class="card-hint">Hover to read more &#9662;</span>
+          <p class="card-desc">Maya and a well-loved toy rabbit show what it means to cherish something and care about how others feel.</p>
+          <div class="card-meta"><span class="pill">Empathy</span><span class="pill">Ages 4&ndash;7</span><span class="pill pill-level" title="Reading level within this 18-book set">Level 3</span></div>
+          <a class="card-launch" href="books/Book17_Maya_Toy_Rabbit.html">Read it &#8594;</a>
+          <a class="card-pdf" href="books/Book17_Maya_Toy_Rabbit.pdf" download>Download the printable PDF</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-art" style="background:linear-gradient(160deg,#FFF1CC,#FFD24A);">
+          <img class="card-cover" src="assets/book18-cover.webp" alt="Cover art" loading="lazy">          <span class="card-tag">Ready to read</span>
+        </div>
+        <div class="card-body">
+          <span class="card-kicker">Book 18 &middot; Classic Story</span>
+          <h3>James and Marcus by the River</h3>
+          <span class="card-hint">Hover to read more &#9662;</span>
+          <p class="card-desc">James and Marcus get curious outdoors by the river, share a picnic, and help a friend.</p>
+          <div class="card-meta"><span class="pill">Sharing</span><span class="pill">Ages 4&ndash;7</span><span class="pill pill-level" title="Reading level within this 18-book set">Level 4</span></div>
+          <a class="card-launch" href="books/Book18_James_Marcus_River_Picnic.html">Read it &#8594;</a>
+          <a class="card-pdf" href="books/Book18_James_Marcus_River_Picnic.pdf" download>Download the printable PDF</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-art" style="background:linear-gradient(160deg,#FFF1CC,#FFD24A);">
+          <img class="card-cover" src="assets/book19-cover.webp" alt="Cover art" loading="lazy">          <span class="card-tag">Ready to read</span>
+        </div>
+        <div class="card-body">
+          <span class="card-kicker">Book 19 &middot; Classic Story</span>
+          <h3>Sophie and the Little Mouse</h3>
+          <span class="card-hint">Hover to read more &#9662;</span>
+          <p class="card-desc">Sophie meets a little mouse and practises kindness, gentle care, and asking for help.</p>
+          <div class="card-meta"><span class="pill">Kindness</span><span class="pill">Ages 4&ndash;7</span><span class="pill pill-level" title="Reading level within this 18-book set">Level 4</span></div>
+          <a class="card-launch" href="books/Book19_Sophie_Little_Mouse.html">Read it &#8594;</a>
+          <a class="card-pdf" href="books/Book19_Sophie_Little_Mouse.pdf" download>Download the printable PDF</a>
         </div>
       </article>
     </div>
@@ -600,7 +684,7 @@
     <div class="section-head">
       <span class="section-eyebrow">Play &amp; Practice</span>
       <h2>Games with the same four friends</h2>
-      <p>Short, replayable activities spanning ages 3&ndash;9 &mdash; sounding out words, naming feelings, rhyming, building sentences, and paying close attention.</p>
+      <p>Short, replayable activities spanning ages 3&ndash;12 &mdash; sounding out words, naming feelings, rhyming, building sentences, spelling, and knowing your community helpers.</p>
     </div>
     <img class="games-banner" src="assets/games-stage.webp" alt="" loading="lazy">
     <div class="card-grid">
@@ -695,6 +779,96 @@
         </div>
       </article>
 
+      <article class="card">
+        <div class="card-art" style="background:linear-gradient(160deg,#F3EAD6,#C9B98E);">
+          <div class="card-art-chars four"><img src="assets/sprites/maya_happy_pointing.png" alt="Maya" loading="lazy"><img src="assets/sprites/marcus_happy_pointing.png" alt="Marcus" loading="lazy"><img src="assets/sprites/sophie_happy_pointing.png" alt="Sophie" loading="lazy"><img src="assets/sprites/james_happy_pointing.png" alt="James" loading="lazy"></div>
+          <span class="card-tag">Ready to play</span>
+        </div>
+        <div class="card-body">
+          <span class="card-kicker">Phonics &middot; Game</span>
+          <h3>Word Dash</h3>
+          <span class="card-hint">Hover to read more &#9662;</span>
+          <p class="card-desc">Real trickier words pulled straight from the books &mdash; tap the letters in order to spell each one, with a streak counter for back-to-back wins.</p>
+          <div class="card-meta"><span class="pill">Spelling</span><span class="pill">Ages 9&ndash;12</span></div>
+          <a class="card-launch" href="games/word_dash.html">Play it &#8594;</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-art" style="background:linear-gradient(160deg,#E4F4D2,#A9D98A);">
+          <div class="card-art-chars"><img src="assets/sprites/maya_happy_running.png" alt="Maya" loading="lazy"></div>
+          <span class="card-tag">Ready to play</span>
+        </div>
+        <div class="card-body">
+          <span class="card-kicker">Action &middot; Game</span>
+          <h3>Garden Harvest</h3>
+          <span class="card-hint">Hover to read more &#9662;</span>
+          <p class="card-desc">Run with Maya through the school garden and catch the falling fruit &mdash; but dodge the sour green tomatoes! Builds hand&ndash;eye coordination.</p>
+          <div class="card-meta"><span class="pill">Catching</span><span class="pill">Ages 4&ndash;7</span></div>
+          <a class="card-launch" href="games/garden_harvest.html">Play it &#8594;</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-art" style="background:linear-gradient(160deg,#BFE3FA,#8FC6EA);">
+          <div class="card-art-chars four"><img src="assets/sprites/maya_happy_jumping.png" alt="Maya" loading="lazy"><img src="assets/sprites/marcus_happy_jumping.png" alt="Marcus" loading="lazy"><img src="assets/sprites/sophie_happy_jumping.png" alt="Sophie" loading="lazy"><img src="assets/sprites/james_happy_jumping.png" alt="James" loading="lazy"></div>
+          <span class="card-tag">Ready to play</span>
+        </div>
+        <div class="card-body">
+          <span class="card-kicker">Community &middot; Game</span>
+          <h3>Helper Detective</h3>
+          <span class="card-hint">Hover to read more &#9662;</span>
+          <p class="card-desc">Match every real helper from the series &mdash; Alex, Ms. Chen, Dr. Patel, and more &mdash; to their job and place in town.</p>
+          <div class="card-meta"><span class="pill">Community helpers</span><span class="pill">Ages 8&ndash;12</span></div>
+          <a class="card-launch" href="games/helper_detective.html">Play it &#8594;</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-art" style="background:linear-gradient(160deg,#FFE9C7,#F7C58B);">
+          <div class="card-art-chars"><img src="assets/sprites/marcus_happy_jumping.png" alt="Marcus" loading="lazy"></div>
+          <span class="card-tag">Ready to play</span>
+        </div>
+        <div class="card-body">
+          <span class="card-kicker">Timing &middot; Game</span>
+          <h3>Block Balance</h3>
+          <span class="card-hint">Hover to read more &#9662;</span>
+          <p class="card-desc">Marcus&rsquo;s crane swings a block back and forth. Tap to drop it and stack the tallest tower you can. Practises timing and patience.</p>
+          <div class="card-meta"><span class="pill">Stacking</span><span class="pill">Ages 5&ndash;9</span></div>
+          <a class="card-launch" href="games/block_balance.html">Play it &#8594;</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-art" style="background:linear-gradient(160deg,#E8DCCB,#C9A98A);">
+          <div class="card-art-chars"><img src="assets/sprites/sophie_happy_pointing.png" alt="Sophie" loading="lazy"></div>
+          <span class="card-tag">Ready to play</span>
+        </div>
+        <div class="card-body">
+          <span class="card-kicker">Turn-taking &middot; Game</span>
+          <h3>Bug Safari</h3>
+          <span class="card-hint">Hover to read more &#9662;</span>
+          <p class="card-desc">Take turns with Sophie rubbing away the dirt to dig up hidden bugs. Whoever finds more wins &mdash; and a tie is fine too.</p>
+          <div class="card-meta"><span class="pill">Taking turns</span><span class="pill">Ages 4&ndash;7</span></div>
+          <a class="card-launch" href="games/bug_safari.html">Play it &#8594;</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-art" style="background:linear-gradient(160deg,#D3F1F6,#8FD3E3);">
+          <div class="card-art-chars"><img src="assets/sprites/james_happy_jumping.png" alt="James" loading="lazy"></div>
+          <span class="card-tag">Ready to play</span>
+        </div>
+        <div class="card-body">
+          <span class="card-kicker">Action &middot; Game</span>
+          <h3>River Hop</h3>
+          <span class="card-hint">Hover to read more &#9662;</span>
+          <p class="card-desc">Hop James from lily pad to log down the river. Tap to jump, tap again in the air to double-jump. How far can you go?</p>
+          <div class="card-meta"><span class="pill">Jumping</span><span class="pill">Ages 5&ndash;9</span></div>
+          <a class="card-launch" href="games/river_hop.html">Play it &#8594;</a>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
@@ -724,7 +898,7 @@
     </div>
     <div id="rewardsCta" class="rewards-cta" hidden>
       <p>🎉 You finished all 14 books!</p>
-      <a class="btn-primary" href="rewards.html">Get the $10 reward box &#8594;</a>
+      <a class="btn-primary" href="rewards.html">Reward box &mdash; coming soon &#8594;</a>
     </div>
     <div id="badgeArea">
     </div>
@@ -774,10 +948,10 @@
           <span class="res-ic" style="background:#FCE0EE;">💕</span>
           <span class="res-body"><span class="res-name">Conscious Discipline</span><span class="res-desc">A brain-based, adult-first SEL approach with free tools for classrooms and homes.</span></span>
         </a>
-        <div class="res-link construction">
-          <span class="res-ic" style="background:#FDEFC4;">🚧</span>
-          <span class="res-body"><span class="res-name">EduSystems Game <span class="res-badge">Under construction</span></span><span class="res-desc">A new partner learning game is on the way. Check back soon &mdash; we&rsquo;re building it!</span></span>
-        </div>
+        <a class="res-link" href="https://health.maryland.gov/phpa/wic/pages/home.aspx" target="_blank" rel="noopener">
+          <span class="res-ic" style="background:#D9EEFB;">🍎</span>
+          <span class="res-body"><span class="res-name">Maryland WIC</span><span class="res-desc">Free healthy food, nutrition support, and referrals for pregnant women, new mothers, and children under 5.</span></span>
+        </a>
       </div>
     </div>
 
@@ -826,6 +1000,7 @@
           <a href="resources.html">Family Resources</a>
           <a href="book-nook.html">Book Nook</a>
           <a href="grants.html">Grants &amp; funding</a>
+          <a href="board.html">Community Board</a>
           <a href="stats.html">Statistics</a>
           <a href="shop.html">Shop</a>
           <a href="privacy.html">Privacy</a>
@@ -846,11 +1021,9 @@
   </div>
 </footer>
 
+<script src="nav.js" defer></script>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
-  document.getElementById('navToggle').addEventListener('click', function() {
-    document.getElementById('library').scrollIntoView({ behavior: 'smooth' });
-  });
 
   /* ---------- progress (device-local only) ---------- */
   function loadProgress() {
@@ -863,7 +1036,9 @@
   }
 
   var GAME_TITLES = { sound_it_out: 'Sound It Out', whos_missing: 'Who\u2019s Missing?', pose_parade: 'Pose Parade',
-    feelings_faces: 'Feelings Faces', rhyme_time: 'Rhyme Time', sentence_builder: 'Sentence Builder' };
+    feelings_faces: 'Feelings Faces', rhyme_time: 'Rhyme Time', sentence_builder: 'Sentence Builder',
+    word_dash: 'Word Dash', helper_detective: 'Helper Detective',
+    garden_harvest: 'Garden Harvest', block_balance: 'Block Balance', bug_safari: 'Bug Safari', river_hop: 'River Hop' };
 
   // Source of truth for "every badge that can be earned" -- matches the
   // library order on this page (Book1-12, 14, 15; Book13 was scrapped).
@@ -884,7 +1059,8 @@
     { id: 'Book14_AllFour_Garden', badge: 'Garden Helper', title: 'All Four Help in the Garden' },
     { id: 'Book15_AllFour_Finale', badge: 'Community Helper Series Complete!', title: 'We Are Community Helpers Too' },
   ];
-  var ALL_GAME_IDS = ['sound_it_out', 'whos_missing', 'pose_parade', 'feelings_faces', 'rhyme_time', 'sentence_builder'];
+  var ALL_GAME_IDS = ['sound_it_out', 'whos_missing', 'pose_parade', 'feelings_faces', 'rhyme_time', 'sentence_builder',
+    'word_dash', 'helper_detective', 'garden_harvest', 'block_balance', 'bug_safari', 'river_hop'];
 
   // A suggested pace through the 14 books, grouped into 5 stages of ~3
   // books each in library order -- purely a display/motivation aid, not

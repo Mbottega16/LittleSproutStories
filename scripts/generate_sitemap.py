@@ -12,7 +12,7 @@ import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-SITE_URL = "https://edusystems-code.github.io/LittleSproutStories"
+SITE_URL = "https://mbottega16.github.io/LittleSproutStories"
 
 # Top-level pages worth a search engine's attention. index.html's own
 # in-page anchors (#library, #games, #resources) aren't separate URLs,
@@ -26,6 +26,7 @@ TOP_LEVEL_PAGES = [
     ("resources.html", "0.7"),
     ("grants.html", "0.6"),
     ("stats.html", "0.6"),
+    ("reading-passport.html", "0.5"),
     ("privacy.html", "0.3"),
 ]
 

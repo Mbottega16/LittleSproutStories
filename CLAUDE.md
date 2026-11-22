@@ -8,8 +8,8 @@ Interactive phonics storybooks (ages 4–7) and educational mini-games (ages 3�
 - **Live Site:** https://mbottega16.github.io/LittleSproutStories/ (GitHub Pages deploys straight from `main`)
 
 ## What this is
-- **What:** fourteen-plus phonics storybooks starring four recurring kids (Maya, Marcus,
-  Sophie, James) and six games, built on a **"Double Engine"** model: every page pairs
+- **What:** eighteen phonics storybooks (Books 1–12 and 14–19) starring four recurring kids
+  (Maya, Marcus, Sophie, James) and twelve games, built on a **"Double Engine"** model: every page pairs
   decodable phonics text with a social-emotional-learning beat. Read-aloud with word
   highlighting, badges and progress, offline support, installable as a PWA.
 - **For:** early readers ages 4–7 (games up to 12), handed a home or classroom tablet by a
@@ -23,7 +23,7 @@ Interactive phonics storybooks (ages 4–7) and educational mini-games (ages 3�
 ## Settled decisions (don't re-argue)
 
 1. **"If it's on `main`, it's live."** GitHub Pages deploys directly from `main`. Non-trivial feature work goes on a feature branch + PR unless the user asks to land on `main`.
-2. **Never hand-edit `books/*.html`.** Always edit the JSON spec in `build_pipeline/specs/` or the template in `build_pipeline/render.py`, then run `python build_pipeline/build.py`.
+2. **Never hand-edit `books/*.html`** — in principle: edit the JSON spec in `build_pipeline/specs/` or `build_pipeline/render.py`, then run `python build_pipeline/build.py`. **WARNING (found 2026-11-21): this is broken right now. The watercolor rebuild (PR #14) and the SEO tags were written straight into `books/*.html`; `render.py` was never updated. Running `build.py` rewrites all 18 books with the OLD look and drops the canonical/OG tags. Do NOT run it on existing books until `render.py` is brought back in line with the published HTML.** Until then, change `books/*.html` carefully by hand and keep the specs in step.
 3. **COPPA & Zero Passive Tracking.** All child reading progress, stars, and badges stay strictly in browser `localStorage`. No third-party analytics or tracking pixels on kid-facing pages. Physical mailing addresses in `rewards-api` are collected only via Stripe Checkout (payment-as-parental-consent) and auto-purged after 90 days.
 4. **Double Engine Pedagogy.** Every book pairs decodable phonics text with a social-emotional learning (SEL) beat and a book-specific "For Grown-Ups" panel at the end. Keep SEL fields (`feeling`, `ask`, `try_this`) separate from factual comprehension games.
 5. **No failure states for kids:** games use non-punitive streaks, not timers or losses.
@@ -41,7 +41,7 @@ The frontend is **zero-dependency vanilla HTML5/CSS3/ES6 JS** (no bundler, no `p
 |---|---|
 | `build_pipeline/` | **Authoritative book generator.** Edit `build_pipeline/specs/<Book>.json` or `build_pipeline/render.py`, then run `python build_pipeline/build.py` to regenerate `books/*.html`. `extract_spec.py` recovers JSON from HTML; `generate_story.py` generates stories + Piper TTS audio. |
 | `books/` | 18 generated storybooks (`Book1`–`Book12`, `Book14`–`Book19`; Book 13 was scrapped intentionally — never renumber). |
-| `games/` | Standalone HTML5/JS mini-games (`feelings_faces.html`, `pose_parade.html`, `rhyme_time.html`, `sentence_builder.html`, `sound_it_out.html`, `whos_missing.html`) sharing sprites and `localStorage` star progress. |
+| `games/` | 12 standalone HTML5/JS mini-games (`feelings_faces`, `pose_parade`, `rhyme_time`, `sentence_builder`, `sound_it_out`, `whos_missing`, `word_dash`, `helper_detective`, `garden_harvest`, `block_balance`, `bug_safari`, `river_hop`) sharing sprites and `localStorage` star progress. |
 | `rewards-api/` | Standalone FastAPI + SQLAlchemy + Stripe + Printify backend for the $10 physical reward box, merch shop, and community cork-board moderation. Deployed separately on Render (`render.yaml`, `rootDir: rewards-api`). |
 | `scripts/` | Verification, art import, and build guards (`link_check.py`, `cache_bump_guard.py`, `placeholder_audit.py`, `generate_sitemap.py`, `import_character_art.py`, `import_background_art.py`). |
 
@@ -82,6 +82,7 @@ To keep context clean and avoid scanning thousands of vendor/binary files, **nev
 ## Rules & Gotchas
 
 - **Bump `CACHE_VERSION` in `sw.js` when changing site assets.** `.git/hooks/pre-push` (on the PC) runs `scripts/cache_bump_guard.py` and `scripts/link_check.py` and will block pushes if cached files changed without bumping `CACHE_VERSION`. The agent docs (`CLAUDE.md`, `AGENTS.md`, `HISTORY.md`, `.claudeignore`) are not cached and don't need a bump.
+- **Skipped from PR #10 (phonics branch) because of the `render.py` problem above:** the split read-aloud button (story vs. the child's practice line), the "Practice these words" list in the For Grown-Ups panel, and the reading-level badge on each book cover. The analyzer, the stats table and the homepage level pills were kept.
 - **Several open PRs branch independently off `main`** and overlap in `index.html` and
   `sw.js` `CACHE_VERSION` — expect to resolve those on each merge.
 - **Games for older kids use only the factual helper layer** from the specs, never the
@@ -94,8 +95,9 @@ To keep context clean and avoid scanning thousands of vendor/binary files, **nev
 
 *Overwrite this at the end of every session; move the previous handoff into `HISTORY.md` first.*
 
-- **Last Worked On (2026-10-29):** imported community center background pack (`raw_art/LittleSprout_community-center_Backgrounds.zip`) into `assets/backgrounds/` (`center_1.jpg` .. `center_5.jpg` and `center.jpg`), completing full 5-variant coverage across all 13 locations (78 images total). Upgraded `scripts/import_background_art.py` with single-target zip/slug argument and `--skip-existing` support. Bumped `sw.js` `CACHE_VERSION` to `littlesprout-v36`.
-- **Current State (2026-10-29):** `main` is live with 18 books, 6 games, all 13 background locations with 5 variants each, zero placeholder assets, and 0 broken links across 712 verified local links. Open PRs: #9, #10, #11, #12, #13.
+- **Last Worked On (2026-11-21, cloud Claude, the owner's ask: finish all open work):** merged the open feature branches into one branch (`claude/finish-open-work`): visitor-flow fixes, the shop/reward-box coming-soon card, two games for older kids, four character games, and the decodability analyzer with the `stats.html` crosswalk. Added Books 16–19 cards to `index.html` (kept out of the 14-book reward logic on purpose). Replaced the stale `edusystems-code.github.io` domain with `mbottega16.github.io` everywhere (sitemap, canonical/OG tags, README, `rewards-api` config). Added the six newer games and their art to the `sw.js` precache; `CACHE_VERSION` is `littlesprout-v43`.
+- **Current State (2026-11-21):** `link_check.py` (695 links), `placeholder_audit.py` and `cache_bump_guard.py` all pass. The live URL was NOT opened (the cloud session could not fetch it). `analyze_decodability.py --check` passes (the words flagged in Books 16–19 were approved in the analyzer and in `10_Decodable_Word_List.md`, per that doc's Tier 3 rules). Headless-browser smoke test: all 18 books, 12 games, index/stats/passport load with no page errors; covers and the new cards render. `CACHE_VERSION` is `littlesprout-v44`.
 - **Next Up:**
-  1. Review and merge the open feature PRs (#9–#13) one at a time, resolving shared `index.html` / `sw.js` `CACHE_VERSION` conflicts on each merge.
-  2. Deploy `rewards-api/` to Render + connect live Stripe keys only when the owner gives explicit spend/publish sign-off.
+  1. The live site loads at `https://mbottega16.github.io/LittleSproutStories/` (checked 2026-11-21). `Little Sprout Stories Web.url` points to `littlesproutstories.com`, which did not load in a test; confirm whether that domain is real.
+  2. Bring `build_pipeline/render.py` back in line with the published (watercolor) books, then port the three skipped PR #10 features. Compare a fresh `build.py` output with `books/` first: write the output to a scratch folder, never over `books/`.
+  3. Deploy `rewards-api/` to Render + connect live Stripe keys only when the owner gives explicit spend/publish sign-off.

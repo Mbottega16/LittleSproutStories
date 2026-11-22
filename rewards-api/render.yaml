@@ -32,11 +32,11 @@ services:
     healthCheckPath: /api/health
     envVars:
       - key: ALLOWED_ORIGINS
-        value: https://edusystems-code.github.io
+        value: https://mbottega16.github.io
       - key: SHOP_PAGE_URL
-        value: https://edusystems-code.github.io/LittleSproutStories/shop.html
+        value: https://mbottega16.github.io/LittleSproutStories/shop.html
       - key: REWARDS_PAGE_URL
-        value: https://edusystems-code.github.io/LittleSproutStories/rewards.html
+        value: https://mbottega16.github.io/LittleSproutStories/rewards.html
       - key: DATABASE_URL
         sync: false   # a Postgres connection URL -- see the note at the top
       - key: RETENTION_DAYS_AFTER_SENT
