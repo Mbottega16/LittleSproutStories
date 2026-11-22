@@ -50,7 +50,11 @@ h1 { color:var(--sprout); font-size:28px; }
 .readaloud[hidden] { display:none; }
 
 .text-a { font-size:18px; line-height:1.6; margin-top:12px; }
-.text-b { font-size:20px; font-weight:bold; background:#eaf7ee; border-left:5px solid var(--sprout); padding:10px 14px; border-radius:8px; margin-top:10px; }
+.text-b-row { display:flex; align-items:center; gap:10px; margin-top:10px; }
+.text-b { font-size:20px; font-weight:bold; background:#eaf7ee; border-left:5px solid var(--sprout); padding:10px 14px; border-radius:8px; flex:1; }
+.readaloud-hint { margin-top:0; padding:6px 12px; font-size:13px; border-color:#ccc; color:#666; flex-shrink:0; }
+.readaloud-hint .ra-icon { font-size:14px; }
+.readaloud-hint:hover { background:#f7f7f7; }
 .w.spoken { background:#FFE9A3; border-radius:4px; }
 
 .quiz { margin-top:16px; background:#fff8e6; border-radius:12px; padding:14px; text-align:center; }
@@ -79,6 +83,8 @@ h1 { color:var(--sprout); font-size:28px; }
 .guide summary { font-weight:bold; cursor:pointer; font-size:17px; }
 .guide p { margin:10px 0 0; }
 .standards { font-size:12px; color:#666; }
+.practice-note { font-size:12px; color:#666; font-weight:normal; }
+.level-tag { display:inline-block; background:#fff; border:2px solid var(--sprout); color:var(--sprout-dark); border-radius:20px; padding:4px 14px; font-size:13px; font-weight:bold; margin-bottom:10px; margin-left:8px; }
 
 /* ---------- juice: page turns, taps, celebrations ---------- */
 .page-wrap.turn-in .page { animation: pageTurnIn .32s cubic-bezier(.2,.8,.3,1) both; }
@@ -120,7 +126,7 @@ h1 { color:var(--sprout); font-size:28px; }
 <main id="bookMain">
 <div class="page-wrap" id="p0" style="display:block">
 <section class="page cover">
-  <div class="banner">Little Sprout Stories</div>
+  <div class="banner">Little Sprout Stories</div><span class="level-tag" title="Relative to the other Little Sprout books, based on how many blend/digraph/multi-syllable words this book actually uses — not an outside grade standard.">Level 3 — Getting stronger</span>
   <h1>Maya &amp; James<br>Visit the Bakery</h1>
   <p class="subtitle">A story about feeling worried — and how a mistake became a recipe</p>
   <div class="art"><img src="../assets/book7-cover.webp" alt="Maya &amp; James Visit the Bakery — cover art" fetchpriority="high"></div>
@@ -129,74 +135,114 @@ h1 { color:var(--sprout); font-size:28px; }
 <div class="page-wrap" id="p1" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book7-page1.webp" alt="Illustration for page 1 of Maya &amp; James Visit the Bakery" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Maya and James hadn’t even reached the door when the smell found them first — warm butter, cinnamon, and fresh bread, all tangled together. “That’s Keisha’s bakery,” Maya sighed happily. “We’re helping her bake cookies for the weekend market today!”</div>
-  <div class="text-b">Maya and James visit the bakery.</div>
+  <div class="text-b-row">
+    <div class="text-b">Maya and James visit the bakery.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p2" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book7-page2.webp" alt="Illustration for page 2 of Maya &amp; James Visit the Bakery" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Keisha pushed through the swinging doors with a tray in her hands and flour on her apron like a dusting of first snow. “My helpers are here!” she cried. “Wash up, tie back, aprons on. Would you like to see what a baker’s day is really like?”</div>
-  <div class="text-b">Keisha says, “Let’s bake!”</div>
+  <div class="text-b-row">
+    <div class="text-b">Keisha says, “Let’s bake!”</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p3" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book7-page3.webp" alt="Illustration for page 3 of Maya &amp; James Visit the Bakery" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">“Bakers start before the sun,” Keisha told them, “because dough cannot be rushed.” First she checked the great oven’s temperature, click by click. Then she peeked at the dough she had mixed the night before — it had risen overnight, puffy as a pillow, full of tiny bubbles. “A baker’s first job isn’t baking. It’s starting early, checking everything, and being ready before the first customer knocks.”</div>
-  <div class="text-b">Keisha starts early and checks her oven.</div>
+  <div class="text-b-row">
+    <div class="text-b">Keisha starts early and checks her oven.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p4" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book7-page4.webp" alt="Illustration for page 4 of Maya &amp; James Visit the Bakery" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Keisha’s kitchen gleamed with tools. There was a mixer as tall as James, with a hook that kneaded dough like two strong hands. There was a scale for weighing, measuring cups for scooping, a rolling pin for flattening, and a timer that ticked like a tiny clock with a job to do. James measured every scoop of flour himself, leveling it perfectly flat each time. “Baking is measuring,” Keisha said, “and measuring is math you can eat.”</div>
-  <div class="text-b">James measures the flour just right.</div>
+  <div class="text-b-row">
+    <div class="text-b">James measures the flour just right.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p5" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book7-page5.webp" alt="Illustration for page 5 of Maya &amp; James Visit the Bakery" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">In the corner stood a practice board, swirled all over with frosting squiggles. “Even bakers practice,” Keisha said. “We pipe frosting on the board before we ever touch a birthday cake. We knead practice dough to make our hands strong and gentle. And we learn to tell when bread is done by its golden color — and by the hollow sound it makes when you tap it, like a little drum.” Thump, thump. “See? Practice first. Then, when it’s a real cake for a real birthday, our hands already know what to do.”</div>
-  <div class="text-b">Bakers practice before the real cake.</div>
+  <div class="text-b-row">
+    <div class="text-b">Bakers practice before the real cake.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p6" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book7-page6.webp" alt="Illustration for page 6 of Maya &amp; James Visit the Bakery" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">All morning, the bakery bell kept chiming — ding! — as neighbors hurried in. The bus driver bought rolls for his route. A grandmother ordered a birthday cake with pink roses. And in a special box by the door, Keisha tucked yesterday’s leftover bread, wrapped carefully, for families who needed it. “A bakery isn’t just a shop,” she said. “It’s the neighborhood’s kitchen. We feed the celebrations, and we feed the ordinary days, too.”</div>
-  <div class="text-b">The bakery feeds the whole neighborhood.</div>
+  <div class="text-b-row">
+    <div class="text-b">The bakery feeds the whole neighborhood.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p7" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book7-page7.webp" alt="Illustration for page 7 of Maya &amp; James Visit the Bakery" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Before anyone touched the dough, Keisha became a teacher. “Rule one,” she said, “clean hands — soap, water, and a whole song of scrubbing.” They washed until their fingers squeaked. “Rule two: the oven is a grown-up job, always. Rule three: we count and measure together, out loud.” Maya counted scoops while James leveled. “Part of my job,” Keisha smiled, “is teaching little bakers to be safe, clean, and careful — so the only surprise in my kitchen is a delicious one.”</div>
-  <div class="text-b">Wash your hands. Baking takes care.</div>
+  <div class="text-b-row">
+    <div class="text-b">Wash your hands. Baking takes care.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p8" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book7-page8.webp" alt="Illustration for page 8 of Maya &amp; James Visit the Bakery" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">At last it was cookie time. James measured with his tongue between his teeth, careful as careful can be. Maya stretched up for the flour bag all by herself — and whoosh! POOF! The bag tipped, and a cloud of white flour dust bloomed into the air and settled over everything: the counter, the cookies-to-be, and one very surprised James. Maya’s eyes filled with worry. “I ruined it,” she said in a very small voice.</div>
-  <div class="text-b">Maya feels worried.</div>
+  <div class="text-b-row">
+    <div class="text-b">Maya feels worried.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
   <div class="quiz" data-answer="1" role="group" aria-label="Question">
     <p class="quiz-q">How does Maya feel?</p>
     <div class="quiz-opts">
@@ -210,20 +256,30 @@ h1 { color:var(--sprout); font-size:28px; }
 <div class="page-wrap" id="p9" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book7-page9.webp" alt="Illustration for page 9 of Maya &amp; James Visit the Bakery" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">But Keisha didn’t scold. She laughed a warm, floury laugh. “Watch this,” she said, and gently patted a pinch of the spilled flour right onto the cookie dough, soft and white as falling snow. “There. A mistake is just an ingredient you didn’t plan for. Let’s see what it cooks up.”</div>
-  <div class="text-b">Keisha is not mad. Flour looks like snow.</div>
+  <div class="text-b-row">
+    <div class="text-b">Keisha is not mad. Flour looks like snow.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p10" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book7-page10.webp" alt="Illustration for page 10 of Maya &amp; James Visit the Bakery" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">“Now these,” Keisha announced, sliding the tray out of the oven, “are Maya’s Snowy Cookies!” They came out golden and sparkling, each one wearing its little cap of white. James took a bite of his perfectly measured cookie. Then he took a bite of Maya’s snowy one. His eyes went round. “Yours is delicious. And — mine is delicious too! They are both good, in different ways!” Maya beamed. Her mistake hadn’t ruined anything. It had invented something.</div>
-  <div class="text-b">A mistake can turn into something new.</div>
+  <div class="text-b-row">
+    <div class="text-b">A mistake can turn into something new.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
   <div class="quiz" data-answer="1" role="group" aria-label="Question">
     <p class="quiz-q">What did Maya learn about mistakes?</p>
     <div class="quiz-opts">
@@ -237,20 +293,30 @@ h1 { color:var(--sprout); font-size:28px; }
 <div class="page-wrap" id="p11" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book7-page11.webp" alt="Illustration for page 11 of Maya &amp; James Visit the Bakery" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">“You know my favorite part of this job?” Keisha asked, wiping her hands on her snowy apron. “It isn’t eating the cookies — though that part is wonderful.” She laughed. “It’s knowing that something I baked shows up at birthday parties, and sick-day soup suppers, and lunchboxes on hard Mondays. A baker gets to take care of people with food. Even on the floury days. Especially on the floury days.”</div>
-  <div class="text-b">Keisha’s food takes care of people.</div>
+  <div class="text-b-row">
+    <div class="text-b">Keisha’s food takes care of people.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p12" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book7-page12.webp" alt="Illustration for page 12 of Maya &amp; James Visit the Bakery" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">They boxed the cookies together, tying each box with string, and carried them proudly to the weekend market. And do you know what happened? Maya’s Snowy Cookies — the ones born from a poof and a worry — were the very first to sell out. “Bye, Keisha!” they called, waving their empty tray. “Same time next week?”</div>
-  <div class="text-b">Maya and James say, “Bye, Keisha!”</div>
+  <div class="text-b-row">
+    <div class="text-b">Maya and James say, “Bye, Keisha!”</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p13" style="display:none">
 <section class="page end-screen">
@@ -263,6 +329,7 @@ h1 { color:var(--sprout); font-size:28px; }
     <p><b>Ask your child:</b> Tell me about a mistake that turned into something good.</p>
     <p><b>Try this:</b> Bake something together and let a “mistake” become part of the recipe.</p>
     <p><b>Words to grow on:</b> dawn, knead, dough, ingredient, measure, level, golden, sprinkle, delicious, worried. Point at the tools as you name them — oven, mixer, scale, measuring cups, rolling pin, piping bag, oven mitts, timer.</p>
+    <p><b>Practice these words:</b> visit, bakery, bake, starts, early <span class="practice-note">(the trickier words from this book’s practice lines)</span></p>
     <p><b>The bigger picture:</b> Bakers do much more than bake treats — they start work before sunrise, check their ovens and ingredients, follow recipes and measure with care, practice their skills on practice dough before the real thing, keep their kitchens clean and safe, teach helpers the rules, and feed their whole neighborhood — from everyday bread to birthday cakes.</p>
     <p class="standards">Standards: W.K.3</p>
   </details>
@@ -480,55 +547,54 @@ function stopSpeech() {
   if (activeBtn) {
     activeBtn.classList.remove('speaking');
     var lbl = activeBtn.querySelector('.ra-label');
-    if (lbl) lbl.textContent = 'Read to me';
+    if (lbl && activeBtn.dataset.label) lbl.textContent = activeBtn.dataset.label;
     activeBtn = null;
   }
 }
 
-function readPage(btn) {
+/* Reads exactly one block (the story, OR the practice line -- never both
+   in one tap). Splitting these was a deliberate fix: one shared button
+   used to read the practice line for the child by default, which is the
+   one line in the book meant for THEM to sound out -- the easiest path
+   was also the one that skipped the actual phonics practice. The story
+   button stays prominent; the practice-line button is a smaller, opt-in
+   "stuck? tap for a hint" control instead of the default. */
+function readBlock(btn, which) {
   if (!SPEECH_OK) return;
   if (activeBtn === btn) { stopSpeech(); return; }
   stopSpeech();
 
   const page = btn.closest('.page');
-  const blocks = [page.querySelector('.text-a'), page.querySelector('.text-b')].filter(Boolean);
-  blocks.forEach(wrapWords);
+  const el = page.querySelector('.text-' + which);
+  if (!el) return;
+  wrapWords(el);
 
   activeBtn = btn;
   btn.classList.add('speaking');
   var lbl = btn.querySelector('.ra-label');
   if (lbl) lbl.textContent = 'Stop';
 
-  var queue = blocks.slice();
-  function speakBlock() {
-    if (!queue.length) { stopSpeech(); return; }
-    var el = queue.shift();
-    var spans = [].slice.call(el.querySelectorAll('.w'));
-    var plain = el.textContent;
-    var offsets = []; var cursor = 0;
-    spans.forEach(function(s) {
-      var idx = plain.indexOf(s.textContent, cursor);
-      offsets.push(idx); cursor = idx + s.textContent.length;
-    });
+  var spans = [].slice.call(el.querySelectorAll('.w'));
+  var plain = el.textContent;
+  var offsets = []; var cursor = 0;
+  spans.forEach(function(s) {
+    var idx = plain.indexOf(s.textContent, cursor);
+    offsets.push(idx); cursor = idx + s.textContent.length;
+  });
 
-    var u = new SpeechSynthesisUtterance(plain);
-    var v = pickVoice(); if (v) u.voice = v;
-    u.rate = 0.85; u.pitch = 1.05;
-    u.onboundary = function(ev) {
-      if (ev.name && ev.name !== 'word') return;
-      var hit = -1;
-      for (var i=0;i<offsets.length;i++) { if (offsets[i] <= ev.charIndex) hit = i; else break; }
-      spans.forEach(function(s) { s.classList.remove('spoken'); });
-      if (hit >= 0 && spans[hit]) spans[hit].classList.add('spoken');
-    };
-    u.onend = function() {
-      spans.forEach(function(s) { s.classList.remove('spoken'); });
-      if (activeBtn === btn) speakBlock();
-    };
-    u.onerror = function() { stopSpeech(); };
-    speechSynthesis.speak(u);
-  }
-  speakBlock();
+  var u = new SpeechSynthesisUtterance(plain);
+  var v = pickVoice(); if (v) u.voice = v;
+  u.rate = 0.85; u.pitch = 1.05;
+  u.onboundary = function(ev) {
+    if (ev.name && ev.name !== 'word') return;
+    var hit = -1;
+    for (var i=0;i<offsets.length;i++) { if (offsets[i] <= ev.charIndex) hit = i; else break; }
+    spans.forEach(function(s) { s.classList.remove('spoken'); });
+    if (hit >= 0 && spans[hit]) spans[hit].classList.add('spoken');
+  };
+  u.onend = function() { stopSpeech(); };
+  u.onerror = function() { stopSpeech(); };
+  speechSynthesis.speak(u);
 }
 
 if (SPEECH_OK) { speechSynthesis.onvoiceschanged = function() {}; }

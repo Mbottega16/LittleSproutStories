@@ -118,6 +118,14 @@
     "try_this": "Count to three while covering your ears, then uncover slowly.",
     "words_to_grow": "gleaming, enormous, coiled, stream, practice, emergency, crew, steady, brave. Point at the tools as you name them — hose, nozzle, ladder, air tank, radio, helmet.",
     "bigger_picture": "Firefighters do much more than fight fires — they check equipment daily, train constantly, live at the station in shifts, teach fire safety, and keep their community calm and prepared.",
-    "standards": "RL.K.1, SL.K.3"
-  }
+    "standards": "RL.K.1, SL.K.3",
+    "practice_words": [
+      "truck",
+      "checks",
+      "every",
+      "ladder",
+      "helmet"
+    ]
+  },
+  "reading_level": 1
 }

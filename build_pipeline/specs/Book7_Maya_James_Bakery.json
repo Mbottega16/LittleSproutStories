@@ -118,6 +118,14 @@
     "try_this": "Bake something together and let a “mistake” become part of the recipe.",
     "words_to_grow": "dawn, knead, dough, ingredient, measure, level, golden, sprinkle, delicious, worried. Point at the tools as you name them — oven, mixer, scale, measuring cups, rolling pin, piping bag, oven mitts, timer.",
     "bigger_picture": "Bakers do much more than bake treats — they start work before sunrise, check their ovens and ingredients, follow recipes and measure with care, practice their skills on practice dough before the real thing, keep their kitchens clean and safe, teach helpers the rules, and feed their whole neighborhood — from everyday bread to birthday cakes.",
-    "standards": "W.K.3"
-  }
+    "standards": "W.K.3",
+    "practice_words": [
+      "visit",
+      "bakery",
+      "bake",
+      "starts",
+      "early"
+    ]
+  },
+  "reading_level": 3
 }

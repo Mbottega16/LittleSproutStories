@@ -63,13 +63,28 @@ def render_quiz(quiz: dict | None) -> str:
     )
 
 
+LEVEL_LABELS = {
+    1: "Level 1 — Just starting out",
+    2: "Level 2 — Building confidence",
+    3: "Level 3 — Getting stronger",
+    4: "Level 4 — Confident reader",
+}
+
+
 def render_cover(spec: dict) -> str:
     cover = spec["cover"]
     art = _art_html(spec, cover, f"{amp(spec['title'])} — cover art", 'fetchpriority="high"')
+    level = spec.get("reading_level")
+    level_html = (
+        '<span class="level-tag" title="Relative to the other Little Sprout books, based on how many '
+        'blend/digraph/multi-syllable words this book actually uses — not an outside grade standard.">'
+        f'{LEVEL_LABELS.get(level, f"Level {level}")}</span>'
+        if level else ""
+    )
     return (
         f'<div class="page-wrap" id="p0" style="display:block">\n'
         f'<section class="page cover">\n'
-        f'  <div class="banner">Little Sprout Stories</div>\n'
+        f'  <div class="banner">Little Sprout Stories</div>{level_html}\n'
         f'  <h1>{cover["h1_html"]}</h1>\n'
         f'  <p class="subtitle">{cover["subtitle"]}</p>\n'
         f'  {art}\n'
@@ -87,17 +102,28 @@ def render_page(spec: dict, page: dict) -> str:
         f'<div class="page-wrap" id="p{n}" style="display:none">\n'
         f'<section class="page">\n'
         f'  {art}\n'
-        f'  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">\n'
-        f'    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>\n'
+        f'  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">\n'
+        f'    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>\n'
         f'  </button>\n'
         f'  <div class="text-a">{page["text_a"]}</div>\n'
-        f'  <div class="text-b">{page["text_b"]}</div>{quiz_block}\n'
+        f'  <div class="text-b-row">\n'
+        f'    <div class="text-b">{page["text_b"]}</div>\n'
+        f'    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">\n'
+        f'      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>\n'
+        f'    </button>\n'
+        f'  </div>{quiz_block}\n'
         f'</section></div>\n'
     )
 
 
 def render_end(spec: dict, end_index: int) -> str:
     e = spec["end_screen"]
+    words = e.get("practice_words") or []
+    practice_html = (
+        f'    <p><b>Practice these words:</b> {", ".join(words)} '
+        f'<span class="practice-note">(the trickier words from this book’s practice lines)</span></p>\n'
+        if words else ""
+    )
     return (
         f'<div class="page-wrap" id="p{end_index}" style="display:none">\n'
         f'<section class="page end-screen">\n'
@@ -110,6 +136,7 @@ def render_end(spec: dict, end_index: int) -> str:
         f'    <p><b>Ask your child:</b> {e["ask"]}</p>\n'
         f'    <p><b>Try this:</b> {e["try_this"]}</p>\n'
         f'    <p><b>Words to grow on:</b> {e["words_to_grow"]}</p>\n'
+        f'{practice_html}'
         f'    <p><b>The bigger picture:</b> {e["bigger_picture"]}</p>\n'
         f'    <p class="standards">Standards: {e["standards"]}</p>\n'
         f'  </details>\n'

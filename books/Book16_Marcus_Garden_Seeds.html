@@ -50,7 +50,11 @@ h1 { color:var(--sprout); font-size:28px; }
 .readaloud[hidden] { display:none; }
 
 .text-a { font-size:18px; line-height:1.6; margin-top:12px; }
-.text-b { font-size:20px; font-weight:bold; background:#eaf7ee; border-left:5px solid var(--sprout); padding:10px 14px; border-radius:8px; margin-top:10px; }
+.text-b-row { display:flex; align-items:center; gap:10px; margin-top:10px; }
+.text-b { font-size:20px; font-weight:bold; background:#eaf7ee; border-left:5px solid var(--sprout); padding:10px 14px; border-radius:8px; flex:1; }
+.readaloud-hint { margin-top:0; padding:6px 12px; font-size:13px; border-color:#ccc; color:#666; flex-shrink:0; }
+.readaloud-hint .ra-icon { font-size:14px; }
+.readaloud-hint:hover { background:#f7f7f7; }
 .w.spoken { background:#FFE9A3; border-radius:4px; }
 
 .quiz { margin-top:16px; background:#fff8e6; border-radius:12px; padding:14px; text-align:center; }
@@ -79,6 +83,8 @@ h1 { color:var(--sprout); font-size:28px; }
 .guide summary { font-weight:bold; cursor:pointer; font-size:17px; }
 .guide p { margin:10px 0 0; }
 .standards { font-size:12px; color:#666; }
+.practice-note { font-size:12px; color:#666; font-weight:normal; }
+.level-tag { display:inline-block; background:#fff; border:2px solid var(--sprout); color:var(--sprout-dark); border-radius:20px; padding:4px 14px; font-size:13px; font-weight:bold; margin-bottom:10px; margin-left:8px; }
 
 /* ---------- juice: page turns, taps, celebrations ---------- */
 .page-wrap.turn-in .page { animation: pageTurnIn .32s cubic-bezier(.2,.8,.3,1) both; }
@@ -120,7 +126,7 @@ h1 { color:var(--sprout); font-size:28px; }
 <main id="bookMain">
 <div class="page-wrap" id="p0" style="display:block">
 <section class="page cover">
-  <div class="banner">Little Sprout Stories</div>
+  <div class="banner">Little Sprout Stories</div><span class="level-tag" title="Relative to the other Little Sprout books, based on how many blend/digraph/multi-syllable words this book actually uses — not an outside grade standard.">Level 3 — Getting stronger</span>
   <h1>Marcus &amp; Sophie in the Secret Garden</h1>
   <p class="subtitle">A story about feeling worried — and trusting tiny seeds to grow</p>
   <div class="art"><img src="../assets/book16-cover.webp" alt="Marcus &amp; Sophie in the Secret Garden — cover art" fetchpriority="high"></div>
@@ -129,47 +135,72 @@ h1 { color:var(--sprout); font-size:28px; }
 <div class="page-wrap" id="p1" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book16-page1.webp" alt="Illustration for page 1 of Marcus &amp; Sophie in the Secret Garden" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">On a sunny morning, Marcus and Sophie slipped through the gate of the community garden — and stopped and stared. Everywhere they looked, little green sprouts were poking up through the dark soil, row after row of them, all reaching for the light. “It’s like a secret,” Sophie whispered. “A whole garden, hiding in the middle of town.”</div>
-  <div class="text-b">Marcus and Sophie see little green plants.</div>
+  <div class="text-b-row">
+    <div class="text-b">Marcus and Sophie see little green plants.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p2" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book16-page2.webp" alt="Illustration for page 2 of Marcus &amp; Sophie in the Secret Garden" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">“Welcome, young gardeners!” called a warm voice. Mr. Green came down the path with his hat in one hand and a basket of tools in the other, smiling like the sun itself. “You’ve come on the very best day,” he said. “Today we are planting tiny seeds — and tiny seeds, my friends, are where enormous things begin.”</div>
-  <div class="text-b">Mr. Green says, “Come plant seeds!”</div>
+  <div class="text-b-row">
+    <div class="text-b">Mr. Green says, “Come plant seeds!”</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p3" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book16-page3.webp" alt="Illustration for page 3 of Marcus &amp; Sophie in the Secret Garden" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">“Before we plant,” said Mr. Green, “we walk the garden and look closely — every bed, every row.” He squeezed the soil to feel if it was thirsty, checked which sprouts needed water, and made sure the watering cans were full and the trowels were clean. “A shared garden belongs to many people,” he explained, “so somebody has to take care of all of it. That’s the garden keeper’s first job: paying attention.”</div>
-  <div class="text-b">Mr. Green checks the whole garden first.</div>
+  <div class="text-b-row">
+    <div class="text-b">Mr. Green checks the whole garden first.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p4" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book16-page4.webp" alt="Illustration for page 4 of Marcus &amp; Sophie in the Secret Garden" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Marcus chose a small clay pot, round and sturdy, and filled it with soft, dark soil using his garden shovel — scoop, pour, pat. The soil smelled rich and earthy, like the ground after rain. “Good soil,” said Mr. Green, nodding, “is a seed’s first home. You’ve built a fine one.”</div>
-  <div class="text-b">Marcus fills a pot with soil.</div>
+  <div class="text-b-row">
+    <div class="text-b">Marcus fills a pot with soil.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p5" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book16-page5.webp" alt="Illustration for page 5 of Marcus &amp; Sophie in the Secret Garden" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Then Sophie opened her seed packet and tipped the seeds into her palm — and her smile wobbled. They were so tiny. Smaller than freckles! “What if they don’t grow?” she asked worriedly. “What if they’re too little to do anything at all?”</div>
-  <div class="text-b">The seeds are tiny. Sophie feels worried.</div>
+  <div class="text-b-row">
+    <div class="text-b">The seeds are tiny. Sophie feels worried.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
   <div class="quiz" data-answer="0" role="group" aria-label="Question">
     <p class="quiz-q">What are Marcus and Sophie planting?</p>
     <div class="quiz-opts">
@@ -183,47 +214,72 @@ h1 { color:var(--sprout); font-size:28px; }
 <div class="page-wrap" id="p6" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book16-page6.webp" alt="Illustration for page 6 of Marcus &amp; Sophie in the Secret Garden" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Mr. Green knelt down in the soil beside her, not one bit worried. “Sophie,” he said gently, “every tall sunflower you have ever seen started out exactly this small. All seeds need is soil, sunlight, water — and patience. The seed does the growing. Our job is just to give it what it needs, and wait.”</div>
-  <div class="text-b">Seeds need soil, sun, water, and time.</div>
+  <div class="text-b-row">
+    <div class="text-b">Seeds need soil, sun, water, and time.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p7" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book16-page7.webp" alt="Illustration for page 7 of Marcus &amp; Sophie in the Secret Garden" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">“Planting is a skill,” said Mr. Green, “so let’s practice first.” On an empty patch of soil, he showed them: poke a hole as deep as your fingertip — no deeper, or the sprout can’t find the sun. Drop in the seed. Cover it like tucking in a blanket. Sophie practiced twice, and by the second try her hands moved slowly and surely, like a real gardener’s hands.</div>
-  <div class="text-b">They practice how to plant the right way.</div>
+  <div class="text-b-row">
+    <div class="text-b">They practice how to plant the right way.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p8" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book16-page8.webp" alt="Illustration for page 8 of Marcus &amp; Sophie in the Secret Garden" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Now Sophie was ready. Carefully, carefully, she pressed two seeds into the soil in Marcus’s pot and patted the earth smooth and flat. Then she leaned down close, the way you lean toward someone you love, and whispered, “Good night, little seeds. Grow well.”</div>
-  <div class="text-b">Sophie plants the seeds.</div>
+  <div class="text-b-row">
+    <div class="text-b">Sophie plants the seeds.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p9" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book16-page9.webp" alt="Illustration for page 9 of Marcus &amp; Sophie in the Secret Garden" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Marcus lifted the watering can with both hands and sprinkled a gentle rain over the pot. The dry soil drank it up eagerly, turning dark and rich. “We did it together!” shouted Marcus. “You planted, I watered!” — and Sophie laughed, because it was true: the pot had needed both of them.</div>
-  <div class="text-b">Marcus gives the seeds water.</div>
+  <div class="text-b-row">
+    <div class="text-b">Marcus gives the seeds water.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p10" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book16-page10.webp" alt="Illustration for page 10 of Marcus &amp; Sophie in the Secret Garden" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Mr. Green walked them down the rows one last time. “See these tomatoes? A grandmother down the street planted them, and the whole neighborhood will share them. Those herbs belong to everybody. And your pot—” he set it carefully among a row of pots planted by other children, “—now belongs here too, growing alongside everyone’s. That’s what community means: many hands, one garden.”</div>
-  <div class="text-b">The garden is for everyone to share.</div>
+  <div class="text-b-row">
+    <div class="text-b">The garden is for everyone to share.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
   <div class="quiz" data-answer="0" role="group" aria-label="Question">
     <p class="quiz-q">What helped Sophie feel confident about planting?</p>
     <div class="quiz-opts">
@@ -237,20 +293,30 @@ h1 { color:var(--sprout); font-size:28px; }
 <div class="page-wrap" id="p11" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book16-page11.webp" alt="Illustration for page 11 of Marcus &amp; Sophie in the Secret Garden" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">“One last lesson,” said Mr. Green. “Planting isn’t the end of a gardener’s job — it’s the beginning.” He taught them the fingertip test: touch the soil, and if it feels dry, the sprouts are thirsty. Keep the pot where the sun can visit. And when you can’t see anything happening? “That’s the seeds’ quiet time,” he said. “Trust them. They’re working underground.”</div>
-  <div class="text-b">Gardeners keep caring after they plant.</div>
+  <div class="text-b-row">
+    <div class="text-b">Gardeners keep caring after they plant.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p12" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book16-page12.webp" alt="Illustration for page 12 of Marcus &amp; Sophie in the Secret Garden" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Marcus and Sophie set their pot in the warm sunshine, in its place among all the others. Nothing had sprouted yet — not one green tip. And still, somehow, the pot looked full of promise. “We can’t wait to come back,” said Sophie, “and see our green sprouts grow.” Mr. Green waved from the gate. “They’ll be growing,” he promised. “So will you.”</div>
-  <div class="text-b">They will come back to see the sprouts.</div>
+  <div class="text-b-row">
+    <div class="text-b">They will come back to see the sprouts.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p13" style="display:none">
 <section class="page end-screen">
@@ -263,6 +329,7 @@ h1 { color:var(--sprout); font-size:28px; }
     <p><b>Ask your child:</b> Have you ever waited for something to grow? How did you practice patience?</p>
     <p><b>Try this:</b> Plant a bean seed in a damp paper towel in a cup by the window this week and watch it sprout together.</p>
     <p><b>Words to grow on:</b> community, sprouts, sturdy, earthy, worriedly, carefully, patience, promise. Point at the tools as you name them — clay pot, garden shovel (trowel), watering can, seed packet.</p>
+    <p><b>Practice these words:</b> green, plants, plant, checks, whole <span class="practice-note">(the trickier words from this book’s practice lines)</span></p>
     <p><b>The bigger picture:</b> Tending a garden is much more than dropping in a seed — it is checking every bed before you begin, learning to plant at the right depth, watering and watching day after day, and sharing one green space with a whole community of other growers.</p>
     <p class="standards">Standards: RL.K.1, SL.K.3</p>
   </details>
@@ -480,55 +547,54 @@ function stopSpeech() {
   if (activeBtn) {
     activeBtn.classList.remove('speaking');
     var lbl = activeBtn.querySelector('.ra-label');
-    if (lbl) lbl.textContent = 'Read to me';
+    if (lbl && activeBtn.dataset.label) lbl.textContent = activeBtn.dataset.label;
     activeBtn = null;
   }
 }
 
-function readPage(btn) {
+/* Reads exactly one block (the story, OR the practice line -- never both
+   in one tap). Splitting these was a deliberate fix: one shared button
+   used to read the practice line for the child by default, which is the
+   one line in the book meant for THEM to sound out -- the easiest path
+   was also the one that skipped the actual phonics practice. The story
+   button stays prominent; the practice-line button is a smaller, opt-in
+   "stuck? tap for a hint" control instead of the default. */
+function readBlock(btn, which) {
   if (!SPEECH_OK) return;
   if (activeBtn === btn) { stopSpeech(); return; }
   stopSpeech();
 
   const page = btn.closest('.page');
-  const blocks = [page.querySelector('.text-a'), page.querySelector('.text-b')].filter(Boolean);
-  blocks.forEach(wrapWords);
+  const el = page.querySelector('.text-' + which);
+  if (!el) return;
+  wrapWords(el);
 
   activeBtn = btn;
   btn.classList.add('speaking');
   var lbl = btn.querySelector('.ra-label');
   if (lbl) lbl.textContent = 'Stop';
 
-  var queue = blocks.slice();
-  function speakBlock() {
-    if (!queue.length) { stopSpeech(); return; }
-    var el = queue.shift();
-    var spans = [].slice.call(el.querySelectorAll('.w'));
-    var plain = el.textContent;
-    var offsets = []; var cursor = 0;
-    spans.forEach(function(s) {
-      var idx = plain.indexOf(s.textContent, cursor);
-      offsets.push(idx); cursor = idx + s.textContent.length;
-    });
+  var spans = [].slice.call(el.querySelectorAll('.w'));
+  var plain = el.textContent;
+  var offsets = []; var cursor = 0;
+  spans.forEach(function(s) {
+    var idx = plain.indexOf(s.textContent, cursor);
+    offsets.push(idx); cursor = idx + s.textContent.length;
+  });
 
-    var u = new SpeechSynthesisUtterance(plain);
-    var v = pickVoice(); if (v) u.voice = v;
-    u.rate = 0.85; u.pitch = 1.05;
-    u.onboundary = function(ev) {
-      if (ev.name && ev.name !== 'word') return;
-      var hit = -1;
-      for (var i=0;i<offsets.length;i++) { if (offsets[i] <= ev.charIndex) hit = i; else break; }
-      spans.forEach(function(s) { s.classList.remove('spoken'); });
-      if (hit >= 0 && spans[hit]) spans[hit].classList.add('spoken');
-    };
-    u.onend = function() {
-      spans.forEach(function(s) { s.classList.remove('spoken'); });
-      if (activeBtn === btn) speakBlock();
-    };
-    u.onerror = function() { stopSpeech(); };
-    speechSynthesis.speak(u);
-  }
-  speakBlock();
+  var u = new SpeechSynthesisUtterance(plain);
+  var v = pickVoice(); if (v) u.voice = v;
+  u.rate = 0.85; u.pitch = 1.05;
+  u.onboundary = function(ev) {
+    if (ev.name && ev.name !== 'word') return;
+    var hit = -1;
+    for (var i=0;i<offsets.length;i++) { if (offsets[i] <= ev.charIndex) hit = i; else break; }
+    spans.forEach(function(s) { s.classList.remove('spoken'); });
+    if (hit >= 0 && spans[hit]) spans[hit].classList.add('spoken');
+  };
+  u.onend = function() { stopSpeech(); };
+  u.onerror = function() { stopSpeech(); };
+  speechSynthesis.speak(u);
 }
 
 if (SPEECH_OK) { speechSynthesis.onvoiceschanged = function() {}; }

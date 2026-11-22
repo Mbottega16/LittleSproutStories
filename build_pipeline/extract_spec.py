@@ -15,8 +15,7 @@ Usage:
     python build_pipeline/extract_spec.py books/Book1_Maya_Marcus_FireStation.html
     python build_pipeline/extract_spec.py --all
 
-Warning: this overwrites specs/<book>.json. It keeps the analyzer fields
-`reading_level` and `practice_words` if the old spec had them.
+Warning: this overwrites specs/<book>.json with whatever is in the book.
 """
 
 import html as htmllib
@@ -31,9 +30,6 @@ from common import amp  # noqa: E402
 REPO_ROOT = Path(__file__).resolve().parent.parent
 BOOKS_DIR = REPO_ROOT / "books"
 SPECS_DIR = Path(__file__).resolve().parent / "specs"
-
-KEEP_FROM_OLD_SPEC = ("reading_level", "practice_words")
-
 
 def _one(pattern: str, text: str, what: str, flags: int = 0) -> re.Match:
     m = re.search(pattern, text, flags)
@@ -136,6 +132,16 @@ def extract_book(html: str) -> dict:
         "bigger_picture": guide("The bigger picture"),
         "standards": _one(r'<p class="standards">Standards: (.*?)</p>', end_block, "standards").group(1),
     }
+
+    # Optional, added by scripts/analyze_decodability.py --write and shown by
+    # the renderer. Read back from the HTML so a re-extract never loses them.
+    # (Key order matches what the analyzer appends, so files do not reshuffle.)
+    practice = re.search(r'<p><b>Practice these words:</b> (.*?) <span class="practice-note">', end_block)
+    if practice:
+        spec["end_screen"]["practice_words"] = practice.group(1).split(", ")
+    level = re.search(r'<span class="level-tag"[^>]*>Level (\d)', cover_block)
+    if level:
+        spec["reading_level"] = int(level.group(1))
     return spec
 
 
@@ -144,11 +150,6 @@ def extract_file(book_path: Path) -> Path:
     html = book_path.read_text(encoding="utf-8", newline="")
     spec = extract_book(html)
     out_path = SPECS_DIR / (book_path.stem + ".json")
-    if out_path.exists():
-        old = json.loads(out_path.read_text(encoding="utf-8"))
-        for key in KEEP_FROM_OLD_SPEC:
-            if key in old:
-                spec[key] = old[key]
     out_path.write_text(json.dumps(spec, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
     return out_path
 

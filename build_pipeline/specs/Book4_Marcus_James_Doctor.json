@@ -118,6 +118,14 @@
     "try_this": "Offer two small choices before your child’s next appointment.",
     "words_to_grow": "fluttery, checkup, stethoscope, gentle, steady, choice, anxious, trust. Point at the tools as you name them — stethoscope, ear-light (otoscope), blood-pressure cuff, scale.",
     "bigger_picture": "Doctors do much more than treat sickness — they prepare and clean their rooms and tools before every patient, study and practice for years (often on pretend patients first), work as a team with nurses and receptionists, give checkups and vaccines to keep people healthy, and teach families the everyday habits that stop illness before it starts.",
-    "standards": "L.K.1.d, SL.K.2"
-  }
+    "standards": "L.K.1.d, SL.K.2",
+    "practice_words": [
+      "hello",
+      "ready",
+      "listen",
+      "practice",
+      "clinic"
+    ]
+  },
+  "reading_level": 4
 }

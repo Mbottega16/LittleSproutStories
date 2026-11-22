@@ -50,7 +50,11 @@ h1 { color:var(--sprout); font-size:28px; }
 .readaloud[hidden] { display:none; }
 
 .text-a { font-size:18px; line-height:1.6; margin-top:12px; }
-.text-b { font-size:20px; font-weight:bold; background:#eaf7ee; border-left:5px solid var(--sprout); padding:10px 14px; border-radius:8px; margin-top:10px; }
+.text-b-row { display:flex; align-items:center; gap:10px; margin-top:10px; }
+.text-b { font-size:20px; font-weight:bold; background:#eaf7ee; border-left:5px solid var(--sprout); padding:10px 14px; border-radius:8px; flex:1; }
+.readaloud-hint { margin-top:0; padding:6px 12px; font-size:13px; border-color:#ccc; color:#666; flex-shrink:0; }
+.readaloud-hint .ra-icon { font-size:14px; }
+.readaloud-hint:hover { background:#f7f7f7; }
 .w.spoken { background:#FFE9A3; border-radius:4px; }
 
 .quiz { margin-top:16px; background:#fff8e6; border-radius:12px; padding:14px; text-align:center; }
@@ -79,6 +83,8 @@ h1 { color:var(--sprout); font-size:28px; }
 .guide summary { font-weight:bold; cursor:pointer; font-size:17px; }
 .guide p { margin:10px 0 0; }
 .standards { font-size:12px; color:#666; }
+.practice-note { font-size:12px; color:#666; font-weight:normal; }
+.level-tag { display:inline-block; background:#fff; border:2px solid var(--sprout); color:var(--sprout-dark); border-radius:20px; padding:4px 14px; font-size:13px; font-weight:bold; margin-bottom:10px; margin-left:8px; }
 
 /* ---------- juice: page turns, taps, celebrations ---------- */
 .page-wrap.turn-in .page { animation: pageTurnIn .32s cubic-bezier(.2,.8,.3,1) both; }
@@ -120,7 +126,7 @@ h1 { color:var(--sprout); font-size:28px; }
 <main id="bookMain">
 <div class="page-wrap" id="p0" style="display:block">
 <section class="page cover">
-  <div class="banner">Little Sprout Stories</div>
+  <div class="banner">Little Sprout Stories</div><span class="level-tag" title="Relative to the other Little Sprout books, based on how many blend/digraph/multi-syllable words this book actually uses — not an outside grade standard.">Level 1 — Just starting out</span>
   <h1>All Four Friends<br>Visit the Community Center</h1>
   <p class="subtitle">A story about feeling impatient — and making the wait visible</p>
   <div class="art"><img src="../assets/book11-cover.webp" alt="All Four Friends Visit the Community Center — cover art" fetchpriority="high"></div>
@@ -129,56 +135,86 @@ h1 { color:var(--sprout); font-size:28px; }
 <div class="page-wrap" id="p1" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book11-page1.webp" alt="Illustration for page 1 of All Four Friends Visit the Community Center" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">All four friends tumbled through the community center doors in one noisy, giggly bunch — Maya, Marcus, Sophie, and James — because today was the day of their favorite group game, the one they talked about all week. “We’re here! We’re here!” announced Sophie, in case the whole building hadn’t noticed.</div>
-  <div class="text-b">Four friends come to play a game.</div>
+  <div class="text-b-row">
+    <div class="text-b">Four friends come to play a game.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p2" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book11-page2.webp" alt="Illustration for page 2 of All Four Friends Visit the Community Center" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Nurse Aisha met them with the game box hugged to her chest and a smile for every single one of them. “Welcome, players! Here is our rule, and it is a fair one: everyone gets a turn, one at a time, and everybody cheers for everybody.” Four heads nodded — some of them more patiently than others.</div>
-  <div class="text-b">Each kid gets a turn.</div>
+  <div class="text-b-row">
+    <div class="text-b">Each kid gets a turn.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p3" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book11-page3.webp" alt="Illustration for page 3 of All Four Friends Visit the Community Center" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">“This room didn’t wake up like this by magic,” Aisha laughed. “The center team comes early.” She showed them: the great ring of keys that unlocks the doors, the sign-in sheet where every visitor writes their name, the chairs set in a friendly circle, and the game box — opened and counted, piece by piece, so nobody’s turn would be spoiled by a missing one. On the shelf sat the first-aid kit, checked and ready, just in case. “Our first job,” said Aisha, “is making the room ready before the people arrive.”</div>
-  <div class="text-b">Aisha gets the room ready.</div>
+  <div class="text-b-row">
+    <div class="text-b">Aisha gets the room ready.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p4" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book11-page4.webp" alt="Illustration for page 4 of All Four Friends Visit the Community Center" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Aisha read the first name. “James!” James stepped up and took the very first turn, careful and proud. Sophie clapped for him — clap, clap — and then she looked at the three friends still waiting, and the whole long game still to go, and her toes began to bounce.</div>
-  <div class="text-b">James takes the first turn.</div>
+  <div class="text-b-row">
+    <div class="text-b">James takes the first turn.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p5" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book11-page5.webp" alt="Illustration for page 5 of All Four Friends Visit the Community Center" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">While the turns went on, Aisha pointed through the doorways, and the center was humming in every direction. In one room, grandparents stretched and swayed in exercise class. In another, big kids bent over homework at the long tables. Somewhere down the hall, babies and their grown-ups were singing a wiggly song. “Babies, grandparents, and everybody in between,” said Aisha. “A community center belongs to the whole community — that’s the whole point of it.”</div>
-  <div class="text-b">The center is for everyone.</div>
+  <div class="text-b-row">
+    <div class="text-b">The center is for everyone.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p6" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book11-page6.webp" alt="Illustration for page 6 of All Four Friends Visit the Community Center" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Marcus took his turn. Maya took her turn. The game went on and on, and Sophie’s turn stayed far away, like a cookie on a very high shelf. “It feels like forever,” Sophie announced to the ceiling, bouncing on her toes — bounce, bounce, bounce — as if bouncing could make time hurry up. It could not.</div>
-  <div class="text-b">Waiting feels long.</div>
+  <div class="text-b-row">
+    <div class="text-b">Waiting feels long.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
   <div class="quiz" data-answer="1" role="group" aria-label="Question">
     <p class="quiz-q">How does Sophie feel waiting?</p>
     <div class="quiz-opts">
@@ -192,38 +228,58 @@ h1 { color:var(--sprout); font-size:28px; }
 <div class="page-wrap" id="p7" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book11-page7.webp" alt="Illustration for page 7 of All Four Friends Visit the Community Center" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Then Aisha the teacher appeared, carrying something wonderful: a great big sand timer, tall as a milk bottle. She set it where everyone could see. “Waiting is hard when you can’t see it,” she said. “So let’s make the wait visible. Watch the sand trickle, grain by grain. When the top is empty — that’s your turn, Sophie. A timer is fair, because everybody can see exactly the same wait.”</div>
-  <div class="text-b">The timer shows the wait.</div>
+  <div class="text-b-row">
+    <div class="text-b">The timer shows the wait.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p8" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book11-page8.webp" alt="Illustration for page 8 of All Four Friends Visit the Community Center" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Sophie watched the sand pour down in a thin, sparkling ribbon. Trickle, trickle. She counted the grains she could not count. She wiggled only half as much. The mountain of sand above grew smaller… and smaller… and the bottom mountain grew — and somehow, knowing how much was left made the left part easier.</div>
-  <div class="text-b">Sophie watches the timer.</div>
+  <div class="text-b-row">
+    <div class="text-b">Sophie watches the timer.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p9" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book11-page9.webp" alt="Illustration for page 9 of All Four Friends Visit the Community Center" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">The very last grain dropped — plip! “Sophie!” called Aisha, and Sophie sprang up like a jack-in-the-box. She played with her whole heart, with all that waiting poured into it, and it was her best round yet — maybe the best round of the whole day.</div>
-  <div class="text-b">Sophie takes her turn.</div>
+  <div class="text-b-row">
+    <div class="text-b">Sophie takes her turn.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p10" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book11-page10.webp" alt="Illustration for page 10 of All Four Friends Visit the Community Center" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">And when the last turn ended, all four friends cheered for each other’s turns — for James’s careful first try, for Marcus, for Maya, and for Sophie’s spectacular finale — win or not, loud or louder. The waiting hadn’t vanished. It had just gotten smaller, the way sand does.</div>
-  <div class="text-b">Friends clap for each other.</div>
+  <div class="text-b-row">
+    <div class="text-b">Friends clap for each other.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
   <div class="quiz" data-answer="0" role="group" aria-label="Question">
     <p class="quiz-q">What helped Sophie wait?</p>
     <div class="quiz-opts">
@@ -237,20 +293,30 @@ h1 { color:var(--sprout); font-size:28px; }
 <div class="page-wrap" id="p11" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book11-page11.webp" alt="Illustration for page 11 of All Four Friends Visit the Community Center" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">“You know my favorite part of this job?” Aisha said as they stacked the game pieces back in their box — click, click, click. “It isn’t the games. It’s watching a room full of neighbors turn into a room full of friends. And look what you practiced today, Sophie — waiting your turn is really just saving up your cheering for later.” Sophie grinned. “I had a LOT saved up.”</div>
-  <div class="text-b">Waiting is saving up cheers.</div>
+  <div class="text-b-row">
+    <div class="text-b">Waiting is saving up cheers.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p12" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book11-page12.webp" alt="Illustration for page 12 of All Four Friends Visit the Community Center" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">The four friends helped push the chairs back to their places, because that is what community means too — leaving the room ready for whoever comes next. Then they spilled out the doors into the sunshine, already arguing happily about next week’s game. “Same time!” called Aisha. “I’ll have the timer ready!”</div>
-  <div class="text-b">They say, “Bye, Aisha!”</div>
+  <div class="text-b-row">
+    <div class="text-b">They say, “Bye, Aisha!”</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p13" style="display:none">
 <section class="page end-screen">
@@ -263,6 +329,7 @@ h1 { color:var(--sprout); font-size:28px; }
     <p><b>Ask your child:</b> What helps you wait for your turn?</p>
     <p><b>Try this:</b> Use a visible timer for turn-taking at home this week.</p>
     <p><b>Words to grow on:</b> community, arrived, counted, visible, trickle, impatient, fair, spectacular, cheer. Point at the tools as you name them — keys, sign-in sheet, game pieces, sand timer, first-aid kit.</p>
+    <p><b>Practice these words:</b> ready, takes, first, center, everyone <span class="practice-note">(the trickier words from this book’s practice lines)</span></p>
     <p><b>The bigger picture:</b> Community center staff do much more than run the game of the day — they open the building early and prepare every room, count and check games and safety supplies, welcome babies, students, and grandparents to programs running side by side, teach fair play, and leave every space ready for the next neighbors who need it.</p>
     <p class="standards">Standards: SL.K.1.a</p>
   </details>
@@ -480,55 +547,54 @@ function stopSpeech() {
   if (activeBtn) {
     activeBtn.classList.remove('speaking');
     var lbl = activeBtn.querySelector('.ra-label');
-    if (lbl) lbl.textContent = 'Read to me';
+    if (lbl && activeBtn.dataset.label) lbl.textContent = activeBtn.dataset.label;
     activeBtn = null;
   }
 }
 
-function readPage(btn) {
+/* Reads exactly one block (the story, OR the practice line -- never both
+   in one tap). Splitting these was a deliberate fix: one shared button
+   used to read the practice line for the child by default, which is the
+   one line in the book meant for THEM to sound out -- the easiest path
+   was also the one that skipped the actual phonics practice. The story
+   button stays prominent; the practice-line button is a smaller, opt-in
+   "stuck? tap for a hint" control instead of the default. */
+function readBlock(btn, which) {
   if (!SPEECH_OK) return;
   if (activeBtn === btn) { stopSpeech(); return; }
   stopSpeech();
 
   const page = btn.closest('.page');
-  const blocks = [page.querySelector('.text-a'), page.querySelector('.text-b')].filter(Boolean);
-  blocks.forEach(wrapWords);
+  const el = page.querySelector('.text-' + which);
+  if (!el) return;
+  wrapWords(el);
 
   activeBtn = btn;
   btn.classList.add('speaking');
   var lbl = btn.querySelector('.ra-label');
   if (lbl) lbl.textContent = 'Stop';
 
-  var queue = blocks.slice();
-  function speakBlock() {
-    if (!queue.length) { stopSpeech(); return; }
-    var el = queue.shift();
-    var spans = [].slice.call(el.querySelectorAll('.w'));
-    var plain = el.textContent;
-    var offsets = []; var cursor = 0;
-    spans.forEach(function(s) {
-      var idx = plain.indexOf(s.textContent, cursor);
-      offsets.push(idx); cursor = idx + s.textContent.length;
-    });
+  var spans = [].slice.call(el.querySelectorAll('.w'));
+  var plain = el.textContent;
+  var offsets = []; var cursor = 0;
+  spans.forEach(function(s) {
+    var idx = plain.indexOf(s.textContent, cursor);
+    offsets.push(idx); cursor = idx + s.textContent.length;
+  });
 
-    var u = new SpeechSynthesisUtterance(plain);
-    var v = pickVoice(); if (v) u.voice = v;
-    u.rate = 0.85; u.pitch = 1.05;
-    u.onboundary = function(ev) {
-      if (ev.name && ev.name !== 'word') return;
-      var hit = -1;
-      for (var i=0;i<offsets.length;i++) { if (offsets[i] <= ev.charIndex) hit = i; else break; }
-      spans.forEach(function(s) { s.classList.remove('spoken'); });
-      if (hit >= 0 && spans[hit]) spans[hit].classList.add('spoken');
-    };
-    u.onend = function() {
-      spans.forEach(function(s) { s.classList.remove('spoken'); });
-      if (activeBtn === btn) speakBlock();
-    };
-    u.onerror = function() { stopSpeech(); };
-    speechSynthesis.speak(u);
-  }
-  speakBlock();
+  var u = new SpeechSynthesisUtterance(plain);
+  var v = pickVoice(); if (v) u.voice = v;
+  u.rate = 0.85; u.pitch = 1.05;
+  u.onboundary = function(ev) {
+    if (ev.name && ev.name !== 'word') return;
+    var hit = -1;
+    for (var i=0;i<offsets.length;i++) { if (offsets[i] <= ev.charIndex) hit = i; else break; }
+    spans.forEach(function(s) { s.classList.remove('spoken'); });
+    if (hit >= 0 && spans[hit]) spans[hit].classList.add('spoken');
+  };
+  u.onend = function() { stopSpeech(); };
+  u.onerror = function() { stopSpeech(); };
+  speechSynthesis.speak(u);
 }
 
 if (SPEECH_OK) { speechSynthesis.onvoiceschanged = function() {}; }

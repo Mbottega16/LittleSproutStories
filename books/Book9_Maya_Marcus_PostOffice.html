@@ -50,7 +50,11 @@ h1 { color:var(--sprout); font-size:28px; }
 .readaloud[hidden] { display:none; }
 
 .text-a { font-size:18px; line-height:1.6; margin-top:12px; }
-.text-b { font-size:20px; font-weight:bold; background:#eaf7ee; border-left:5px solid var(--sprout); padding:10px 14px; border-radius:8px; margin-top:10px; }
+.text-b-row { display:flex; align-items:center; gap:10px; margin-top:10px; }
+.text-b { font-size:20px; font-weight:bold; background:#eaf7ee; border-left:5px solid var(--sprout); padding:10px 14px; border-radius:8px; flex:1; }
+.readaloud-hint { margin-top:0; padding:6px 12px; font-size:13px; border-color:#ccc; color:#666; flex-shrink:0; }
+.readaloud-hint .ra-icon { font-size:14px; }
+.readaloud-hint:hover { background:#f7f7f7; }
 .w.spoken { background:#FFE9A3; border-radius:4px; }
 
 .quiz { margin-top:16px; background:#fff8e6; border-radius:12px; padding:14px; text-align:center; }
@@ -79,6 +83,8 @@ h1 { color:var(--sprout); font-size:28px; }
 .guide summary { font-weight:bold; cursor:pointer; font-size:17px; }
 .guide p { margin:10px 0 0; }
 .standards { font-size:12px; color:#666; }
+.practice-note { font-size:12px; color:#666; font-weight:normal; }
+.level-tag { display:inline-block; background:#fff; border:2px solid var(--sprout); color:var(--sprout-dark); border-radius:20px; padding:4px 14px; font-size:13px; font-weight:bold; margin-bottom:10px; margin-left:8px; }
 
 /* ---------- juice: page turns, taps, celebrations ---------- */
 .page-wrap.turn-in .page { animation: pageTurnIn .32s cubic-bezier(.2,.8,.3,1) both; }
@@ -120,7 +126,7 @@ h1 { color:var(--sprout); font-size:28px; }
 <main id="bookMain">
 <div class="page-wrap" id="p0" style="display:block">
 <section class="page cover">
-  <div class="banner">Little Sprout Stories</div>
+  <div class="banner">Little Sprout Stories</div><span class="level-tag" title="Relative to the other Little Sprout books, based on how many blend/digraph/multi-syllable words this book actually uses — not an outside grade standard.">Level 4 — Confident reader</span>
   <h1>Maya &amp; Marcus<br>Visit the Post Office</h1>
   <p class="subtitle">A story about feeling doubtful — and trusting that good enough is good enough</p>
   <div class="art"><img src="../assets/book9-cover.webp" alt="Maya &amp; Marcus Visit the Post Office — cover art" fetchpriority="high"></div>
@@ -129,74 +135,114 @@ h1 { color:var(--sprout); font-size:28px; }
 <div class="page-wrap" id="p1" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book9-page1.webp" alt="Illustration for page 1 of Maya &amp; Marcus Visit the Post Office" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Maya had written a letter — a real letter, in her best handwriting, with a drawing of a sunflower in the corner. Today she and Marcus were going to mail it all the way to Grandma’s house. Maya held the envelope with both hands, the way you hold something important.</div>
-  <div class="text-b">Maya has a letter for Grandma.</div>
+  <div class="text-b-row">
+    <div class="text-b">Maya has a letter for Grandma.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p2" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book9-page2.webp" alt="Illustration for page 2 of Maya &amp; Marcus Visit the Post Office" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">The post office smelled of paper and ink, and behind the counter stood Rose, with a warm smile and a whole stack of colorful stamps — flags, flowers, and one with a rocket ship. “Well, hello!” said Rose. “Sending something special today? Let me show you what a postal worker’s day is really like.”</div>
-  <div class="text-b">Rose says hello. Rose has stamps.</div>
+  <div class="text-b-row">
+    <div class="text-b">Rose says hello. Rose has stamps.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p3" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book9-page3.webp" alt="Illustration for page 3 of Maya &amp; Marcus Visit the Post Office" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">“Postal workers start early,” Rose told them, “before the town even wakes up.” Behind the counter stood a wall of sorting slots, each labeled with a street, and Rose’s hands flew — letter, slot, letter, slot — putting every envelope in exactly the right place. She checked her satchel and peered into the mail truck waiting at the back door. “A postal worker’s first job isn’t delivering. It’s sorting, so every single letter can find its way home.”</div>
-  <div class="text-b">Rose sorts every letter first.</div>
+  <div class="text-b-row">
+    <div class="text-b">Rose sorts every letter first.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p4" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book9-page4.webp" alt="Illustration for page 4 of Maya &amp; Marcus Visit the Post Office" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Rose showed them everything a letter meets on its journey. The scale that weighs packages, beep by beep. The postmark stamp that comes down — THUMP! — to say “this letter was here, on this very day.” And a long wall of tiny metal doors: hundreds of post office boxes, each keeping somebody’s mail safe until they come with their key. “Every letter takes a trip,” said Rose. “Our tools make sure it takes the right one.”</div>
-  <div class="text-b">Letters take a trip to Grandma’s house.</div>
+  <div class="text-b-row">
+    <div class="text-b">Letters take a trip to Grandma’s house.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p5" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book9-page5.webp" alt="Illustration for page 5 of Maya &amp; Marcus Visit the Post Office" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">“Think sorting looks easy?” Rose grinned. “Try the training game!” She spread a pile of pretend letters across the counter, and Maya and Marcus raced to slide each one into the right slot — Maple Street, Oak Street, River Road! They mixed up two, and Rose laughed kindly. “Even postal workers practice. New carriers walk their routes with a trainer, street by street, until they know every doorstep. We practice so that no letter ever gets lost on our watch.”</div>
-  <div class="text-b">Postal workers practice their routes.</div>
+  <div class="text-b-row">
+    <div class="text-b">Postal workers practice their routes.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p6" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book9-page6.webp" alt="Illustration for page 6 of Maya &amp; Marcus Visit the Post Office" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">“Who gets mail?” Marcus asked. “Everyone,” said Rose, “and everything.” Birthday cards with money from uncles. Medicine that arrives right on time. A postcard from somebody standing next to the ocean. Carriers walk the same streets every day, in sunshine and in rain, and they get to know every family — and every dog! “If a neighbor’s mailbox stays stuffed full for days,” Rose added, “we notice, and we tell somebody, because looking out for your street is part of the job too.”</div>
-  <div class="text-b">Postal workers help every street.</div>
+  <div class="text-b-row">
+    <div class="text-b">Postal workers help every street.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p7" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book9-page7.webp" alt="Illustration for page 7 of Maya &amp; Marcus Visit the Post Office" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Then Rose became a teacher. She took a big pretend envelope and showed them the secret code every letter needs. “The name goes here, so we know WHO. The street and town go here, so we know WHERE. And the stamp goes in the corner — that’s the letter’s ticket for its trip.” Maya practiced writing the address very carefully. “Part of my job,” Rose said, “is helping anyone — even a brand-new letter writer — send their words anywhere in the whole world.”</div>
-  <div class="text-b">An address tells the letter where to go.</div>
+  <div class="text-b-row">
+    <div class="text-b">An address tells the letter where to go.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p8" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book9-page8.webp" alt="Illustration for page 8 of Maya &amp; Marcus Visit the Post Office" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">At last, it was time to mail the real letter. But Maya looked at her envelope one more time — and now all she could see was a smudge near the corner, and one word crossed out and written again, wobbly. Her shoulders sank. “It’s not good enough,” she said quietly. “Grandma keeps her letters forever. Mine has mistakes in it.”</div>
-  <div class="text-b">Maya feels doubtful about her letter.</div>
+  <div class="text-b-row">
+    <div class="text-b">Maya feels doubtful about her letter.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
   <div class="quiz" data-answer="1" role="group" aria-label="Question">
     <p class="quiz-q">How does Maya feel about her letter?</p>
     <div class="quiz-opts">
@@ -210,20 +256,30 @@ h1 { color:var(--sprout); font-size:28px; }
 <div class="page-wrap" id="p9" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book9-page9.webp" alt="Illustration for page 9 of Maya &amp; Marcus Visit the Post Office" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Marcus looked at the letter — at the smudge, and the wobbly word, and the sunflower blooming in the corner. “Grandma won’t care about the smudge,” he said gently. “She’ll just be happy it’s from you. The letter is good because YOU wrote it, Maya. Nobody else could have written exactly that one.”</div>
-  <div class="text-b">Grandma will be glad it is from Maya.</div>
+  <div class="text-b-row">
+    <div class="text-b">Grandma will be glad it is from Maya.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p10" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book9-page10.webp" alt="Illustration for page 10 of Maya &amp; Marcus Visit the Post Office" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Rose leaned over the counter. “May I tell you a secret of the post office?” she said. “Every letter that comes through here is real and true, smudges and all. The crossed-out words just show somebody cared enough to fix them.” Maya took a deep breath. She picked up her letter — her real, true, good-enough letter — reached up on tiptoe… and dropped it into the mail bin. A little weight she hadn’t even known she was carrying lifted right off her shoulders.</div>
-  <div class="text-b">Maya trusts her letter is good enough.</div>
+  <div class="text-b-row">
+    <div class="text-b">Maya trusts her letter is good enough.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
   <div class="quiz" data-answer="1" role="group" aria-label="Question">
     <p class="quiz-q">What helped Maya feel better?</p>
     <div class="quiz-opts">
@@ -237,20 +293,30 @@ h1 { color:var(--sprout); font-size:28px; }
 <div class="page-wrap" id="p11" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book9-page11.webp" alt="Illustration for page 11 of Maya &amp; Marcus Visit the Post Office" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">“You know my favorite part of this job?” Rose asked as they watched the bin fill with the morning’s mail. “It isn’t the stamps, and it isn’t even the truck. It’s that I get to carry people’s love around in my satchel. A birthday hug. A ‘thinking of you.’ A letter from a granddaughter with a sunflower in the corner. Every delivery is somebody’s good news.”</div>
-  <div class="text-b">Rose carries good news to everyone.</div>
+  <div class="text-b-row">
+    <div class="text-b">Rose carries good news to everyone.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p12" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book9-page12.webp" alt="Illustration for page 12 of Maya &amp; Marcus Visit the Post Office" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">“Bye, Rose!” they called, and they waved until the post office door swung shut behind them. And one week later — just one! — Grandma called on the phone, and her voice was smiling. She loved the letter. She loved the sunflower. She even loved the wobbly word. Smudges and all, it was perfect, because it was from Maya. That very afternoon, Maya sat down… and started a brand-new letter.</div>
-  <div class="text-b">Grandma loved the letter. Maya writes again!</div>
+  <div class="text-b-row">
+    <div class="text-b">Grandma loved the letter. Maya writes again!</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p13" style="display:none">
 <section class="page end-screen">
@@ -263,6 +329,7 @@ h1 { color:var(--sprout); font-size:28px; }
     <p><b>Ask your child:</b> Is there something you made that you worried was not good enough?</p>
     <p><b>Try this:</b> Mail a real letter together this week, imperfections included.</p>
     <p><b>Words to grow on:</b> envelope, address, stamp, sort, journey, deliver, satchel, smudge, doubtful, trust. Point at the tools as you name them — sorting slots, scale, postmark stamp, satchel, mail truck, post office boxes.</p>
+    <p><b>Practice these words:</b> hello, every, first, take, trip <span class="practice-note">(the trickier words from this book’s practice lines)</span></p>
     <p><b>The bigger picture:</b> Postal workers do much more than sell stamps — they sort thousands of letters into exactly the right places before the town wakes up, weigh and check every package, practice their routes until they know every street and doorstep, deliver in all kinds of weather, look out for the people on their routes, and teach everyone — even brand-new letter writers — how to send words and packages anywhere in the world.</p>
     <p class="standards">Standards: W.K.1, L.K.2.a</p>
   </details>
@@ -480,55 +547,54 @@ function stopSpeech() {
   if (activeBtn) {
     activeBtn.classList.remove('speaking');
     var lbl = activeBtn.querySelector('.ra-label');
-    if (lbl) lbl.textContent = 'Read to me';
+    if (lbl && activeBtn.dataset.label) lbl.textContent = activeBtn.dataset.label;
     activeBtn = null;
   }
 }
 
-function readPage(btn) {
+/* Reads exactly one block (the story, OR the practice line -- never both
+   in one tap). Splitting these was a deliberate fix: one shared button
+   used to read the practice line for the child by default, which is the
+   one line in the book meant for THEM to sound out -- the easiest path
+   was also the one that skipped the actual phonics practice. The story
+   button stays prominent; the practice-line button is a smaller, opt-in
+   "stuck? tap for a hint" control instead of the default. */
+function readBlock(btn, which) {
   if (!SPEECH_OK) return;
   if (activeBtn === btn) { stopSpeech(); return; }
   stopSpeech();
 
   const page = btn.closest('.page');
-  const blocks = [page.querySelector('.text-a'), page.querySelector('.text-b')].filter(Boolean);
-  blocks.forEach(wrapWords);
+  const el = page.querySelector('.text-' + which);
+  if (!el) return;
+  wrapWords(el);
 
   activeBtn = btn;
   btn.classList.add('speaking');
   var lbl = btn.querySelector('.ra-label');
   if (lbl) lbl.textContent = 'Stop';
 
-  var queue = blocks.slice();
-  function speakBlock() {
-    if (!queue.length) { stopSpeech(); return; }
-    var el = queue.shift();
-    var spans = [].slice.call(el.querySelectorAll('.w'));
-    var plain = el.textContent;
-    var offsets = []; var cursor = 0;
-    spans.forEach(function(s) {
-      var idx = plain.indexOf(s.textContent, cursor);
-      offsets.push(idx); cursor = idx + s.textContent.length;
-    });
+  var spans = [].slice.call(el.querySelectorAll('.w'));
+  var plain = el.textContent;
+  var offsets = []; var cursor = 0;
+  spans.forEach(function(s) {
+    var idx = plain.indexOf(s.textContent, cursor);
+    offsets.push(idx); cursor = idx + s.textContent.length;
+  });
 
-    var u = new SpeechSynthesisUtterance(plain);
-    var v = pickVoice(); if (v) u.voice = v;
-    u.rate = 0.85; u.pitch = 1.05;
-    u.onboundary = function(ev) {
-      if (ev.name && ev.name !== 'word') return;
-      var hit = -1;
-      for (var i=0;i<offsets.length;i++) { if (offsets[i] <= ev.charIndex) hit = i; else break; }
-      spans.forEach(function(s) { s.classList.remove('spoken'); });
-      if (hit >= 0 && spans[hit]) spans[hit].classList.add('spoken');
-    };
-    u.onend = function() {
-      spans.forEach(function(s) { s.classList.remove('spoken'); });
-      if (activeBtn === btn) speakBlock();
-    };
-    u.onerror = function() { stopSpeech(); };
-    speechSynthesis.speak(u);
-  }
-  speakBlock();
+  var u = new SpeechSynthesisUtterance(plain);
+  var v = pickVoice(); if (v) u.voice = v;
+  u.rate = 0.85; u.pitch = 1.05;
+  u.onboundary = function(ev) {
+    if (ev.name && ev.name !== 'word') return;
+    var hit = -1;
+    for (var i=0;i<offsets.length;i++) { if (offsets[i] <= ev.charIndex) hit = i; else break; }
+    spans.forEach(function(s) { s.classList.remove('spoken'); });
+    if (hit >= 0 && spans[hit]) spans[hit].classList.add('spoken');
+  };
+  u.onend = function() { stopSpeech(); };
+  u.onerror = function() { stopSpeech(); };
+  speechSynthesis.speak(u);
 }
 
 if (SPEECH_OK) { speechSynthesis.onvoiceschanged = function() {}; }

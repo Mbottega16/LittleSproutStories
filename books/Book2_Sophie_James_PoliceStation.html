@@ -50,7 +50,11 @@ h1 { color:var(--sprout); font-size:28px; }
 .readaloud[hidden] { display:none; }
 
 .text-a { font-size:18px; line-height:1.6; margin-top:12px; }
-.text-b { font-size:20px; font-weight:bold; background:#eaf7ee; border-left:5px solid var(--sprout); padding:10px 14px; border-radius:8px; margin-top:10px; }
+.text-b-row { display:flex; align-items:center; gap:10px; margin-top:10px; }
+.text-b { font-size:20px; font-weight:bold; background:#eaf7ee; border-left:5px solid var(--sprout); padding:10px 14px; border-radius:8px; flex:1; }
+.readaloud-hint { margin-top:0; padding:6px 12px; font-size:13px; border-color:#ccc; color:#666; flex-shrink:0; }
+.readaloud-hint .ra-icon { font-size:14px; }
+.readaloud-hint:hover { background:#f7f7f7; }
 .w.spoken { background:#FFE9A3; border-radius:4px; }
 
 .quiz { margin-top:16px; background:#fff8e6; border-radius:12px; padding:14px; text-align:center; }
@@ -79,6 +83,8 @@ h1 { color:var(--sprout); font-size:28px; }
 .guide summary { font-weight:bold; cursor:pointer; font-size:17px; }
 .guide p { margin:10px 0 0; }
 .standards { font-size:12px; color:#666; }
+.practice-note { font-size:12px; color:#666; font-weight:normal; }
+.level-tag { display:inline-block; background:#fff; border:2px solid var(--sprout); color:var(--sprout-dark); border-radius:20px; padding:4px 14px; font-size:13px; font-weight:bold; margin-bottom:10px; margin-left:8px; }
 
 /* ---------- juice: page turns, taps, celebrations ---------- */
 .page-wrap.turn-in .page { animation: pageTurnIn .32s cubic-bezier(.2,.8,.3,1) both; }
@@ -120,7 +126,7 @@ h1 { color:var(--sprout); font-size:28px; }
 <main id="bookMain">
 <div class="page-wrap" id="p0" style="display:block">
 <section class="page cover">
-  <div class="banner">Little Sprout Stories</div>
+  <div class="banner">Little Sprout Stories</div><span class="level-tag" title="Relative to the other Little Sprout books, based on how many blend/digraph/multi-syllable words this book actually uses — not an outside grade standard.">Level 4 — Confident reader</span>
   <h1>Sophie &amp; James<br>Visit the Police Station</h1>
   <p class="subtitle">A story about feeling frustrated — and learning plans can bend</p>
   <div class="art"><img src="../assets/book2-cover.webp" alt="Sophie &amp; James Visit the Police Station — cover art" fetchpriority="high"></div>
@@ -129,74 +135,114 @@ h1 { color:var(--sprout); font-size:28px; }
 <div class="page-wrap" id="p1" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book2-page1.webp" alt="Illustration for page 1 of Sophie &amp; James Visit the Police Station" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Sophie bounced on her toes the whole way there. “The police station!” she sang, tugging James by the sleeve. “I want to see everything — the car, the lights, the everything!” James hugged his notebook and smiled. He liked seeing everything too. He just liked seeing it in order.</div>
-  <div class="text-b">Sophie and James visit the police station.</div>
+  <div class="text-b-row">
+    <div class="text-b">Sophie and James visit the police station.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p2" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book2-page2.webp" alt="Illustration for page 2 of Sophie &amp; James Visit the Police Station" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">The doors opened, and out stepped Officer Jasmine, her badge gleaming like a tiny sun. “Welcome, friends!” she said. “I’m Officer Jasmine. Would you like to see what a police officer’s day is really like?”</div>
-  <div class="text-b">Officer Jasmine says hello.</div>
+  <div class="text-b-row">
+    <div class="text-b">Officer Jasmine says hello.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p3" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book2-page3.webp" alt="Illustration for page 3 of Sophie &amp; James Visit the Police Station" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">“Before anything else,” said Jasmine, “we check our tools — every single morning.” Around the patrol car she went: blink went the lights, thump went each tire, and crackle-crackle went the radio as she tested it. She checked her flashlight, her notebook, and the bright vest that helps drivers see her in the dark. “An officer’s first job isn’t chasing anything. It’s making sure everything works, before we ever need it.”</div>
-  <div class="text-b">Jasmine checks her car and her radio.</div>
+  <div class="text-b-row">
+    <div class="text-b">Jasmine checks her car and her radio.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p4" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book2-page4.webp" alt="Illustration for page 4 of Sophie &amp; James Visit the Police Station" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">James opened his notebook to a page of careful little boxes. “My checklist,” he announced. “First the police car. Then the radio. Then the map wall.” Jasmine showed them every one: the car that carries officers all over town, the radio that lets the whole team talk to each other from far away, and the great map wall, where every street in the neighborhood had its very own place — just like every helper in town.</div>
-  <div class="text-b">James has a list of things to see.</div>
+  <div class="text-b-row">
+    <div class="text-b">James has a list of things to see.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p5" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book2-page5.webp" alt="Illustration for page 5 of Sophie &amp; James Visit the Police Station" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Out in the yard, two officers were practicing. One blew a whistle — tweet! — and raised a white-gloved hand to stop an imaginary car, while the other guided a “lost” teddy bear safely across a pretend street. “We practice even when nothing is wrong,” Jasmine explained, “the way you practice tying your shoes. Then, when a real person needs help, our hands already know what to do.”</div>
-  <div class="text-b">Officers practice to be ready.</div>
+  <div class="text-b-row">
+    <div class="text-b">Officers practice to be ready.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p6" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book2-page6.webp" alt="Illustration for page 6 of Sophie &amp; James Visit the Police Station" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Inside, the station hummed like a beehive. Radios crackled, phones rang softly, and the dispatcher listened carefully and sent officers wherever they were needed. Outside, a patrol car rolled slowly down the street, and the baker waved, and the crossing guard waved, and two grandmothers waved. “An officer’s office,” Jasmine said, “is the whole neighborhood — and the people in it are the best part.”</div>
-  <div class="text-b">Officers help the whole town.</div>
+  <div class="text-b-row">
+    <div class="text-b">Officers help the whole town.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p7" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book2-page7.webp" alt="Illustration for page 7 of Sophie &amp; James Visit the Police Station" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">On the corner, Jasmine became a teacher. “Stopping at the curb is rule number one,” she said. “Feet stop. Eyes look — left, right, and left again. Ears listen. Then we walk — we don’t run — straight across.” They practiced twice, until Sophie’s feet stopped all by themselves. “The best part of my job,” Jasmine said, “is helping nobody get hurt at all.”</div>
-  <div class="text-b">Stop, look, and listen to cross safely.</div>
+  <div class="text-b-row">
+    <div class="text-b">Stop, look, and listen to cross safely.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p8" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book2-page8.webp" alt="Illustration for page 8 of Sophie &amp; James Visit the Police Station" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Their last stop was the patrol car, up close. Jasmine opened the door so they could peek inside — and oh, the buttons! Switches and buttons in a whole shining row, every single one begging to be pressed. Before anyone could say “one at a time,” Sophie’s fingers went tap-tap-tap-tap — lights blinked, the radio squawked — and James stared at his beautiful checklist, where nothing was in order anymore. His face crumpled. “My plan,” he whispered. “It’s all mixed up.”</div>
-  <div class="text-b">James feels frustrated.</div>
+  <div class="text-b-row">
+    <div class="text-b">James feels frustrated.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
   <div class="quiz" data-answer="1" role="group" aria-label="Question">
     <p class="quiz-q">How does James feel?</p>
     <div class="quiz-opts">
@@ -210,20 +256,30 @@ h1 { color:var(--sprout); font-size:28px; }
 <div class="page-wrap" id="p9" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book2-page9.webp" alt="Illustration for page 9 of Sophie &amp; James Visit the Police Station" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Jasmine knelt down until her eyes were right even with James’s. “I know,” she said gently. “You made a good plan, and it got bumped. But listen — plans are a little like officers on patrol. Sometimes they have to turn down a different street. A plan can bend a little, James… and still work.”</div>
-  <div class="text-b">A plan can bend and still work.</div>
+  <div class="text-b-row">
+    <div class="text-b">A plan can bend and still work.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p10" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book2-page10.webp" alt="Illustration for page 10 of Sophie &amp; James Visit the Police Station" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">Jasmine unrolled the real patrol schedule, covered in colorful blocks from morning to night. “Here’s how we’ll fix it,” she said. “Sophie, pick the one thing you want most. James, pick yours.” Sophie chose the siren button — one careful press, with permission this time. James chose the map wall, where he found his very own street and grinned all over his face. Two picks. Two smiles. One plan that worked.</div>
-  <div class="text-b">Sophie and James share the plan.</div>
+  <div class="text-b-row">
+    <div class="text-b">Sophie and James share the plan.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
   <div class="quiz" data-answer="0" role="group" aria-label="Question">
     <p class="quiz-q">What helped fix the problem?</p>
     <div class="quiz-opts">
@@ -237,20 +293,30 @@ h1 { color:var(--sprout); font-size:28px; }
 <div class="page-wrap" id="p11" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book2-page11.webp" alt="Illustration for page 11 of Sophie &amp; James Visit the Police Station" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">“You know my favorite part of this job?” Jasmine asked as they walked back. “It isn’t the car, and it isn’t the siren. It’s that everybody in this town knows my name — and I know theirs. When children know an officer is a safe person to run to, the whole town feels safer.” She winked at James. “Even children with checklists.” James hugged his notebook. “Especially children with checklists.”</div>
-  <div class="text-b">Jasmine helps everyone feel safe.</div>
+  <div class="text-b-row">
+    <div class="text-b">Jasmine helps everyone feel safe.</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p12" style="display:none">
 <section class="page">
   <div class="art"><img src="../assets/book2-page12.webp" alt="Illustration for page 12 of Sophie &amp; James Visit the Police Station" loading="lazy"></div>
-  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">
-    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>
+  <button class="readaloud" type="button" onclick="readBlock(this,&#39;a&#39;)" data-label="Read the story to me" aria-label="Read the story to me">
+    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read the story to me</span>
   </button>
   <div class="text-a">At the corner, Sophie and James stopped all by themselves. Feet stop. Eyes look — left, right, left again. Ears listen. Then they walked — they did not run — straight across, waving the whole way. “Bye, Jasmine!” they called. “See you out in the neighborhood!”</div>
-  <div class="text-b">Sophie and James say, “Bye, Jasmine!”</div>
+  <div class="text-b-row">
+    <div class="text-b">Sophie and James say, “Bye, Jasmine!”</div>
+    <button class="readaloud readaloud-hint" type="button" onclick="readBlock(this,&#39;b&#39;)" data-label="Hint" aria-label="Read this practice line out loud, if you get stuck">
+      <span class="ra-icon" aria-hidden="true">&#128264;</span><span class="ra-label">Hint</span>
+    </button>
+  </div>
 </section></div>
 <div class="page-wrap" id="p13" style="display:none">
 <section class="page end-screen">
@@ -263,6 +329,7 @@ h1 { color:var(--sprout); font-size:28px; }
     <p><b>Ask your child:</b> What do you do when your plan does not go the way you hoped?</p>
     <p><b>Try this:</b> Let your child help set tonight’s plan, then bend it together if something changes.</p>
     <p><b>Words to grow on:</b> gleaming, patrol, crackle, schedule, neighborhood, curb, dispatcher, bend, frustrated. Point at the tools as you name them — badge, radio, flashlight, vest, map wall.</p>
+    <p><b>Practice these words:</b> visit, police, station, officer, hello <span class="practice-note">(the trickier words from this book’s practice lines)</span></p>
     <p><b>The bigger picture:</b> Police officers do much more than ride in cars with sirens — they check their equipment and patrol cars every morning, train for emergencies before they happen, patrol neighborhoods and get to know the people there, work as a team with dispatchers, and teach safety so that nobody gets hurt at all.</p>
     <p class="standards">Standards: RI.K.3, W.K.2</p>
   </details>
@@ -480,55 +547,54 @@ function stopSpeech() {
   if (activeBtn) {
     activeBtn.classList.remove('speaking');
     var lbl = activeBtn.querySelector('.ra-label');
-    if (lbl) lbl.textContent = 'Read to me';
+    if (lbl && activeBtn.dataset.label) lbl.textContent = activeBtn.dataset.label;
     activeBtn = null;
   }
 }
 
-function readPage(btn) {
+/* Reads exactly one block (the story, OR the practice line -- never both
+   in one tap). Splitting these was a deliberate fix: one shared button
+   used to read the practice line for the child by default, which is the
+   one line in the book meant for THEM to sound out -- the easiest path
+   was also the one that skipped the actual phonics practice. The story
+   button stays prominent; the practice-line button is a smaller, opt-in
+   "stuck? tap for a hint" control instead of the default. */
+function readBlock(btn, which) {
   if (!SPEECH_OK) return;
   if (activeBtn === btn) { stopSpeech(); return; }
   stopSpeech();
 
   const page = btn.closest('.page');
-  const blocks = [page.querySelector('.text-a'), page.querySelector('.text-b')].filter(Boolean);
-  blocks.forEach(wrapWords);
+  const el = page.querySelector('.text-' + which);
+  if (!el) return;
+  wrapWords(el);
 
   activeBtn = btn;
   btn.classList.add('speaking');
   var lbl = btn.querySelector('.ra-label');
   if (lbl) lbl.textContent = 'Stop';
 
-  var queue = blocks.slice();
-  function speakBlock() {
-    if (!queue.length) { stopSpeech(); return; }
-    var el = queue.shift();
-    var spans = [].slice.call(el.querySelectorAll('.w'));
-    var plain = el.textContent;
-    var offsets = []; var cursor = 0;
-    spans.forEach(function(s) {
-      var idx = plain.indexOf(s.textContent, cursor);
-      offsets.push(idx); cursor = idx + s.textContent.length;
-    });
+  var spans = [].slice.call(el.querySelectorAll('.w'));
+  var plain = el.textContent;
+  var offsets = []; var cursor = 0;
+  spans.forEach(function(s) {
+    var idx = plain.indexOf(s.textContent, cursor);
+    offsets.push(idx); cursor = idx + s.textContent.length;
+  });
 
-    var u = new SpeechSynthesisUtterance(plain);
-    var v = pickVoice(); if (v) u.voice = v;
-    u.rate = 0.85; u.pitch = 1.05;
-    u.onboundary = function(ev) {
-      if (ev.name && ev.name !== 'word') return;
-      var hit = -1;
-      for (var i=0;i<offsets.length;i++) { if (offsets[i] <= ev.charIndex) hit = i; else break; }
-      spans.forEach(function(s) { s.classList.remove('spoken'); });
-      if (hit >= 0 && spans[hit]) spans[hit].classList.add('spoken');
-    };
-    u.onend = function() {
-      spans.forEach(function(s) { s.classList.remove('spoken'); });
-      if (activeBtn === btn) speakBlock();
-    };
-    u.onerror = function() { stopSpeech(); };
-    speechSynthesis.speak(u);
-  }
-  speakBlock();
+  var u = new SpeechSynthesisUtterance(plain);
+  var v = pickVoice(); if (v) u.voice = v;
+  u.rate = 0.85; u.pitch = 1.05;
+  u.onboundary = function(ev) {
+    if (ev.name && ev.name !== 'word') return;
+    var hit = -1;
+    for (var i=0;i<offsets.length;i++) { if (offsets[i] <= ev.charIndex) hit = i; else break; }
+    spans.forEach(function(s) { s.classList.remove('spoken'); });
+    if (hit >= 0 && spans[hit]) spans[hit].classList.add('spoken');
+  };
+  u.onend = function() { stopSpeech(); };
+  u.onerror = function() { stopSpeech(); };
+  speechSynthesis.speak(u);
 }
 
 if (SPEECH_OK) { speechSynthesis.onvoiceschanged = function() {}; }

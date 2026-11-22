@@ -118,6 +118,14 @@
     "try_this": "Fix something small together and talk about its new marks.",
     "words_to_grow": "cradled, crooked, honestly, magnifying, reinforce, seam, practice, beloved, proud. Point at the tools as you name them — screwdriver, pliers, glue, clamp, magnifying lamp.",
     "bigger_picture": "Repairers do much more than fix the one thing in front of them — they open the shop and prepare their tools each day, practice new repairs on scraps before touching anything precious, tell the truth about what a repair can and cannot do, and keep a whole neighborhood’s belongings working longer instead of being thrown away.",
-    "standards": "RI.K.8, L.K.4.a"
-  }
+    "standards": "RI.K.8, L.K.4.a",
+    "practice_words": [
+      "broken",
+      "worried",
+      "ready",
+      "feels",
+      "fixed"
+    ]
+  },
+  "reading_level": 3
 }

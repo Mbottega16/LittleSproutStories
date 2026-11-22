@@ -118,6 +118,14 @@
     "try_this": "Let your child choose how they sit and read tonight.",
     "words_to_grow": "rustly, enormous, catalogue, label, borrow, display, rehearse, embarrassed, tiptoes. Point at the tools as you name them — book drop, cart, spine label, catalogue computer, bookmark.",
     "bigger_picture": "Librarians do much more than read stories — they open and prepare the library every morning, keep thousands of books organized so any book can be found, rehearse and lead story times, teach readers how to find and care for books, help people answer questions and use computers, and keep the library a free, welcoming place where the whole town belongs.",
-    "standards": "RL.K.5, RL.K.6"
-  }
+    "standards": "RL.K.5, RL.K.6",
+    "practice_words": [
+      "visit",
+      "library",
+      "welcomes",
+      "readers",
+      "ready"
+    ]
+  },
+  "reading_level": 2
 }

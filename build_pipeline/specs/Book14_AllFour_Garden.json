@@ -118,6 +118,14 @@
     "try_this": "Rotate a chore at home the same way this week.",
     "words_to_grow": "tidy, earthy, trowel, crumbled, rotation, shallower, spaced, harvest, seasons. Point at the tools as you name them — trowel, watering can, seed packet, sun hat.",
     "bigger_picture": "Gardening is much more than digging a hole — it is checking the soil and weather before you begin, learning to do each job with care, sharing the work fairly, tending plants through the seasons, and growing food that feeds a whole community.",
-    "standards": "W.K.7"
-  }
+    "standards": "W.K.7",
+    "practice_words": [
+      "plant",
+      "checks",
+      "first",
+      "water",
+      "every"
+    ]
+  },
+  "reading_level": 2
 }

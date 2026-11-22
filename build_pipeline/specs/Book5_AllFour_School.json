@@ -118,6 +118,14 @@
     "try_this": "Talk through the day’s schedule together before drop-off.",
     "words_to_grow": "enormous, sample, schedule, rehearse, custodian, together, worried, burst. Point at the tools as you name them — board and schedule, pencils, books, lesson plans.",
     "bigger_picture": "Teachers do much more than give lessons — they prepare their rooms and materials before students arrive, write plans and rehearse activities, work as a team with nurses, cooks, custodians, and librarians, teach safety routines and kindness alongside reading and numbers, and help every child discover what they love to learn.",
-    "standards": "RL.K.9, SL.K.4"
-  }
+    "standards": "RL.K.9, SL.K.4",
+    "practice_words": [
+      "visit",
+      "hello",
+      "ready",
+      "teachers",
+      "practice"
+    ]
+  },
+  "reading_level": 1
 }

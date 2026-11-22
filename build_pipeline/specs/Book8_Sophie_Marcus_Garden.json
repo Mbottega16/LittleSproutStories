@@ -118,6 +118,14 @@
     "try_this": "Plant a seed together and check on it over several days.",
     "words_to_grow": "sprout, bud, petal, bloom, soil, tend, patient, gentle, notice, ready. Point at the tools as you name them — trowel, watering can, gloves, wheelbarrow, seed packets, rain gauge.",
     "bigger_picture": "Gardeners do much more than pick flowers — they check the soil and water every morning, plan and plant by the seasons, practice gentle hands on tiny sprouts, keep careful notebooks, grow food their whole neighborhood shares, make homes for bees, butterflies, and birds, and teach people how to read what plants need — including how to wait for the right time.",
-    "standards": "L.K.5.a, L.K.5.c"
-  }
+    "standards": "L.K.5.a, L.K.5.c",
+    "practice_words": [
+      "pick",
+      "checks",
+      "every",
+      "morning",
+      "plant"
+    ]
+  },
+  "reading_level": 2
 }

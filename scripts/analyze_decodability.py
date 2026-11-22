@@ -189,9 +189,12 @@ def analyze_book(spec_path: Path) -> dict:
             if is_adv:
                 advanced += 1
             if cat in ("heart_word", "blend", "digraph", "multisyllable_cvc"):
-                if base not in seen_practice and len(practice_words) < 5:
-                    seen_practice.add(base)
-                    practice_words.append(base)
+                # Record the word as it is printed in the book. `base` is the
+                # suffix-stripped form used for classifying ("something" ->
+                # "someth"), which is not a word a parent should see.
+                if w not in seen_practice and w not in ("dr", "mr", "ms", "mrs") and len(practice_words) < 5:
+                    seen_practice.add(w)
+                    practice_words.append(w)
             if len(w) > len(longest):
                 longest = w
     return {
