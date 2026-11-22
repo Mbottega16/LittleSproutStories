@@ -1,123 +1,68 @@
 {
   "book_id": "Book17_Maya_Toy_Rabbit",
-  "title": "Maya and the Velveteen Rabbit",
-  "book_title": "Maya & Sophie and the Velveteen Rabbit",
+  "title": "Maya & the Velveteen Rabbit",
+  "book_title": "Maya & the Velveteen Rabbit",
   "book_badge": "Gentle Care",
   "cover": {
-    "h1_html": "Maya &amp; <br>the Velveteen Rabbit",
-    "stage": {
-      "backdrop": "backdrop-library",
-      "elements": [
-        {
-          "type": "img",
-          "sprite": "maya_happy_waving.png",
-          "alt": "Maya"
-        },
-        {
-          "type": "img",
-          "sprite": "sophie_happy_waving.png",
-          "alt": "Sophie"
-        }
-      ]
-    }
+    "h1_html": "Maya &amp; the Velveteen Rabbit",
+    "subtitle": "A story about feeling worried — and learning that love makes things real",
+    "image": "book17-cover.webp"
   },
   "pages": [
     {
       "index": 1,
-      "stage": {
-        "backdrop": "backdrop-library",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_pointing.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_happy_standing.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "hotspot",
-            "position": "left",
-            "effect": "pulse",
-            "aria_label": "Tap the rabbit",
-            "emoji": "&#128007;"
-          }
-        ]
-      },
-      "text_a": "Maya and Sophie were exploring the cozy corner of the library when they discovered an old wooden box tucked under a shelf.",
-      "text_b": "Maya sees an old box. A toy is inside.",
+      "image": "book17-page1.webp",
+      "text_a": "Maya and Sophie were exploring the cozy corner of the library — the corner with the squashy cushions and the smell of old paper — when Maya spotted something mysterious tucked under the lowest shelf: an old wooden box, its lid worn smooth by many, many hands. “Sophie,” she whispered. “Look at that.”",
+      "text_b": "Maya sees an old box in the library.",
       "quiz": null
     },
     {
       "index": 2,
-      "stage": {
-        "backdrop": "backdrop-library",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_standing.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_happy_jumping.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "hotspot",
-            "position": "right",
-            "effect": "pop",
-            "aria_label": "Pet the rabbit",
-            "emoji": "&#129528;"
-          }
-        ]
-      },
-      "text_a": "Inside the box sat a soft stuffed rabbit with worn velvet ears and a quiet smile.",
-      "text_b": "Sophie claps. &ldquo;Look at him!&rdquo; said Sophie.",
+      "image": "book17-page2.webp",
+      "text_a": "Sophie lifted the lid — creak — and inside, nestled on a faded blanket, sat a stuffed rabbit. His velvet ears had gone soft and thin, one button eye shone a little crookedly, and his stitched mouth curved up in the quietest smile, as if he had been dreaming pleasant dreams for a very long time.",
+      "text_b": "A soft old rabbit is in the box.",
       "quiz": null
     },
     {
       "index": 3,
-      "stage": {
-        "backdrop": "backdrop-library",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_giving.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_neutral_looking.png",
-            "alt": "Sophie"
-          }
-        ]
-      },
-      "text_a": "Maya picked up the rabbit gently. &ldquo;His fur is worn, but he feels so warm and gentle,&rdquo; whispered Maya.",
-      "text_b": "The rabbit has soft red ears.",
+      "image": "book17-page3.webp",
+      "text_a": "“That’s the keeping box,” said Ms. Chen, kneeling beside them. “The library keeps its most-loved treasures here, so they can rest between story times.” Beside the rabbit lay his care kit: a brush soft as a sigh, a needle and thread for loose seams, and a tiny pillow for his head. “Treasured things don’t stay loved by accident,” she said. “Somebody has to take care of them — gently, and on purpose.”",
+      "text_b": "We take care of the things we love.",
       "quiz": null
     },
     {
       "index": 4,
-      "stage": {
-        "backdrop": "backdrop-library",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_neutral_looking.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_sad_standing.png",
-            "alt": "Sophie"
-          }
-        ]
-      },
-      "text_a": "Sophie looked closely at the rabbit&rsquo;s stitched seams. &ldquo;Is he too old to play with?&rdquo; she wondered.",
-      "text_b": "Sophie is sad. &ldquo;Is he too old?&rdquo;",
+      "image": "book17-page4.webp",
+      "text_a": "Maya lifted the rabbit with both hands, the way you carry a sleeping kitten. His fur had rubbed thin in the exact places where small arms had hugged him most, and his ears flopped the way only well-listened-to ears can flop. “He’s worn,” Maya whispered, “but he feels so warm and gentle. Like he’s still full of all the hugs.”",
+      "text_b": "The old rabbit feels warm and soft.",
+      "quiz": null
+    },
+    {
+      "index": 5,
+      "image": "book17-page5.webp",
+      "text_a": "“Old and loved things are also a little bit fragile,” said Ms. Chen, “so we practice our gentle hands.” First, clean hands. Then, two hands — never one ear! Then a soft lap to sit on, like a nest. Sophie practiced carrying the rabbit across the rug, slowly, proudly, the way librarians carry the oldest books in the whole building. “Gentle,” Ms. Chen nodded, “is a thing you can practice — just like reading.”",
+      "text_b": "Gentle hands keep old things safe.",
+      "quiz": null
+    },
+    {
+      "index": 6,
+      "image": "book17-page6.webp",
+      "text_a": "“Before you two,” Ms. Chen told them, “this rabbit was loved by other children — and before them, by others still.” Children who were now grown-ups with children of their own had once sat in this very corner, hugging this very rabbit, whispering their very own secrets into those velvet ears. “He isn’t just one person’s rabbit,” she said. “He belongs to everybody who has ever loved him. Including, now, you.”",
+      "text_b": "Many children have loved this rabbit.",
+      "quiz": null
+    },
+    {
+      "index": 7,
+      "image": "book17-page7.webp",
+      "text_a": "“Here’s the secret,” said Ms. Chen, “and it’s a secret worth sharing. A toy becomes real when somebody imagines with it — really imagines — and tells it stories, and listens with their whole heart.” Sophie’s eyes went round. “So we can share the secret?” “That’s the best part,” Ms. Chen smiled. “Love is the one thing that gets bigger when you give it away. After lunch, at story time, you may introduce him to everyone.”",
+      "text_b": "Love gets bigger when we share it.",
+      "quiz": null
+    },
+    {
+      "index": 8,
+      "image": "book17-page8.webp",
+      "text_a": "Sophie looked closely at the rabbit’s stitched seams, at the thin places where his velvet had worn nearly to the cloth beneath. A worry crept over her like a small gray cloud. “But Ms. Chen…” she said softly, “is he too old to play with? Maybe nobody wants an old rabbit anymore.”",
+      "text_b": "Sophie is sad. “Is he too old?”",
       "quiz": {
         "question": "What toy did Maya and Sophie find?",
         "options": [
@@ -129,78 +74,17 @@
       }
     },
     {
-      "index": 5,
-      "stage": {
-        "backdrop": "backdrop-library",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_standing.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_happy_standing.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "helper",
-            "name": "Ms. Chen",
-            "emoji": "&#128218;"
-          }
-        ]
-      },
-      "text_a": "Ms. Chen knelt beside them with a gentle smile. &ldquo;Real value doesn&rsquo;t come from being brand new. When a toy is truly loved, it becomes real.&rdquo;",
-      "text_b": "Ms. Chen smiles. &ldquo;Love makes him real.&rdquo;",
+      "index": 9,
+      "image": "book17-page9.webp",
+      "text_a": "Ms. Chen knelt down beside them with a gentle smile. “Real doesn’t come from being brand new,” she said. “A toy fresh from the shop isn’t real yet — it’s just new. Real is what happens when a toy is truly, truly loved: hugged through thunderstorms, cried on a little, and taken everywhere that matters. By then, the worn places aren’t damage. They’re proof.”",
+      "text_b": "Love makes the rabbit real.",
       "quiz": null
     },
     {
-      "index": 6,
-      "stage": {
-        "backdrop": "backdrop-library",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_standing.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_happy_looking.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "hotspot",
-            "position": "mid",
-            "effect": "ding",
-            "aria_label": "Make a wish",
-            "emoji": "&#10024;"
-          }
-        ]
-      },
-      "text_a": "Maya hugged the rabbit close. &ldquo;You are my favorite reading buddy now,&rdquo; she said happily.",
+      "index": 10,
+      "image": "book17-page10.webp",
+      "text_a": "Maya hugged the rabbit close, right against her heart, where he fit as if he had always belonged there. “You are my favorite reading buddy now,” she declared. “Not because you’re new. Because you’re YOU.” And though the rabbit could not smile any wider — his stitches wouldn’t allow it — the girls were quite sure he was smiling on the inside.",
       "text_b": "Maya hugs the rabbit with love.",
-      "quiz": null
-    },
-    {
-      "index": 7,
-      "stage": {
-        "backdrop": "backdrop-library",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_standing.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_happy_giving.png",
-            "alt": "Sophie"
-          }
-        ]
-      },
-      "text_a": "Sophie helped arrange three storybooks so the rabbit could listen to the words. &ldquo;He loves stories!&rdquo; laughed Sophie.",
-      "text_b": "Sophie is glad. We love our rabbit.",
       "quiz": {
         "question": "What makes an old toy special?",
         "options": [
@@ -212,38 +96,28 @@
       }
     },
     {
-      "index": 8,
-      "stage": {
-        "backdrop": "backdrop-library",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_waving.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_happy_waving.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "helper",
-            "name": "Ms. Chen",
-            "emoji": "&#128218;"
-          }
-        ]
-      },
-      "text_a": "Before leaving the library, the girls tucked the rabbit into a soft felt basket. &ldquo;Sleep well, little friend,&rdquo; said Maya.",
-      "text_b": "Maya and Sophie clap. &ldquo;Good night!&rdquo;",
+      "index": 11,
+      "image": "book17-page11.webp",
+      "text_a": "Sophie arranged three storybooks in a row so the rabbit could “see” every picture, and the girls took turns reading aloud — Sophie doing the big voices, Maya doing the whispers. Other children drifted over, and soon the whole cozy corner was listening. The rabbit sat in the middle of it all, ears up, heart full: a very old toy, having a brand-new best day.",
+      "text_b": "The girls read stories to the rabbit.",
+      "quiz": null
+    },
+    {
+      "index": 12,
+      "image": "book17-page12.webp",
+      "text_a": "Before they left the library, the girls tucked the rabbit into his soft felt basket inside the keeping box, with his tiny pillow under his head and his ears arranged just so. “Sleep well, little friend,” whispered Maya. “We’ll be back.” And as the lid closed — creak — the coziest corner of the library seemed to sigh with happiness.",
+      "text_b": "Maya and Sophie say, “Good night, rabbit!”",
       "quiz": null
     }
   ],
   "end_screen": {
-    "badge_emoji": "&#128007;",
-    "badge_label_html": "Gentle<br>Care",
+    "badge_emoji": "&#127941;",
+    "badge_label_html": "Gentle Care",
     "feeling": "Cherishing well-loved things and understanding empathy.",
     "ask": "Do you have a toy or blanket that is well-loved? Why is it special to you?",
     "try_this": "Pick a beloved toy together and give it a special spot or gentle bedtime story tonight.",
+    "words_to_grow": "cozy, mysterious, velvet, worn, fragile, treasured, imagine, proof, arrange. Point at the care tools as you name them — brush, needle and thread, keeping box, felt basket.",
+    "bigger_picture": "This story is about far more than a cute old toy — it’s about how treasured things stay treasured: somebody cares for them on purpose, handles them with practiced gentle hands, and shares their love across many people and many years. “Real” is what love leaves behind.",
     "standards": "RL.K.1, SL.K.3"
   }
 }

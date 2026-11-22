@@ -5,96 +5,36 @@
   "book_badge": "Repair Shop Explorer",
   "cover": {
     "h1_html": "Sophie &amp; James<br>Visit the Repair Shop",
-    "stage": {
-      "backdrop": "backdrop-repair",
-      "elements": [
-        {
-          "type": "img",
-          "sprite": "sophie_happy_waving.png",
-          "alt": "Sophie"
-        },
-        {
-          "type": "img",
-          "sprite": "james_happy_waving.png",
-          "alt": "James"
-        }
-      ]
-    }
+    "subtitle": "A story about feeling sad — and learning that fixed things tell a story",
+    "image": "book10-cover.webp"
   },
   "pages": [
     {
       "index": 1,
-      "stage": {
-        "backdrop": "backdrop-repair",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_sad_standing.png",
-            "alt": "James"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_neutral_walking.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "hotspot",
-            "position": "right",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#129302;"
-          }
-        ]
-      },
-      "text_a": "James&rsquo;s favorite toy robot had a broken arm, and today David the repair helper would try to fix it.",
-      "text_b": "James&rsquo;s robot will not go.",
+      "image": "book10-page1.webp",
+      "text_a": "James carried his favorite toy robot the whole way, cradled in both arms like something made of glass. The robot’s arm hung crooked and still — no waving, no marching, no beep-boop hello. “Today David the repair helper will try to fix him,” James said, half hopeful, half holding his breath.",
+      "text_b": "James’s robot is broken.",
       "quiz": null
     },
     {
       "index": 2,
-      "stage": {
-        "backdrop": "backdrop-repair",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_sad_looking.png",
-            "alt": "James"
-          },
-          {
-            "type": "helper",
-            "name": "David",
-            "emoji": "&#128104;&#8205;&#128295;"
-          }
-        ]
-      },
-      "text_a": "&ldquo;Will it be exactly like before?&rdquo; James asked, worried.",
-      "text_b": "James is sad.",
+      "image": "book10-page2.webp",
+      "text_a": "The repair shop smelled of wood and warm metal, and David looked up from his workbench with a kind smile. James set the robot down gently, then asked the question that had been sitting in his tummy all morning: “Will it be exactly like before?” he asked, worried. “Exactly the same as he was?”",
+      "text_b": "James is worried.",
       "quiz": null
     },
     {
       "index": 3,
-      "stage": {
-        "backdrop": "backdrop-repair",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_sad_standing.png",
-            "alt": "James"
-          },
-          {
-            "type": "helper",
-            "name": "David",
-            "emoji": "&#128104;&#8205;&#128295;"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_neutral_looking.png",
-            "alt": "Sophie"
-          }
-        ]
-      },
-      "text_a": "David looked closely at the robot. &ldquo;I can fix it, but you might still see the repair line,&rdquo; he said honestly.",
-      "text_b": "James feels bad too.",
+      "image": "book10-page3.webp",
+      "text_a": "“Before I fix anything,” said David, “a repairer gets ready.” Click went the lights. Swish went the broom. Then he laid his tools along the bench in a careful row — screwdrivers big to small, pliers, glue, a clamp — and checked the shelf of things waiting their turn: a lamp, a toaster, a wobbly stool. “My first job isn’t fixing,” David said. “It’s knowing what is waiting, and having the right tool ready for it.”",
+      "text_b": "David gets his tools ready.",
+      "quiz": null
+    },
+    {
+      "index": 4,
+      "image": "book10-page4.webp",
+      "text_a": "David switched on his magnifying lamp, and the robot’s arm grew big and clear as a moon. He peered, he wiggled, he tested. “I can fix it,” he said at last. “The glue will hold, and I will reinforce it — make it strong. But I must tell you honestly, James: you might still see the repair line.” James looked at his robot, and his shoulders sank.",
+      "text_b": "James feels sad.",
       "quiz": {
         "question": "How does James feel?",
         "options": [
@@ -106,101 +46,45 @@
       }
     },
     {
-      "index": 4,
-      "stage": {
-        "backdrop": "backdrop-repair",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_neutral_reaching.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "james_sad_standing.png",
-            "alt": "James"
-          }
-        ]
-      },
-      "text_a": "Sophie squeezed his hand. &ldquo;Sometimes fixed things get a new kind of special,&rdquo; she said.",
-      "text_b": "Fixed things feel good.",
-      "quiz": null
-    },
-    {
       "index": 5,
-      "stage": {
-        "backdrop": "backdrop-repair",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_neutral_kneeling.png",
-            "alt": "James"
-          },
-          {
-            "type": "helper",
-            "name": "David",
-            "emoji": "&#128104;&#8205;&#128295;"
-          },
-          {
-            "type": "hotspot",
-            "position": "right2",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#128295;"
-          }
-        ]
-      },
-      "text_a": "David carefully glued and reinforced the little arm while James watched every step.",
-      "text_b": "David fixes the arm.",
+      "image": "book10-page5.webp",
+      "text_a": "Sophie squeezed his hand. “When my teddy’s ear got sewn back,” she said, “it didn’t look the same. It looked… loved. Sometimes fixed things get a new kind of special.” James thought about the teddy’s brave, crooked ear. He nodded, just a little.",
+      "text_b": "Fixed things can be special.",
       "quiz": null
     },
     {
       "index": 6,
-      "stage": {
-        "backdrop": "backdrop-repair",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_neutral_looking.png",
-            "alt": "James"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_neutral_pointing.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "hotspot",
-            "position": "mid",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#129302;"
-          }
-        ]
-      },
-      "text_a": "When it was done, a thin seam ran across the robot&rsquo;s shoulder &mdash; but the arm moved just fine.",
-      "text_b": "David can fix it.",
+      "image": "book10-page6.webp",
+      "text_a": "“Before I touch a treasure,” David said, “I practice.” He showed them his practice shelf: a chair leg he had glued and re-glued while he was learning, and a row of scrap wood, dotted with test drops of glue. “Fixers practice on scraps that belong to nobody,” he explained, “so that when a beloved thing lands on the bench, our hands already know exactly what to do.”",
+      "text_b": "David practices on old wood first.",
       "quiz": null
     },
     {
       "index": 7,
-      "stage": {
-        "backdrop": "backdrop-repair",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_happy_standing.png",
-            "alt": "James"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_happy_giving.png",
-            "alt": "Sophie"
-          }
-        ]
-      },
-      "text_a": "James looked at the seam for a long moment, then grinned. &ldquo;That&rsquo;s his battle scar now,&rdquo; he said proudly.",
-      "text_b": "James feels glad.",
+      "image": "book10-page7.webp",
+      "text_a": "While they waited, David pointed along the waiting shelf, and every broken thing had a story. “That lamp belongs to the library, so children can read after dark. That bicycle gets Mr. Okafor to work. That toaster makes breakfast for a whole family.” He smiled. “A repair shop doesn’t just fix things. It keeps the whole neighborhood’s things working — and keeps good things out of the trash.”",
+      "text_b": "David fixes things for the whole town.",
+      "quiz": null
+    },
+    {
+      "index": 8,
+      "image": "book10-page8.webp",
+      "text_a": "Now David worked slowly, the way surgeons and storytellers work — no rushing allowed. A bead of glue along the break. The little arm held gently in place. The clamp closed like a patient hand, squeezing while the glue set strong. James watched every single step, barely breathing, while Sophie counted the clamp’s slow ticking seconds out loud.",
+      "text_b": "David fixes the arm.",
+      "quiz": null
+    },
+    {
+      "index": 9,
+      "image": "book10-page9.webp",
+      "text_a": "When the clamp opened — click — a thin seam ran across the robot’s shoulder, like a tiny silver river on a map. James held his breath. Then the arm went up. The arm went down. The arm waved — beep-boop! — in a perfect, marching wave.",
+      "text_b": "The robot can wave again.",
+      "quiz": null
+    },
+    {
+      "index": 10,
+      "image": "book10-page10.webp",
+      "text_a": "James looked at the seam for a long, long moment. Then the grin arrived, wide and proud. “That’s not a mistake,” he announced. “That’s his battle scar now. It shows he broke — and he got fixed — and he’s still him.” He pressed the button, and the robot marched in a proud little circle, seam shining.",
+      "text_b": "James feels proud.",
       "quiz": {
         "question": "How does James feel about the seam by the end?",
         "options": [
@@ -212,38 +96,28 @@
       }
     },
     {
-      "index": 8,
-      "stage": {
-        "backdrop": "backdrop-repair",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_happy_waving.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "james_happy_waving.png",
-            "alt": "James"
-          },
-          {
-            "type": "helper",
-            "name": "David",
-            "emoji": "&#128104;&#8205;&#128295;"
-          }
-        ]
-      },
-      "text_a": "Sophie and James thanked David and promised to bring anything else that broke straight to him.",
-      "text_b": "They thank David.",
+      "index": 11,
+      "image": "book10-page11.webp",
+      "text_a": "“You know my favorite part of this job?” David said, wiping his hands. “It isn’t the glue, and it isn’t the tools. It’s this moment — when a loved thing goes home again, carrying its story on the outside. Everything I’ve ever fixed left here a little bit different, and every single bit of different was a story.”",
+      "text_b": "Fixed things tell a story.",
+      "quiz": null
+    },
+    {
+      "index": 12,
+      "image": "book10-page12.webp",
+      "text_a": "Sophie and James thanked David a hundred times, and the robot waved one more beep-boop goodbye all on its own — well, almost. “And we promise,” said James, hugging his battle-scarred best friend, “anything else that breaks, we bring it straight to you.” “I’ll be here,” said David. “Bench ready.”",
+      "text_b": "They say, “Thank you, David!”",
       "quiz": null
     }
   ],
   "end_screen": {
     "badge_emoji": "&#127941;",
-    "badge_label_html": "Repair Shop<br>Explorer",
+    "badge_label_html": "Repair Shop Explorer",
     "feeling": "Small grief eases when a repaired thing is seen as changed, not ruined.",
     "ask": "Has something you loved ever broken and gotten fixed?",
     "try_this": "Fix something small together and talk about its new marks.",
+    "words_to_grow": "cradled, crooked, honestly, magnifying, reinforce, seam, practice, beloved, proud. Point at the tools as you name them — screwdriver, pliers, glue, clamp, magnifying lamp.",
+    "bigger_picture": "Repairers do much more than fix the one thing in front of them — they open the shop and prepare their tools each day, practice new repairs on scraps before touching anything precious, tell the truth about what a repair can and cannot do, and keep a whole neighborhood’s belongings working longer instead of being thrown away.",
     "standards": "RI.K.8, L.K.4.a"
   }
 }

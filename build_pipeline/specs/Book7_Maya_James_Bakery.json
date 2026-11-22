@@ -5,131 +5,64 @@
   "book_badge": "Bakery Explorer",
   "cover": {
     "h1_html": "Maya &amp; James<br>Visit the Bakery",
-    "stage": {
-      "backdrop": "backdrop-bakery",
-      "elements": [
-        {
-          "type": "img",
-          "sprite": "maya_happy_waving.png",
-          "alt": "Maya"
-        },
-        {
-          "type": "img",
-          "sprite": "james_happy_waving.png",
-          "alt": "James"
-        }
-      ]
-    }
+    "subtitle": "A story about feeling worried — and how a mistake became a recipe",
+    "image": "book7-cover.webp"
   },
   "pages": [
     {
       "index": 1,
-      "stage": {
-        "backdrop": "backdrop-bakery",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_walking.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "james_happy_walking.png",
-            "alt": "James"
-          },
-          {
-            "type": "helper",
-            "name": "Keisha",
-            "emoji": "&#128105;&#8205;&#127859;"
-          },
-          {
-            "type": "hotspot",
-            "position": "right",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#129384;"
-          }
-        ]
-      },
-      "text_a": "Maya and James visited Keisha&rsquo;s bakery to help make cookies for the weekend market.",
-      "text_b": "Maya and James bake.",
+      "image": "book7-page1.webp",
+      "text_a": "Maya and James hadn’t even reached the door when the smell found them first — warm butter, cinnamon, and fresh bread, all tangled together. “That’s Keisha’s bakery,” Maya sighed happily. “We’re helping her bake cookies for the weekend market today!”",
+      "text_b": "Maya and James visit the bakery.",
       "quiz": null
     },
     {
       "index": 2,
-      "stage": {
-        "backdrop": "backdrop-bakery",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_neutral_kneeling.png",
-            "alt": "James"
-          },
-          {
-            "type": "img",
-            "sprite": "maya_happy_standing.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "hotspot",
-            "position": "left",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#129474;"
-          }
-        ]
-      },
-      "text_a": "James carefully measured every scoop of flour, leveling it perfectly each time.",
-      "text_b": "James gets the flour.",
+      "image": "book7-page2.webp",
+      "text_a": "Keisha pushed through the swinging doors with a tray in her hands and flour on her apron like a dusting of first snow. “My helpers are here!” she cried. “Wash up, tie back, aprons on. Would you like to see what a baker’s day is really like?”",
+      "text_b": "Keisha says, “Let’s bake!”",
       "quiz": null
     },
     {
       "index": 3,
-      "stage": {
-        "backdrop": "backdrop-bakery",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_surprised_reaching.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "james_surprised_standing.png",
-            "alt": "James"
-          },
-          {
-            "type": "hotspot",
-            "position": "mid",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#10052;&#65039;"
-          }
-        ]
-      },
-      "text_a": "Maya reached for the flour bag and &mdash; poof! &mdash; a cloud of white dust puffed into the air and everywhere.",
-      "text_b": "Flour goes on James!",
+      "image": "book7-page3.webp",
+      "text_a": "“Bakers start before the sun,” Keisha told them, “because dough cannot be rushed.” First she checked the great oven’s temperature, click by click. Then she peeked at the dough she had mixed the night before — it had risen overnight, puffy as a pillow, full of tiny bubbles. “A baker’s first job isn’t baking. It’s starting early, checking everything, and being ready before the first customer knocks.”",
+      "text_b": "Keisha starts early and checks her oven.",
       "quiz": null
     },
     {
       "index": 4,
-      "stage": {
-        "backdrop": "backdrop-bakery",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_sad_standing.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "james_neutral_looking.png",
-            "alt": "James"
-          }
-        ]
-      },
-      "text_a": "&ldquo;I ruined it,&rdquo; Maya said, her eyes filling with worry.",
-      "text_b": "Maya feels bad.",
+      "image": "book7-page4.webp",
+      "text_a": "Keisha’s kitchen gleamed with tools. There was a mixer as tall as James, with a hook that kneaded dough like two strong hands. There was a scale for weighing, measuring cups for scooping, a rolling pin for flattening, and a timer that ticked like a tiny clock with a job to do. James measured every scoop of flour himself, leveling it perfectly flat each time. “Baking is measuring,” Keisha said, “and measuring is math you can eat.”",
+      "text_b": "James measures the flour just right.",
+      "quiz": null
+    },
+    {
+      "index": 5,
+      "image": "book7-page5.webp",
+      "text_a": "In the corner stood a practice board, swirled all over with frosting squiggles. “Even bakers practice,” Keisha said. “We pipe frosting on the board before we ever touch a birthday cake. We knead practice dough to make our hands strong and gentle. And we learn to tell when bread is done by its golden color — and by the hollow sound it makes when you tap it, like a little drum.” Thump, thump. “See? Practice first. Then, when it’s a real cake for a real birthday, our hands already know what to do.”",
+      "text_b": "Bakers practice before the real cake.",
+      "quiz": null
+    },
+    {
+      "index": 6,
+      "image": "book7-page6.webp",
+      "text_a": "All morning, the bakery bell kept chiming — ding! — as neighbors hurried in. The bus driver bought rolls for his route. A grandmother ordered a birthday cake with pink roses. And in a special box by the door, Keisha tucked yesterday’s leftover bread, wrapped carefully, for families who needed it. “A bakery isn’t just a shop,” she said. “It’s the neighborhood’s kitchen. We feed the celebrations, and we feed the ordinary days, too.”",
+      "text_b": "The bakery feeds the whole neighborhood.",
+      "quiz": null
+    },
+    {
+      "index": 7,
+      "image": "book7-page7.webp",
+      "text_a": "Before anyone touched the dough, Keisha became a teacher. “Rule one,” she said, “clean hands — soap, water, and a whole song of scrubbing.” They washed until their fingers squeaked. “Rule two: the oven is a grown-up job, always. Rule three: we count and measure together, out loud.” Maya counted scoops while James leveled. “Part of my job,” Keisha smiled, “is teaching little bakers to be safe, clean, and careful — so the only surprise in my kitchen is a delicious one.”",
+      "text_b": "Wash your hands. Baking takes care.",
+      "quiz": null
+    },
+    {
+      "index": 8,
+      "image": "book7-page8.webp",
+      "text_a": "At last it was cookie time. James measured with his tongue between his teeth, careful as careful can be. Maya stretched up for the flour bag all by herself — and whoosh! POOF! The bag tipped, and a cloud of white flour dust bloomed into the air and settled over everything: the counter, the cookies-to-be, and one very surprised James. Maya’s eyes filled with worry. “I ruined it,” she said in a very small voice.",
+      "text_b": "Maya feels worried.",
       "quiz": {
         "question": "How does Maya feel?",
         "options": [
@@ -141,85 +74,17 @@
       }
     },
     {
-      "index": 5,
-      "stage": {
-        "backdrop": "backdrop-bakery",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_sad_looking.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "helper",
-            "name": "Keisha",
-            "emoji": "&#128105;&#8205;&#127859;"
-          },
-          {
-            "type": "hotspot",
-            "position": "right",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#10052;&#65039;"
-          }
-        ]
-      },
-      "text_a": "Keisha laughed warmly. &ldquo;Watch this,&rdquo; she said, and gently patted a bit of the spilled flour onto the cookie dough like snow.",
-      "text_b": "Flour looks like snow.",
+      "index": 9,
+      "image": "book7-page9.webp",
+      "text_a": "But Keisha didn’t scold. She laughed a warm, floury laugh. “Watch this,” she said, and gently patted a pinch of the spilled flour right onto the cookie dough, soft and white as falling snow. “There. A mistake is just an ingredient you didn’t plan for. Let’s see what it cooks up.”",
+      "text_b": "Keisha is not mad. Flour looks like snow.",
       "quiz": null
     },
     {
-      "index": 6,
-      "stage": {
-        "backdrop": "backdrop-bakery",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_standing.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "helper",
-            "name": "Keisha",
-            "emoji": "&#128105;&#8205;&#127859;"
-          },
-          {
-            "type": "img",
-            "sprite": "james_happy_pointing.png",
-            "alt": "James"
-          }
-        ]
-      },
-      "text_a": "&ldquo;Now these are Maya&rsquo;s Snowy Cookies,&rdquo; Keisha announced, and Maya couldn&rsquo;t help but smile.",
-      "text_b": "Maya&rsquo;s cookies are the best.",
-      "quiz": null
-    },
-    {
-      "index": 7,
-      "stage": {
-        "backdrop": "backdrop-bakery",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_happy_giving.png",
-            "alt": "James"
-          },
-          {
-            "type": "img",
-            "sprite": "maya_happy_giving.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "hotspot",
-            "position": "mid",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#127850;"
-          }
-        ]
-      },
-      "text_a": "James realized his perfectly measured cookies and Maya&rsquo;s snowy ones both turned out delicious.",
-      "text_b": "Both cookies are good.",
+      "index": 10,
+      "image": "book7-page10.webp",
+      "text_a": "“Now these,” Keisha announced, sliding the tray out of the oven, “are Maya’s Snowy Cookies!” They came out golden and sparkling, each one wearing its little cap of white. James took a bite of his perfectly measured cookie. Then he took a bite of Maya’s snowy one. His eyes went round. “Yours is delicious. And — mine is delicious too! They are both good, in different ways!” Maya beamed. Her mistake hadn’t ruined anything. It had invented something.",
+      "text_b": "A mistake can turn into something new.",
       "quiz": {
         "question": "What did Maya learn about mistakes?",
         "options": [
@@ -231,38 +96,28 @@
       }
     },
     {
-      "index": 8,
-      "stage": {
-        "backdrop": "backdrop-bakery",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_waving.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "james_happy_waving.png",
-            "alt": "James"
-          },
-          {
-            "type": "helper",
-            "name": "Keisha",
-            "emoji": "&#128105;&#8205;&#127859;"
-          }
-        ]
-      },
-      "text_a": "They boxed up cookies together, and Maya&rsquo;s snowy ones were the first to sell out at the market.",
-      "text_b": "The cookies sell out.",
+      "index": 11,
+      "image": "book7-page11.webp",
+      "text_a": "“You know my favorite part of this job?” Keisha asked, wiping her hands on her snowy apron. “It isn’t eating the cookies — though that part is wonderful.” She laughed. “It’s knowing that something I baked shows up at birthday parties, and sick-day soup suppers, and lunchboxes on hard Mondays. A baker gets to take care of people with food. Even on the floury days. Especially on the floury days.”",
+      "text_b": "Keisha’s food takes care of people.",
+      "quiz": null
+    },
+    {
+      "index": 12,
+      "image": "book7-page12.webp",
+      "text_a": "They boxed the cookies together, tying each box with string, and carried them proudly to the weekend market. And do you know what happened? Maya’s Snowy Cookies — the ones born from a poof and a worry — were the very first to sell out. “Bye, Keisha!” they called, waving their empty tray. “Same time next week?”",
+      "text_b": "Maya and James say, “Bye, Keisha!”",
       "quiz": null
     }
   ],
   "end_screen": {
     "badge_emoji": "&#127941;",
-    "badge_label_html": "Bakery<br>Explorer",
+    "badge_label_html": "Bakery Explorer",
     "feeling": "Fear of mistakes eases when a mistake becomes something new.",
     "ask": "Tell me about a mistake that turned into something good.",
-    "try_this": "Bake something together and let a &ldquo;mistake&rdquo; become part of the recipe.",
+    "try_this": "Bake something together and let a “mistake” become part of the recipe.",
+    "words_to_grow": "dawn, knead, dough, ingredient, measure, level, golden, sprinkle, delicious, worried. Point at the tools as you name them — oven, mixer, scale, measuring cups, rolling pin, piping bag, oven mitts, timer.",
+    "bigger_picture": "Bakers do much more than bake treats — they start work before sunrise, check their ovens and ingredients, follow recipes and measure with care, practice their skills on practice dough before the real thing, keep their kitchens clean and safe, teach helpers the rules, and feed their whole neighborhood — from everyday bread to birthday cakes.",
     "standards": "W.K.3"
   }
 }

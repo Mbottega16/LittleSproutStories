@@ -4,194 +4,58 @@
   "book_title": "We Are Community Helpers Too",
   "book_badge": "Community Helper Series Complete!",
   "cover": {
-    "h1_html": "We Are<br>Community Helpers Too",
-    "stage": {
-      "backdrop": "backdrop-school",
-      "elements": [
-        {
-          "type": "img",
-          "sprite": "maya_happy_waving.png",
-          "alt": "Maya"
-        },
-        {
-          "type": "img",
-          "sprite": "marcus_happy_waving.png",
-          "alt": "Marcus"
-        },
-        {
-          "type": "img",
-          "sprite": "sophie_happy_waving.png",
-          "alt": "Sophie"
-        },
-        {
-          "type": "img",
-          "sprite": "james_happy_waving.png",
-          "alt": "James"
-        }
-      ]
-    }
+    "h1_html": "We Are Community Helpers Too",
+    "subtitle": "A story about growing — and discovering the helper in you",
+    "image": "book15-cover.webp"
   },
   "pages": [
     {
       "index": 1,
-      "stage": {
-        "backdrop": "backdrop-school",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_sitting.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_sitting.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_happy_sitting.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "james_happy_sitting.png",
-            "alt": "James"
-          }
-        ]
-      },
-      "text_a": "Looking back on all their visits, the four friends realized they&rsquo;d learned a little bit from every helper they had met.",
-      "text_b": "They think of each visit.",
+      "image": "book15-page1.webp",
+      "text_a": "One quiet afternoon, the four friends sat in a circle and looked back on all their visits — the fire station, the police station, the library, the garden, and every friendly place in between. “You know what?” said Sophie slowly. “We didn’t just visit the helpers. We learned a little bit from every single one.”",
+      "text_b": "The friends think about all their visits.",
       "quiz": null
     },
     {
       "index": 2,
-      "stage": {
-        "backdrop": "backdrop-school",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "marcus_happy_hands.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "hotspot",
-            "position": "right",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#128658;"
-          }
-        ]
-      },
-      "text_a": "&ldquo;I loved being like Alex, brave and ready to help,&rdquo; said Marcus.",
-      "text_b": "Marcus felt like Alex.",
+      "image": "book15-page2.webp",
+      "text_a": "Marcus sat up tall. “I loved being like Alex,” he said, “brave and ready to help — even when my tummy felt jumpy. He taught me that brave doesn’t mean not scared. Brave means having a plan, and a friend.” He pressed his hands over his ears and grinned. “One, two, three!”",
+      "text_b": "Marcus felt like Alex the firefighter.",
       "quiz": null
     },
     {
       "index": 3,
-      "stage": {
-        "backdrop": "backdrop-school",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_giving.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "hotspot",
-            "position": "left",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#128218;"
-          }
-        ]
-      },
-      "text_a": "&ldquo;I loved being like Ms. Chen, sharing stories,&rdquo; said Maya.",
-      "text_b": "Maya felt like Ms. Chen.",
+      "image": "book15-page3.webp",
+      "text_a": "“And I loved being like Ms. Chen,” said Maya, hugging a storybook to her chest. “She shares stories with the whole town, and she knows there’s no one right way to enjoy a book. Some readers sit still. Some readers wiggle. Every reader belongs at the library.”",
+      "text_b": "Maya felt like Ms. Chen the librarian.",
       "quiz": null
     },
     {
       "index": 4,
-      "stage": {
-        "backdrop": "backdrop-school",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_happy_kneeling.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "james_happy_pointing.png",
-            "alt": "James"
-          },
-          {
-            "type": "hotspot",
-            "position": "mid",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#127793;"
-          }
-        ]
-      },
-      "text_a": "Sophie and James remembered Tom&rsquo;s patience and Rose&rsquo;s careful sorting, and every other helper along the way.",
-      "text_b": "Each kid thinks of a helper.",
+      "image": "book15-page4.webp",
+      "text_a": "Sophie remembered Tom’s patience, waiting all season for tiny seeds to grow. James remembered Rose’s careful sorting at the post office, where every letter finds its way home. They remembered Officer Jasmine’s steady voice, Dr. Patel’s gentle hands — every helper, each one different, each one teaching them something worth keeping.",
+      "text_b": "Each kid remembers a helper.",
       "quiz": null
     },
     {
       "index": 5,
-      "stage": {
-        "backdrop": "backdrop-school",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_happy_jumping.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "maya_happy_standing.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_standing.png",
-            "alt": "Marcus"
-          }
-        ]
-      },
-      "text_a": "&ldquo;Let&rsquo;s make our own pretend town at school!&rdquo; Sophie said, and everyone lit up with the idea.",
-      "text_b": "They plan a play town.",
+      "image": "book15-page5.webp",
+      "text_a": "Then Sophie’s eyes went bright as buttons. “I know!” she cried. “Let’s make our own pretend town, right here at school — and this time, we get to be the helpers!” For one whole second, nobody said anything. And then everybody started talking at once.",
+      "text_b": "They will make a pretend town.",
       "quiz": null
     },
     {
       "index": 6,
-      "stage": {
-        "backdrop": "backdrop-school",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "marcus_happy_hands.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "maya_happy_reaching.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_happy_kneeling.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "james_happy_pointing.png",
-            "alt": "James"
-          }
-        ]
-      },
-      "text_a": "Each friend picked the helper role that fit them best &mdash; Marcus as firefighter, Maya as librarian, Sophie as gardener, James as officer.",
-      "text_b": "Each kid picks a job.",
+      "image": "book15-page6.webp",
+      "text_a": "But real helpers don’t just grab a costume — they get ready first, and so did the four friends. Marcus did an equipment check, just like Alex taught him: pretend truck, check; first-aid kit, check. James made a checklist in his notebook. Maya loaded her book cart. And Sophie filled her watering can and lined up her seed packets in a row. “A town,” said James, ticking his boxes, “starts with being prepared.”",
+      "text_b": "Helpers get their tools ready first.",
+      "quiz": null
+    },
+    {
+      "index": 7,
+      "image": "book15-page7.webp",
+      "text_a": "Then came the choosing, and this time there was no arguing at all — because every friend already knew the helper who fit them best. Marcus chose firefighter. Maya chose librarian. Sophie chose gardener. And James, hugging his notebook, chose officer. Four friends, four helpers, four perfect fits.",
+      "text_b": "Each kid picks their favorite helper job.",
       "quiz": {
         "question": "What is each friend doing?",
         "options": [
@@ -203,65 +67,24 @@
       }
     },
     {
-      "index": 7,
-      "stage": {
-        "backdrop": "backdrop-school",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_walking.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_running.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_happy_running.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "james_happy_walking.png",
-            "alt": "James"
-          }
-        ]
-      },
-      "text_a": "For one whole day, their classroom became a bustling little town, full of pretend helpers doing real good.",
-      "text_b": "Their classroom is a town.",
+      "index": 8,
+      "image": "book15-page8.webp",
+      "text_a": "Costumes on, the friends did something surprising: they practiced. Marcus rehearsed his calm counting voice — “One, two, three” — the way Alex soothes a worried friend. Maya practiced her story-time voices, booming and squeaking. Sophie watered the class plant slowly, right at the roots. And James directed “traffic” at the classroom door, one careful hand signal at a time. “Helpers don’t just show up,” said James. “Helpers train.”",
+      "text_b": "They practice to be good helpers.",
       "quiz": null
     },
     {
-      "index": 8,
-      "stage": {
-        "backdrop": "backdrop-school",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_giving.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_giving.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_happy_giving.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "james_happy_giving.png",
-            "alt": "James"
-          }
-        ]
-      },
-      "text_a": "At the end of the day, they all agreed: everyone can be a helper, in their own way.",
-      "text_b": "Each kid can help.",
+      "index": 9,
+      "image": "book15-page9.webp",
+      "text_a": "For one whole day, their classroom became a bustling little town. The fire station stood by the window, the library bloomed in the reading corner, the garden grew along the wall, and Officer James patrolled a beat exactly four desks long. Everywhere you looked, pretend helpers were doing real good.",
+      "text_b": "Their classroom is a little town.",
+      "quiz": null
+    },
+    {
+      "index": 10,
+      "image": "book15-page10.webp",
+      "text_a": "And then the pretend town did something nobody expected: it turned real. When a classmate’s tummy went jumpy before sharing time, Marcus counted with her — one, two, three — until her feet felt steady. Maya read a whole picture book to a younger friend who couldn’t read it yet. Sophie’s plant got its drink, and James’s crosswalk kept the line safe and smooth. Helping, they discovered, works exactly the same in a pretend town as in a real one.",
+      "text_b": "Their pretend helping became real helping.",
       "quiz": {
         "question": "What did the friends learn?",
         "options": [
@@ -271,14 +94,30 @@
         ],
         "answer": 1
       }
+    },
+    {
+      "index": 11,
+      "image": "book15-page11.webp",
+      "text_a": "At the end of the day, the four friends stood in front of the class and taught everyone what the helpers had taught them. “Brave means having a plan,” said Marcus. “Stop, look, and listen,” said James. “Every reader belongs,” said Maya. “And good things grow for people who take care,” said Sophie. Four lessons, from four small teachers, for the whole class to keep.",
+      "text_b": "They teach the class what helpers taught them.",
+      "quiz": null
+    },
+    {
+      "index": 12,
+      "image": "book15-page12.webp",
+      "text_a": "As they packed up their town, tired and proud, the friends all agreed on the most important thing of all: you don’t have to be grown up to be a helper, and you don’t have to be the same as anybody else. Everyone can be a helper — in their own way. And tomorrow, in their own ways, they would be.",
+      "text_b": "Everyone can be a helper.",
+      "quiz": null
     }
   ],
   "end_screen": {
     "badge_emoji": "&#127941;",
-    "badge_label_html": "Community Helper<br>Series Complete!",
+    "badge_label_html": "Community Helper Series Complete!",
     "feeling": "Pride in recognizing personal growth across many experiences.",
     "ask": "Which community helper did you like being the most, and why?",
     "try_this": "Let your child set up their own pretend-helper day at home.",
+    "words_to_grow": "bustling, pretend, prepared, rehearsed, steady, checklist, belongs, patrol. Point at the tools as you name them — first-aid kit, checklist, book cart, watering can, seed packets.",
+    "bigger_picture": "Being a community helper is much more than a costume — real helpers prepare and check their tools, train their skills before they are needed, look after their neighbors in ways big and small, and pass on what they know. This final visit turns the series around: the children discover those habits already live in them.",
     "standards": "W.K.8, RL.K.2"
   }
 }

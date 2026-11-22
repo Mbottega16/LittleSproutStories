@@ -1,511 +1,97 @@
 """
 Renders a books/BookN_*.html file from a build_pipeline/specs/BookN_*.json
-spec. The HTML/CSS/JS shell (styles, topbar, nav, easy-read toggle, quiz
-logic, read-aloud engine, service-worker registration) is identical across
-every existing book — this reproduces that exact shell and slots in only
-the per-book content (title, pages, art, text, quiz).
+spec plus the two shared templates in build_pipeline/templates/.
+
+    templates/book_head.html   everything before <main> (meta tags, CSS, header)
+    templates/book_tail.html   everything after </main> (nav row, all the JS)
+    specs/<book>.json          the cover, the 12 pages, the quizzes, the
+                               "For Grown-Ups" panel
+
+Rewritten 2026-11-22 so the output matches the published "watercolor" books
+byte for byte (see build.py). The old version rendered the pre-watercolor
+sprite-stage layout and no longer matched the live site.
 
 Usage:
-    python build_pipeline/render.py specs/Book1_Maya_Marcus_FireStation.json
-    python build_pipeline/render.py --all
+    python render.py <specs/BookN_....json> | --all
+    python render.py --all --out <folder>      # write somewhere other than books/
 """
 
 import json
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from common import amp  # noqa: E402
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 BOOKS_DIR = REPO_ROOT / "books"
 SPECS_DIR = Path(__file__).resolve().parent / "specs"
-
-HEAD = """<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#5BA672">
-<title>{title} | Little Sprout Stories</title>
-<link rel="manifest" href="../manifest.json">
-<style>
-:root {{ --sprout:#5BA672; --sprout-dark:#3C7A52; --cream:#FBF6EC; --ink:#2b2b2b; }}
-* {{ box-sizing:border-box; }}
-body {{ margin:0; font-family:'Comic Sans MS','Segoe UI',sans-serif; background:var(--cream); color:var(--ink); }}
-
-body.easyread {{ font-family:'Verdana','Tahoma',sans-serif; letter-spacing:.045em; word-spacing:.16em; }}
-body.easyread .text-a, body.easyread .text-b {{ line-height:1.95; }}
-
-.topbar {{ max-width:640px; margin:0 auto; padding:10px 20px 0; display:flex; justify-content:flex-end; gap:8px; }}
-.topbar button {{ background:#fff; border:2px solid var(--sprout); color:var(--sprout-dark); border-radius:20px;
-  padding:6px 14px; font-size:14px; font-weight:bold; cursor:pointer; font-family:inherit; }}
-.topbar button[aria-pressed="true"] {{ background:var(--sprout); color:#fff; }}
-
-.page-wrap {{ max-width:640px; margin:0 auto; padding:12px 20px 20px; }}
-.page {{ background:#fff; border-radius:20px; padding:24px; box-shadow:0 4px 16px rgba(0,0,0,0.1); }}
-.cover {{ text-align:center; }}
-.banner {{ background:var(--sprout); color:#fff; display:inline-block; padding:6px 18px; border-radius:20px; font-size:14px; margin-bottom:10px; }}
-h1 {{ color:var(--sprout); font-size:28px; }}
-.stage {{ position:relative; min-height:320px; border-radius:16px; margin:16px 0; display:flex; align-items:flex-end; justify-content:center; gap:10px; padding:16px; overflow:hidden; background-size:cover; background-position:center bottom; }}
-/* All twelve locations now have real illustrated backgrounds (assets/backgrounds/).
-   Each keeps its old flat-gradient rule as the paint-before-image-loads/fallback color.
-   backdrop-classroom is Mr. Rodriguez's specific room -- used only on the one page across
-   every book that actually features him as the on-page helper (Book5 p2). Everywhere else
-   School-related (including Book5's own other pages and Book15's classroom-flavored recap)
-   stays on backdrop-school's general room, per explicit instruction. */
-.backdrop-barbershop {{ background-color:#e8f4dc; background-image:url('../assets/backgrounds/barbershop.jpg'); }}
-.backdrop-garden {{ background-color:#bfe3fa; background-image:url('../assets/backgrounds/garden.jpg'); }}
-.backdrop-repair {{ background-color:#f3ead6; background-image:url('../assets/backgrounds/repair.jpg'); }}
-.backdrop-street {{ background-color:#bfe3ff; background-image:url('../assets/backgrounds/street.jpg'); }}
-.backdrop-firestation {{ background-color:#ffd9a0; background-image:url('../assets/backgrounds/firestation.jpg'); }}
-.backdrop-police {{ background-color:#d9eefb; background-image:url('../assets/backgrounds/police.jpg'); }}
-.backdrop-classroom {{ background-color:#fff1cc; background-image:url('../assets/backgrounds/classroom.jpg'); }}
-.backdrop-library {{ background-color:#f3ead6; background-image:url('../assets/backgrounds/library.jpg'); }}
-.backdrop-doctor {{ background-color:#fce0ee; background-image:url('../assets/backgrounds/doctor.jpg'); }}
-.backdrop-center {{ background-color:#fce0ee; background-image:url('../assets/backgrounds/center.jpg'); }}
-.backdrop-school {{ background-color:#fff1cc; background-image:url('../assets/backgrounds/school.jpg'); }}
-.backdrop-bakery {{ background-color:#ffe3cc; background-image:url('../assets/backgrounds/bakery.jpg'); }}
-.backdrop-postoffice {{ background-color:#d9eefb; background-image:url('../assets/backgrounds/postoffice.jpg'); }}
-img.char {{ height:220px; object-fit:contain; }}
-
-.hotspot {{ position:absolute; top:20px; font-size:40px; cursor:pointer; animation:bob 2s ease-in-out infinite;
-  transition:transform .2s; background:none; border:none; padding:4px; line-height:1; }}
-.hotspot.left {{ left:20px; }}
-.hotspot.right {{ right:20px; }}
-.hotspot.mid {{ left:50%; transform:translateX(-50%); }}
-.hotspot.right2 {{ right:70px; top:44px; }}
-@keyframes bob {{ 0%,100%{{transform:translateY(0)}} 50%{{transform:translateY(-8px)}} }}
-@media (prefers-reduced-motion: reduce) {{ .hotspot {{ animation:none; }} }}
-
-.helper-slot {{ font-size:60px; text-align:center; }}
-.helper-label {{ font-size:14px; background:#fff; border-radius:8px; padding:2px 8px; }}
-
-.readaloud {{ display:inline-flex; align-items:center; gap:8px; background:#fff; border:2px solid var(--sprout);
-  color:var(--sprout-dark); border-radius:22px; padding:8px 16px; font-size:15px; font-weight:bold;
-  cursor:pointer; margin-top:14px; font-family:inherit; }}
-.readaloud:hover {{ background:#f2fbf5; }}
-.readaloud.speaking {{ background:var(--sprout); color:#fff; }}
-.readaloud[hidden] {{ display:none; }}
-
-.text-a {{ font-size:18px; line-height:1.6; margin-top:12px; }}
-.text-b {{ font-size:20px; font-weight:bold; background:#eaf7ee; border-left:5px solid var(--sprout); padding:10px 14px; border-radius:8px; margin-top:10px; }}
-.w.spoken {{ background:#FFE9A3; border-radius:4px; }}
-
-.quiz {{ margin-top:16px; background:#fff8e6; border-radius:12px; padding:14px; text-align:center; }}
-.quiz-q {{ font-weight:bold; margin:0 0 8px; }}
-.quiz button {{ display:block; width:100%; margin:6px 0; padding:12px; font-size:16px; border-radius:10px;
-  border:2px solid var(--sprout); background:#fff; cursor:pointer; font-family:inherit; }}
-.quiz button.correct {{ background:var(--sprout); color:#fff; }}
-.quiz button.wrong {{ background:#C6453B; color:#fff; }}
-.quiz-feedback {{ min-height:22px; font-weight:bold; color:var(--sprout-dark); margin:6px 0 0; }}
-
-.start-btn {{ margin-top:20px; background:var(--sprout); color:#fff; border:none; padding:14px 28px; font-size:18px;
-  border-radius:30px; cursor:pointer; font-family:inherit; display:inline-block; text-decoration:none; }}
-.start-btn.ghost {{ background:#fff; color:var(--sprout-dark); border:2px solid var(--sprout); }}
-.end-btns {{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }}
-
-.nav-row {{ max-width:640px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0 20px 30px; gap:12px; }}
-.nav-row button {{ background:var(--sprout); color:#fff; border:none; padding:12px 22px; border-radius:20px; font-size:16px; cursor:pointer; font-family:inherit; }}
-.nav-row button:disabled {{ background:#ccc; cursor:default; }}
-.progress {{ font-size:13px; color:#5c5c5c; }}
-
-.end-screen {{ text-align:center; }}
-.badge {{ font-size:60px; }}
-.badge div {{ font-size:18px; font-weight:bold; color:var(--sprout); }}
-.saved-note {{ font-size:14px; color:var(--sprout-dark); font-weight:bold; min-height:20px; }}
-.guide {{ text-align:left; background:#eaf7ee; border-radius:12px; padding:16px; margin-top:16px; }}
-.guide summary {{ font-weight:bold; cursor:pointer; font-size:17px; }}
-.guide p {{ margin:10px 0 0; }}
-.standards {{ font-size:12px; color:#666; }}
-
-/* ---------- juice: page turns, taps, celebrations ---------- */
-.page-wrap.turn-in .page {{ animation: pageTurnIn .32s cubic-bezier(.2,.8,.3,1) both; }}
-@keyframes pageTurnIn {{ from {{ opacity:0; transform:translateY(10px) scale(.97); }} to {{ opacity:1; transform:translateY(0) scale(1); }} }}
-
-.hotspot.tapped {{ animation: hotspotPop .4s ease; }}
-@keyframes hotspotPop {{ 0% {{ transform:scale(1) rotate(0); }} 40% {{ transform:scale(1.45) rotate(-10deg); }} 100% {{ transform:scale(1) rotate(0); }} }}
-
-.start-btn, .nav-row button, .readaloud, .topbar button {{ transition:transform .12s ease; }}
-.start-btn:active, .nav-row button:not(:disabled):active, .readaloud:active, .topbar button:active {{ transform:scale(.93); }}
-
-.quiz button.correct {{ animation: correctGlow .6s ease; }}
-@keyframes correctGlow {{ 0% {{ box-shadow:0 0 0 0 rgba(91,166,114,.55); }} 100% {{ box-shadow:0 0 0 16px rgba(91,166,114,0); }} }}
-.quiz button.wrong {{ animation: wrongShake .4s ease; }}
-@keyframes wrongShake {{ 0%,100% {{ transform:translateX(0); }} 25% {{ transform:translateX(-6px); }} 75% {{ transform:translateX(6px); }} }}
-
-.badge {{ display:inline-block; }}
-.badge.celebrate {{ animation: badgePop .6s cubic-bezier(.3,1.5,.4,1) both; }}
-@keyframes badgePop {{ 0% {{ transform:scale(0) rotate(-15deg); }} 60% {{ transform:scale(1.25) rotate(6deg); }} 100% {{ transform:scale(1) rotate(0); }} }}
-
-.confetti-piece {{ position:fixed; top:-12px; width:10px; height:14px; opacity:.95; pointer-events:none; z-index:999; animation:confettiFall linear forwards; }}
-@keyframes confettiFall {{ to {{ transform:translateY(110vh) rotate(560deg); opacity:.6; }} }}
-
-@media (prefers-reduced-motion: reduce) {{
-  .page-wrap.turn-in .page, .hotspot.tapped, .quiz button.correct, .quiz button.wrong, .badge.celebrate {{ animation:none; }}
-  .start-btn:active, .nav-row button:not(:disabled):active, .readaloud:active, .topbar button:active {{ transform:none; }}
-  .confetti-piece {{ display:none; }}
-}}
-
-:focus-visible {{ outline:3px solid #185FA5; outline-offset:3px; border-radius:6px; }}
-</style>
-</head>
-<body>
-
-<div class="topbar">
-  <button type="button" id="muteBtn" onclick="toggleMute()" aria-pressed="false"
-          title="Sound on/off">&#128266;</button>
-  <button type="button" id="easyBtn" onclick="toggleEasy()" aria-pressed="false"
-          title="Easier-to-read spacing">Aa</button>
-</div>
-
-<main id="bookMain">
-"""
-
-NAV_AND_SCRIPT = """</main>
-
-<div class="nav-row">
-  <button id="prevBtn" type="button" onclick="prevPage()" disabled>&#9664; Back</button>
-  <span class="progress" id="progressLabel" aria-live="polite"></span>
-  <button id="nextBtn" type="button" onclick="nextPage()">Next &#9654;</button>
-</div>
-
-<script>
-const BOOK_ID = "{book_id}";
-const BOOK_TITLE = "{book_title}";
-const BOOK_BADGE = "{book_badge}";
-let current = 0;
-const total = {total};
-
-/* ---------- progress: saved on this device only ---------- */
-function loadProgress() {{
-  try {{ return JSON.parse(localStorage.getItem('littlesprout') || '{{}}'); }}
-  catch (e) {{ return {{}}; }}
-}}
-function saveProgress(data) {{
-  try {{ localStorage.setItem('littlesprout', JSON.stringify(data)); return true; }}
-  catch (e) {{ return false; }}
-}}
-/* ---------- reading time: wall-clock while this tab is actually visible,
-   so leaving it open in a background tab doesn't inflate the number.
-   Only recorded on the FIRST completion -- rereads don't overwrite it. */
-let visibleSince = document.visibilityState === 'visible' ? Date.now() : null;
-let visibleMs = 0;
-document.addEventListener('visibilitychange', function() {{
-  if (document.visibilityState === 'hidden') {{
-    if (visibleSince) visibleMs += Date.now() - visibleSince;
-    visibleSince = null;
-  }} else {{
-    visibleSince = Date.now();
-  }}
-}});
-function currentVisibleMs() {{
-  return visibleMs + (visibleSince ? Date.now() - visibleSince : 0);
-}}
-
-function markFinished() {{
-  const d = loadProgress();
-  d.books = d.books || {{}};
-  const already = d.books[BOOK_ID] && d.books[BOOK_ID].finished;
-  const prevSeconds = (d.books[BOOK_ID] && d.books[BOOK_ID].seconds) || null;
-  d.books[BOOK_ID] = {{
-    finished:true, title:BOOK_TITLE, badge:BOOK_BADGE, at:Date.now(),
-    seconds: already ? prevSeconds : Math.round(currentVisibleMs() / 1000),
-  }};
-  const ok = saveProgress(d);
-  const note = document.getElementById('savedNote');
-  if (note) note.textContent = ok
-    ? (already ? 'Badge already in your collection!' : 'Badge saved to your collection!')
-    : '';
-  if (!already) {{
-    sfxCheer();
-    const badge = document.querySelector('.end-screen .badge');
-    if (badge) {{ badge.classList.remove('celebrate'); void badge.offsetWidth; badge.classList.add('celebrate'); }}
-    confettiBurst();
-  }}
-}}
-
-/* ---------- sound: tiny synthesized effects, no audio files ---------- */
-let audioCtx = null;
-function getAudioCtx() {{
-  if (!audioCtx) {{ try {{ audioCtx = new (window.AudioContext||window.webkitAudioContext)(); }} catch(e) {{}} }}
-  return audioCtx;
-}}
-function isMuted() {{ return !!loadProgress().muted; }}
-function tone(freq, dur, type, vol) {{
-  if (isMuted()) return;
-  const ctx = getAudioCtx(); if (!ctx) return;
-  try {{
-    const o = ctx.createOscillator(); const g = ctx.createGain();
-    o.type = type || 'sine'; o.frequency.value = freq;
-    o.connect(g); g.connect(ctx.destination);
-    g.gain.value = vol || 0.1;
-    g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + dur);
-    o.start(); o.stop(ctx.currentTime + dur);
-  }} catch(e) {{}}
-}}
-function sfxPop() {{ tone(520, .12, 'sine', .12); }}
-function sfxWhoosh() {{ tone(220, .16, 'sine', .05); setTimeout(function(){{ tone(340, .12, 'sine', .04); }}, 55); }}
-function sfxSuccess() {{ tone(523, .12, 'sine', .1); setTimeout(function(){{ tone(659, .12, 'sine', .1); }}, 90); setTimeout(function(){{ tone(784, .2, 'sine', .12); }}, 180); }}
-function sfxOops() {{ tone(220, .18, 'sine', .08); }}
-function sfxCheer() {{ [523,659,784,1047].forEach(function(f,i) {{ setTimeout(function(){{ tone(f, .18, 'sine', .1); }}, i*100); }}); }}
-
-/* ---------- visual: confetti on finishing a book ---------- */
-function confettiBurst() {{
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const colors = ['#5BA672','#FFD24A','#185FA5','#B0488C','#E8433F'];
-  for (let i=0; i<24; i++) {{
-    const p = document.createElement('div');
-    p.className = 'confetti-piece';
-    p.style.left = (Math.random()*100) + 'vw';
-    p.style.background = colors[i % colors.length];
-    p.style.animationDuration = (1.4 + Math.random()*1.2) + 's';
-    p.style.transform = 'rotate(' + (Math.random()*360) + 'deg)';
-    document.body.appendChild(p);
-    setTimeout(function(){{ p.remove(); }}, 3000);
-  }}
-}}
-
-/* ---------- paging ---------- */
-function show(i) {{
-  stopSpeech();
-  for (let j=0;j<total;j++) document.getElementById('p'+j).style.display = (j===i)?'block':'none';
-  document.getElementById('prevBtn').disabled = (i===0);
-  document.getElementById('nextBtn').style.display = (i===total-1)?'none':'inline-block';
-  document.getElementById('progressLabel').textContent =
-    (i===0) ? '' : (i===total-1 ? 'The end' : 'Page ' + i + ' of ' + (total-2));
-  const wrap = document.getElementById('p'+i);
-  wrap.classList.remove('turn-in'); void wrap.offsetWidth; wrap.classList.add('turn-in');
-  if (i===total-1) markFinished();
-  window.scrollTo(0,0);
-}}
-function nextPage() {{ if (current<total-1) {{ current++; sfxWhoosh(); show(current); }} }}
-function prevPage() {{ if (current>0) {{ current--; sfxWhoosh(); show(current); }} }}
-function restart() {{ current = 0; show(0); }}
-
-document.addEventListener('keydown', function(e) {{
-  if (e.key === 'ArrowRight') nextPage();
-  else if (e.key === 'ArrowLeft') prevPage();
-  else if (e.key === 'Escape') stopSpeech();
-}});
-
-/* ---------- hotspots ---------- */
-function pulse(el) {{
-  sfxPop();
-  el.classList.remove('tapped'); void el.offsetWidth; el.classList.add('tapped');
-}}
-function ding(el) {{
-  el.classList.remove('tapped'); void el.offsetWidth; el.classList.add('tapped');
-  tone(880, .35, 'sine', .12);
-}}
-
-/* ---------- quiz ---------- */
-function checkAnswer(btn, chosen) {{
-  const quiz = btn.closest('.quiz');
-  const answer = parseInt(quiz.dataset.answer);
-  const fb = quiz.querySelector('.quiz-feedback');
-  const btns = [].slice.call(quiz.querySelectorAll('button'));
-  btns.forEach(function(b,i) {{
-    b.disabled = true;
-    if (i===answer) b.classList.add('correct');
-    else if (i===chosen) b.classList.add('wrong');
-  }});
-  if (chosen === answer) {{ sfxSuccess(); }} else {{ sfxOops(); }}
-  if (fb) fb.textContent = (chosen===answer)
-    ? 'That\\u2019s right!'
-    : 'Good try \\u2014 the green one is the answer.';
-}}
-
-/* ---------- easy-read toggle ---------- */
-function toggleEasy() {{
-  const on = document.body.classList.toggle('easyread');
-  document.getElementById('easyBtn').setAttribute('aria-pressed', on ? 'true':'false');
-  const d = loadProgress(); d.easyread = on; saveProgress(d);
-}}
-(function initEasy() {{
-  if (loadProgress().easyread) {{
-    document.body.classList.add('easyread');
-    document.getElementById('easyBtn').setAttribute('aria-pressed','true');
-  }}
-}})();
-
-/* ---------- mute toggle ---------- */
-function toggleMute() {{
-  const d = loadProgress(); d.muted = !d.muted; saveProgress(d);
-  const b = document.getElementById('muteBtn');
-  b.textContent = d.muted ? '\N{SPEAKER WITH CANCELLATION STROKE}' : '\N{SPEAKER WITH THREE SOUND WAVES}';
-  b.setAttribute('aria-pressed', d.muted ? 'true' : 'false');
-}}
-(function initMute() {{
-  if (loadProgress().muted) {{
-    const b = document.getElementById('muteBtn');
-    b.textContent = '\N{SPEAKER WITH CANCELLATION STROKE}';
-    b.setAttribute('aria-pressed', 'true');
-  }}
-}})();
-
-/* ---------- read aloud ---------- */
-const SPEECH_OK = ('speechSynthesis' in window) && ('SpeechSynthesisUtterance' in window);
-let activeBtn = null;
-
-if (!SPEECH_OK) {{
-  [].slice.call(document.querySelectorAll('.readaloud')).forEach(function(b) {{ b.hidden = true; }});
-}}
-
-function pickVoice() {{
-  const vs = speechSynthesis.getVoices().filter(function(v) {{
-    return v.lang && v.lang.toLowerCase().indexOf('en') === 0;
-  }});
-  if (!vs.length) return null;
-  const preferred = ['Samantha','Google US English','Microsoft Aria','Microsoft Zira','Karen','Moira'];
-  for (var i=0;i<preferred.length;i++) {{
-    var hit = vs.find(function(v) {{ return v.name.indexOf(preferred[i]) !== -1; }});
-    if (hit) return hit;
-  }}
-  return vs.find(function(v) {{ return v.localService; }}) || vs[0];
-}}
-
-function wrapWords(el) {{
-  if (el.dataset.wrapped === '1') return;
-  const text = el.textContent;
-  el.innerHTML = text.split(/(\\s+)/).map(function(tok) {{
-    if (tok === '' || /^\\s+$/.test(tok)) return tok;
-    return '<span class="w">' + tok.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</span>';
-  }}).join('');
-  el.dataset.wrapped = '1';
-}}
-
-function stopSpeech() {{
-  if (SPEECH_OK) {{ try {{ speechSynthesis.cancel(); }} catch(e) {{}} }}
-  [].slice.call(document.querySelectorAll('.w.spoken')).forEach(function(s) {{ s.classList.remove('spoken'); }});
-  if (activeBtn) {{
-    activeBtn.classList.remove('speaking');
-    var lbl = activeBtn.querySelector('.ra-label');
-    if (lbl) lbl.textContent = 'Read to me';
-    activeBtn = null;
-  }}
-}}
-
-function readPage(btn) {{
-  if (!SPEECH_OK) return;
-  if (activeBtn === btn) {{ stopSpeech(); return; }}
-  stopSpeech();
-
-  const page = btn.closest('.page');
-  const blocks = [page.querySelector('.text-a'), page.querySelector('.text-b')].filter(Boolean);
-  blocks.forEach(wrapWords);
-
-  activeBtn = btn;
-  btn.classList.add('speaking');
-  var lbl = btn.querySelector('.ra-label');
-  if (lbl) lbl.textContent = 'Stop';
-
-  var queue = blocks.slice();
-  function speakBlock() {{
-    if (!queue.length) {{ stopSpeech(); return; }}
-    var el = queue.shift();
-    var spans = [].slice.call(el.querySelectorAll('.w'));
-    var plain = el.textContent;
-    var offsets = []; var cursor = 0;
-    spans.forEach(function(s) {{
-      var idx = plain.indexOf(s.textContent, cursor);
-      offsets.push(idx); cursor = idx + s.textContent.length;
-    }});
-
-    var u = new SpeechSynthesisUtterance(plain);
-    var v = pickVoice(); if (v) u.voice = v;
-    u.rate = 0.85; u.pitch = 1.05;
-    u.onboundary = function(ev) {{
-      if (ev.name && ev.name !== 'word') return;
-      var hit = -1;
-      for (var i=0;i<offsets.length;i++) {{ if (offsets[i] <= ev.charIndex) hit = i; else break; }}
-      spans.forEach(function(s) {{ s.classList.remove('spoken'); }});
-      if (hit >= 0 && spans[hit]) spans[hit].classList.add('spoken');
-    }};
-    u.onend = function() {{
-      spans.forEach(function(s) {{ s.classList.remove('spoken'); }});
-      if (activeBtn === btn) speakBlock();
-    }};
-    u.onerror = function() {{ stopSpeech(); }};
-    speechSynthesis.speak(u);
-  }}
-  speakBlock();
-}}
-
-if (SPEECH_OK) {{ speechSynthesis.onvoiceschanged = function() {{}}; }}
-window.addEventListener('beforeunload', stopSpeech);
-
-if ('serviceWorker' in navigator) {{
-  window.addEventListener('load', function() {{
-    navigator.serviceWorker.register('../sw.js').catch(function() {{}});
-  }});
-}}
-
-show(0);
-</script>
-</body>
-</html>"""
+TEMPLATES_DIR = Path(__file__).resolve().parent / "templates"
 
 
-def render_stage_element(el: dict) -> str:
-    if el["type"] == "img":
-        return f'<img class="char" src="../assets/sprites/{el["sprite"]}" alt="{el["alt"]}" loading="lazy">'
-    if el["type"] == "helper":
-        return (
-            f'<div class="helper-slot" role="img" aria-label="{el["name"]}">{el["emoji"]}'
-            f'<div class="helper-label">{el["name"]}</div></div>'
-        )
-    if el["type"] == "hotspot":
-        return (
-            f'<button class="hotspot {el["position"]}" onclick="{el["effect"]}(this)" '
-            f'aria-label="{el["aria_label"]}" type="button">{el["emoji"]}</button>'
-        )
-    raise ValueError(f"unknown stage element type: {el['type']!r}")
+def _template(name: str) -> str:
+    # newline="" keeps the template's own line endings untouched
+    return (TEMPLATES_DIR / name).read_text(encoding="utf-8", newline="")
 
 
-def render_stage(stage: dict) -> str:
-    inner = "\n    ".join(render_stage_element(el) for el in stage["elements"])
-    return f'<div class="stage {stage["backdrop"]}">\n    {inner}\n  </div>'
+def _fill(template: str, **values: str) -> str:
+    for key, value in values.items():
+        template = template.replace(f"@@{key}@@", value)
+    return template
+
+
+def _art_html(spec: dict, item: dict, default_alt: str, attr: str) -> str:
+    alt = item.get("alt", default_alt)
+    return f'<div class="art"><img src="../assets/{item["image"]}" alt="{alt}" {attr}></div>'
 
 
 def render_quiz(quiz: dict | None) -> str:
     if not quiz:
         return ""
-    opts = "\n      ".join(
-        f'<button type="button" onclick="checkAnswer(this,{i})">{opt}</button>'
-        for i, opt in enumerate(quiz["options"])
+    opts = "\n".join(
+        f'      <button type="button" onclick="checkAnswer(this,{i})">{text}</button>'
+        for i, text in enumerate(quiz["options"])
     )
     return (
         f'<div class="quiz" data-answer="{quiz["answer"]}" role="group" aria-label="Question">\n'
         f'    <p class="quiz-q">{quiz["question"]}</p>\n'
-        f'    <div class="quiz-opts">\n      {opts}\n    </div>\n'
+        f'    <div class="quiz-opts">\n'
+        f'{opts}\n'
+        f'    </div>\n'
         f'    <p class="quiz-feedback" role="status" aria-live="polite"></p>\n'
         f'  </div>'
     )
 
 
-def render_page(page: dict) -> str:
-    quiz_html = render_quiz(page.get("quiz"))
-    quiz_block = f"\n  {quiz_html}" if quiz_html else ""
-    return (
-        f'<div class="page-wrap" id="p{page["index"]}" style="display:none">\n'
-        f'<section class="page">\n'
-        f'  {render_stage(page["stage"])}\n'
-        f'  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">\n'
-        f'    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>\n'
-        f'  </button>\n'
-        f'  <div class="text-a">{page["text_a"]}</div>\n'
-        f'  <div class="text-b">{page["text_b"]}</div>{quiz_block}\n'
-        f'</section></div>\n'
-    )
-
-
 def render_cover(spec: dict) -> str:
     cover = spec["cover"]
+    art = _art_html(spec, cover, f"{amp(spec['title'])} — cover art", 'fetchpriority="high"')
     return (
         f'<div class="page-wrap" id="p0" style="display:block">\n'
         f'<section class="page cover">\n'
         f'  <div class="banner">Little Sprout Stories</div>\n'
         f'  <h1>{cover["h1_html"]}</h1>\n'
-        f'  {render_stage(cover["stage"])}\n'
+        f'  <p class="subtitle">{cover["subtitle"]}</p>\n'
+        f'  {art}\n'
         f'  <button class="start-btn" type="button" onclick="nextPage()">Start Reading &#9654;</button>\n'
+        f'</section></div>\n'
+    )
+
+
+def render_page(spec: dict, page: dict) -> str:
+    n = page["index"]
+    art = _art_html(spec, page, f"Illustration for page {n} of {amp(spec['title'])}", 'loading="lazy"')
+    quiz_html = render_quiz(page.get("quiz"))
+    quiz_block = f"\n  {quiz_html}" if quiz_html else ""
+    return (
+        f'<div class="page-wrap" id="p{n}" style="display:none">\n'
+        f'<section class="page">\n'
+        f'  {art}\n'
+        f'  <button class="readaloud" type="button" onclick="readPage(this)" aria-label="Read this page out loud">\n'
+        f'    <span class="ra-icon" aria-hidden="true">&#128266;</span><span class="ra-label">Read to me</span>\n'
+        f'  </button>\n'
+        f'  <div class="text-a">{page["text_a"]}</div>\n'
+        f'  <div class="text-b">{page["text_b"]}</div>{quiz_block}\n'
         f'</section></div>\n'
     )
 
@@ -523,10 +109,13 @@ def render_end(spec: dict, end_index: int) -> str:
         f'    <p><b>Feeling/skill:</b> {e["feeling"]}</p>\n'
         f'    <p><b>Ask your child:</b> {e["ask"]}</p>\n'
         f'    <p><b>Try this:</b> {e["try_this"]}</p>\n'
+        f'    <p><b>Words to grow on:</b> {e["words_to_grow"]}</p>\n'
+        f'    <p><b>The bigger picture:</b> {e["bigger_picture"]}</p>\n'
         f'    <p class="standards">Standards: {e["standards"]}</p>\n'
         f'  </details>\n'
         f'  <div class="end-btns">\n'
         f'    <button class="start-btn" type="button" onclick="restart()">Read Again &#9654;</button>\n'
+        f'    <a class="start-btn ghost" href="{spec["book_id"]}.pdf" download>&#128196; Download the printable PDF</a>\n'
         f'    <a class="start-btn ghost" href="../index.html">&#8592; More books</a>\n'
         f'  </div>\n'
         f'</section></div>\n'
@@ -534,35 +123,46 @@ def render_end(spec: dict, end_index: int) -> str:
 
 
 def render_book(spec: dict) -> str:
-    total = len(spec["pages"]) + 2  # cover + interior pages + end
-    end_index = total - 1
-    out = [HEAD.format(title=spec["title"])]
-    out.append(render_cover(spec))
-    for page in spec["pages"]:
-        out.append(render_page(page))
-    out.append(render_end(spec, end_index))
-    out.append(NAV_AND_SCRIPT.format(
-        book_id=spec["book_id"], book_title=spec["book_title"],
-        book_badge=spec["book_badge"], total=total,
-    ))
-    return "".join(out)
+    total = len(spec["pages"]) + 2  # cover + interior pages + end screen
+    head = _fill(_template("book_head.html"), ID=spec["book_id"], TITLE=amp(spec["title"]))
+    tail = _fill(
+        _template("book_tail.html"),
+        ID=spec["book_id"],
+        BOOK_TITLE=spec["book_title"],
+        BADGE=spec["book_badge"],
+        TOTAL=str(total),
+    )
+    parts = [head, '<main id="bookMain">\n', render_cover(spec)]
+    parts += [render_page(spec, page) for page in spec["pages"]]
+    parts.append(render_end(spec, total - 1))
+    parts.append(tail)
+    return "".join(parts)
 
 
 def main() -> int:
-    if len(sys.argv) == 2 and sys.argv[1] == "--all":
+    args = sys.argv[1:]
+    out_dir = BOOKS_DIR
+    if "--out" in args:
+        i = args.index("--out")
+        out_dir = Path(args[i + 1])
+        del args[i : i + 2]
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    if args == ["--all"]:
         targets = sorted(SPECS_DIR.glob("*.json"))
-    elif len(sys.argv) == 2:
-        targets = [Path(sys.argv[1])]
+    elif len(args) == 1:
+        targets = [Path(args[0])]
     else:
-        print("Usage: python render.py <specs/BookN_....json> | --all")
+        print("Usage: python render.py <specs/BookN_....json> | --all [--out <folder>]")
         return 1
 
     for path in targets:
         spec = json.loads(path.read_text(encoding="utf-8"))
         html = render_book(spec)
-        out_path = BOOKS_DIR / (path.stem + ".html")
+        out_path = out_dir / (path.stem + ".html")
         out_path.write_text(html, encoding="utf-8", newline="\n")
-        print(f"{path.name} -> {out_path.relative_to(REPO_ROOT)}")
+        shown = out_path.relative_to(REPO_ROOT) if out_path.is_relative_to(REPO_ROOT) else out_path
+        print(f"{path.name} -> {shown}")
     return 0
 
 

@@ -5,103 +5,64 @@
   "book_badge": "Post Office Explorer",
   "cover": {
     "h1_html": "Maya &amp; Marcus<br>Visit the Post Office",
-    "stage": {
-      "backdrop": "backdrop-postoffice",
-      "elements": [
-        {
-          "type": "img",
-          "sprite": "maya_happy_waving.png",
-          "alt": "Maya"
-        },
-        {
-          "type": "img",
-          "sprite": "marcus_happy_waving.png",
-          "alt": "Marcus"
-        }
-      ]
-    }
+    "subtitle": "A story about feeling doubtful — and trusting that good enough is good enough",
+    "image": "book9-cover.webp"
   },
   "pages": [
     {
       "index": 1,
-      "stage": {
-        "backdrop": "backdrop-street",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_neutral_walking.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_walking.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "hotspot",
-            "position": "right",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#9993;&#65039;"
-          }
-        ]
-      },
-      "text_a": "Maya had written a letter to her grandmother, and today she and Marcus were mailing it.",
-      "text_b": "Maya has a letter.",
+      "image": "book9-page1.webp",
+      "text_a": "Maya had written a letter — a real letter, in her best handwriting, with a drawing of a sunflower in the corner. Today she and Marcus were going to mail it all the way to Grandma’s house. Maya held the envelope with both hands, the way you hold something important.",
+      "text_b": "Maya has a letter for Grandma.",
       "quiz": null
     },
     {
       "index": 2,
-      "stage": {
-        "backdrop": "backdrop-postoffice",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_neutral_standing.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "helper",
-            "name": "Rose",
-            "emoji": "&#128105;&#8205;&#128188;"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_standing.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "hotspot",
-            "position": "left",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#128174;"
-          }
-        ]
-      },
-      "text_a": "Rose greeted them at the counter with a warm smile and a stack of colorful stamps.",
-      "text_b": "Rose has stamps.",
+      "image": "book9-page2.webp",
+      "text_a": "The post office smelled of paper and ink, and behind the counter stood Rose, with a warm smile and a whole stack of colorful stamps — flags, flowers, and one with a rocket ship. “Well, hello!” said Rose. “Sending something special today? Let me show you what a postal worker’s day is really like.”",
+      "text_b": "Rose says hello. Rose has stamps.",
       "quiz": null
     },
     {
       "index": 3,
-      "stage": {
-        "backdrop": "backdrop-postoffice",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_sad_looking.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_neutral_standing.png",
-            "alt": "Marcus"
-          }
-        ]
-      },
-      "text_a": "Maya looked at her letter again &mdash; a smudge here, a crossed-out word there. &ldquo;It&rsquo;s not good enough,&rdquo; she said quietly.",
-      "text_b": "Maya feels a bit sad.",
+      "image": "book9-page3.webp",
+      "text_a": "“Postal workers start early,” Rose told them, “before the town even wakes up.” Behind the counter stood a wall of sorting slots, each labeled with a street, and Rose’s hands flew — letter, slot, letter, slot — putting every envelope in exactly the right place. She checked her satchel and peered into the mail truck waiting at the back door. “A postal worker’s first job isn’t delivering. It’s sorting, so every single letter can find its way home.”",
+      "text_b": "Rose sorts every letter first.",
+      "quiz": null
+    },
+    {
+      "index": 4,
+      "image": "book9-page4.webp",
+      "text_a": "Rose showed them everything a letter meets on its journey. The scale that weighs packages, beep by beep. The postmark stamp that comes down — THUMP! — to say “this letter was here, on this very day.” And a long wall of tiny metal doors: hundreds of post office boxes, each keeping somebody’s mail safe until they come with their key. “Every letter takes a trip,” said Rose. “Our tools make sure it takes the right one.”",
+      "text_b": "Letters take a trip to Grandma’s house.",
+      "quiz": null
+    },
+    {
+      "index": 5,
+      "image": "book9-page5.webp",
+      "text_a": "“Think sorting looks easy?” Rose grinned. “Try the training game!” She spread a pile of pretend letters across the counter, and Maya and Marcus raced to slide each one into the right slot — Maple Street, Oak Street, River Road! They mixed up two, and Rose laughed kindly. “Even postal workers practice. New carriers walk their routes with a trainer, street by street, until they know every doorstep. We practice so that no letter ever gets lost on our watch.”",
+      "text_b": "Postal workers practice their routes.",
+      "quiz": null
+    },
+    {
+      "index": 6,
+      "image": "book9-page6.webp",
+      "text_a": "“Who gets mail?” Marcus asked. “Everyone,” said Rose, “and everything.” Birthday cards with money from uncles. Medicine that arrives right on time. A postcard from somebody standing next to the ocean. Carriers walk the same streets every day, in sunshine and in rain, and they get to know every family — and every dog! “If a neighbor’s mailbox stays stuffed full for days,” Rose added, “we notice, and we tell somebody, because looking out for your street is part of the job too.”",
+      "text_b": "Postal workers help every street.",
+      "quiz": null
+    },
+    {
+      "index": 7,
+      "image": "book9-page7.webp",
+      "text_a": "Then Rose became a teacher. She took a big pretend envelope and showed them the secret code every letter needs. “The name goes here, so we know WHO. The street and town go here, so we know WHERE. And the stamp goes in the corner — that’s the letter’s ticket for its trip.” Maya practiced writing the address very carefully. “Part of my job,” Rose said, “is helping anyone — even a brand-new letter writer — send their words anywhere in the whole world.”",
+      "text_b": "An address tells the letter where to go.",
+      "quiz": null
+    },
+    {
+      "index": 8,
+      "image": "book9-page8.webp",
+      "text_a": "At last, it was time to mail the real letter. But Maya looked at her envelope one more time — and now all she could see was a smudge near the corner, and one word crossed out and written again, wobbly. Her shoulders sank. “It’s not good enough,” she said quietly. “Grandma keeps her letters forever. Mine has mistakes in it.”",
+      "text_b": "Maya feels doubtful about her letter.",
       "quiz": {
         "question": "How does Maya feel about her letter?",
         "options": [
@@ -113,106 +74,17 @@
       }
     },
     {
-      "index": 4,
-      "stage": {
-        "backdrop": "backdrop-postoffice",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "marcus_neutral_reaching.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "maya_sad_standing.png",
-            "alt": "Maya"
-          }
-        ]
-      },
-      "text_a": "Marcus looked at the letter. &ldquo;Grandma will just be happy it&rsquo;s from you,&rdquo; he said gently.",
-      "text_b": "Grandma will be glad.",
+      "index": 9,
+      "image": "book9-page9.webp",
+      "text_a": "Marcus looked at the letter — at the smudge, and the wobbly word, and the sunflower blooming in the corner. “Grandma won’t care about the smudge,” he said gently. “She’ll just be happy it’s from you. The letter is good because YOU wrote it, Maya. Nobody else could have written exactly that one.”",
+      "text_b": "Grandma will be glad it is from Maya.",
       "quiz": null
     },
     {
-      "index": 5,
-      "stage": {
-        "backdrop": "backdrop-postoffice",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_neutral_looking.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "helper",
-            "name": "Rose",
-            "emoji": "&#128105;&#8205;&#128188;"
-          },
-          {
-            "type": "hotspot",
-            "position": "mid",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#128233;"
-          }
-        ]
-      },
-      "text_a": "Rose showed them how the letter would be sorted, stamped, and sent on its journey.",
-      "text_b": "Rose sorts the mail.",
-      "quiz": null
-    },
-    {
-      "index": 6,
-      "stage": {
-        "backdrop": "backdrop-postoffice",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_neutral_standing.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "helper",
-            "name": "Rose",
-            "emoji": "&#128105;&#8205;&#128188;"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_neutral_looking.png",
-            "alt": "Marcus"
-          }
-        ]
-      },
-      "text_a": "&ldquo;Every letter that comes through here is real and true, smudges and all,&rdquo; Rose said.",
-      "text_b": "Each letter is real.",
-      "quiz": null
-    },
-    {
-      "index": 7,
-      "stage": {
-        "backdrop": "backdrop-postoffice",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_reaching.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_giving.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "hotspot",
-            "position": "right",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#128235;"
-          }
-        ]
-      },
-      "text_a": "Maya watched her letter drop into the mail bin, and a little weight lifted off her shoulders.",
-      "text_b": "Maya sends her letter.",
+      "index": 10,
+      "image": "book9-page10.webp",
+      "text_a": "Rose leaned over the counter. “May I tell you a secret of the post office?” she said. “Every letter that comes through here is real and true, smudges and all. The crossed-out words just show somebody cared enough to fix them.” Maya took a deep breath. She picked up her letter — her real, true, good-enough letter — reached up on tiptoe… and dropped it into the mail bin. A little weight she hadn’t even known she was carrying lifted right off her shoulders.",
+      "text_b": "Maya trusts her letter is good enough.",
       "quiz": {
         "question": "What helped Maya feel better?",
         "options": [
@@ -224,40 +96,28 @@
       }
     },
     {
-      "index": 8,
-      "stage": {
-        "backdrop": "backdrop-postoffice",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_jumping.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_hands.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "hotspot",
-            "position": "mid",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#128222;"
-          }
-        ]
-      },
-      "text_a": "A week later, Grandma called &mdash; she loved the letter, smudge and all.",
-      "text_b": "Grandma is glad for the letter.",
+      "index": 11,
+      "image": "book9-page11.webp",
+      "text_a": "“You know my favorite part of this job?” Rose asked as they watched the bin fill with the morning’s mail. “It isn’t the stamps, and it isn’t even the truck. It’s that I get to carry people’s love around in my satchel. A birthday hug. A ‘thinking of you.’ A letter from a granddaughter with a sunflower in the corner. Every delivery is somebody’s good news.”",
+      "text_b": "Rose carries good news to everyone.",
+      "quiz": null
+    },
+    {
+      "index": 12,
+      "image": "book9-page12.webp",
+      "text_a": "“Bye, Rose!” they called, and they waved until the post office door swung shut behind them. And one week later — just one! — Grandma called on the phone, and her voice was smiling. She loved the letter. She loved the sunflower. She even loved the wobbly word. Smudges and all, it was perfect, because it was from Maya. That very afternoon, Maya sat down… and started a brand-new letter.",
+      "text_b": "Grandma loved the letter. Maya writes again!",
       "quiz": null
     }
   ],
   "end_screen": {
     "badge_emoji": "&#127941;",
-    "badge_label_html": "Post Office<br>Explorer",
-    "feeling": "Self-doubt eases with trust that &ldquo;good enough&rdquo; really is good enough.",
+    "badge_label_html": "Post Office Explorer",
+    "feeling": "Self-doubt eases with trust that “good enough” really is good enough.",
     "ask": "Is there something you made that you worried was not good enough?",
     "try_this": "Mail a real letter together this week, imperfections included.",
+    "words_to_grow": "envelope, address, stamp, sort, journey, deliver, satchel, smudge, doubtful, trust. Point at the tools as you name them — sorting slots, scale, postmark stamp, satchel, mail truck, post office boxes.",
+    "bigger_picture": "Postal workers do much more than sell stamps — they sort thousands of letters into exactly the right places before the town wakes up, weigh and check every package, practice their routes until they know every street and doorstep, deliver in all kinds of weather, look out for the people on their routes, and teach everyone — even brand-new letter writers — how to send words and packages anywhere in the world.",
     "standards": "W.K.1, L.K.2.a"
   }
 }

@@ -32,6 +32,8 @@ jobs:
           python-version: "3.12"
       - name: Broken internal links
         run: python scripts/link_check.py
+      - name: Books match their specs
+        run: python scripts/pipeline_roundtrip.py
       # CACHE_VERSION enforcement lives in the pre-push hook
       # (scripts/cache_bump_guard.py) -- it needs the real push range,
       # which CI doesn't have, so it isn't duplicated here.
