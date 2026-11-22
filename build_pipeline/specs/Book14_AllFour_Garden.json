@@ -1,125 +1,54 @@
 {
   "book_id": "Book14_AllFour_Garden",
-  "title": "All Four Help in the Garden",
-  "book_title": "All Four Help in the Garden",
+  "title": "All Four Friends Help in the Garden",
+  "book_title": "All Four Friends Help in the Garden",
   "book_badge": "Garden Helper",
   "cover": {
-    "h1_html": "All Four Friends<br>Help in the Garden",
-    "stage": {
-      "backdrop": "backdrop-garden",
-      "elements": [
-        {
-          "type": "img",
-          "sprite": "maya_happy_waving.png",
-          "alt": "Maya"
-        },
-        {
-          "type": "img",
-          "sprite": "marcus_happy_waving.png",
-          "alt": "Marcus"
-        },
-        {
-          "type": "img",
-          "sprite": "sophie_happy_waving.png",
-          "alt": "Sophie"
-        },
-        {
-          "type": "img",
-          "sprite": "james_happy_waving.png",
-          "alt": "James"
-        }
-      ]
-    }
+    "h1_html": "All Four Friends Help in the Garden",
+    "subtitle": "A story about a disagreement — and a fair way to share the work",
+    "image": "book14-cover.webp"
   },
   "pages": [
     {
       "index": 1,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_walking.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_walking.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_happy_walking.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "james_happy_walking.png",
-            "alt": "James"
-          }
-        ]
-      },
-      "text_a": "The four friends came to help Tom plant a new row of vegetables.",
-      "text_b": "Four friends help plant.",
+      "image": "book14-page1.webp",
+      "text_a": "The four friends hurried through the garden gate with their sleeves already rolled. All around them, the garden was waking up — rows of green standing in tidy lines, bees drifting from flower to flower, and the warm, earthy smell of soil after watering. Today, Tom had promised, they would plant a brand-new row of vegetables of their very own.",
+      "text_b": "Four friends come to help in the garden.",
       "quiz": null
     },
     {
       "index": 2,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_happy_pointing.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "helper",
-            "name": "Tom",
-            "emoji": "&#129333;"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_pointing.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "hotspot",
-            "position": "right",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#129717;"
-          }
-        ]
-      },
-      "text_a": "Everyone wanted the same job &mdash; digging the holes &mdash; and nobody wanted to water or plant seeds.",
-      "text_b": "Each kid wants one job.",
+      "image": "book14-page2.webp",
+      "text_a": "“Well, look at this crew!” said Tom, wiping his hands on his apron and grinning under his sun hat. “A new row of vegetables doesn’t plant itself, and I’ve been saving this job for eight good hands. Are you ready to be real gardeners today — the whole job, not just the easy parts?”",
+      "text_b": "Tom says, “Come help plant!”",
       "quiz": null
     },
     {
       "index": 3,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_frustrated_hands.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_frustrated_hands.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "maya_frustrated_standing.png",
-            "alt": "Maya"
-          }
-        ]
-      },
-      "text_a": "&ldquo;I called digging first!&rdquo; said Sophie. &ldquo;No, I did!&rdquo; said Marcus. Voices got louder.",
-      "text_b": "The friends want the same job.",
+      "image": "book14-page3.webp",
+      "text_a": "“Before we plant a single seed,” said Tom, “a gardener looks closely.” He squeezed a handful of soil — it crumbled softly, just right, not too dry and not too muddy. He glanced at the sky, checked the trowels and the watering can, and lined up the seed packets in a neat row. “Spring is planting season, but only if the soil is ready. A gardener’s first job is paying attention.”",
+      "text_b": "Tom checks the soil and his tools first.",
+      "quiz": null
+    },
+    {
+      "index": 4,
+      "image": "book14-page4.webp",
+      "text_a": "“Planting a row takes three jobs,” Tom explained, “and every job has its own tool.” He showed them the trowel, for digging; the seed packet, for planting; and the watering can, for giving the seeds their first long drink. “Dig, plant, water. Miss one, and the garden notices. A row of vegetables is a team effort — just like you four.”",
+      "text_b": "Dig, plant, water. Every job matters.",
+      "quiz": null
+    },
+    {
+      "index": 5,
+      "image": "book14-page5.webp",
+      "text_a": "But the moment Tom finished, every single friend wanted the very same job. Digging! Digging looked muddy and mighty and fun. Nobody’s hand went up for planting. Nobody’s hand went up for watering. Four friends stared at one trowel, and the garden got very, very quiet.",
+      "text_b": "Every kid wants the same job.",
+      "quiz": null
+    },
+    {
+      "index": 6,
+      "image": "book14-page6.webp",
+      "text_a": "“I called digging first!” said Sophie. “No, I did!” said Marcus, and his voice climbed right over hers. Arms crossed. Toes dug in — and not into the soil. The louder they got, the smaller the garden felt, until even the bees seemed to be holding their breath.",
+      "text_b": "The friends argue about the jobs.",
       "quiz": {
         "question": "What is happening?",
         "options": [
@@ -131,121 +60,31 @@
       }
     },
     {
-      "index": 4,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_frustrated_looking.png",
-            "alt": "James"
-          },
-          {
-            "type": "helper",
-            "name": "Tom",
-            "emoji": "&#129333;"
-          },
-          {
-            "type": "img",
-            "sprite": "maya_neutral_looking.png",
-            "alt": "Maya"
-          }
-        ]
-      },
-      "text_a": "Tom raised a calm hand. &ldquo;What if everyone tries every job, just for a little while each?&rdquo;",
-      "text_b": "Each kid tries a job.",
-      "quiz": null
-    },
-    {
-      "index": 5,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_neutral_pointing.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_neutral_standing.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "james_neutral_standing.png",
-            "alt": "James"
-          }
-        ]
-      },
-      "text_a": "Maya set up a simple rotation &mdash; dig, plant, water, repeat &mdash; so each friend got a turn at all three.",
-      "text_b": "They take turns.",
-      "quiz": null
-    },
-    {
-      "index": 6,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_happy_reaching.png",
-            "alt": "James"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_happy_kneeling.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_kneeling.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "hotspot",
-            "position": "left",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#128167;"
-          }
-        ]
-      },
-      "text_a": "By the end, James loved watering most, Sophie loved digging, Marcus loved planting seeds, and Maya loved watching it all grow.",
-      "text_b": "Each kid finds a job they like.",
-      "quiz": null
-    },
-    {
       "index": 7,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_giving.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_standing.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_happy_standing.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "hotspot",
-            "position": "mid",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#127793;"
-          }
-        ]
-      },
-      "text_a": "The new row of vegetables stood in a neat, proud line, planted by all four pairs of hands.",
-      "text_b": "The garden job is done.",
+      "image": "book14-page7.webp",
+      "text_a": "Tom raised one calm hand, the way gardeners do when the weather turns. “Hold on, now,” he said gently. “What if nobody has to miss out? What if everyone tries every job — digging, planting, and watering — just for a little while each? Then nobody is stuck, and nobody is left out.”",
+      "text_b": "Tom says everyone can try every job.",
+      "quiz": null
+    },
+    {
+      "index": 8,
+      "image": "book14-page8.webp",
+      "text_a": "Maya’s eyes lit up. “Like a wheel!” she said. “Dig, plant, water — then turn!” She scratched the plan in the soil with a stick so everyone could see it: dig, plant, water, repeat. A fair rotation, right there in the dirt, where nobody could argue with it. One by one, the crossed arms came uncrossed.",
+      "text_b": "They take turns at every job.",
+      "quiz": null
+    },
+    {
+      "index": 9,
+      "image": "book14-page9.webp",
+      "text_a": "Taking turns was only half of it — now they learned to do each job well. Sophie dug holes as deep as her thumb, no deeper, no shallower. Marcus spaced his seeds a finger’s width apart, so each plant would have room to stretch. James watered slowly, slowly, right at the roots, where the thirsty plants could drink. “Anyone can hurry,” Tom said. “Gardeners take care.”",
+      "text_b": "They learn to do every job well.",
+      "quiz": null
+    },
+    {
+      "index": 10,
+      "image": "book14-page10.webp",
+      "text_a": "Round and round the wheel turned — and something surprising happened. James, who had never wanted to water, loved the gentle rain of the watering can most of all. Sophie loved digging. Marcus loved pressing tiny seeds into their beds. And Maya loved watching the whole row come together, one turn at a time.",
+      "text_b": "Each kid finds a job they like best.",
       "quiz": {
         "question": "What helped solve the disagreement?",
         "options": [
@@ -257,48 +96,36 @@
       }
     },
     {
-      "index": 8,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_waving.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_waving.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_happy_waving.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "james_happy_waving.png",
-            "alt": "James"
-          },
-          {
-            "type": "helper",
-            "name": "Tom",
-            "emoji": "&#129333;"
-          }
-        ]
-      },
-      "text_a": "They promised Tom they&rsquo;d come back to watch the vegetables grow.",
-      "text_b": "They will come back.",
+      "index": 11,
+      "image": "book14-page11.webp",
+      "text_a": "At last the new row stood in a neat, proud line, planted by all four pairs of hands. “Now the seasons take their turn,” Tom told them. “Spring wakes the seeds. Summer grows them tall. And in the fall, when the vegetables are ripe, this whole neighborhood shares the harvest.” He smiled. “That’s the secret of a garden. The work is yours — but the good of it belongs to everybody.”",
+      "text_b": "The garden will feed the whole neighborhood.",
+      "quiz": null
+    },
+    {
+      "index": 12,
+      "image": "book14-page12.webp",
+      "text_a": "Before they left, Tom pressed a seed packet into each friend’s hand. “Plant these at home,” he said, “and teach your families everything you learned — the checking, the turning, the taking care.” The four friends promised to come back and watch their vegetables grow. And they would — gardeners always come back.",
+      "text_b": "They will come back to see it grow.",
       "quiz": null
     }
   ],
   "end_screen": {
     "badge_emoji": "&#127941;",
-    "badge_label_html": "Garden<br>Helper",
+    "badge_label_html": "Garden Helper",
     "feeling": "Conflict over roles eases through a fair rotation everyone can see.",
     "ask": "What is a fair way to share jobs with friends or family?",
     "try_this": "Rotate a chore at home the same way this week.",
-    "standards": "W.K.7"
-  }
+    "words_to_grow": "tidy, earthy, trowel, crumbled, rotation, shallower, spaced, harvest, seasons. Point at the tools as you name them — trowel, watering can, seed packet, sun hat.",
+    "bigger_picture": "Gardening is much more than digging a hole — it is checking the soil and weather before you begin, learning to do each job with care, sharing the work fairly, tending plants through the seasons, and growing food that feeds a whole community.",
+    "standards": "W.K.7",
+    "practice_words": [
+      "plant",
+      "checks",
+      "first",
+      "water",
+      "every"
+    ]
+  },
+  "reading_level": 2
 }

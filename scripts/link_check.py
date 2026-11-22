@@ -16,7 +16,9 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 LINK_RE = re.compile(r'(?:href|src)=["\']([^"\']+)["\']')
-SKIP_DIRS = {".git", "node_modules", "scripts", "archive"}
+# build_pipeline/templates/ holds page templates whose "../" links only make
+# sense inside books/, so they are not pages of the site.
+SKIP_DIRS = {".git", "node_modules", "scripts", "archive", "build_pipeline"}
 
 
 def is_local(url: str) -> bool:

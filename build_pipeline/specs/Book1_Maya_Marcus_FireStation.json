@@ -5,131 +5,64 @@
   "book_badge": "Fire Station Explorer",
   "cover": {
     "h1_html": "Maya &amp; Marcus<br>Visit the Fire Station",
-    "stage": {
-      "backdrop": "backdrop-firestation",
-      "elements": [
-        {
-          "type": "img",
-          "sprite": "maya_happy_waving.png",
-          "alt": "Maya"
-        },
-        {
-          "type": "img",
-          "sprite": "marcus_happy_waving.png",
-          "alt": "Marcus"
-        }
-      ]
-    }
+    "subtitle": "A story about feeling nervous — and being brave",
+    "image": "book1-cover.webp"
   },
   "pages": [
     {
       "index": 1,
-      "stage": {
-        "backdrop": "backdrop-street",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_pointing.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_surprised_looking.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "hotspot",
-            "position": "left",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#128658;"
-          }
-        ]
-      },
-      "text_a": "Maya and Marcus were walking to school when they saw something exciting &mdash; a big red fire truck parked outside the fire station!",
-      "text_b": "Maya and Marcus see a big red truck.",
+      "image": "book1-page1.webp",
+      "text_a": "Maya and Marcus were on their way to school when something enormous and gleaming stopped them mid-step — a fire truck, red as a ripe apple, parked outside the fire station with its ladders shining in the morning sun. “Whoa,” breathed Marcus. “It’s even bigger up close.”",
+      "text_b": "Maya and Marcus see a big red fire truck.",
       "quiz": null
     },
     {
       "index": 2,
-      "stage": {
-        "backdrop": "backdrop-firestation",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_standing.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_standing.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "helper",
-            "name": "Alex",
-            "emoji": "&#128658;&#8205;"
-          }
-        ]
-      },
-      "text_a": "&ldquo;Can we go look?&rdquo; asked Marcus. A firefighter named Alex waved them over with a big smile.",
-      "text_b": "Alex claps. &ldquo;Come in!&rdquo; said Alex.",
+      "image": "book1-page2.webp",
+      "text_a": "“Can we look?” Marcus called. The station door rolled up, and out stepped a firefighter with a grin as wide as the doorway. “You sure can,” he said. “I’m Alex. Welcome to our station — would you like to see what a firefighter’s day is really like?”",
+      "text_b": "Alex says, “Come in!”",
       "quiz": null
     },
     {
       "index": 3,
-      "stage": {
-        "backdrop": "backdrop-firestation",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_reaching.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_pointing.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "hotspot",
-            "position": "right",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#9937;"
-          },
-          {
-            "type": "hotspot",
-            "position": "right2",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#129519;"
-          }
-        ]
-      },
-      "text_a": "Alex showed them the fire truck, the big hose, and the shiny helmets. &ldquo;I help keep our town safe,&rdquo; said Alex.",
-      "text_b": "Alex has a hat. Alex has a bag.",
+      "image": "book1-page3.webp",
+      "text_a": "“Before anything else,” said Alex, “we check our tools — every single morning.” He tested his radio, clicked his flashlight on and off, and lifted the heavy air tank that helps firefighters breathe through smoke. “A firefighter’s first job isn’t fighting fires. It’s making sure everything works before we ever need it.”",
+      "text_b": "Alex checks his tools every day.",
       "quiz": null
     },
     {
       "index": 4,
-      "stage": {
-        "backdrop": "backdrop-firestation",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_neutral_looking.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_surprised_hands.png",
-            "alt": "Marcus"
-          }
-        ]
-      },
-      "text_a": "&ldquo;Want to hear what the fire alarm sounds like?&rdquo; asked Alex. Marcus&rsquo;s tummy felt jumpy. &ldquo;It&rsquo;s loud,&rdquo; he whispered. &ldquo;I don&rsquo;t know if I like loud.&rdquo;",
-      "text_b": "The bell rings. Marcus feels bad.",
+      "image": "book1-page4.webp",
+      "text_a": "Alex showed them the great coiled hoses, thick as tree trunks, and the nozzle that shapes the water into a powerful stream. He let them hold a helmet — surprisingly heavy! — and pointed up at the ladder that could stretch taller than three giraffes. “Every tool has a job,” Alex said, “and we practice until using them feels easy.”",
+      "text_b": "Alex has a hose, a ladder, and a helmet.",
+      "quiz": null
+    },
+    {
+      "index": 5,
+      "image": "book1-page5.webp",
+      "text_a": "Out in the yard, a firefighter was spraying arcs of water at a row of orange cones — splash, splash, splash — knocking them down one by one. “We train even when there’s no fire,” Alex explained, “the way you practice reading even when it’s not a test. When a real emergency comes, our hands already know what to do.”",
+      "text_b": "Firefighters practice to be ready.",
+      "quiz": null
+    },
+    {
+      "index": 6,
+      "image": "book1-page6.webp",
+      "text_a": "Inside, the station smelled of toast and coffee. There was a kitchen with a long table, beds in a quiet room, and a list of chores on the wall — cooking, sweeping, washing the truck. “We live here on our work days,” said Alex, “so the crew becomes like a second family. But even at dinner, even at midnight, we must always, always be ready to go.”",
+      "text_b": "The fire station is like a home.",
+      "quiz": null
+    },
+    {
+      "index": 7,
+      "image": "book1-page7.webp",
+      "text_a": "“The best fire,” Alex told them, kneeling down, “is the one that never starts.” He pressed the button on a smoke alarm — chirp! — and taught them the rules: if the alarm sounds, get out and stay out, and run to your family’s meeting spot. “Part of my job is teaching kids like you, so nobody gets hurt at all.”",
+      "text_b": "If the alarm beeps, go out and stay out.",
+      "quiz": null
+    },
+    {
+      "index": 8,
+      "image": "book1-page8.webp",
+      "text_a": "“Would you like to hear what our fire alarm sounds like?” Alex asked gently. Marcus’s tummy went jumpy, like it was full of bouncing grasshoppers. “It’s loud,” he whispered. “I don’t know if I like loud.”",
+      "text_b": "The bell rings. Marcus feels scared.",
       "quiz": {
         "question": "How does Marcus feel?",
         "options": [
@@ -141,116 +74,58 @@
       }
     },
     {
-      "index": 5,
-      "stage": {
-        "backdrop": "backdrop-firestation",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_neutral_pointing.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_surprised_standing.png",
-            "alt": "Marcus"
-          }
-        ]
-      },
-      "text_a": "Maya took Marcus&rsquo;s hand. &ldquo;It&rsquo;s okay to feel nervous,&rdquo; she said. Alex nodded. &ldquo;You can cover your ears first, and we&rsquo;ll count to three together.&rdquo;",
-      "text_b": "Maya holds Marcus&rsquo;s hand. Maya helps Marcus.",
+      "index": 9,
+      "image": "book1-page9.webp",
+      "text_a": "Maya took Marcus’s hand and gave it a warm squeeze. “It’s okay to feel nervous,” she said. Alex nodded kindly. “Here’s our plan: cover your ears first, stand right here beside me, and we’ll count to three together. Brave doesn’t mean not scared. Brave means having a plan — and a friend.”",
+      "text_b": "Maya holds Marcus’s hand. Maya helps Marcus.",
       "quiz": null
     },
     {
-      "index": 6,
-      "stage": {
-        "backdrop": "backdrop-firestation",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_neutral_standing.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_surprised_hands.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "hotspot",
-            "position": "mid",
-            "effect": "ding",
-            "aria_label": "Tap to play",
-            "emoji": "&#128276;"
-          }
-        ]
-      },
-      "text_a": "Alex counted, &ldquo;One, two, three!&rdquo; The alarm rang &mdash; loud, but only for a second. Marcus covered his ears and grinned. &ldquo;That wasn&rsquo;t so bad!&rdquo;",
+      "index": 10,
+      "image": "book1-page10.webp",
+      "text_a": "Marcus pressed his hands over his ears. “One…” said Alex. “Two…” said Maya. “THREE!” — BRRRING! The alarm sang out, bold and brassy, for one whole second… and then it stopped. Marcus peeked through his fingers. His heart was thumping, but his feet felt steady. “That wasn’t so bad!”",
       "text_b": "One, two, three! Marcus did it.",
-      "quiz": null
-    },
-    {
-      "index": 7,
-      "stage": {
-        "backdrop": "backdrop-firestation",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_giving.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_jumping.png",
-            "alt": "Marcus"
-          }
-        ]
-      },
-      "text_a": "&ldquo;I did it!&rdquo; said Marcus. &ldquo;Being a little nervous first is okay,&rdquo; said Alex, &ldquo;as long as you have a friend and a helper nearby.&rdquo;",
-      "text_b": "Marcus did it! Marcus feels glad.",
       "quiz": {
-        "question": "What helped Marcus feel brave?",
+        "question": "How many times did Marcus count?",
         "options": [
-          "A friend and a plan",
-          "A snack",
-          "Running away"
+          "One time",
+          "Two times",
+          "Three times"
         ],
-        "answer": 0
+        "answer": 2
       }
     },
     {
-      "index": 8,
-      "stage": {
-        "backdrop": "backdrop-firestation",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_waving.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_sitting.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "helper",
-            "name": "Alex",
-            "emoji": "&#128658;&#8205;"
-          }
-        ]
-      },
-      "text_a": "Before they left, Alex let them sit in the driver&rsquo;s seat of the fire truck. Maya and Marcus waved goodbye, promising to visit again soon.",
-      "text_b": "Maya and Marcus clap. &ldquo;Bye, Alex!&rdquo;",
+      "index": 11,
+      "image": "book1-page11.webp",
+      "text_a": "“I did it!” Marcus cheered. Alex laughed. “You know what my favorite part of this job is? It isn’t the truck, and it isn’t the siren. It’s this — helping our town feel safe, and watching somebody discover they’re braver than they thought.” He looked at Marcus. “Somebody like you.”",
+      "text_b": "Marcus did it! Marcus feels glad.",
+      "quiz": null
+    },
+    {
+      "index": 12,
+      "image": "book1-page12.webp",
+      "text_a": "Before they left, Alex lifted them up, up, up into the driver’s seat of the great red truck, where the steering wheel felt as wide as a bicycle tire. Down below, the whole crew waved. Maya and Marcus waved back until their arms ached — two small firefighters-for-a-day, already dreaming of their next visit.",
+      "text_b": "Maya and Marcus clap. “Bye, Alex!”",
       "quiz": null
     }
   ],
   "end_screen": {
     "badge_emoji": "&#127941;",
-    "badge_label_html": "Fire Station<br>Explorer",
+    "badge_label_html": "Fire Station Explorer",
     "feeling": "Naming nervousness and using a friend + a plan to move through it.",
-    "ask": "Has a loud sound ever surprised you? What helped you feel okay again?",
-    "try_this": "Practice a &ldquo;count to three&rdquo; calming breath together before a loud or new experience this week.",
-    "standards": "RL.K.1, SL.K.3"
-  }
+    "ask": "What do you do when a sound is too loud?",
+    "try_this": "Count to three while covering your ears, then uncover slowly.",
+    "words_to_grow": "gleaming, enormous, coiled, stream, practice, emergency, crew, steady, brave. Point at the tools as you name them — hose, nozzle, ladder, air tank, radio, helmet.",
+    "bigger_picture": "Firefighters do much more than fight fires — they check equipment daily, train constantly, live at the station in shifts, teach fire safety, and keep their community calm and prepared.",
+    "standards": "RL.K.1, SL.K.3",
+    "practice_words": [
+      "truck",
+      "checks",
+      "every",
+      "ladder",
+      "helmet"
+    ]
+  },
+  "reading_level": 1
 }

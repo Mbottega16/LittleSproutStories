@@ -1,118 +1,54 @@
 {
   "book_id": "Book11_AllFour_CommunityCenter",
-  "title": "All Four Visit the Community Center",
-  "book_title": "All Four Visit the Community Center",
+  "title": "All Four Friends Visit the Community Center",
+  "book_title": "All Four Friends Visit the Community Center",
   "book_badge": "Community Center Explorer",
   "cover": {
     "h1_html": "All Four Friends<br>Visit the Community Center",
-    "stage": {
-      "backdrop": "backdrop-center",
-      "elements": [
-        {
-          "type": "img",
-          "sprite": "maya_happy_waving.png",
-          "alt": "Maya"
-        },
-        {
-          "type": "img",
-          "sprite": "marcus_happy_waving.png",
-          "alt": "Marcus"
-        },
-        {
-          "type": "img",
-          "sprite": "sophie_happy_waving.png",
-          "alt": "Sophie"
-        },
-        {
-          "type": "img",
-          "sprite": "james_happy_waving.png",
-          "alt": "James"
-        }
-      ]
-    }
+    "subtitle": "A story about feeling impatient — and making the wait visible",
+    "image": "book11-cover.webp"
   },
   "pages": [
     {
       "index": 1,
-      "stage": {
-        "backdrop": "backdrop-center",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_walking.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_walking.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_happy_running.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "james_happy_walking.png",
-            "alt": "James"
-          }
-        ]
-      },
-      "text_a": "All four friends came to the community center for a favorite group game.",
-      "text_b": "Four friends play a game.",
+      "image": "book11-page1.webp",
+      "text_a": "All four friends tumbled through the community center doors in one noisy, giggly bunch — Maya, Marcus, Sophie, and James — because today was the day of their favorite group game, the one they talked about all week. “We’re here! We’re here!” announced Sophie, in case the whole building hadn’t noticed.",
+      "text_b": "Four friends come to play a game.",
       "quiz": null
     },
     {
       "index": 2,
-      "stage": {
-        "backdrop": "backdrop-center",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_happy_standing.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "helper",
-            "name": "Nurse Aisha",
-            "emoji": "&#128105;&#8205;&#9877;&#65039;"
-          },
-          {
-            "type": "img",
-            "sprite": "james_happy_standing.png",
-            "alt": "James"
-          }
-        ]
-      },
-      "text_a": "Nurse Aisha explained the rules &mdash; everyone would get a turn, one at a time.",
+      "image": "book11-page2.webp",
+      "text_a": "Nurse Aisha met them with the game box hugged to her chest and a smile for every single one of them. “Welcome, players! Here is our rule, and it is a fair one: everyone gets a turn, one at a time, and everybody cheers for everybody.” Four heads nodded — some of them more patiently than others.",
       "text_b": "Each kid gets a turn.",
       "quiz": null
     },
     {
       "index": 3,
-      "stage": {
-        "backdrop": "backdrop-center",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_happy_jumping.png",
-            "alt": "James"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_frustrated_hands.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_neutral_standing.png",
-            "alt": "Marcus"
-          }
-        ]
-      },
-      "text_a": "James went first, and it was hard for Sophie to wait for her turn to come.",
-      "text_b": "Sophie feels mad.",
+      "image": "book11-page3.webp",
+      "text_a": "“This room didn’t wake up like this by magic,” Aisha laughed. “The center team comes early.” She showed them: the great ring of keys that unlocks the doors, the sign-in sheet where every visitor writes their name, the chairs set in a friendly circle, and the game box — opened and counted, piece by piece, so nobody’s turn would be spoiled by a missing one. On the shelf sat the first-aid kit, checked and ready, just in case. “Our first job,” said Aisha, “is making the room ready before the people arrive.”",
+      "text_b": "Aisha gets the room ready.",
+      "quiz": null
+    },
+    {
+      "index": 4,
+      "image": "book11-page4.webp",
+      "text_a": "Aisha read the first name. “James!” James stepped up and took the very first turn, careful and proud. Sophie clapped for him — clap, clap — and then she looked at the three friends still waiting, and the whole long game still to go, and her toes began to bounce.",
+      "text_b": "James takes the first turn.",
+      "quiz": null
+    },
+    {
+      "index": 5,
+      "image": "book11-page5.webp",
+      "text_a": "While the turns went on, Aisha pointed through the doorways, and the center was humming in every direction. In one room, grandparents stretched and swayed in exercise class. In another, big kids bent over homework at the long tables. Somewhere down the hall, babies and their grown-ups were singing a wiggly song. “Babies, grandparents, and everybody in between,” said Aisha. “A community center belongs to the whole community — that’s the whole point of it.”",
+      "text_b": "The center is for everyone.",
+      "quiz": null
+    },
+    {
+      "index": 6,
+      "image": "book11-page6.webp",
+      "text_a": "Marcus took his turn. Maya took her turn. The game went on and on, and Sophie’s turn stayed far away, like a cookie on a very high shelf. “It feels like forever,” Sophie announced to the ceiling, bouncing on her toes — bounce, bounce, bounce — as if bouncing could make time hurry up. It could not.",
+      "text_b": "Waiting feels long.",
       "quiz": {
         "question": "How does Sophie feel waiting?",
         "options": [
@@ -124,106 +60,31 @@
       }
     },
     {
-      "index": 4,
-      "stage": {
-        "backdrop": "backdrop-center",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_frustrated_jumping.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "maya_neutral_looking.png",
-            "alt": "Maya"
-          }
-        ]
-      },
-      "text_a": "&ldquo;It feels like forever,&rdquo; Sophie said, bouncing on her toes.",
-      "text_b": "Waiting feels long.",
+      "index": 7,
+      "image": "book11-page7.webp",
+      "text_a": "Then Aisha the teacher appeared, carrying something wonderful: a great big sand timer, tall as a milk bottle. She set it where everyone could see. “Waiting is hard when you can’t see it,” she said. “So let’s make the wait visible. Watch the sand trickle, grain by grain. When the top is empty — that’s your turn, Sophie. A timer is fair, because everybody can see exactly the same wait.”",
+      "text_b": "The timer shows the wait.",
       "quiz": null
     },
     {
-      "index": 5,
-      "stage": {
-        "backdrop": "backdrop-center",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_neutral_looking.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "helper",
-            "name": "Nurse Aisha",
-            "emoji": "&#128105;&#8205;&#9877;&#65039;"
-          },
-          {
-            "type": "hotspot",
-            "position": "right",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#8987;"
-          }
-        ]
-      },
-      "text_a": "Nurse Aisha brought out a big sand timer everyone could watch trickle down together.",
-      "text_b": "The timer ticks.",
-      "quiz": null
-    },
-    {
-      "index": 6,
-      "stage": {
-        "backdrop": "backdrop-center",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_neutral_sitting.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_neutral_sitting.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "hotspot",
-            "position": "mid",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#8987;"
-          }
-        ]
-      },
-      "text_a": "Now Sophie could see exactly how long her wait would be, and watching the sand helped the time pass.",
+      "index": 8,
+      "image": "book11-page8.webp",
+      "text_a": "Sophie watched the sand pour down in a thin, sparkling ribbon. Trickle, trickle. She counted the grains she could not count. She wiggled only half as much. The mountain of sand above grew smaller… and smaller… and the bottom mountain grew — and somehow, knowing how much was left made the left part easier.",
       "text_b": "Sophie watches the timer.",
       "quiz": null
     },
     {
-      "index": 7,
-      "stage": {
-        "backdrop": "backdrop-center",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_happy_jumping.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "maya_happy_giving.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_giving.png",
-            "alt": "Marcus"
-          }
-        ]
-      },
-      "text_a": "When her turn finally came, Sophie played her best round yet.",
+      "index": 9,
+      "image": "book11-page9.webp",
+      "text_a": "The very last grain dropped — plip! “Sophie!” called Aisha, and Sophie sprang up like a jack-in-the-box. She played with her whole heart, with all that waiting poured into it, and it was her best round yet — maybe the best round of the whole day.",
       "text_b": "Sophie takes her turn.",
+      "quiz": null
+    },
+    {
+      "index": 10,
+      "image": "book11-page10.webp",
+      "text_a": "And when the last turn ended, all four friends cheered for each other’s turns — for James’s careful first try, for Marcus, for Maya, and for Sophie’s spectacular finale — win or not, loud or louder. The waiting hadn’t vanished. It had just gotten smaller, the way sand does.",
+      "text_b": "Friends clap for each other.",
       "quiz": {
         "question": "What helped Sophie wait?",
         "options": [
@@ -235,43 +96,36 @@
       }
     },
     {
-      "index": 8,
-      "stage": {
-        "backdrop": "backdrop-center",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "maya_happy_waving.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_hands.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_happy_waving.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "james_happy_giving.png",
-            "alt": "James"
-          }
-        ]
-      },
-      "text_a": "All four friends cheered for each other&rsquo;s turns, win or not.",
-      "text_b": "Friends clap for Sophie.",
+      "index": 11,
+      "image": "book11-page11.webp",
+      "text_a": "“You know my favorite part of this job?” Aisha said as they stacked the game pieces back in their box — click, click, click. “It isn’t the games. It’s watching a room full of neighbors turn into a room full of friends. And look what you practiced today, Sophie — waiting your turn is really just saving up your cheering for later.” Sophie grinned. “I had a LOT saved up.”",
+      "text_b": "Waiting is saving up cheers.",
+      "quiz": null
+    },
+    {
+      "index": 12,
+      "image": "book11-page12.webp",
+      "text_a": "The four friends helped push the chairs back to their places, because that is what community means too — leaving the room ready for whoever comes next. Then they spilled out the doors into the sunshine, already arguing happily about next week’s game. “Same time!” called Aisha. “I’ll have the timer ready!”",
+      "text_b": "They say, “Bye, Aisha!”",
       "quiz": null
     }
   ],
   "end_screen": {
     "badge_emoji": "&#127941;",
-    "badge_label_html": "Community Center<br>Explorer",
+    "badge_label_html": "Community Center Explorer",
     "feeling": "Impatience eases when waiting is made visible and fair.",
     "ask": "What helps you wait for your turn?",
     "try_this": "Use a visible timer for turn-taking at home this week.",
-    "standards": "SL.K.1.a"
-  }
+    "words_to_grow": "community, arrived, counted, visible, trickle, impatient, fair, spectacular, cheer. Point at the tools as you name them — keys, sign-in sheet, game pieces, sand timer, first-aid kit.",
+    "bigger_picture": "Community center staff do much more than run the game of the day — they open the building early and prepare every room, count and check games and safety supplies, welcome babies, students, and grandparents to programs running side by side, teach fair play, and leave every space ready for the next neighbors who need it.",
+    "standards": "SL.K.1.a",
+    "practice_words": [
+      "ready",
+      "takes",
+      "first",
+      "center",
+      "everyone"
+    ]
+  },
+  "reading_level": 1
 }

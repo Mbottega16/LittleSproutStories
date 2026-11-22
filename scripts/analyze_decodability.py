@@ -26,6 +26,7 @@ Usage (from repo root):
                                                       # (for the pre-push
                                                       # hook)
 """
+import html
 import json
 import re
 import sys
@@ -88,9 +89,9 @@ THEME_NOUNS = {
     "pin", "stamps", "haircut", "tool", "job", "game", "classroom",
     "chest", "snow", "sun", "spot", "home", "day", "friend", "friends",
     "kid", "helper",
-    # Books 16-19 (picture-supported: the backdrop/sprite shows the thing).
+    # Books 16-19 (picture-supported: the page illustration shows the thing).
     # "seed" is the doc's own example line in 10_Decodable_Word_List.md.
-    "seed", "boat", "rope",
+    "seed", "boat",
 }
 # Names (category c): the four leads, the eleven community helpers, and
 # family terms used the same way a name is (learned as a whole word/
@@ -171,8 +172,11 @@ def analyze_book(spec_path: Path) -> dict:
     practice_words = []  # unique blend/digraph/multisyllable/heart words, in first-seen order
     seen_practice = set()
     for page in data.get("pages", []):
-        tb = page.get("text_b", "") or ""
-        tb = tb.replace("&rsquo;", "'").replace("&ldquo;", '"').replace("&rdquo;", '"')
+        # The specs hold the published text as-is: HTML entities (&rsquo;) in
+        # some places and real curly quotes in others. Normalise both, so a
+        # word like "don't" is one word and never "don" + "t".
+        tb = html.unescape(page.get("text_b", "") or "")
+        tb = tb.replace("’", "'").replace("‘", "'")
         for raw in re.findall(r"[A-Za-z']+", tb):
             w = raw.lower().strip("'")
             if not w:
@@ -185,9 +189,12 @@ def analyze_book(spec_path: Path) -> dict:
             if is_adv:
                 advanced += 1
             if cat in ("heart_word", "blend", "digraph", "multisyllable_cvc"):
-                if base not in seen_practice and len(practice_words) < 5:
-                    seen_practice.add(base)
-                    practice_words.append(base)
+                # Record the word as it is printed in the book. `base` is the
+                # suffix-stripped form used for classifying ("something" ->
+                # "someth"), which is not a word a parent should see.
+                if w not in seen_practice and w not in ("dr", "mr", "ms", "mrs") and len(practice_words) < 5:
+                    seen_practice.add(w)
+                    practice_words.append(w)
             if len(w) > len(longest):
                 longest = w
     return {

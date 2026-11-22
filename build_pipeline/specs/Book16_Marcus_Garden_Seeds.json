@@ -1,128 +1,47 @@
 {
   "book_id": "Book16_Marcus_Garden_Seeds",
-  "title": "Marcus and Sophie in the Secret Garden",
+  "title": "Marcus & Sophie in the Secret Garden",
   "book_title": "Marcus & Sophie in the Secret Garden",
   "book_badge": "Garden Sprout",
   "cover": {
-    "h1_html": "Marcus &amp; <br>Sophie in the Secret Garden",
-    "stage": {
-      "backdrop": "backdrop-garden",
-      "elements": [
-        {
-          "type": "img",
-          "sprite": "marcus_happy_waving.png",
-          "alt": "Marcus"
-        },
-        {
-          "type": "img",
-          "sprite": "sophie_happy_waving.png",
-          "alt": "Sophie"
-        }
-      ]
-    }
+    "h1_html": "Marcus &amp; Sophie in the Secret Garden",
+    "subtitle": "A story about feeling worried — and trusting tiny seeds to grow",
+    "image": "book16-cover.webp"
   },
   "pages": [
     {
       "index": 1,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "marcus_happy_pointing.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_happy_standing.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "hotspot",
-            "position": "left",
-            "effect": "pulse",
-            "aria_label": "Tap the sprout",
-            "emoji": "&#127793;"
-          }
-        ]
-      },
-      "text_a": "Marcus and Sophie visited the community garden on a sunny morning. Little green sprouts were growing everywhere!",
-      "text_b": "Marcus and Sophie see the green plants.",
+      "image": "book16-page1.webp",
+      "text_a": "On a sunny morning, Marcus and Sophie slipped through the gate of the community garden — and stopped and stared. Everywhere they looked, little green sprouts were poking up through the dark soil, row after row of them, all reaching for the light. “It’s like a secret,” Sophie whispered. “A whole garden, hiding in the middle of town.”",
+      "text_b": "Marcus and Sophie see little green plants.",
       "quiz": null
     },
     {
       "index": 2,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "marcus_happy_standing.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_happy_standing.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "helper",
-            "name": "Mr. Green",
-            "emoji": "&#127793;"
-          }
-        ]
-      },
-      "text_a": "&ldquo;Welcome, young gardeners!&rdquo; said Mr. Green with a warm smile. &ldquo;Today we are planting tiny seeds.&rdquo;",
-      "text_b": "Mr. Green waves. &ldquo;Come help!&rdquo; said Mr. Green.",
+      "image": "book16-page2.webp",
+      "text_a": "“Welcome, young gardeners!” called a warm voice. Mr. Green came down the path with his hat in one hand and a basket of tools in the other, smiling like the sun itself. “You’ve come on the very best day,” he said. “Today we are planting tiny seeds — and tiny seeds, my friends, are where enormous things begin.”",
+      "text_b": "Mr. Green says, “Come plant seeds!”",
       "quiz": null
     },
     {
       "index": 3,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "marcus_happy_kneeling.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_neutral_looking.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "hotspot",
-            "position": "right",
-            "effect": "pop",
-            "aria_label": "Tap the pot",
-            "emoji": "&#129684;"
-          }
-        ]
-      },
-      "text_a": "Marcus held a small clay pot. He filled it with soft, dark soil using his garden shovel.",
-      "text_b": "Marcus has a pot. Marcus digs in the dirt.",
+      "image": "book16-page3.webp",
+      "text_a": "“Before we plant,” said Mr. Green, “we walk the garden and look closely — every bed, every row.” He squeezed the soil to feel if it was thirsty, checked which sprouts needed water, and made sure the watering cans were full and the trowels were clean. “A shared garden belongs to many people,” he explained, “so somebody has to take care of all of it. That’s the garden keeper’s first job: paying attention.”",
+      "text_b": "Mr. Green checks the whole garden first.",
       "quiz": null
     },
     {
       "index": 4,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "marcus_neutral_looking.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_sad_standing.png",
-            "alt": "Sophie"
-          }
-        ]
-      },
-      "text_a": "Sophie opened a packet of seeds. &ldquo;They are so tiny! What if they don&rsquo;t grow?&rdquo; she asked worriedly.",
-      "text_b": "Sophie looks at the seeds. Sophie feels a bit sad.",
+      "image": "book16-page4.webp",
+      "text_a": "Marcus chose a small clay pot, round and sturdy, and filled it with soft, dark soil using his garden shovel — scoop, pour, pat. The soil smelled rich and earthy, like the ground after rain. “Good soil,” said Mr. Green, nodding, “is a seed’s first home. You’ve built a fine one.”",
+      "text_b": "Marcus fills a pot with soil.",
+      "quiz": null
+    },
+    {
+      "index": 5,
+      "image": "book16-page5.webp",
+      "text_a": "Then Sophie opened her seed packet and tipped the seeds into her palm — and her smile wobbled. They were so tiny. Smaller than freckles! “What if they don’t grow?” she asked worriedly. “What if they’re too little to do anything at all?”",
+      "text_b": "The seeds are tiny. Sophie feels worried.",
       "quiz": {
         "question": "What are Marcus and Sophie planting?",
         "options": [
@@ -134,82 +53,42 @@
       }
     },
     {
-      "index": 5,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "marcus_happy_standing.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_neutral_looking.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "helper",
-            "name": "Mr. Green",
-            "emoji": "&#127793;"
-          }
-        ]
-      },
-      "text_a": "Mr. Green smiled gently. &ldquo;All seeds need is soil, sunlight, water, and patience,&rdquo; he explained.",
-      "text_b": "Seeds need sun and water to get big.",
-      "quiz": null
-    },
-    {
       "index": 6,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "marcus_happy_looking.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_happy_kneeling.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "hotspot",
-            "position": "mid",
-            "effect": "ding",
-            "aria_label": "Water the seeds",
-            "emoji": "&#128167;"
-          }
-        ]
-      },
-      "text_a": "Sophie carefully pressed two seeds into the dirt and patted it smooth. &ldquo;Good night, little seeds!&rdquo; she whispered.",
-      "text_b": "Sophie taps the dirt. Good job, Sophie!",
+      "image": "book16-page6.webp",
+      "text_a": "Mr. Green knelt down in the soil beside her, not one bit worried. “Sophie,” he said gently, “every tall sunflower you have ever seen started out exactly this small. All seeds need is soil, sunlight, water — and patience. The seed does the growing. Our job is just to give it what it needs, and wait.”",
+      "text_b": "Seeds need soil, sun, water, and time.",
       "quiz": null
     },
     {
       "index": 7,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "marcus_happy_jumping.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_happy_giving.png",
-            "alt": "Sophie"
-          }
-        ]
-      },
-      "text_a": "Marcus sprinkled water from the watering can. The soil drank it up eagerly. &ldquo;We did it together!&rdquo; shouted Marcus.",
-      "text_b": "Marcus gets water. Marcus feels glad.",
+      "image": "book16-page7.webp",
+      "text_a": "“Planting is a skill,” said Mr. Green, “so let’s practice first.” On an empty patch of soil, he showed them: poke a hole as deep as your fingertip — no deeper, or the sprout can’t find the sun. Drop in the seed. Cover it like tucking in a blanket. Sophie practiced twice, and by the second try her hands moved slowly and surely, like a real gardener’s hands.",
+      "text_b": "They practice how to plant the right way.",
+      "quiz": null
+    },
+    {
+      "index": 8,
+      "image": "book16-page8.webp",
+      "text_a": "Now Sophie was ready. Carefully, carefully, she pressed two seeds into the soil in Marcus’s pot and patted the earth smooth and flat. Then she leaned down close, the way you lean toward someone you love, and whispered, “Good night, little seeds. Grow well.”",
+      "text_b": "Sophie plants the seeds.",
+      "quiz": null
+    },
+    {
+      "index": 9,
+      "image": "book16-page9.webp",
+      "text_a": "Marcus lifted the watering can with both hands and sprinkled a gentle rain over the pot. The dry soil drank it up eagerly, turning dark and rich. “We did it together!” shouted Marcus. “You planted, I watered!” — and Sophie laughed, because it was true: the pot had needed both of them.",
+      "text_b": "Marcus gives the seeds water.",
+      "quiz": null
+    },
+    {
+      "index": 10,
+      "image": "book16-page10.webp",
+      "text_a": "Mr. Green walked them down the rows one last time. “See these tomatoes? A grandmother down the street planted them, and the whole neighborhood will share them. Those herbs belong to everybody. And your pot—” he set it carefully among a row of pots planted by other children, “—now belongs here too, growing alongside everyone’s. That’s what community means: many hands, one garden.”",
+      "text_b": "The garden is for everyone to share.",
       "quiz": {
         "question": "What helped Sophie feel confident about planting?",
         "options": [
-          "Mr. Green&rsquo;s kind advice",
+          "Mr. Green’s kind advice",
           "Running away",
           "Eating a snack"
         ],
@@ -217,38 +96,36 @@
       }
     },
     {
-      "index": 8,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "marcus_happy_waving.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_happy_waving.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "helper",
-            "name": "Mr. Green",
-            "emoji": "&#127793;"
-          }
-        ]
-      },
-      "text_a": "Marcus and Sophie placed their pot in the warm sunshine. They could not wait to come back and see their green sprouts grow.",
-      "text_b": "Marcus and Sophie clap. &ldquo;We did it!&rdquo;",
+      "index": 11,
+      "image": "book16-page11.webp",
+      "text_a": "“One last lesson,” said Mr. Green. “Planting isn’t the end of a gardener’s job — it’s the beginning.” He taught them the fingertip test: touch the soil, and if it feels dry, the sprouts are thirsty. Keep the pot where the sun can visit. And when you can’t see anything happening? “That’s the seeds’ quiet time,” he said. “Trust them. They’re working underground.”",
+      "text_b": "Gardeners keep caring after they plant.",
+      "quiz": null
+    },
+    {
+      "index": 12,
+      "image": "book16-page12.webp",
+      "text_a": "Marcus and Sophie set their pot in the warm sunshine, in its place among all the others. Nothing had sprouted yet — not one green tip. And still, somehow, the pot looked full of promise. “We can’t wait to come back,” said Sophie, “and see our green sprouts grow.” Mr. Green waved from the gate. “They’ll be growing,” he promised. “So will you.”",
+      "text_b": "They will come back to see the sprouts.",
       "quiz": null
     }
   ],
   "end_screen": {
-    "badge_emoji": "&#127793;",
-    "badge_label_html": "Garden<br>Sprout",
+    "badge_emoji": "&#127941;",
+    "badge_label_html": "Garden Sprout",
     "feeling": "Patience and teamwork when trying something new.",
     "ask": "Have you ever waited for something to grow? How did you practice patience?",
     "try_this": "Plant a bean seed in a damp paper towel in a cup by the window this week and watch it sprout together.",
-    "standards": "RL.K.1, SL.K.3"
-  }
+    "words_to_grow": "community, sprouts, sturdy, earthy, worriedly, carefully, patience, promise. Point at the tools as you name them — clay pot, garden shovel (trowel), watering can, seed packet.",
+    "bigger_picture": "Tending a garden is much more than dropping in a seed — it is checking every bed before you begin, learning to plant at the right depth, watering and watching day after day, and sharing one green space with a whole community of other growers.",
+    "standards": "RL.K.1, SL.K.3",
+    "practice_words": [
+      "green",
+      "plants",
+      "plant",
+      "checks",
+      "whole"
+    ]
+  },
+  "reading_level": 3
 }

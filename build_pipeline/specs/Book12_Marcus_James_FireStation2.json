@@ -4,97 +4,58 @@
   "book_title": "Marcus & James Revisit the Fire Station",
   "book_badge": "Fire Station Explorer II",
   "cover": {
-    "h1_html": "Marcus &amp; James<br>Revisit the Fire Station",
-    "stage": {
-      "backdrop": "backdrop-firestation",
-      "elements": [
-        {
-          "type": "img",
-          "sprite": "marcus_happy_waving.png",
-          "alt": "Marcus"
-        },
-        {
-          "type": "img",
-          "sprite": "james_happy_waving.png",
-          "alt": "James"
-        }
-      ]
-    }
+    "h1_html": "Marcus &amp; James Revisit the Fire Station",
+    "subtitle": "A story about feeling nervous — and passing on what a friend once taught you",
+    "image": "book12-cover.webp"
   },
   "pages": [
     {
       "index": 1,
-      "stage": {
-        "backdrop": "backdrop-street",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "marcus_happy_pointing.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "james_happy_walking.png",
-            "alt": "James"
-          },
-          {
-            "type": "hotspot",
-            "position": "left",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#128658;"
-          }
-        ]
-      },
-      "text_a": "Marcus was excited to bring James to the fire station for the very first time.",
-      "text_b": "Marcus brings James.",
+      "image": "book12-page1.webp",
+      "text_a": "Marcus marched up the fire station walkway like a small tour guide with a very important guest. “I’ve been here before,” he announced to James, whose eyes were round as headlights. “I know where the hoses live. I know what the alarm sounds like. I even know Alex.” James hurried to keep up. “You know everything,” he said.",
+      "text_b": "Marcus brings James to the fire station.",
       "quiz": null
     },
     {
       "index": 2,
-      "stage": {
-        "backdrop": "backdrop-firestation",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "marcus_happy_standing.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "james_happy_standing.png",
-            "alt": "James"
-          },
-          {
-            "type": "helper",
-            "name": "Alex",
-            "emoji": "&#128658;&#8205;"
-          }
-        ]
-      },
-      "text_a": "Alex remembered Marcus right away. &ldquo;Welcome back!&rdquo; she said warmly.",
-      "text_b": "Alex knows Marcus.",
+      "image": "book12-page2.webp",
+      "text_a": "The big door rolled up, and there stood Alex — who took one look and remembered Marcus right away. “Welcome back!” Alex said warmly. “And you must be James. Marcus told the whole crew about his first visit.” Marcus stood up very straight. “Today,” said Alex, “maybe Marcus can help me show you around.”",
+      "text_b": "Alex remembers Marcus.",
       "quiz": null
     },
     {
       "index": 3,
-      "stage": {
-        "backdrop": "backdrop-firestation",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_surprised_hands.png",
-            "alt": "James"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_neutral_looking.png",
-            "alt": "Marcus"
-          }
-        ]
-      },
-      "text_a": "When Alex mentioned the alarm demo, James&rsquo;s tummy went jumpy &mdash; just like Marcus&rsquo;s had, long ago.",
-      "text_b": "James feels bad.",
+      "image": "book12-page3.webp",
+      "text_a": "“Last time you saw my tools,” said Alex. “This time, meet my team.” There was the captain, who studies the map, makes the plan, and keeps every firefighter safe. There was the engineer, who drives the great truck and works the pump that pushes the water with a roar. And there were the firefighters, who haul the hoses and raise the ladders together. “Nobody fights a fire alone,” said Alex. “Every job needs every other job.”",
+      "text_b": "Every firefighter has a job.",
+      "quiz": null
+    },
+    {
+      "index": 4,
+      "image": "book12-page4.webp",
+      "text_a": "Suddenly — BRRT! — a practice bell rang, and the station exploded into choreography. Boots thumped, jackets flew on, and the engineer started the truck while the crew unrolled a hose down the driveway in long, looping ribbons. Alex clicked a stopwatch. “A drill is practice that pretends to be real,” Alex explained, “so that a real day feels just like practice. Faster every week — and never, ever sloppy.”",
+      "text_b": "Firefighters practice with a drill.",
+      "quiz": null
+    },
+    {
+      "index": 5,
+      "image": "book12-page5.webp",
+      "text_a": "On the walk back inside, Marcus spotted photographs pinned along the hallway: the crew reading stories at the school, the crew fitting a bright helmet on a wobbly toddler, the crew checking a grandmother’s smoke alarm while she held the flashlight. “We don’t only come when there’s trouble,” said Alex. “The best days are the quiet ones — when the town just gets to know its firefighters.”",
+      "text_b": "Firefighters help the whole town.",
+      "quiz": null
+    },
+    {
+      "index": 6,
+      "image": "book12-page6.webp",
+      "text_a": "“Now,” said Alex, “the part James has been waiting for. Shall we hear the alarm demo?” Marcus smiled — but beside him, James’s face had changed. His tummy had gone jumpy, fluttery, full of bouncing grasshoppers… and Marcus recognized that look right away. He had worn that exact same look, long ago.",
+      "text_b": "James feels nervous.",
+      "quiz": null
+    },
+    {
+      "index": 7,
+      "image": "book12-page7.webp",
+      "text_a": "Marcus crouched down until his eyes were even with his friend’s. “Hey,” he said, gently as anything. “I felt like that my first time too. Exactly like that. My tummy did the grasshopper thing and everything.” James blinked. “You? But you know everything.” “I know the trick now,” said Marcus. “That’s different.”",
+      "text_b": "Marcus knows how James feels.",
       "quiz": {
         "question": "How does James feel?",
         "options": [
@@ -106,94 +67,24 @@
       }
     },
     {
-      "index": 4,
-      "stage": {
-        "backdrop": "backdrop-firestation",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "marcus_neutral_reaching.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "james_surprised_standing.png",
-            "alt": "James"
-          }
-        ]
-      },
-      "text_a": "Marcus recognized the look right away. &ldquo;I felt like that my first time too,&rdquo; he said.",
-      "text_b": "Marcus helps James.",
-      "quiz": null
-    },
-    {
-      "index": 5,
-      "stage": {
-        "backdrop": "backdrop-firestation",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "marcus_neutral_pointing.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "james_neutral_hands.png",
-            "alt": "James"
-          }
-        ]
-      },
-      "text_a": "&ldquo;Want to try the trick that helped me? Cover your ears, and we count to three together.&rdquo;",
+      "index": 8,
+      "image": "book12-page8.webp",
+      "text_a": "And Marcus, who had once been the nervous one, became the teacher. “Want to try the trick that helped me? Cover your ears — like this — and we count to three together. Alex counts out loud. I’ll be right here the whole time.” James pressed his hands over his ears, and took a deep, shaky breath, and nodded.",
       "text_b": "Cover your ears. Count to three.",
       "quiz": null
     },
     {
-      "index": 6,
-      "stage": {
-        "backdrop": "backdrop-firestation",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_surprised_hands.png",
-            "alt": "James"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_neutral_standing.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "hotspot",
-            "position": "mid",
-            "effect": "ding",
-            "aria_label": "Tap to play",
-            "emoji": "&#128276;"
-          }
-        ]
-      },
-      "text_a": "Alex counted, &ldquo;One, two, three!&rdquo; The alarm rang, and James kept his hands steady over his ears.",
-      "text_b": "James is OK.",
+      "index": 9,
+      "image": "book12-page9.webp",
+      "text_a": "“One…” said Alex. “Two…” said Marcus, loud and steady, holding his own ears the exact same way. “THREE!” BRRRING! The alarm sang out, bold and brassy — and James kept his hands steady over his ears, and his feet planted steady on the floor, until the very last echo rolled away.",
+      "text_b": "James did it.",
       "quiz": null
     },
     {
-      "index": 7,
-      "stage": {
-        "backdrop": "backdrop-firestation",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_happy_jumping.png",
-            "alt": "James"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_giving.png",
-            "alt": "Marcus"
-          }
-        ]
-      },
-      "text_a": "&ldquo;That wasn&rsquo;t so bad,&rdquo; James said, echoing Marcus&rsquo;s very first words.",
-      "text_b": "James did it.",
+      "index": 10,
+      "image": "book12-page10.webp",
+      "text_a": "James lowered his hands, slowly, like a hero in a story. His heart was thumping. His grin was enormous. “That wasn’t so bad,” he said — and Alex laughed out loud, because those were Marcus’s very first words, word for word, the day Marcus had stood in that exact same spot, with grasshoppers in his tummy too.",
+      "text_b": "James is brave now.",
       "quiz": {
         "question": "Who helped James feel brave?",
         "options": [
@@ -205,38 +96,36 @@
       }
     },
     {
-      "index": 8,
-      "stage": {
-        "backdrop": "backdrop-firestation",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "marcus_happy_hands.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "james_happy_waving.png",
-            "alt": "James"
-          },
-          {
-            "type": "helper",
-            "name": "Alex",
-            "emoji": "&#128658;&#8205;"
-          }
-        ]
-      },
-      "text_a": "Marcus beamed with pride &mdash; being the helper felt just as good as being helped.",
-      "text_b": "Marcus feels glad too.",
+      "index": 11,
+      "image": "book12-page11.webp",
+      "text_a": "Marcus beamed with a new kind of pride — warmer, even, than the day he had been brave himself. “Being the helper,” he said wonderingly, “feels just as good as being helped.” Alex nodded. “Now you understand the secret of this whole station, Marcus. Everything we learn here, we learn so we can hand it to somebody else.”",
+      "text_b": "Helping feels good too.",
+      "quiz": null
+    },
+    {
+      "index": 12,
+      "image": "book12-page12.webp",
+      "text_a": "To finish the visit, James got to help the crew roll the great drill hose back onto the truck, looping it in big, careful circles, hand over hand, while Marcus supervised like a very small captain. Then everybody waved — the captain, the engineer, the whole crew. “Next time,” said James, marching down the walkway like a tour guide with a very important guest, “I’m bringing Sophie and Maya. I know a trick to teach them.”",
+      "text_b": "They say, “Bye, Alex! Bye, crew!”",
       "quiz": null
     }
   ],
   "end_screen": {
     "badge_emoji": "&#127941;",
-    "badge_label_html": "Fire Station<br>Explorer II",
+    "badge_label_html": "Fire Station Explorer II",
     "feeling": "Passing a coping trick to a friend builds confidence in both children.",
     "ask": "Have you ever helped a friend the way someone once helped you?",
     "try_this": "Ask your child to teach a younger sibling one calming trick.",
-    "standards": "RL.K.7"
-  }
+    "words_to_grow": "revisit, remembered, recognize, captain, engineer, drill, choreography, steady, echo, proud. Point at the crew’s tools and roles as you name them — pump, stopwatch, map, hose.",
+    "bigger_picture": "A fire crew is a team of specialists — a captain who plans and protects the team, an engineer who drives and runs the pump, and firefighters who haul and climb together. They drill on a stopwatch so real emergencies feel like practice, and between alarms they are neighbors: visiting schools, fitting helmets, and checking alarms so trouble never starts.",
+    "standards": "RL.K.7",
+    "practice_words": [
+      "brings",
+      "station",
+      "remembers",
+      "every",
+      "firefighter"
+    ]
+  },
+  "reading_level": 2
 }

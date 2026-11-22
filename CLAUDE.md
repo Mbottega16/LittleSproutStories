@@ -23,7 +23,7 @@ Interactive phonics storybooks (ages 4–7) and educational mini-games (ages 3�
 ## Settled decisions (don't re-argue)
 
 1. **"If it's on `main`, it's live."** GitHub Pages deploys directly from `main`. Non-trivial feature work goes on a feature branch + PR unless the user asks to land on `main`.
-2. **Never hand-edit `books/*.html`** — in principle: edit the JSON spec in `build_pipeline/specs/` or `build_pipeline/render.py`, then run `python build_pipeline/build.py`. **WARNING (found 2026-11-21): this is broken right now. The watercolor rebuild (PR #14) and the SEO tags were written straight into `books/*.html`; `render.py` was never updated. Running `build.py` rewrites all 18 books with the OLD look and drops the canonical/OG tags. Do NOT run it on existing books until `render.py` is brought back in line with the published HTML.** Until then, change `books/*.html` carefully by hand and keep the specs in step.
+2. **Never hand-edit `books/*.html`** — edit the JSON spec in `build_pipeline/specs/` (or the shared templates in `build_pipeline/templates/`, or `build_pipeline/render.py`), then run `python build_pipeline/build.py`. This works again since 2026-11-22: the specs were rebuilt from the live books and the output is byte-identical to `books/`. `scripts/pipeline_roundtrip.py` checks it and CI runs it, so a hand edit to a book makes CI fail. If you must hand-edit a book, run `python build_pipeline/extract_spec.py --all` right after, to copy the edit back into the spec.
 3. **COPPA & Zero Passive Tracking.** All child reading progress, stars, and badges stay strictly in browser `localStorage`. No third-party analytics or tracking pixels on kid-facing pages. Physical mailing addresses in `rewards-api` are collected only via Stripe Checkout (payment-as-parental-consent) and auto-purged after 90 days.
 4. **Double Engine Pedagogy.** Every book pairs decodable phonics text with a social-emotional learning (SEL) beat and a book-specific "For Grown-Ups" panel at the end. Keep SEL fields (`feeling`, `ask`, `try_this`) separate from factual comprehension games.
 5. **No failure states for kids:** games use non-punitive streaks, not timers or losses.
@@ -39,11 +39,11 @@ The frontend is **zero-dependency vanilla HTML5/CSS3/ES6 JS** (no bundler, no `p
 
 | Path | Role |
 |---|---|
-| `build_pipeline/` | **Authoritative book generator.** Edit `build_pipeline/specs/<Book>.json` or `build_pipeline/render.py`, then run `python build_pipeline/build.py` to regenerate `books/*.html`. `extract_spec.py` recovers JSON from HTML; `generate_story.py` generates stories + Piper TTS audio. |
+| `build_pipeline/` | **Authoritative book generator.** `specs/<Book>.json` hold each book's content (cover, 12 pages, quizzes, For Grown-Ups panel). `templates/book_head.html` and `book_tail.html` hold the shared CSS and JS. `render.py` builds a book; `python build_pipeline/build.py` rebuilds `books/*.html`. `extract_spec.py` copies a published book back into its spec. `generate_story.py` drafts stories in the OLD sprite-scene format (it no longer renders as is) and Piper TTS audio. See `build_pipeline/README.md`. |
 | `books/` | 18 generated storybooks (`Book1`–`Book12`, `Book14`–`Book19`; Book 13 was scrapped intentionally — never renumber). |
 | `games/` | 12 standalone HTML5/JS mini-games (`feelings_faces`, `pose_parade`, `rhyme_time`, `sentence_builder`, `sound_it_out`, `whos_missing`, `word_dash`, `helper_detective`, `garden_harvest`, `block_balance`, `bug_safari`, `river_hop`) sharing sprites and `localStorage` star progress. |
 | `rewards-api/` | Standalone FastAPI + SQLAlchemy + Stripe + Printify backend for the $10 physical reward box, merch shop, and community cork-board moderation. Deployed separately on Render (`render.yaml`, `rootDir: rewards-api`). |
-| `scripts/` | Verification, art import, and build guards (`link_check.py`, `cache_bump_guard.py`, `placeholder_audit.py`, `generate_sitemap.py`, `import_character_art.py`, `import_background_art.py`). |
+| `scripts/` | Verification, art import, and build guards (`link_check.py`, `cache_bump_guard.py`, `placeholder_audit.py`, `pipeline_roundtrip.py`, `analyze_decodability.py`, `generate_sitemap.py`, `import_character_art.py`, `import_background_art.py`). |
 
 **Root HTML pages (13 active entry points — not loose scratch files)**
 - **Reader & Family Pages:** `index.html` (main catalog, badge shelf, 5-stage reading plan), `characters.html` ("Meet the Friends": Maya, Marcus, Sophie, James), `reading-passport.html` (printable 14-location passport), `book-nook.html` & `book-nook-bookplate.html` (book donation hub & printable bookplates).
@@ -63,6 +63,11 @@ python build_pipeline/build.py
 python scripts/link_check.py
 python scripts/cache_bump_guard.py
 python scripts/placeholder_audit.py
+python scripts/pipeline_roundtrip.py   # books/ must equal what the specs render (CI runs this)
+
+# Reading levels and the approved-word check for every book's practice line
+python scripts/analyze_decodability.py          # report
+python scripts/analyze_decodability.py --write  # refresh reading_level + practice_words in the specs, then rebuild
 
 # Backend (rewards-api) test suite
 rewards-api\.venv\Scripts\pytest rewards-api/tests -q
@@ -76,13 +81,14 @@ To keep context clean and avoid scanning thousands of vendor/binary files, **nev
 - `rewards-api/.venv/` — 7,580+ Python virtual environment files.
 - `raw_art/` — 389 MB of unprocessed character/background source zips and PSD/PNG sheets.
 - `assets/audio/`, `assets/sprites/`, `assets/backgrounds/`, `assets/resource-photos/` — binary media assets (use `scripts/` to inspect or import art).
-- `books/*.html` — **generated output** from `build_pipeline/specs/*.json`. Do not hand-edit or read all 18 generated HTML books to understand template structure; read `build_pipeline/render.py` and one spec in `build_pipeline/specs/` instead.
+- `books/*.html` — **generated output** from `build_pipeline/specs/*.json`. Do not hand-edit or read all 18 generated HTML books to understand the structure; read `build_pipeline/README.md`, `build_pipeline/render.py` and one spec instead. (The shared CSS and JS are in `build_pipeline/templates/`.)
 - `data/*.db` — local SQLite working database.
 
 ## Rules & Gotchas
 
 - **Bump `CACHE_VERSION` in `sw.js` when changing site assets.** `.git/hooks/pre-push` (on the PC) runs `scripts/cache_bump_guard.py` and `scripts/link_check.py` and will block pushes if cached files changed without bumping `CACHE_VERSION`. The agent docs (`CLAUDE.md`, `AGENTS.md`, `HISTORY.md`, `.claudeignore`) are not cached and don't need a bump.
-- **Skipped from PR #10 (phonics branch) because of the `render.py` problem above:** the split read-aloud button (story vs. the child's practice line), the "Practice these words" list in the For Grown-Ups panel, and the reading-level badge on each book cover. The analyzer, the stats table and the homepage level pills were kept.
+- **PR #10's three features are in (2026-11-22):** the split read-aloud ("Read the story to me" reads only the story; the small "Hint" button reads only the child's practice line), the "Practice these words" line in the For Grown-Ups panel, and the reading-level tag on each cover. They live in the templates and `render.py`.
+- **`analyze_decodability.py --check` fails on the published text, on purpose.** The 12-page books use many words that are not in the approved list (for example fire, hose, safe, care, keep, time, right, soil, learn). Whether to approve them (Tier 3 words with picture support) or rewrite the lines is the owner's call. Do not approve words just to make the check pass, and keep `--check` out of the pre-push hook until that is decided.
 - **Several open PRs branch independently off `main`** and overlap in `index.html` and
   `sw.js` `CACHE_VERSION` — expect to resolve those on each merge.
 - **Games for older kids use only the factual helper layer** from the specs, never the
@@ -95,9 +101,10 @@ To keep context clean and avoid scanning thousands of vendor/binary files, **nev
 
 *Overwrite this at the end of every session; move the previous handoff into `HISTORY.md` first.*
 
-- **Last Worked On (2026-11-21, cloud Claude, the owner's ask: finish all open work):** merged the open feature branches into one branch (`claude/finish-open-work`): visitor-flow fixes, the shop/reward-box coming-soon card, two games for older kids, four character games, and the decodability analyzer with the `stats.html` crosswalk. Added Books 16–19 cards to `index.html` (kept out of the 14-book reward logic on purpose). Replaced the stale `edusystems-code.github.io` domain with `mbottega16.github.io` everywhere (sitemap, canonical/OG tags, README, `rewards-api` config). Added the six newer games and their art to the `sw.js` precache; `CACHE_VERSION` is `littlesprout-v43`.
-- **Current State (2026-11-21):** `link_check.py` (695 links), `placeholder_audit.py` and `cache_bump_guard.py` all pass. The live URL was NOT opened (the cloud session could not fetch it). `analyze_decodability.py --check` passes (the words flagged in Books 16–19 were approved in the analyzer and in `10_Decodable_Word_List.md`, per that doc's Tier 3 rules). Headless-browser smoke test: all 18 books, 12 games, index/stats/passport load with no page errors; covers and the new cards render. `CACHE_VERSION` is `littlesprout-v44`.
+- **Last Worked On (2026-11-22, cloud Claude, the owner's ask: merge PR #17 and finish everything):** merged PR #17 into `main`. Rebuilt the book pipeline: the specs were old (8 pages vs 12 live), so `extract_spec.py` and `render.py` were rewritten, the shared head and script moved to `build_pipeline/templates/`, and all 18 specs were rebuilt from the live books. Added `scripts/pipeline_roundtrip.py` (also run in CI). Ported PR #10's three features (split read-aloud, practice words, cover level tag). Corrected 13 of 18 reading levels on `index.html` and `stats.html` (PR #17 had used the old specs). `CACHE_VERSION` is `littlesprout-v46`.
+- **Current State (2026-11-22):** on branch `claude/sync-render-py` (a pull request, not yet merged unless `main` says otherwise). `pipeline_roundtrip.py`, `link_check.py`, `placeholder_audit.py`, `cache_bump_guard.py` pass. Headless browser: all 18 books load, the two read-aloud buttons speak the right blocks, no page errors. `analyze_decodability.py --check` FAILS on the published text by design (see Gotchas).
 - **Next Up:**
-  1. The live site loads at `https://mbottega16.github.io/LittleSproutStories/` (checked 2026-11-21). `Little Sprout Stories Web.url` points to `littlesproutstories.com`, which did not load in a test; confirm whether that domain is real.
-  2. Bring `build_pipeline/render.py` back in line with the published (watercolor) books, then port the three skipped PR #10 features. Compare a fresh `build.py` output with `books/` first: write the output to a scratch folder, never over `books/`.
-  3. Deploy `rewards-api/` to Render + connect live Stripe keys only when the owner gives explicit spend/publish sign-off.
+  1. Owner decision: approve the flagged Stream B words in `10_Decodable_Word_List.md` (Tier 3, picture-supported) or rewrite those lines. Run `python scripts/analyze_decodability.py` for the list.
+  2. `Little Sprout Stories Web.url` points to `littlesproutstories.com`, which did not load in a test; confirm whether that domain is real.
+  3. Homepage card text for Book 15 reads "visit All our friends at the Series Finale" (a template line); write a real description.
+  4. Deploy `rewards-api/` to Render + connect live Stripe keys only when the owner gives explicit spend/publish sign-off.

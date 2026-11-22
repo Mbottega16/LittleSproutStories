@@ -1,0 +1,271 @@
+</main>
+
+<div class="nav-row">
+  <button id="prevBtn" type="button" onclick="prevPage()" disabled>&#9664; Back</button>
+  <span class="progress" id="progressLabel" aria-live="polite"></span>
+  <button id="nextBtn" type="button" onclick="nextPage()">Next &#9654;</button>
+</div>
+
+<script>
+const BOOK_ID = "@@ID@@";
+const BOOK_TITLE = "@@BOOK_TITLE@@";
+const BOOK_BADGE = "@@BADGE@@";
+let current = 0;
+const total = @@TOTAL@@;
+
+/* ---------- progress: saved on this device only ---------- */
+function loadProgress() {
+  try { return JSON.parse(localStorage.getItem('littlesprout') || '{}'); }
+  catch (e) { return {}; }
+}
+function saveProgress(data) {
+  try { localStorage.setItem('littlesprout', JSON.stringify(data)); return true; }
+  catch (e) { return false; }
+}
+/* ---------- reading time: wall-clock while this tab is actually visible,
+   so leaving it open in a background tab doesn't inflate the number.
+   Only recorded on the FIRST completion -- rereads don't overwrite it. */
+let visibleSince = document.visibilityState === 'visible' ? Date.now() : null;
+let visibleMs = 0;
+document.addEventListener('visibilitychange', function() {
+  if (document.visibilityState === 'hidden') {
+    if (visibleSince) visibleMs += Date.now() - visibleSince;
+    visibleSince = null;
+  } else {
+    visibleSince = Date.now();
+  }
+});
+function currentVisibleMs() {
+  return visibleMs + (visibleSince ? Date.now() - visibleSince : 0);
+}
+
+function markFinished() {
+  const d = loadProgress();
+  d.books = d.books || {};
+  const already = d.books[BOOK_ID] && d.books[BOOK_ID].finished;
+  const prevSeconds = (d.books[BOOK_ID] && d.books[BOOK_ID].seconds) || null;
+  d.books[BOOK_ID] = {
+    finished:true, title:BOOK_TITLE, badge:BOOK_BADGE, at:Date.now(),
+    seconds: already ? prevSeconds : Math.round(currentVisibleMs() / 1000),
+  };
+  const ok = saveProgress(d);
+  const note = document.getElementById('savedNote');
+  if (note) note.textContent = ok
+    ? (already ? 'Badge already in your collection!' : 'Badge saved to your collection!')
+    : '';
+  if (!already) {
+    sfxCheer();
+    const badge = document.querySelector('.end-screen .badge');
+    if (badge) { badge.classList.remove('celebrate'); void badge.offsetWidth; badge.classList.add('celebrate'); }
+    confettiBurst();
+  }
+}
+
+/* ---------- sound: tiny synthesized effects, no audio files ---------- */
+let audioCtx = null;
+function getAudioCtx() {
+  if (!audioCtx) { try { audioCtx = new (window.AudioContext||window.webkitAudioContext)(); } catch(e) {} }
+  return audioCtx;
+}
+function isMuted() { return !!loadProgress().muted; }
+function tone(freq, dur, type, vol) {
+  if (isMuted()) return;
+  const ctx = getAudioCtx(); if (!ctx) return;
+  try {
+    const o = ctx.createOscillator(); const g = ctx.createGain();
+    o.type = type || 'sine'; o.frequency.value = freq;
+    o.connect(g); g.connect(ctx.destination);
+    g.gain.value = vol || 0.1;
+    g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + dur);
+    o.start(); o.stop(ctx.currentTime + dur);
+  } catch(e) {}
+}
+function sfxWhoosh() { tone(220, .16, 'sine', .05); setTimeout(function(){ tone(340, .12, 'sine', .04); }, 55); }
+function sfxSuccess() { tone(523, .12, 'sine', .1); setTimeout(function(){ tone(659, .12, 'sine', .1); }, 90); setTimeout(function(){ tone(784, .2, 'sine', .12); }, 180); }
+function sfxOops() { tone(220, .18, 'sine', .08); }
+function sfxCheer() { [523,659,784,1047].forEach(function(f,i) { setTimeout(function(){ tone(f, .18, 'sine', .1); }, i*100); }); }
+
+/* ---------- visual: confetti on finishing a book ---------- */
+function confettiBurst() {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const colors = ['#5BA672','#FFD24A','#185FA5','#B0488C','#E8433F'];
+  for (let i=0; i<24; i++) {
+    const p = document.createElement('div');
+    p.className = 'confetti-piece';
+    p.style.left = (Math.random()*100) + 'vw';
+    p.style.background = colors[i % colors.length];
+    p.style.animationDuration = (1.4 + Math.random()*1.2) + 's';
+    p.style.transform = 'rotate(' + (Math.random()*360) + 'deg)';
+    document.body.appendChild(p);
+    setTimeout(function(){ p.remove(); }, 3000);
+  }
+}
+
+/* ---------- paging ---------- */
+function show(i) {
+  stopSpeech();
+  for (let j=0;j<total;j++) document.getElementById('p'+j).style.display = (j===i)?'block':'none';
+  document.getElementById('prevBtn').disabled = (i===0);
+  document.getElementById('nextBtn').style.display = (i===total-1)?'none':'inline-block';
+  document.getElementById('progressLabel').textContent =
+    (i===0) ? '' : (i===total-1 ? 'The end' : 'Page ' + i + ' of ' + (total-2));
+  const wrap = document.getElementById('p'+i);
+  wrap.classList.remove('turn-in'); void wrap.offsetWidth; wrap.classList.add('turn-in');
+  if (i===total-1) markFinished();
+  window.scrollTo(0,0);
+}
+function nextPage() { if (current<total-1) { current++; sfxWhoosh(); show(current); } }
+function prevPage() { if (current>0) { current--; sfxWhoosh(); show(current); } }
+function restart() { current = 0; show(0); }
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'ArrowRight') nextPage();
+  else if (e.key === 'ArrowLeft') prevPage();
+  else if (e.key === 'Escape') stopSpeech();
+});
+
+/* ---------- quiz ---------- */
+function checkAnswer(btn, chosen) {
+  const quiz = btn.closest('.quiz');
+  const answer = parseInt(quiz.dataset.answer);
+  const fb = quiz.querySelector('.quiz-feedback');
+  const btns = [].slice.call(quiz.querySelectorAll('button'));
+  btns.forEach(function(b,i) {
+    b.disabled = true;
+    if (i===answer) b.classList.add('correct');
+    else if (i===chosen) b.classList.add('wrong');
+  });
+  if (chosen === answer) { sfxSuccess(); } else { sfxOops(); }
+  if (fb) fb.textContent = (chosen===answer)
+    ? 'That\u2019s right!'
+    : 'Good try \u2014 the green one is the answer.';
+}
+
+/* ---------- easy-read toggle ---------- */
+function toggleEasy() {
+  const on = document.body.classList.toggle('easyread');
+  document.getElementById('easyBtn').setAttribute('aria-pressed', on ? 'true':'false');
+  const d = loadProgress(); d.easyread = on; saveProgress(d);
+}
+(function initEasy() {
+  if (loadProgress().easyread) {
+    document.body.classList.add('easyread');
+    document.getElementById('easyBtn').setAttribute('aria-pressed','true');
+  }
+})();
+
+/* ---------- mute toggle ---------- */
+function toggleMute() {
+  const d = loadProgress(); d.muted = !d.muted; saveProgress(d);
+  const b = document.getElementById('muteBtn');
+  b.textContent = d.muted ? '\uD83D\uDD07' : '\uD83D\uDD0A';
+  b.setAttribute('aria-pressed', d.muted ? 'true' : 'false');
+}
+(function initMute() {
+  if (loadProgress().muted) {
+    const b = document.getElementById('muteBtn');
+    b.textContent = '\uD83D\uDD07';
+    b.setAttribute('aria-pressed', 'true');
+  }
+})();
+
+/* ---------- read aloud ---------- */
+const SPEECH_OK = ('speechSynthesis' in window) && ('SpeechSynthesisUtterance' in window);
+let activeBtn = null;
+
+if (!SPEECH_OK) {
+  [].slice.call(document.querySelectorAll('.readaloud')).forEach(function(b) { b.hidden = true; });
+}
+
+function pickVoice() {
+  const vs = speechSynthesis.getVoices().filter(function(v) {
+    return v.lang && v.lang.toLowerCase().indexOf('en') === 0;
+  });
+  if (!vs.length) return null;
+  const preferred = ['Samantha','Google US English','Microsoft Aria','Microsoft Zira','Karen','Moira'];
+  for (var i=0;i<preferred.length;i++) {
+    var hit = vs.find(function(v) { return v.name.indexOf(preferred[i]) !== -1; });
+    if (hit) return hit;
+  }
+  return vs.find(function(v) { return v.localService; }) || vs[0];
+}
+
+function wrapWords(el) {
+  if (el.dataset.wrapped === '1') return;
+  const text = el.textContent;
+  el.innerHTML = text.split(/(\s+)/).map(function(tok) {
+    if (tok === '' || /^\s+$/.test(tok)) return tok;
+    return '<span class="w">' + tok.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</span>';
+  }).join('');
+  el.dataset.wrapped = '1';
+}
+
+function stopSpeech() {
+  if (SPEECH_OK) { try { speechSynthesis.cancel(); } catch(e) {} }
+  [].slice.call(document.querySelectorAll('.w.spoken')).forEach(function(s) { s.classList.remove('spoken'); });
+  if (activeBtn) {
+    activeBtn.classList.remove('speaking');
+    var lbl = activeBtn.querySelector('.ra-label');
+    if (lbl && activeBtn.dataset.label) lbl.textContent = activeBtn.dataset.label;
+    activeBtn = null;
+  }
+}
+
+/* Reads exactly one block (the story, OR the practice line -- never both
+   in one tap). Splitting these was a deliberate fix: one shared button
+   used to read the practice line for the child by default, which is the
+   one line in the book meant for THEM to sound out -- the easiest path
+   was also the one that skipped the actual phonics practice. The story
+   button stays prominent; the practice-line button is a smaller, opt-in
+   "stuck? tap for a hint" control instead of the default. */
+function readBlock(btn, which) {
+  if (!SPEECH_OK) return;
+  if (activeBtn === btn) { stopSpeech(); return; }
+  stopSpeech();
+
+  const page = btn.closest('.page');
+  const el = page.querySelector('.text-' + which);
+  if (!el) return;
+  wrapWords(el);
+
+  activeBtn = btn;
+  btn.classList.add('speaking');
+  var lbl = btn.querySelector('.ra-label');
+  if (lbl) lbl.textContent = 'Stop';
+
+  var spans = [].slice.call(el.querySelectorAll('.w'));
+  var plain = el.textContent;
+  var offsets = []; var cursor = 0;
+  spans.forEach(function(s) {
+    var idx = plain.indexOf(s.textContent, cursor);
+    offsets.push(idx); cursor = idx + s.textContent.length;
+  });
+
+  var u = new SpeechSynthesisUtterance(plain);
+  var v = pickVoice(); if (v) u.voice = v;
+  u.rate = 0.85; u.pitch = 1.05;
+  u.onboundary = function(ev) {
+    if (ev.name && ev.name !== 'word') return;
+    var hit = -1;
+    for (var i=0;i<offsets.length;i++) { if (offsets[i] <= ev.charIndex) hit = i; else break; }
+    spans.forEach(function(s) { s.classList.remove('spoken'); });
+    if (hit >= 0 && spans[hit]) spans[hit].classList.add('spoken');
+  };
+  u.onend = function() { stopSpeech(); };
+  u.onerror = function() { stopSpeech(); };
+  speechSynthesis.speak(u);
+}
+
+if (SPEECH_OK) { speechSynthesis.onvoiceschanged = function() {}; }
+window.addEventListener('beforeunload', stopSpeech);
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('../sw.js').catch(function() {});
+  });
+}
+
+show(0);
+</script>
+</body>
+</html>

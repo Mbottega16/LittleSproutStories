@@ -5,103 +5,64 @@
   "book_badge": "Garden Explorer",
   "cover": {
     "h1_html": "Sophie &amp; Marcus<br>Visit the Garden",
-    "stage": {
-      "backdrop": "backdrop-garden",
-      "elements": [
-        {
-          "type": "img",
-          "sprite": "sophie_happy_waving.png",
-          "alt": "Sophie"
-        },
-        {
-          "type": "img",
-          "sprite": "marcus_happy_waving.png",
-          "alt": "Marcus"
-        }
-      ]
-    }
+    "subtitle": "A story about feeling impatient — and learning that waiting can bloom",
+    "image": "book8-cover.webp"
   },
   "pages": [
     {
       "index": 1,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_happy_running.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_walking.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "hotspot",
-            "position": "right",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#127804;"
-          }
-        ]
-      },
-      "text_a": "Sophie ran straight for the flower beds, ready to pick every bloom she saw.",
-      "text_b": "Sophie wants flowers.",
+      "image": "book8-page1.webp",
+      "text_a": "The garden gate creaked open, and Sophie was off like a rocket. Past the tomato vines, past the buzzing lavender, straight for the flower beds she ran, ready to gather every single bloom she saw into the biggest bouquet in the world.",
+      "text_b": "Sophie wants to pick the flowers.",
       "quiz": null
     },
     {
       "index": 2,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_neutral_standing.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "helper",
-            "name": "Tom",
-            "emoji": "&#129333;"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_neutral_looking.png",
-            "alt": "Marcus"
-          }
-        ]
-      },
-      "text_a": "Tom the gardener gently stopped her. &ldquo;Some flowers are ready, and some need more time,&rdquo; he explained.",
-      "text_b": "Some flowers wait.",
+      "image": "book8-page2.webp",
+      "text_a": "“Whoa, there,” said a gentle voice. Tom the gardener stepped out from behind the sunflowers, with dirt on his knees and a trowel in his hand. “I’m glad you’re here, Sophie. But before we pick anything, there’s something a gardener knows: some flowers are ready, and some need more time.”",
+      "text_b": "Tom says some flowers need more time.",
       "quiz": null
     },
     {
       "index": 3,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_frustrated_hands.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_neutral_standing.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "hotspot",
-            "position": "left",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#127793;"
-          }
-        ]
-      },
-      "text_a": "&ldquo;But I want one now!&rdquo; Sophie said, reaching for a tightly closed bud.",
-      "text_b": "Sophie feels mad.",
+      "image": "book8-page3.webp",
+      "text_a": "“A gardener’s day starts with looking,” Tom said. Every morning he walked the rows, slow as a detective. He pressed one finger into the soil — dry or damp? He peeked under leaves for nibbling bugs. He checked the rain gauge to see how much water the sky had already given. “Plants can’t talk,” Tom said, “so a gardener’s first job is to notice what they need — before we water, before we weed, before we pick a single thing.”",
+      "text_b": "Tom checks the garden every morning.",
+      "quiz": null
+    },
+    {
+      "index": 4,
+      "image": "book8-page4.webp",
+      "text_a": "Tom showed them the garden’s treasures. Rows of vegetables wore little labels like name tags, so he would always know who was growing where. Seed packets waited in a box, sorted by season, each with a picture of what it promised to become. In the shed stood the trowel for digging, the watering can for drinking, and the wheelbarrow that carried everything too heavy for arms. “Every tool has a job,” said Tom, “and every plant has a plan.”",
+      "text_b": "Tom has tools and seeds for every plant.",
+      "quiz": null
+    },
+    {
+      "index": 5,
+      "image": "book8-page5.webp",
+      "text_a": "In a shady corner, tiny sprouts no bigger than thumbnails trembled in their pots. “This is where gardeners practice,” Tom whispered. “Moving a baby plant takes the gentlest hands in the world, so we practice first — a two-finger pinch, slow and soft — before we ever touch the real seedlings.” He showed them his garden notebook, too, filled with careful notes: what was planted, what was watered, what bloomed, and when. “Gardeners write things down, because gardens grow too slowly for anyone to remember it all.”",
+      "text_b": "Gardeners practice with gentle hands.",
+      "quiz": null
+    },
+    {
+      "index": 6,
+      "image": "book8-page6.webp",
+      "text_a": "“Who is all this for?” asked Marcus, looking at the mountains of tomatoes. Tom smiled. “Everyone.” Families from the neighborhood each tended a patch and carried home bags of beans and zucchini. Extra vegetables went into a sharing box by the gate. Bees drifted from flower to flower, doing their own important work, and a robin had built her nest in the hedge. “A garden doesn’t just grow food,” Tom said. “It grows a whole neighborhood — people, bees, birds, and all.”",
+      "text_b": "The garden feeds the whole neighborhood.",
+      "quiz": null
+    },
+    {
+      "index": 7,
+      "image": "book8-page7.webp",
+      "text_a": "Then Tom became a teacher. He knelt beside two flowers — one wide open like a little umbrella, one squeezed tight and green. “Plants tell us what they need, if we know how to look,” he said. “Soft, open petals mean ‘I’m ready.’ A tight, green bud means ‘Not yet — I’m still growing.’” Sophie looked very carefully. “Part of my job,” Tom said, “is teaching people to read what the garden is saying.”",
+      "text_b": "Open petals mean ready. Tight buds mean not yet.",
+      "quiz": null
+    },
+    {
+      "index": 8,
+      "image": "book8-page8.webp",
+      "text_a": "Sophie nodded like she understood. She really did understand. But understanding and wanting are two different things, and her fingers itched toward the tightest, greenest bud on the whole bush. “But I want one NOW,” she said, reaching, reaching — “this one could be ready. It could be!”",
+      "text_b": "Sophie feels impatient.",
       "quiz": {
         "question": "How does Sophie feel?",
         "options": [
@@ -113,101 +74,17 @@
       }
     },
     {
-      "index": 4,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "marcus_neutral_kneeling.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_frustrated_standing.png",
-            "alt": "Sophie"
-          }
-        ]
-      },
-      "text_a": "Marcus knelt beside a fully open flower nearby. &ldquo;This one looks ready to me,&rdquo; he said calmly.",
-      "text_b": "Marcus looks at each one.",
+      "index": 9,
+      "image": "book8-page9.webp",
+      "text_a": "Marcus didn’t argue. He just knelt down in the dirt, calm as you please, beside a flower that had opened all the way — petals spread wide, golden in the middle, a bee humming happily around it. “Sophie,” he said quietly. “Come and look at this one. Just look first.” Sophie huffed. Then she knelt down beside him… and looked.",
+      "text_b": "Marcus shows Sophie a ready flower.",
       "quiz": null
     },
     {
-      "index": 5,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_neutral_looking.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "helper",
-            "name": "Tom",
-            "emoji": "&#129333;"
-          },
-          {
-            "type": "hotspot",
-            "position": "right2",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#127799;"
-          }
-        ]
-      },
-      "text_a": "Tom showed Sophie how to tell &mdash; soft, open petals mean ready; tight, green buds mean &ldquo;not yet.&rdquo;",
-      "text_b": "Open petals mean ready.",
-      "quiz": null
-    },
-    {
-      "index": 6,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_surprised_pointing.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_standing.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "hotspot",
-            "position": "mid",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#127804;"
-          }
-        ]
-      },
-      "text_a": "Sophie searched and searched, and then she spotted one bright, wide-open flower of her very own.",
-      "text_b": "Sophie finds a ready flower.",
-      "quiz": null
-    },
-    {
-      "index": 7,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_happy_kneeling.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_giving.png",
-            "alt": "Marcus"
-          }
-        ]
-      },
-      "text_a": "She picked it carefully, and it felt even better than if she&rsquo;d grabbed the very first one.",
-      "text_b": "Sophie is glad she waited.",
+      "index": 10,
+      "image": "book8-page10.webp",
+      "text_a": "Now Sophie searched like Tom had taught her — bed by bed, bloom by bloom, reading each flower the way you read a page. No. Not yet. Still growing. And then — there! One bright flower, open all the way, ready and waiting as if it had been saving itself just for her. She picked it slowly and carefully, holding it like a tiny treasure. And do you know? Finding it herself, after the waiting, felt even better than grabbing the very first flower she saw.",
+      "text_b": "Waiting can lead to something better.",
       "quiz": {
         "question": "What did Sophie learn?",
         "options": [
@@ -219,33 +96,36 @@
       }
     },
     {
-      "index": 8,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_happy_walking.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_walking.png",
-            "alt": "Marcus"
-          }
-        ]
-      },
-      "text_a": "Marcus and Sophie carried their flowers home, already planning to visit the garden again.",
-      "text_b": "They take the flowers home.",
+      "index": 11,
+      "image": "book8-page11.webp",
+      "text_a": "“You know my favorite part of this job?” Tom asked, leaning on his trowel. “It isn’t the tomatoes, and it isn’t even the flowers. It’s that a garden teaches everybody who visits to slow down and pay attention. Everything here grows at its own speed — the beans, the buds…” He winked at Sophie. “…and the gardeners-in-training.” Sophie held her flower a little more gently.",
+      "text_b": "The garden teaches us to slow down.",
+      "quiz": null
+    },
+    {
+      "index": 12,
+      "image": "book8-page12.webp",
+      "text_a": "Marcus and Sophie carried their flowers home like trophies, already planning their next visit. At the gate, Sophie turned and waved — not at Tom, but at the rows of tight green buds still sleeping on the bushes. “Bye!” she called. “See you when you’re ready!”",
+      "text_b": "Sophie and Marcus say, “Bye, garden!”",
       "quiz": null
     }
   ],
   "end_screen": {
     "badge_emoji": "&#127941;",
-    "badge_label_html": "Garden<br>Explorer",
+    "badge_label_html": "Garden Explorer",
     "feeling": "Impatience eases with the satisfaction of the right timing.",
     "ask": "What is something worth waiting for?",
     "try_this": "Plant a seed together and check on it over several days.",
-    "standards": "L.K.5.a, L.K.5.c"
-  }
+    "words_to_grow": "sprout, bud, petal, bloom, soil, tend, patient, gentle, notice, ready. Point at the tools as you name them — trowel, watering can, gloves, wheelbarrow, seed packets, rain gauge.",
+    "bigger_picture": "Gardeners do much more than pick flowers — they check the soil and water every morning, plan and plant by the seasons, practice gentle hands on tiny sprouts, keep careful notebooks, grow food their whole neighborhood shares, make homes for bees, butterflies, and birds, and teach people how to read what plants need — including how to wait for the right time.",
+    "standards": "L.K.5.a, L.K.5.c",
+    "practice_words": [
+      "pick",
+      "checks",
+      "every",
+      "morning",
+      "plant"
+    ]
+  },
+  "reading_level": 2
 }

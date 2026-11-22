@@ -140,6 +140,13 @@ old cached copy. This is the single most common cause of "I pushed a fix but it 
 
 These are real gaps, documented so nobody mistakes them for finished work:
 
+> **Note (2026-11-22):** the two items below describe the old book scenes (sprite
+> characters on a `backdrop-*` background, helpers as an emoji plus a name label).
+> The books no longer use them. Since the watercolor rebuild, every book page is one
+> illustration (`assets/bookN-pageM.webp`, cover `assets/bookN-cover.webp`) and the
+> books' CSS has no `backdrop-*` or `.helper-slot` rules. The backdrop art in
+> `assets/backgrounds/` is still used by the games.
+
 - ~~Backgrounds~~ — done, refreshed 2026-09-11. Real illustrated art
   (`assets/backgrounds/`) via `scripts/import_background_art.py`. 12 of
   the 13 `backdrop-*` locations got a full 5-variant overhaul (var1 is

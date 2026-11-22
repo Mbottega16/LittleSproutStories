@@ -48,7 +48,7 @@ Children should **never** read *"feels bad"* when experiencing anxiety, shyness,
 - **Tier 1 (Ages 4–5 / Early K, Books 1–5):** `glad, sad, mad, calm, safe, upset, stuck, lost, OK, good`, plus Heart Words `brave, kind, warm`.
 - **Tier 2 (Ages 5–6 / Late K – Early G1, Books 6–12):** adds `proud, brave, afraid, shy, quiet, cross, bold, fine, warm`.
 - **Tier 3 (Ages 6–7 / G1 – Early G2, Books 14–19+):** adds `nervous, excited, hopeful, grumpy, worried, patient, gentle, caring`.
-- **Added 2026-11-21 for Books 16–19 (checked by `scripts/analyze_decodability.py`):** Heart Words `love, night`; picture-supported theme nouns `seed(s), boat, rope`; the title `Mr` is treated like a name.
+- **Added 2026-11-21 for Books 16–19 (checked by `scripts/analyze_decodability.py`):** Heart Words `love, night`; picture-supported theme nouns `seed(s), boat`; the title `Mr` is treated like a name. (Checked against the published 12-page text on 2026-11-22.)
 
 ## The "Zero Invented Props" Rule
 

@@ -1,116 +1,68 @@
 {
   "book_id": "Book19_Sophie_Little_Mouse",
-  "title": "Sophie and the Little Mouse",
-  "book_title": "Sophie & Maya and the Little Mouse",
+  "title": "Sophie & the Little Mouse",
+  "book_title": "Sophie & the Little Mouse",
   "book_badge": "Kind Helper",
   "cover": {
-    "h1_html": "Sophie &amp; <br>the Little Mouse",
-    "stage": {
-      "backdrop": "backdrop-street",
-      "elements": [
-        {
-          "type": "img",
-          "sprite": "sophie_happy_waving.png",
-          "alt": "Sophie"
-        },
-        {
-          "type": "img",
-          "sprite": "maya_happy_waving.png",
-          "alt": "Maya"
-        }
-      ]
-    }
+    "h1_html": "Sophie &amp; the Little Mouse",
+    "subtitle": "A story about feeling helpless — and learning that small kindness counts",
+    "image": "book19-cover.webp"
   },
   "pages": [
     {
       "index": 1,
-      "stage": {
-        "backdrop": "backdrop-street",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_happy_pointing.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "maya_happy_standing.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "hotspot",
-            "position": "left",
-            "effect": "pulse",
-            "aria_label": "Tap the mouse",
-            "emoji": "&#128045;"
-          }
-        ]
-      },
-      "text_a": "Sophie and Maya were walking past the community garden gate when Sophie noticed something rustling in the dry leaves.",
-      "text_b": "Sophie sees a little mouse.",
+      "image": "book19-page1.webp",
+      "text_a": "Sophie and Maya were walking past the community garden gate, where the sunflowers stood taller than teachers, when Sophie stopped mid-step. Rustle, rustle. Something tiny was stirring in the dry leaves at the fence’s foot — something very small, and very stuck. “Maya,” she whispered. “Did you hear that?”",
+      "text_b": "Sophie hears something in the leaves.",
       "quiz": null
     },
     {
       "index": 2,
-      "stage": {
-        "backdrop": "backdrop-street",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_neutral_looking.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "maya_neutral_looking.png",
-            "alt": "Maya"
-          }
-        ]
-      },
-      "text_a": "A tiny gray mouse had gotten tangled in some soft gardening twine. It squeaked softly, trying to get free.",
-      "text_b": "The mouse cannot run away.",
+      "image": "book19-page2.webp",
+      "text_a": "They crouched down — slowly, carefully — and there he was: a tiny gray mouse, no bigger than a plum, tangled in a loop of soft gardening twine. The string had wound around and around, and the more he wriggled, the tighter it held. He squeaked, very softly, the smallest sound in the whole garden. Squeak. Help.",
+      "text_b": "A little mouse is stuck in string.",
       "quiz": null
     },
     {
       "index": 3,
-      "stage": {
-        "backdrop": "backdrop-street",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_happy_standing.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "maya_happy_standing.png",
-            "alt": "Maya"
-          }
-        ]
-      },
-      "text_a": "&ldquo;He is so little,&rdquo; whispered Maya. &ldquo;We should be very quiet and gentle so we don&rsquo;t scare him.&rdquo;",
-      "text_b": "Maya is calm. &ldquo;We can help,&rdquo; said Maya.",
+      "image": "book19-page3.webp",
+      "text_a": "Sophie’s hands wanted to help right away — but Maya put one finger up, the way Keisha the caretaker had taught all the garden helpers. “First rule of helping small things: stop, look, and think.” So they stopped. They looked — at the twine, at the mouse’s quick, frightened breathing. And they thought: our fingers are too big for knots this tiny. This is a job that needs a grown-up’s tools. “Preparing,” Maya said, “is the first part of helping.”",
+      "text_b": "First stop and look. Then get help.",
       "quiz": null
     },
     {
       "index": 4,
-      "stage": {
-        "backdrop": "backdrop-street",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_sad_standing.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "maya_neutral_looking.png",
-            "alt": "Maya"
-          }
-        ]
-      },
-      "text_a": "Sophie reached out, but the twine was wound tight. &ldquo;I can&rsquo;t untangle it alone!&rdquo; Sophie said, feeling discouraged.",
-      "text_b": "Sophie is sad. The rope is stuck.",
+      "image": "book19-page4.webp",
+      "text_a": "“He is so little,” whispered Maya. From one careful step away, they could see everything: whiskers thin as thread, ears like two pink petals, and a heart beating so fast it made his whole soft side flutter. “We should be very quiet and very gentle,” Maya breathed, “so we don’t scare him more. To him, we’re giants. Kind giants, let’s be.”",
+      "text_b": "The mouse is little. We must be gentle.",
+      "quiz": null
+    },
+    {
+      "index": 5,
+      "image": "book19-page5.webp",
+      "text_a": "While they kept watch, the girls practiced being gentle on purpose. Tiptoe steps, soft as moth wings. Voices turned down to library-sparkle quiet. Hands held still and low, so they’d never loom. It was harder than it looked — Sophie’s excitement kept trying to bounce right out of her shoes! “Gentle,” Maya reminded her, “is something you practice. Like piano. Like cartwheels.” Sophie took a breath, and slowed right down.",
+      "text_b": "Quiet feet and soft voices help.",
+      "quiz": null
+    },
+    {
+      "index": 6,
+      "image": "book19-page6.webp",
+      "text_a": "Waiting beside the leaves, the girls began to notice where they really were. The garden wasn’t just flowers for people. The hedge was a hallway of homes. The mossy stone was somebody’s doorstep. The leaf pile was a warm winter blanket, and under it — probably — lived this very mouse, and beetles, and worms who turned old leaves into new soil. “It’s a whole neighborhood,” Sophie marveled, “in one garden.”",
+      "text_b": "The garden is a home for many small animals.",
+      "quiz": null
+    },
+    {
+      "index": 7,
+      "image": "book19-page7.webp",
+      "text_a": "On the gate hung the garden rules, in Keisha’s careful painted letters, and Maya read them aloud: “Look with your eyes. Leave every home as you found it. And string, twine, and ribbon always go in the bin — because what’s trash to us can be a trap for someone small.” Sophie looked at the twine around the mouse and understood all the way down to her toes. “Rules aren’t bossy,” she said. “Some rules are just kindness, written down.”",
+      "text_b": "String goes in the bin, so animals stay safe.",
+      "quiz": null
+    },
+    {
+      "index": 8,
+      "image": "book19-page8.webp",
+      "text_a": "At last Sophie reached out — gently, slowly, the practiced way — and touched the twine with one careful fingertip. But the loop was wound tight as a knot in a shoelace, crossed and re-crossed, and her fingers were simply too big. “I can’t untangle it alone!” she said, and her shoulders slumped all the way down. “It’s too tight, and he’s too small, and I don’t know how!”",
+      "text_b": "Sophie is sad. “I can’t do it alone.”",
       "quiz": {
         "question": "What did Sophie and Maya find tangled in twine?",
         "options": [
@@ -122,78 +74,17 @@
       }
     },
     {
-      "index": 5,
-      "stage": {
-        "backdrop": "backdrop-street",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_happy_standing.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "maya_happy_standing.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "helper",
-            "name": "Keisha",
-            "emoji": "&#128045;"
-          }
-        ]
-      },
-      "text_a": "Keisha, the park caretaker, walked over with a gentle smile and a pair of blunt safety snips.",
-      "text_b": "Keisha smiles. &ldquo;Let me help,&rdquo; said Keisha.",
+      "index": 9,
+      "image": "book19-page9.webp",
+      "text_a": "But the girls had done the very best first thing without even knowing it: they had stayed, and they had watched, and now — here came Keisha herself down the garden path, with her gentle smile and, in her apron pocket, a pair of blunt safety snips made for exactly this. “You kept him calm and you kept him company,” she told them. “That’s not nothing, helpers. That’s half the rescue.”",
+      "text_b": "Keisha smiles. “Let me help.”",
       "quiz": null
     },
     {
-      "index": 6,
-      "stage": {
-        "backdrop": "backdrop-street",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_happy_kneeling.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "maya_happy_looking.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "hotspot",
-            "position": "mid",
-            "effect": "ding",
-            "aria_label": "Cheer for the mouse",
-            "emoji": "&#10024;"
-          }
-        ]
-      },
-      "text_a": "Keisha snipped the loose string carefully. Sophie gently held back the leaves so the mouse had a clear path.",
+      "index": 10,
+      "image": "book19-page10.webp",
+      "text_a": "Keisha slid the blunt snips under the loosest loop — snip — and then — snip — again, each cut careful as a whisper. Sophie held the leaves back so the path was clear, and Maya breathed quiet, steady breaths beside him. One last thread popped loose. The mouse sat blinking in the sudden, wonderful freedom of it. Free. Completely, twine-free free.",
       "text_b": "Snip, snip! The mouse is free.",
-      "quiz": null
-    },
-    {
-      "index": 7,
-      "stage": {
-        "backdrop": "backdrop-street",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_happy_jumping.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "maya_happy_giving.png",
-            "alt": "Maya"
-          }
-        ]
-      },
-      "text_a": "The mouse paused on a mossy stone, wiggled its tiny whiskers at the girls, and scampered safely into the warm hedge.",
-      "text_b": "Sophie is glad. The mouse ran home.",
       "quiz": {
         "question": "Why were Sophie and Maya happy at the end?",
         "options": [
@@ -205,38 +96,36 @@
       }
     },
     {
-      "index": 8,
-      "stage": {
-        "backdrop": "backdrop-street",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_happy_waving.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "maya_happy_waving.png",
-            "alt": "Maya"
-          },
-          {
-            "type": "helper",
-            "name": "Keisha",
-            "emoji": "&#128045;"
-          }
-        ]
-      },
-      "text_a": "Keisha smiled at them both. &ldquo;No act of kindness, no matter how small, is ever wasted,&rdquo; Keisha said.",
-      "text_b": "Sophie and Maya clap. We did good!",
+      "index": 11,
+      "image": "book19-page11.webp",
+      "text_a": "The mouse didn’t run right away. He climbed onto the mossy stone — his own front doorstep, as it happened — and sat up and wiggled his thread-thin whiskers at the girls, which everyone agreed was mouse language for thank you. Then — zip! — he scampered into the warm hedge, into his hallway of homes, where supper and safety and a leaf-pile bed were waiting.",
+      "text_b": "The mouse runs home, safe and happy.",
+      "quiz": null
+    },
+    {
+      "index": 12,
+      "image": "book19-page12.webp",
+      "text_a": "Keisha smiled at them both, the way the sun smiles on the whole garden at once. “Remember this,” she said. “No act of kindness, no matter how small, is ever wasted — and neither is the stopping, and the looking, and the asking for help. That’s how the small kindnesses get done properly.” Sophie looked at her hands — too big for tiny knots, just right for holding leaves back — and felt very proud indeed.",
+      "text_b": "Sophie and Maya helped. Small kindness counts.",
       "quiz": null
     }
   ],
   "end_screen": {
-    "badge_emoji": "&#128045;",
-    "badge_label_html": "Kind<br>Helper",
+    "badge_emoji": "&#127941;",
+    "badge_label_html": "Kind Helper",
     "feeling": "Kindness, gentle care for small creatures, and asking for help.",
     "ask": "Have you ever helped an animal or a friend who was stuck? How did it feel?",
     "try_this": "Look for one small act of kindness you can do for someone in your family today.",
-    "standards": "RL.K.1, SL.K.3"
-  }
+    "words_to_grow": "rustling, tangled, wriggled, caretaker, habitat, tiptoe, prevention, kindness, properly. Point at the habitat parts as you name them — hedge, mossy stone, leaf pile, twine, safety snips.",
+    "bigger_picture": "Freeing the mouse takes one minute of this story. The rest is everything that makes kindness work: preparing before you act, practicing gentleness like a skill, understanding that a garden is a neighborhood of homes, learning the safety rules that prevent harm in the first place — and knowing when the kindest thing of all is to ask a grown-up for help.",
+    "standards": "RL.K.1, SL.K.3",
+    "practice_words": [
+      "something",
+      "leaves",
+      "mouse",
+      "stuck",
+      "string"
+    ]
+  },
+  "reading_level": 4
 }

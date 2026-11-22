@@ -1,123 +1,68 @@
 {
   "book_id": "Book18_James_Marcus_River_Picnic",
-  "title": "James and Marcus by the River",
+  "title": "James & Marcus by the River",
   "book_title": "James & Marcus by the River",
   "book_badge": "River Friend",
   "cover": {
-    "h1_html": "James &amp; <br>Marcus by the River",
-    "stage": {
-      "backdrop": "backdrop-garden",
-      "elements": [
-        {
-          "type": "img",
-          "sprite": "james_happy_waving.png",
-          "alt": "James"
-        },
-        {
-          "type": "img",
-          "sprite": "marcus_happy_waving.png",
-          "alt": "Marcus"
-        }
-      ]
-    }
+    "h1_html": "James &amp; Marcus by the River",
+    "subtitle": "A story about a small worry — and a day saved by a friend&#x27;s quick hands",
+    "image": "book18-cover.webp"
   },
   "pages": [
     {
       "index": 1,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_happy_pointing.png",
-            "alt": "James"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_standing.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "hotspot",
-            "position": "left",
-            "effect": "pulse",
-            "aria_label": "Tap the boat",
-            "emoji": "&#128674;"
-          }
-        ]
-      },
-      "text_a": "James and Marcus took a red picnic basket down to the sparkling river on a warm spring day.",
-      "text_b": "James and Marcus see the river.",
+      "image": "book18-page1.webp",
+      "text_a": "James and Marcus carried the red picnic basket between them — one handle each, the way you carry something precious — down the grassy path to where the river sparkled and chuckled over its stones. It was a warm spring day, the kind with butterflies in it. “Best picnic spot in the world,” Marcus announced, “here we come!”",
+      "text_b": "James and Marcus go to the river.",
       "quiz": null
     },
     {
       "index": 2,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_happy_standing.png",
-            "alt": "James"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_jumping.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "hotspot",
-            "position": "right",
-            "effect": "pop",
-            "aria_label": "Watch the duck",
-            "emoji": "&#129414;"
-          }
-        ]
-      },
-      "text_a": "A small wooden rowboat bobbed gently by the green shore. &ldquo;Look at that little boat!&rdquo; laughed Marcus.",
-      "text_b": "Marcus sees a red boat.",
+      "image": "book18-page2.webp",
+      "text_a": "Down by the green shore, a small wooden rowboat bobbed and nodded on the ripples, bumping its nose softly against the dock — hello, hello, hello. Sunlight danced on the water in a thousand tiny coins. “Look at that little boat!” laughed Marcus. “It’s like it’s waving at us.”",
+      "text_b": "Marcus sees a little boat on the water.",
       "quiz": null
     },
     {
       "index": 3,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_happy_kneeling.png",
-            "alt": "James"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_standing.png",
-            "alt": "Marcus"
-          }
-        ]
-      },
-      "text_a": "James spread out a big checkered blanket under the shady willow tree.",
-      "text_b": "James puts down the basket.",
+      "image": "book18-page3.webp",
+      "text_a": "“A good picnic starts before the basket even opens,” said James, who had thought about this picnic all week. First, the big checkered blanket, spread smooth under the shady willow tree. Then a check of the spot together: soft grass, no anthills, close enough to watch the water and far enough to keep their toes dry. Hats on, water bottles out. “Ready,” James nodded, satisfied. “NOW we’re ready.”",
+      "text_b": "First we get ready. Then we picnic.",
       "quiz": null
     },
     {
       "index": 4,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_neutral_looking.png",
-            "alt": "James"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_sad_standing.png",
-            "alt": "Marcus"
-          }
-        ]
-      },
-      "text_a": "Marcus opened the basket, but the jam jar slipped! &ldquo;Oh no! Did it spill?&rdquo; he cried.",
-      "text_b": "Marcus is sad. &ldquo;Did it drop?&rdquo;",
+      "image": "book18-page4.webp",
+      "text_a": "Before eating, the boys explored the river’s edge, where the world was busy being small. Smooth stones, cool as coins. A dragonfly in a jewel-blue coat, hovering like a tiny helicopter. Rings spreading on the water where fish mouths kissed the surface — plip, plip. “There’s so much happening,” Marcus whispered, “in the part I almost didn’t look at.”",
+      "text_b": "Many small things live by the river.",
+      "quiz": null
+    },
+    {
+      "index": 5,
+      "image": "book18-page5.webp",
+      "text_a": "“Let’s play the quiet watching game,” said James. “Whoever sits stillest, sees most.” So they sat — wiggle-free, whisper-quiet — and practiced being watchers. One minute of stillness, and the river began to trust them: a frog plopped, a heron stalked past on stilts of legs, and two dragonflies chased each other in loops. “Watching,” said Marcus, amazed, “is harder than running. And better.”",
+      "text_b": "Sit still and watch. The river shows you things.",
+      "quiz": null
+    },
+    {
+      "index": 6,
+      "image": "book18-page6.webp",
+      "text_a": "The river, they were learning, isn’t just water going past. It’s somebody’s whole home. The fish live under the ripples, the ducks paddle on top, the dragonflies hunt above it, and the old willow drinks from it with roots like straws — and in return, her shade keeps the bank cool for everybody. Everything here helps everything else. “It’s not our river,” James said slowly. “We’re just visiting it.”",
+      "text_b": "The river is a home for many animals.",
+      "quiz": null
+    },
+    {
+      "index": 7,
+      "image": "book18-page7.webp",
+      "text_a": "Not far away, Alex the firefighter sat fishing, as peaceful as a cat in a sunbeam. “River rules, since you’re visiting,” he called with a grin. “One: stay where a grown-up can see you — look at the water with your eyes, not your feet. Two: everything we bring, we bring back — wrappers, bottles, all of it. The river gives us a beautiful day. We give it a clean bank back.”",
+      "text_b": "Stay where grown-ups can see you. Keep the river clean.",
+      "quiz": null
+    },
+    {
+      "index": 8,
+      "image": "book18-page8.webp",
+      "text_a": "At last, the picnic! Marcus lifted the lid with a flourish — but the jam jar, slick and round and heavier than it looked, slipped right through his fingers. Down it tumbled toward the stones — “Oh no!” he cried, and his stomach dropped right along with it. “Did it spill? Did I ruin the picnic?”",
+      "text_b": "Marcus is sad. “Did the jar spill?”",
       "quiz": {
         "question": "Where did James and Marcus go for a picnic?",
         "options": [
@@ -129,78 +74,17 @@
       }
     },
     {
-      "index": 5,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_happy_standing.png",
-            "alt": "James"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_standing.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "helper",
-            "name": "Alex",
-            "emoji": "&#128674;"
-          }
-        ]
-      },
-      "text_a": "Alex the firefighter was fishing nearby and caught the jar with a friendly grin. &ldquo;Safe and sound!&rdquo; Alex said.",
-      "text_b": "Alex smiles. &ldquo;I got it!&rdquo; said Alex.",
+      "index": 9,
+      "image": "book18-page9.webp",
+      "text_a": "But the jar never hit the stones. Quick as a frog’s tongue — snap! — Alex’s hand shot out from his fishing spot and caught it clean, with a friendly grin. “Safe and sound!” said Alex. “Slippery jars are nobody’s fault, Marcus. They’re just jars being jars.” Marcus let out all the breath he’d been holding. The picnic — and the day — were saved.",
+      "text_b": "Alex smiles. “I got it!”",
       "quiz": null
     },
     {
-      "index": 6,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_happy_sitting.png",
-            "alt": "James"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_sitting.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "hotspot",
-            "position": "mid",
-            "effect": "ding",
-            "aria_label": "Share a snack",
-            "emoji": "&#129366;"
-          }
-        ]
-      },
-      "text_a": "They shared fresh bread, sweet fruit, and cool water together under the soft breeze.",
-      "text_b": "They eat bread and jam in the sun.",
-      "quiz": null
-    },
-    {
-      "index": 7,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_happy_standing.png",
-            "alt": "James"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_jumping.png",
-            "alt": "Marcus"
-          }
-        ]
-      },
-      "text_a": "Two friendly ducks swam over and quacked happily as Marcus waved. &ldquo;Picnics with friends are the best!&rdquo; said Marcus.",
-      "text_b": "Marcus is glad. Marcus loves picnics.",
+      "index": 10,
+      "image": "book18-page10.webp",
+      "text_a": "Then they shared everything properly at last: fresh bread torn into pillowy hunks, sweet fruit that ran down their chins, cool water, and — of course — great shining spoonfuls of the rescued jam. Somehow, food tastes better outside, with grass under the blanket and somebody you like across from you. “To the jar,” James toasted, raising his cup. “And to the catch.”",
+      "text_b": "They eat bread and jam together.",
       "quiz": {
         "question": "Who helped Marcus catch the jar?",
         "options": [
@@ -212,38 +96,36 @@
       }
     },
     {
-      "index": 8,
-      "stage": {
-        "backdrop": "backdrop-garden",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_happy_waving.png",
-            "alt": "James"
-          },
-          {
-            "type": "img",
-            "sprite": "marcus_happy_waving.png",
-            "alt": "Marcus"
-          },
-          {
-            "type": "helper",
-            "name": "Alex",
-            "emoji": "&#128674;"
-          }
-        ]
-      },
-      "text_a": "As the sun set, the boys packed their basket and waved goodbye to the peaceful river.",
-      "text_b": "James and Marcus clap. &ldquo;Good day!&rdquo;",
+      "index": 11,
+      "image": "book18-page11.webp",
+      "text_a": "Two friendly ducks came paddling over, quacking hopeful quacks, and Marcus waved them a royal welcome. They didn’t get any jam — jam is not for ducks, Alex explained, because wild animals do best with their own wild food — but they stayed for the company anyway, bobbing just offshore. “Picnics with friends are the best,” sighed Marcus. “Even the floating kind.”",
+      "text_b": "Ducks come to visit the picnic.",
+      "quiz": null
+    },
+    {
+      "index": 12,
+      "image": "book18-page12.webp",
+      "text_a": "As the sun slid low and painted the water gold, the boys packed their basket the Alex way: everything they brought, they brought back — every wrapper, every bottle, until the bank looked as clean as a bedtime story’s last page. Then they waved to the boat, the willow, and the whole shining river. “Good day!” they called. And the river, chuckling over its stones, seemed to wave back.",
+      "text_b": "James and Marcus say, “Good day, river!”",
       "quiz": null
     }
   ],
   "end_screen": {
-    "badge_emoji": "&#128674;",
-    "badge_label_html": "River<br>Friend",
+    "badge_emoji": "&#127941;",
+    "badge_label_html": "River Friend",
     "feeling": "Outdoor curiosity, sharing, and helping a friend.",
     "ask": "Have you ever shared a meal outside with someone? What was fun about it?",
     "try_this": "Have a mini living-room or backyard blanket picnic together this weekend.",
-    "standards": "RL.K.1, SL.K.3"
-  }
+    "words_to_grow": "sparkled, bobbed, ripples, checkered, observe, stillness, ecosystem, stewardship, rescued. Point at the river’s residents as you name them — dragonfly, heron, frog, willow, ducks.",
+    "bigger_picture": "A picnic is the smallest part of this story. The boys prepare carefully, practice the skill of quiet observation, discover that a river is a whole community of living things that help each other, and learn the two kindnesses of visiting wild places: stay safe, and leave the place cleaner than you found it.",
+    "standards": "RL.K.1, SL.K.3",
+    "practice_words": [
+      "river",
+      "water",
+      "first",
+      "ready",
+      "picnic"
+    ]
+  },
+  "reading_level": 3
 }

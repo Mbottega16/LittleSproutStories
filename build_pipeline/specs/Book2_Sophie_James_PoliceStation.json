@@ -5,124 +5,64 @@
   "book_badge": "Police Station Explorer",
   "cover": {
     "h1_html": "Sophie &amp; James<br>Visit the Police Station",
-    "stage": {
-      "backdrop": "backdrop-police",
-      "elements": [
-        {
-          "type": "img",
-          "sprite": "sophie_happy_waving.png",
-          "alt": "Sophie"
-        },
-        {
-          "type": "img",
-          "sprite": "james_happy_waving.png",
-          "alt": "James"
-        }
-      ]
-    }
+    "subtitle": "A story about feeling frustrated — and learning plans can bend",
+    "image": "book2-cover.webp"
   },
   "pages": [
     {
       "index": 1,
-      "stage": {
-        "backdrop": "backdrop-street",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_happy_running.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "james_happy_walking.png",
-            "alt": "James"
-          }
-        ]
-      },
-      "text_a": "Sophie and James couldn&rsquo;t wait to visit the police station &mdash; Sophie wanted to see everything at once!",
-      "text_b": "Sophie and James go in.",
+      "image": "book2-page1.webp",
+      "text_a": "Sophie bounced on her toes the whole way there. “The police station!” she sang, tugging James by the sleeve. “I want to see everything — the car, the lights, the everything!” James hugged his notebook and smiled. He liked seeing everything too. He just liked seeing it in order.",
+      "text_b": "Sophie and James visit the police station.",
       "quiz": null
     },
     {
       "index": 2,
-      "stage": {
-        "backdrop": "backdrop-police",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_happy_standing.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "james_happy_standing.png",
-            "alt": "James"
-          },
-          {
-            "type": "helper",
-            "name": "Jasmine",
-            "emoji": "&#128110;&#8205;&#9792;&#65039;"
-          },
-          {
-            "type": "hotspot",
-            "position": "right",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#11088;"
-          }
-        ]
-      },
-      "text_a": "Officer Jasmine greeted them with a big smile and a shiny badge. &ldquo;Welcome, friends!&rdquo;",
-      "text_b": "Jasmine has a pin.",
+      "image": "book2-page2.webp",
+      "text_a": "The doors opened, and out stepped Officer Jasmine, her badge gleaming like a tiny sun. “Welcome, friends!” she said. “I’m Officer Jasmine. Would you like to see what a police officer’s day is really like?”",
+      "text_b": "Officer Jasmine says hello.",
       "quiz": null
     },
     {
       "index": 3,
-      "stage": {
-        "backdrop": "backdrop-police",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_neutral_pointing.png",
-            "alt": "James"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_happy_jumping.png",
-            "alt": "Sophie"
-          }
-        ]
-      },
-      "text_a": "James pulled out a checklist. &ldquo;First the police car, then the radio, then the map wall,&rdquo; he said.",
-      "text_b": "James has a list.",
+      "image": "book2-page3.webp",
+      "text_a": "“Before anything else,” said Jasmine, “we check our tools — every single morning.” Around the patrol car she went: blink went the lights, thump went each tire, and crackle-crackle went the radio as she tested it. She checked her flashlight, her notebook, and the bright vest that helps drivers see her in the dark. “An officer’s first job isn’t chasing anything. It’s making sure everything works, before we ever need it.”",
+      "text_b": "Jasmine checks her car and her radio.",
       "quiz": null
     },
     {
       "index": 4,
-      "stage": {
-        "backdrop": "backdrop-police",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_happy_pointing.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "james_frustrated_hands.png",
-            "alt": "James"
-          },
-          {
-            "type": "hotspot",
-            "position": "left",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#128660;"
-          }
-        ]
-      },
-      "text_a": "But Sophie was already at the police car, pressing every button she could find! James felt his plan slipping away.",
-      "text_b": "James feels mad.",
+      "image": "book2-page4.webp",
+      "text_a": "James opened his notebook to a page of careful little boxes. “My checklist,” he announced. “First the police car. Then the radio. Then the map wall.” Jasmine showed them every one: the car that carries officers all over town, the radio that lets the whole team talk to each other from far away, and the great map wall, where every street in the neighborhood had its very own place — just like every helper in town.",
+      "text_b": "James has a list of things to see.",
+      "quiz": null
+    },
+    {
+      "index": 5,
+      "image": "book2-page5.webp",
+      "text_a": "Out in the yard, two officers were practicing. One blew a whistle — tweet! — and raised a white-gloved hand to stop an imaginary car, while the other guided a “lost” teddy bear safely across a pretend street. “We practice even when nothing is wrong,” Jasmine explained, “the way you practice tying your shoes. Then, when a real person needs help, our hands already know what to do.”",
+      "text_b": "Officers practice to be ready.",
+      "quiz": null
+    },
+    {
+      "index": 6,
+      "image": "book2-page6.webp",
+      "text_a": "Inside, the station hummed like a beehive. Radios crackled, phones rang softly, and the dispatcher listened carefully and sent officers wherever they were needed. Outside, a patrol car rolled slowly down the street, and the baker waved, and the crossing guard waved, and two grandmothers waved. “An officer’s office,” Jasmine said, “is the whole neighborhood — and the people in it are the best part.”",
+      "text_b": "Officers help the whole town.",
+      "quiz": null
+    },
+    {
+      "index": 7,
+      "image": "book2-page7.webp",
+      "text_a": "On the corner, Jasmine became a teacher. “Stopping at the curb is rule number one,” she said. “Feet stop. Eyes look — left, right, and left again. Ears listen. Then we walk — we don’t run — straight across.” They practiced twice, until Sophie’s feet stopped all by themselves. “The best part of my job,” Jasmine said, “is helping nobody get hurt at all.”",
+      "text_b": "Stop, look, and listen to cross safely.",
+      "quiz": null
+    },
+    {
+      "index": 8,
+      "image": "book2-page8.webp",
+      "text_a": "Their last stop was the patrol car, up close. Jasmine opened the door so they could peek inside — and oh, the buttons! Switches and buttons in a whole shining row, every single one begging to be pressed. Before anyone could say “one at a time,” Sophie’s fingers went tap-tap-tap-tap — lights blinked, the radio squawked — and James stared at his beautiful checklist, where nothing was in order anymore. His face crumpled. “My plan,” he whispered. “It’s all mixed up.”",
+      "text_b": "James feels frustrated.",
       "quiz": {
         "question": "How does James feel?",
         "options": [
@@ -134,85 +74,17 @@
       }
     },
     {
-      "index": 5,
-      "stage": {
-        "backdrop": "backdrop-police",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_frustrated_standing.png",
-            "alt": "James"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_neutral_looking.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "helper",
-            "name": "Jasmine",
-            "emoji": "&#128110;&#8205;&#9792;&#65039;"
-          }
-        ]
-      },
-      "text_a": "&ldquo;My list is getting all mixed up,&rdquo; James said quietly. Jasmine knelt down. &ldquo;Plans can bend a little and still work.&rdquo;",
-      "text_b": "The list can wait.",
+      "index": 9,
+      "image": "book2-page9.webp",
+      "text_a": "Jasmine knelt down until her eyes were right even with James’s. “I know,” she said gently. “You made a good plan, and it got bumped. But listen — plans are a little like officers on patrol. Sometimes they have to turn down a different street. A plan can bend a little, James… and still work.”",
+      "text_b": "A plan can bend and still work.",
       "quiz": null
     },
     {
-      "index": 6,
-      "stage": {
-        "backdrop": "backdrop-police",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "james_neutral_looking.png",
-            "alt": "James"
-          },
-          {
-            "type": "img",
-            "sprite": "sophie_neutral_standing.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "hotspot",
-            "position": "mid",
-            "effect": "pulse",
-            "aria_label": "Tap to play",
-            "emoji": "&#128506;&#65039;"
-          }
-        ]
-      },
-      "text_a": "Jasmine showed them the real patrol schedule for the day. &ldquo;You can each pick one thing you want to see most.&rdquo;",
-      "text_b": "Pick one thing.",
-      "quiz": null
-    },
-    {
-      "index": 7,
-      "stage": {
-        "backdrop": "backdrop-police",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_happy_jumping.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "james_happy_pointing.png",
-            "alt": "James"
-          },
-          {
-            "type": "hotspot",
-            "position": "right",
-            "effect": "ding",
-            "aria_label": "Tap to play",
-            "emoji": "&#128680;"
-          }
-        ]
-      },
-      "text_a": "Sophie picked the siren button. James picked the map wall. Both got exactly what they wanted.",
-      "text_b": "Sophie and James are glad.",
+      "index": 10,
+      "image": "book2-page10.webp",
+      "text_a": "Jasmine unrolled the real patrol schedule, covered in colorful blocks from morning to night. “Here’s how we’ll fix it,” she said. “Sophie, pick the one thing you want most. James, pick yours.” Sophie chose the siren button — one careful press, with permission this time. James chose the map wall, where he found his very own street and grinned all over his face. Two picks. Two smiles. One plan that worked.",
+      "text_b": "Sophie and James share the plan.",
       "quiz": {
         "question": "What helped fix the problem?",
         "options": [
@@ -224,38 +96,36 @@
       }
     },
     {
-      "index": 8,
-      "stage": {
-        "backdrop": "backdrop-police",
-        "elements": [
-          {
-            "type": "img",
-            "sprite": "sophie_happy_waving.png",
-            "alt": "Sophie"
-          },
-          {
-            "type": "img",
-            "sprite": "james_happy_waving.png",
-            "alt": "James"
-          },
-          {
-            "type": "helper",
-            "name": "Jasmine",
-            "emoji": "&#128110;&#8205;&#9792;&#65039;"
-          }
-        ]
-      },
-      "text_a": "They waved goodbye to Jasmine, promising to be careful crossing streets just like she showed them.",
-      "text_b": "Bye, Jasmine!",
+      "index": 11,
+      "image": "book2-page11.webp",
+      "text_a": "“You know my favorite part of this job?” Jasmine asked as they walked back. “It isn’t the car, and it isn’t the siren. It’s that everybody in this town knows my name — and I know theirs. When children know an officer is a safe person to run to, the whole town feels safer.” She winked at James. “Even children with checklists.” James hugged his notebook. “Especially children with checklists.”",
+      "text_b": "Jasmine helps everyone feel safe.",
+      "quiz": null
+    },
+    {
+      "index": 12,
+      "image": "book2-page12.webp",
+      "text_a": "At the corner, Sophie and James stopped all by themselves. Feet stop. Eyes look — left, right, left again. Ears listen. Then they walked — they did not run — straight across, waving the whole way. “Bye, Jasmine!” they called. “See you out in the neighborhood!”",
+      "text_b": "Sophie and James say, “Bye, Jasmine!”",
       "quiz": null
     }
   ],
   "end_screen": {
     "badge_emoji": "&#127941;",
-    "badge_label_html": "Police Station<br>Explorer",
+    "badge_label_html": "Police Station Explorer",
     "feeling": "Frustration eases when a plan is allowed to flex.",
     "ask": "What do you do when your plan does not go the way you hoped?",
-    "try_this": "Let your child help set tonight&rsquo;s plan, then bend it together if something changes.",
-    "standards": "RI.K.3, W.K.2"
-  }
+    "try_this": "Let your child help set tonight’s plan, then bend it together if something changes.",
+    "words_to_grow": "gleaming, patrol, crackle, schedule, neighborhood, curb, dispatcher, bend, frustrated. Point at the tools as you name them — badge, radio, flashlight, vest, map wall.",
+    "bigger_picture": "Police officers do much more than ride in cars with sirens — they check their equipment and patrol cars every morning, train for emergencies before they happen, patrol neighborhoods and get to know the people there, work as a team with dispatchers, and teach safety so that nobody gets hurt at all.",
+    "standards": "RI.K.3, W.K.2",
+    "practice_words": [
+      "visit",
+      "police",
+      "station",
+      "officer",
+      "hello"
+    ]
+  },
+  "reading_level": 4
 }
