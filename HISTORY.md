@@ -19,6 +19,14 @@ This repo is public, so private planning notes stay in the owner's vault, not he
 
 ---
 
+## 2026-11-22 — build pipeline back in step; reading levels corrected; PR #10 features in
+
+*Cloud · Claude · branch `claude/sync-render-py`*
+- **Changed:** Merged PR #17. Found that the specs in `build_pipeline/specs/` were old (8 pages per book; the live books have 12 pages and different text). Rewrote `extract_spec.py` and `render.py` for the current template, moved the shared head and script into `build_pipeline/templates/`, and rebuilt all 18 specs from the live books. `build.py` output is byte-identical to `books/` again. Added `scripts/pipeline_roundtrip.py` and a CI step that fails if `books/` and the specs drift apart. Ported PR #10's three features (split read-aloud with a Hint button, "Practice these words", reading-level tag on the cover). Corrected 13 of 18 reading levels on `index.html` and `stats.html`.
+- **Why:** The owner asked to finish everything. PR #17 had computed the level pills from the old specs, so most levels were wrong on the live site. Fixing the pipeline first made the real text available to the analyzer.
+- **Verified:** Round trip is byte-identical for all 18 books; `build.py` run for real changed nothing before the features were added. Headless Chrome, all 18 books: the story button speaks only the story, the Hint button only the practice line, the cover tag and practice words match the specs, no page errors. Site smoke test: 0 bad pages, no broken covers after scrolling. `link_check.py`, `placeholder_audit.py`, `cache_bump_guard.py` pass. NOT checked: the printable PDFs (text did not change), a real phone or tablet, the live site after the merge.
+- **Left open:** `analyze_decodability.py --check` fails on the published text (many words are not in the approved list). That is the owner's call: approve the words or rewrite the lines. Removed the "rope" approval from PR #17 (no book uses it).
+
 ## 2026-11-21 — finish open work: merge branches, Books 16–19 on the homepage, domain fix
 
 *Cloud · Claude · branch `claude/finish-open-work`*

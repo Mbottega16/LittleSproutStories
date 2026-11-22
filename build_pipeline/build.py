@@ -5,14 +5,11 @@ build_pipeline/specs/*.json.
     python build_pipeline/build.py            # rebuild every book from its spec
     python build_pipeline/build.py Book1_Maya_Marcus_FireStation   # rebuild one
 
-Round-trip verified against the real, live books at the time this pipeline
-was built (2026-08-23): every one of the 14 specs, re-rendered, produced a
-byte-identical file to what was already published — see git history on
-build_pipeline/ for that verification run. That guarantee holds only as
-long as specs/*.json and render.py are the source of truth; if a book was
-hand-edited outside the pipeline since, re-run
-extract_spec.py --all first to bring specs/ back in sync (and accept you
-may be overwriting an edit that didn't go through the pipeline).
+Round trip: re-rendering the 18 specs produces books/ byte for byte
+(re-verified 2026-11-22; `python scripts/pipeline_roundtrip.py` checks it and
+CI runs it). If that check fails because a book was edited by hand, run
+`python build_pipeline/extract_spec.py --all` first, to copy the edit back
+into the specs. Otherwise this command overwrites the hand edit.
 """
 
 import sys
