@@ -12,3 +12,13 @@ def amp(text: str) -> str:
     as plain text inside the JavaScript constants.
     """
     return text.replace("&", "&amp;")
+
+
+def read_exact(path) -> str:
+    """Read a UTF-8 text file without changing its line endings.
+
+    (Path.read_text(newline=...) only exists in Python 3.13 and newer, so this
+    uses open() to work on older versions too.)
+    """
+    with open(path, encoding="utf-8", newline="") as f:
+        return f.read()

@@ -21,7 +21,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common import amp  # noqa: E402
+from common import amp, read_exact  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 BOOKS_DIR = REPO_ROOT / "books"
@@ -30,8 +30,7 @@ TEMPLATES_DIR = Path(__file__).resolve().parent / "templates"
 
 
 def _template(name: str) -> str:
-    # newline="" keeps the template's own line endings untouched
-    return (TEMPLATES_DIR / name).read_text(encoding="utf-8", newline="")
+    return read_exact(TEMPLATES_DIR / name)
 
 
 def _fill(template: str, **values: str) -> str:

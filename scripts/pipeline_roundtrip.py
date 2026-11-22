@@ -29,6 +29,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "build_pipeline"))
 
 import render  # noqa: E402
+from common import read_exact  # noqa: E402
 
 
 def main() -> int:
@@ -45,7 +46,7 @@ def main() -> int:
             continue
         spec = json.loads(specs[stem].read_text(encoding="utf-8"))
         wanted = render.render_book(spec)
-        actual = books[stem].read_text(encoding="utf-8", newline="")
+        actual = read_exact(books[stem])
         if wanted != actual:
             first = next(
                 (line for line in difflib.unified_diff(

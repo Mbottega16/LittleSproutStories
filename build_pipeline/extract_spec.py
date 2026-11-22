@@ -25,7 +25,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common import amp  # noqa: E402
+from common import amp, read_exact  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 BOOKS_DIR = REPO_ROOT / "books"
@@ -146,8 +146,7 @@ def extract_book(html: str) -> dict:
 
 
 def extract_file(book_path: Path) -> Path:
-    # newline="" keeps the file's own line endings untouched
-    html = book_path.read_text(encoding="utf-8", newline="")
+    html = read_exact(book_path)
     spec = extract_book(html)
     out_path = SPECS_DIR / (book_path.stem + ".json")
     out_path.write_text(json.dumps(spec, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
